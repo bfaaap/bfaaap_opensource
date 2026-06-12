@@ -1,0 +1,275 @@
+#!/usr/bin/env python3
+"""
+bFaaaP paper figures — generator.
+
+Creates publication-quality figures at >= 300 DPI for the arXiv preprint.
+Each figure is produced both as a vector PDF (used by LaTeX) and as a
+600-DPI PNG (raster, as requested). Edit the small functions below to tweak
+any figure, then re-run:
+
+    python3 scripts.py
+
+Requires: matplotlib, numpy (use the environment that has them).
+"""
+import os
+import numpy as np
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from matplotlib.patches import FancyBboxPatch, FancyArrowPatch, Ellipse, Rectangle
+
+OUT = os.path.dirname(os.path.abspath(__file__))
+DPI = 600  # >= 300 (raster). PDF output is vector (resolution-independent).
+
+plt.rcParams.update({
+    "font.size": 10,
+    "font.family": "DejaVu Sans",
+    "axes.linewidth": 0.8,
+    "savefig.bbox": "tight",
+    "savefig.pad_inches": 0.05,
+})
+
+BLUE_F, BLUE_E = "#eaf1fb", "#2f5597"
+GREEN_F, GREEN_E = "#e9f6ec", "#2e7d32"
+GREY_F, GREY_E = "#f0f0f0", "#555555"
+ORANGE_F, ORANGE_E = "#fdeedd", "#c5701a"
+
+
+def save(fig, name):
+    # Pass dpi to the PDF too: vector elements stay resolution-independent, but
+    # any embedded raster photos (Figure 1) are sampled at >= 300 DPI so the
+    # composite does not lose resolution.
+    fig.savefig(os.path.join(OUT, name + ".pdf"), dpi=DPI)
+    fig.savefig(os.path.join(OUT, name + ".png"), dpi=DPI)
+    plt.close(fig)
+    print("wrote", name + ".pdf /", name + ".png")
+
+
+def box(ax, x, y, w, h, text, fc=BLUE_F, ec=BLUE_E, fs=9):
+    ax.add_patch(FancyBboxPatch((x, y), w, h,
+                 boxstyle="round,pad=0.02,rounding_size=0.06",
+                 linewidth=1.2, edgecolor=ec, facecolor=fc))
+    ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=fs)
+    return (x, y, w, h)
+
+
+def arrow(ax, p1, p2, label=None, lw=1.4, color="#222222", rad=0.0, fs=8, loff=(0, 0.12)):
+    ax.add_patch(FancyArrowPatch(p1, p2, arrowstyle="-|>", mutation_scale=12,
+                 linewidth=lw, color=color,
+                 connectionstyle=f"arc3,rad={rad}"))
+    if label:
+        mx, my = (p1[0] + p2[0]) / 2 + loff[0], (p1[1] + p2[1]) / 2 + loff[1]
+        ax.text(mx, my, label, ha="center", va="center", fontsize=fs, color=color)
+
+
+# ---------------------------------------------------------------- Figure 1
+def fig_architecture():
+    fig, ax = plt.subplots(figsize=(9.2, 3.9))
+    ax.set_xlim(0, 12.5); ax.set_ylim(0, 4.7); ax.axis("off")
+
+    ax.text(0.52, 2.45, "Player\nhead motion", ha="center", va="center", fontsize=8.6)
+    A = box(ax, 1.35, 1.82, 2.80, 1.28, "iOS controller\n(ARKit face tracking,\nCoreBluetooth)", fs=8.2)
+    B = box(ax, 5.10, 1.82, 2.05, 1.28, "BLE board\n(nRF52840,\nBluefruit)", fs=8.2)
+    SW = box(ax, 8.20, 3.28, 4.05, 0.98, "Sustain-pedal jack\n(Switch: electronic)", fc=GREEN_F, ec=GREEN_E, fs=8.2)
+    C = box(ax, 8.20, 1.88, 4.05, 0.98, "Pico main board\n(RP2040)", fs=8.2)
+    D = box(ax, 8.20, 0.42, 4.05, 0.98, "motor -> belt -> leadscrew ->\npush-rod -> pedal (Pro)", fc=ORANGE_F, ec=ORANGE_E, fs=8.2)
+
+    arrow(ax, (1.00, 2.45), (1.35, 2.45))
+    arrow(ax, (4.15, 2.45), (5.10, 2.45))
+    ax.text(4.62, 2.92, "BLE (NUS):\nvalues + N/F", ha="center", va="center", fontsize=7.6)
+    # BLE board -> Switch jack (curved up) and -> Pico (horizontal)
+    ax.add_patch(FancyArrowPatch((7.15, 2.80), (8.20, 3.62), arrowstyle="-|>",
+                 mutation_scale=12, lw=1.4, color="#222222",
+                 connectionstyle="arc3,rad=0.18"))
+    ax.text(7.42, 3.42, "GP13\non/off", ha="left", va="center", fontsize=7.3)
+    arrow(ax, (7.15, 2.22), (8.20, 2.34))
+    ax.text(7.66, 1.96, "UART (1 byte)", ha="center", va="top", fontsize=7.3)
+    arrow(ax, (10.22, 1.88), (10.22, 1.40))
+    ax.text(10.48, 1.64, "drive", ha="left", va="center", fontsize=7.6, color="#222")
+    save(fig, "fig_architecture")
+
+
+# ---------------------------------------------------------------- Figure 2
+def fig_control():
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.6, 2.9))
+
+    # (a) value mapping  v = clamp(g*(theta - theta0), 0, 99)
+    theta0, g = 5.0, 9.0
+    x = np.linspace(0, 20, 400)
+    v = np.clip(g * (x - theta0), 0, 99)
+    ax1.plot(x, v, color=BLUE_E, lw=2)
+    ax1.axvline(theta0, color=GREY_E, ls="--", lw=1)
+    ax1.text(theta0 + 0.3, 8, r"$\theta_0$ (neutral)", fontsize=8, color=GREY_E)
+    ax1.axhline(99, color=ORANGE_E, ls=":", lw=1)
+    ax1.text(12.5, 92, "clamp at 99", fontsize=8, color=ORANGE_E)
+    ax1.set_xlabel(r"head pitch $\theta$ (deg, downward)")
+    ax1.set_ylabel("transmitted value $v$")
+    ax1.set_title("(a) angle to pedal value", fontsize=9)
+    ax1.set_xlim(0, 20); ax1.set_ylim(-3, 108)
+    ax1.grid(alpha=0.25)
+
+    # (b) hysteresis engage/release
+    tau, delta = 8.0, 1.5
+    ax2.set_xlim(0, 16); ax2.set_ylim(-0.25, 1.35)
+    ax2.set_xlabel(r"head angle above neutral $(\theta-\theta_0)$ (deg)")
+    ax2.set_ylabel("pedal state")
+    ax2.set_yticks([0, 1]); ax2.set_yticklabels(["released", "engaged"])
+    ax2.set_title("(b) engage/release hysteresis", fontsize=9)
+    # forward (increasing): release until tau, then engage
+    ax2.plot([0, tau, tau, 16], [0, 0, 1, 1], color=GREEN_E, lw=2, label="increasing")
+    # backward (decreasing): engaged until tau-delta, then release
+    ax2.plot([16, tau - delta, tau - delta, 0], [1, 1, 0, 0], color=BLUE_E, lw=2, ls="--", label="decreasing")
+    ax2.axvspan(tau - delta, tau, color="#ffe9c9", alpha=0.7)
+    ax2.text((tau - delta + tau) / 2, 0.5, "dead-\nband $\\delta$", ha="center", va="center", fontsize=7.5)
+    ax2.annotate(r"engage at $\tau$", (tau, 1.02), (tau - 4.5, 1.18), fontsize=8,
+                 arrowprops=dict(arrowstyle="->", color=GREEN_E))
+    ax2.annotate(r"release at $\tau-\delta$", (tau - delta, -0.02), (tau - 0.5, -0.2), fontsize=8,
+                 arrowprops=dict(arrowstyle="->", color=BLUE_E))
+    ax2.legend(fontsize=7.5, loc="center right")
+    ax2.grid(alpha=0.25)
+    fig.tight_layout()
+    save(fig, "fig_control")
+
+
+# ---------------------------------------------------------------- Figure 3
+def fig_rate_decoupling():
+    fig, ax = plt.subplots(figsize=(7.6, 2.5))
+    ax.set_xlim(-8, 210); ax.set_ylim(0, 3.2); ax.axis("off")
+    T = 200
+    # AR frames ~60 fps (16.7 ms)
+    ax.hlines(2.4, 0, T, color=GREY_E, lw=1)
+    for t in np.arange(0, T + 1, 1000.0 / 60.0):
+        ax.vlines(t, 2.25, 2.55, color=BLUE_E, lw=1)
+    ax.text(-6, 2.4, "AR\n~60 fps", ha="right", va="center", fontsize=8, color=BLUE_E)
+    ax.text(T + 3, 2.4, "stores latest\nangle (shared var)", ha="left", va="center", fontsize=7.5)
+
+    # BLE sends every 100 ms
+    ax.hlines(0.8, 0, T, color=GREY_E, lw=1)
+    for t in [0, 100, 200]:
+        ax.vlines(t, 0.62, 0.98, color=ORANGE_E, lw=2.2)
+        ax.add_patch(FancyArrowPatch((t, 2.20), (t, 1.00), arrowstyle="-|>",
+                     mutation_scale=10, color="#999999", lw=1, ls="--"))
+    ax.text(-6, 0.8, "BLE\n10 Hz\n(100 ms)", ha="right", va="center", fontsize=8, color=ORANGE_E)
+    ax.text(T + 3, 0.8, "samples & sends", ha="left", va="center", fontsize=7.5)
+
+    ax.annotate("", (185, 2.4), (165, 2.4), arrowprops=dict(arrowstyle="<->", color=GREY_E))
+    ax.text(175, 2.62, "16.7 ms", ha="center", fontsize=7, color=GREY_E)
+    ax.annotate("", (100, 0.45), (0, 0.45), arrowprops=dict(arrowstyle="<->", color=GREY_E))
+    ax.text(50, 0.30, "100 ms", ha="center", fontsize=7, color=GREY_E)
+    ax.set_title("AR sampling rate decoupled from BLE send rate (via one shared variable)",
+                 fontsize=9)
+    save(fig, "fig_rate_decoupling")
+
+
+# ---------------------------------------------------------------- Figure 4
+def fig_pro_mechanism():
+    fig, ax = plt.subplots(figsize=(7.4, 3.7))
+    ax.set_xlim(0, 10.6); ax.set_ylim(0, 5.5); ax.axis("off")
+    # floor
+    ax.hlines(0.5, 0.3, 10.3, color="#888", lw=1.5)
+    ax.add_patch(Rectangle((0.3, 0.2), 10.0, 0.3, facecolor="#eeeeee", edgecolor="none"))
+    # frame (aluminium extrusion)
+    ax.add_patch(Rectangle((1.05, 0.5), 0.26, 3.95, facecolor="#cfd6dd", edgecolor="#555"))
+    ax.text(0.80, 2.45, "aluminium\nframe", fontsize=8, ha="right", rotation=90, va="center")
+    # motor
+    ax.add_patch(FancyBboxPatch((1.55, 3.05), 1.55, 1.05, boxstyle="round,pad=0.02",
+                 facecolor=ORANGE_F, edgecolor=ORANGE_E, lw=1.3))
+    ax.text(2.32, 3.57, "motor", fontsize=8.5, ha="center", va="center")
+    # belt/pulleys (motor -> leadscrew) with label placed clear above both
+    ax.plot([3.10, 3.95], [3.78, 3.55], color="#444", lw=2)
+    ax.plot([3.10, 3.95], [3.42, 3.05], color="#444", lw=2)
+    ax.annotate("", (3.5, 3.62), (3.5, 4.55), arrowprops=dict(arrowstyle="-", color="#999", lw=0.8))
+    ax.text(3.5, 4.62, "2GT belt + pulleys", fontsize=8, ha="center", va="bottom")
+    # leadscrew + nut
+    ax.add_patch(Rectangle((3.95, 2.45), 0.4, 1.55, facecolor="#dddddd", edgecolor="#555", hatch="----"))
+    ax.text(4.55, 3.28, "lead screw (T10)\n+ nut", fontsize=8, ha="left", va="center")
+    # push-rod down onto pedal
+    ax.add_patch(Rectangle((4.00, 0.95), 0.30, 1.55, facecolor="#cccccc", edgecolor="#555"))
+    ax.text(4.55, 1.65, "push-rod", fontsize=8, ha="left", va="center")
+    # sustain pedal (lever) being pressed
+    ax.plot([2.2, 4.25], [1.5, 0.98], color="#b8860b", lw=4)
+    ax.text(2.30, 1.86, "sustain pedal", fontsize=8, ha="left", color="#7a5b08")
+    # neighbouring pedal + airback
+    ax.plot([6.5, 8.7], [1.25, 1.25], color="#b8860b", lw=4)
+    ax.text(7.60, 1.58, "neighbouring pedal", fontsize=8, ha="center", color="#7a5b08")
+    ax.add_patch(Ellipse((7.60, 0.88), 2.0, 0.62, facecolor="#bcd2f0", edgecolor=BLUE_E, lw=1.3))
+    ax.text(7.60, 0.88, "airback (inflated)", fontsize=8, ha="center", va="center")
+    ax.add_patch(FancyArrowPatch((7.60, 1.00), (7.60, 1.23), arrowstyle="-|>",
+                 mutation_scale=10, color=BLUE_E, lw=1.5))
+    ax.text(8.78, 0.88, "absorbs\nreaction\nforce", fontsize=7.5, ha="left", va="center", color=BLUE_E)
+    ax.set_title("Pro device: motor drivetrain + airback reaction-force anchoring", fontsize=9.5)
+    save(fig, "fig_pro_mechanism")
+
+
+# ---------------------------------------------------------------- Figure 0 (overview)
+def _overview_diagram(ax):
+    """Vertical operating-principle flow drawn into the given axis (0..10)."""
+    ax.set_xlim(0, 10); ax.set_ylim(0, 10); ax.axis("off")
+    ax.set_title("(c) operating principle", fontsize=8.6)
+    box(ax, 2.6, 8.65, 4.8, 1.00, "Player tilts head\n(up / down)", fc=GREY_F, ec=GREY_E, fs=8.2)
+    box(ax, 1.7, 6.75, 6.6, 1.35, "Smartphone AI\n(ARKit face tracking)\n+ paced BLE send (100 ms)", fs=8.0)
+    box(ax, 3.0, 4.55, 4.0, 1.00, "Pedal device", fc=GREY_F, ec=GREY_E, fs=8.4)
+    box(ax, 0.10, 2.50, 4.60, 1.35, "Pro: motor presses\nacoustic pedal", fc=ORANGE_F, ec=ORANGE_E, fs=7.9)
+    box(ax, 5.30, 2.50, 4.60, 1.35, "Switch: electronic\nsustain switch (digital)", fc=GREEN_F, ec=GREEN_E, fs=7.9)
+    box(ax, 2.7, 0.40, 4.6, 1.05, "Note sustains while\nhead stays tilted", fc=BLUE_F, ec=BLUE_E, fs=8.2)
+    A = "#333"
+    ax.add_patch(FancyArrowPatch((5.0, 8.65), (5.0, 8.12), arrowstyle="-|>", mutation_scale=11, color=A))
+    ax.add_patch(FancyArrowPatch((5.0, 6.75), (5.0, 5.57), arrowstyle="-|>", mutation_scale=11, color=A))
+    ax.text(5.30, 6.16, "BLE (Nordic UART):\niNN + N/F", ha="left", va="center", fontsize=6.8)
+    ax.add_patch(FancyArrowPatch((4.0, 4.55), (2.40, 3.88), arrowstyle="-|>", mutation_scale=10, color=A))
+    ax.add_patch(FancyArrowPatch((6.0, 4.55), (7.60, 3.88), arrowstyle="-|>", mutation_scale=10, color=A))
+    ax.add_patch(FancyArrowPatch((2.40, 2.50), (4.4, 1.48), arrowstyle="-|>", mutation_scale=10, color=A))
+    ax.add_patch(FancyArrowPatch((7.60, 2.50), (5.6, 1.48), arrowstyle="-|>", mutation_scale=10, color=A))
+
+
+def fig_overview():
+    """Figure 1 overview from real photos (two each: iOS, Pro, Switch) plus the
+    operating-principle diagram. Photos are read at native resolution and embedded
+    at >= 300 DPI (see save(): PDF raster dpi); lanczos resampling avoids softness.
+    Photos:
+      ov_ios_neutral.png / ov_ios_engaged.png  (iOS UI: white -> red feedback)
+      ov_pro_device.jpg  / ov_pro_controller.jpg (Pro device + hand controller)
+      ov_switch_setup.jpg / ov_switch_leds.png   (Switch on a keyboard + LED states)
+    """
+    names = {
+        "ios_n": "ov_ios_neutral.png", "ios_e": "ov_ios_engaged.png",
+        "pro_dev": "ov_pro_device.jpg", "pro_ctrl": "ov_pro_controller.jpg",
+        "sw_set": "ov_switch_setup.jpg", "sw_led": "ov_switch_leds.png",
+    }
+    im = {k: mpimg.imread(os.path.join(OUT, v)) for k, v in names.items()}
+
+    def photo(ax, key, label, sub):
+        ax.imshow(im[key], interpolation="lanczos")
+        ax.axis("off")
+        ax.set_title(f"{label} {sub}", fontsize=8.0)
+
+    fig = plt.figure(figsize=(7.6, 9.1))
+    outer = fig.add_gridspec(3, 1, height_ratios=[1.30, 1.0, 1.0], hspace=0.22)
+
+    # Row 1 -- shared iOS controller (white -> red) + operating-principle diagram
+    r0 = outer[0].subgridspec(1, 3, width_ratios=[0.62, 0.62, 1.90], wspace=0.07)
+    photo(fig.add_subplot(r0[0]), "ios_n", "(a)", "iOS\nneutral (white)")
+    photo(fig.add_subplot(r0[1]), "ios_e", "(b)", "iOS\nengaged (red)")
+    _overview_diagram(fig.add_subplot(r0[2]))
+
+    # Row 2 -- Pro (acoustic): device on the pedal + hand controller
+    r1 = outer[1].subgridspec(1, 2, width_ratios=[1.18, 0.82], wspace=0.04)
+    photo(fig.add_subplot(r1[0]), "pro_dev", "(d)", "Pro device pressing an acoustic pedal")
+    photo(fig.add_subplot(r1[1]), "pro_ctrl", "(e)", "Pro hand controller\n(slider + on/off)")
+
+    # Row 3 -- Switch (electronic/digital): on a keyboard + status LEDs
+    r2 = outer[2].subgridspec(1, 2, width_ratios=[1.12, 0.88], wspace=0.06)
+    photo(fig.add_subplot(r2[0]), "sw_set", "(f)", "Switch on a digital keyboard (with iOS app)")
+    photo(fig.add_subplot(r2[1]), "sw_led", "(g)", "Switch status LED\noff / ready / engaged")
+
+    save(fig, "fig_overview")
+
+
+if __name__ == "__main__":
+    fig_overview()
+    fig_architecture()
+    fig_control()
+    fig_rate_decoupling()
+    fig_pro_mechanism()
+    print("done.")

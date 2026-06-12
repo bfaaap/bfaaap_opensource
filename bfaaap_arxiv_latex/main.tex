@@ -1,0 +1,328 @@
+% bFaaaP arXiv preprint --- DRAFT 1 (2026-06-13)
+% Compiles with pdflatex (self-contained; standard packages only).
+% Suggested arXiv categories: primary cs.HC, cross-list cs.RO (and eess.SY).
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{fancyvrb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{authblk}
+\usepackage{caption}
+
+\title{\textbf{bFaaaP: A Hands-Free, Head-Angle-Controlled Robotic
+Piano-Pedal System for Inclusive Performance}}
+
+\author[1,2]{Tomoyuki Shishido\thanks{Corresponding author and first author.
+ORCID: 0000-0002-8944-2088. Email: \texttt{<corresponding email>}.}}
+\author[3]{Hiroyuki Narusawa}
+\affil[1]{SeemeData Labs, Inc., Tokyo, Japan}
+\affil[2]{Shishido \& Associates, Tokyo, Japan}
+\affil[3]{Naru Science Soft, Saitama, Japan}
+
+\date{Draft 1 --- June 13, 2026 (preprint)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The piano sustain pedal is operated by foot, which excludes people who cannot
+readily use their feet---players with limb disabilities, small children whose
+feet do not reach the pedals, and some elderly players. We present
+\textbf{bFaaaP} (\emph{barrier-Free assist as a Pedal}), a hands-free system that
+controls a piano pedal from the player's \emph{head angle}. A smartphone tracks
+the head pose with on-device augmented-reality face tracking and transmits a
+compact control signal over Bluetooth Low Energy (BLE) to a pedal device. The
+signal is generated from two parameters---a head-angle \emph{threshold} and the
+press \emph{speed/depth}---giving intuitive, expressive sustain control. Two
+device realizations share a single controller: \emph{Pro}, a robotic actuator
+that physically presses an acoustic piano's sustain pedal and is anchored by a
+novel pneumatic ``airback'' that absorbs the actuation reaction force without
+modifying the instrument; and \emph{Switch}, an electronic actuator that drives
+the sustain input of digital pianos and keyboards. A key implementation insight
+is the deliberate \emph{decoupling} of the fast face-tracking sampling rate from
+the slower BLE transmission rate, which keeps the wireless link reliable. The
+system has been demonstrated in public concerts and recitals from 2018 to 2026.
+We release the full hardware and software as open source to support reproduction
+and inclusive music-making.
+\end{abstract}
+
+\noindent\textbf{Keywords:} assistive technology; human--computer interaction;
+accessibility; robotic actuation; head-gesture interface; music technology;
+open hardware.
+
+\section{Introduction}
+Expressive piano performance relies heavily on the \emph{sustain (damper) pedal},
+which is operated by the foot. This foot requirement excludes a population that
+\emph{can} play the keys but cannot operate the pedal: wheelchair users and others
+with lower-limb impairments, small children whose feet do not yet reach the
+pedals, and some elderly players. The project began in 2018 from exactly such a
+request: a wheelchair-using client asked whether the piano pedal could be
+motorized so it could be ``pressed.''
+
+We present bFaaaP, a system that lets a player operate the pedal \emph{hands-free}
+using small head movements. The contributions of this paper are:
+\begin{enumerate}
+  \item A \textbf{two-parameter head-angle control method} (an angle threshold
+  plus a press speed/depth gain, with hysteresis) that maps a natural head tilt
+  to expressive pedal action (the underlying method is patented).
+  \item A \textbf{rate-decoupling design} that reconciles the high frame rate of
+  smartphone face tracking with the limited throughput of a BLE link, eliminating
+  a class of communication faults.
+  \item Two device realizations from one controller: a \textbf{robotic actuator
+  for acoustic pianos} with a \textbf{pneumatic ``airback'' reaction-force
+  anchor} that requires no modification of the instrument, and an
+  \textbf{electronic actuator for digital pianos/keyboards}.
+  \item A \textbf{sensorless mechanical-limit auto-calibration} that finds the
+  pedal travel limits from motor-current (reaction-force) sensing and a user
+  slider.
+  \item A field-deployed, \textbf{open-source} assistive instrument, demonstrated
+  in public performances over 2018--2026.
+\end{enumerate}
+
+\section{Related work}
+bFaaaP sits at the intersection of three areas.
+\textbf{Accessible/assistive musical instruments} adapt or design instruments so
+that people with motor disabilities can perform~\cite{ramirez2023,duarte2023}.
+\textbf{Hands-free, head-based human--computer interfaces} use head movement (and
+gaze) as an accessible input for users with limited hand use~\cite{sumak2019};
+commodity smartphone augmented-reality frameworks now provide robust on-device
+face/head pose estimation~\cite{arkit}.
+\textbf{Robotic and mechatronic actuation of acoustic instruments} has been
+studied for expressive, automated, and robotic music performance, including the
+piano~\cite{scimeca2020,weinberg2020,zappi2012}. bFaaaP is distinguished by
+(i)~targeting the \emph{sustain pedal} specifically, (ii)~using a \emph{commodity
+smartphone} as the head sensor, and (iii)~enabling \emph{non-destructive}
+placement on an \emph{unmodified} acoustic piano via pneumatic anchoring.
+
+\section{System overview}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_overview.pdf}
+\caption{System overview. \textbf{(a,b)} The shared iOS controller's play screen
+gives live feedback by colour: it is neutral (white/grey) below the head-angle
+threshold (a) and turns red once the head is tilted past it so the pedal engages
+(b). \textbf{(c)} Operating principle: a head tilt is sensed by smartphone AI
+(ARKit face tracking) and relayed over a Bluetooth Low Energy link (Nordic UART
+Service) to the pedal device, which is realized either as a motor that presses an
+acoustic pedal (\emph{Pro}) or as an electronic sustain switch (\emph{Switch}).
+\textbf{(d)} The Pro device pressing an acoustic piano's sustain pedal, anchored
+on an anti-slip mat. \textbf{(e)} The Pro hand controller (a slide potentiometer
+sets the upper travel limit; a button toggles the air pump). \textbf{(f)} The
+Switch unit beside a digital keyboard, with the same iOS app running on the
+tablet. \textbf{(g)} The Switch status LED mirrors the app state
+(off / ready / engaged).}
+\label{fig:overview}
+\end{figure}
+
+bFaaaP comprises two components linked by BLE (Figures~\ref{fig:overview}
+and~\ref{fig:arch}):
+a \textbf{smartphone controller} and a \textbf{pedal device}. The smartphone
+(iOS; an iPhone/iPad with a TrueDepth front camera) tracks the player's head
+pitch with AR face tracking and computes a control value. It transmits this value
+to the pedal device over a Nordic UART Service (NUS) BLE link. The device then
+operates the pedal so a note sustains while the head is tilted past a threshold,
+and releases when the head returns.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_architecture.pdf}
+\caption{System architecture. One smartphone controller drives two device
+realizations (Switch: electronic; Pro: robotic).}
+\label{fig:arch}
+\end{figure}
+
+The same controller supports two product lines: \textbf{Pro} for acoustic pianos
+(grand and upright), where a motor physically depresses the sustain pedal; and
+\textbf{Switch} for electric pianos and keyboards, where the sustain is actuated
+electronically through the instrument's pedal jack.
+
+\section{Head-angle control method}
+\label{sec:control}
+Let $\theta$ be the (downward) head pitch reported by the face tracker, $\theta_0$
+a user-calibrated neutral offset, and $g$ a user gain (``speed/depth'').
+The transmitted pedal value is
+\begin{equation}
+v = \mathrm{clamp}\big(\,g\cdot(\theta-\theta_0),\;0,\;99\,\big),
+\end{equation}
+encoded as a two-digit code and streamed at a fixed cadence. The discrete
+engage/release events use \emph{hysteresis}: engage when
+$\theta-\theta_0 \ge \tau$ and disengaged, release when
+$\theta-\theta_0 < \tau-\delta$ and engaged, with a small dead-band $\delta$. The
+combination of an angle \emph{threshold} and a press \emph{speed/depth} gain is
+the system's distinguishing control feature (patented; see
+Section~\ref{sec:ip}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_control.pdf}
+\caption{Head-angle control. (a) The transmitted value maps the head angle above
+a calibrated neutral, scaled by a user gain and clamped. (b) Engage/release use
+hysteresis with a small dead-band to avoid chatter near the threshold.}
+\label{fig:control}
+\end{figure}
+
+\paragraph{Rate decoupling (key insight).}
+AR face tracking produces a new head angle every camera frame ($\sim$60\,fps),
+but the BLE link cannot reliably carry that rate. Rather than transmit per frame,
+the tracker only \emph{stores} the latest angle into a shared variable; a separate
+timer samples and sends it at $\sim$10\,Hz (a $100$\,ms period), and the discrete
+engage/release events are throttled to a $\ge 10$\,ms minimum interval. In early
+development the send period was as low as $5$\,ms and produced communication
+faults; raising it to $100$\,ms made the link robust. Thus the fast sensor and the
+slow radio meet through a single shared variable, decoupling the two timing
+domains---conceptually mirrored on the device side, where an event-driven BLE
+stack feeds a synchronous motion loop over a wired UART.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_rate_decoupling.pdf}
+\caption{The fast AR sampling rate ($\sim$60\,fps) is decoupled from the slower
+BLE send rate (10\,Hz): the tracker only updates a shared variable, which a timer
+samples and transmits.}
+\label{fig:rate}
+\end{figure}
+
+\section{Pro device: robotic actuation for acoustic pianos}
+The Pro device places a small, 3D-printed, aluminium-extrusion-framed unit at the
+piano's pedal lyre. A motor drives a timing belt and a lead screw that advances a
+push-rod onto the sustain pedal, so the transmitted value $v$ maps linearly to
+pedal depth between calibrated travel limits (Figure~\ref{fig:pro}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\linewidth]{figures/fig_pro_mechanism.pdf}
+\caption{Pro device. A motor drives a timing belt and lead screw that advances a
+push-rod onto the sustain pedal; an inflatable airback beneath a neighbouring
+pedal absorbs the reaction force and anchors the unit on an unmodified piano.}
+\label{fig:pro}
+\end{figure}
+
+\paragraph{Airback reaction-force anchoring.}
+Pressing the pedal produces a reaction force that would otherwise push the
+lightweight unit away. We absorb this force with a pneumatic \emph{airback}: an
+inflatable bag is placed beneath a neighbouring pedal and inflated by a small
+pump at setup, clamping the unit in place. This anchors the device on an
+\emph{unmodified} piano without screws or adhesives---a practical requirement for
+shared and valuable instruments.
+
+\paragraph{Sensorless limit calibration.}
+At power-up the firmware (i) runs the air pump until a pressure threshold confirms
+anchoring, then (ii) drives the rod toward the pedal until the \emph{motor current}
+(proportional to reaction torque) rises at the hard stop, fixing the
+\emph{lower} travel limit; the \emph{upper} limit is set live by a slider on a
+hand controller. No limit switches are required.
+
+\section{Switch device: electronic actuation for digital instruments}
+For electric pianos and keyboards, the Switch realization needs no motor: the BLE
+board drives a digital output (with a relay/opto element) that opens and closes
+the instrument's \emph{sustain-pedal jack}, acting as the pedal switch. An
+on-board RGB LED indicates the engage state. Because polarity conventions differ
+across manufacturers, an on/off-type setting inverts the output sense.
+
+\section{Implementation}
+The smartphone controller is a SwiftUI iOS application using ARKit for face
+tracking and CoreBluetooth for the BLE link; it streams the value $v$ with
+fire-and-forget writes, which are safe precisely because the application
+rate-limits itself (Section~\ref{sec:control}). The pedal device uses an
+nRF52840 BLE board (Adafruit Bluefruit / Nordic UART~\cite{nus}) for the radio;
+the Pro main board is an RP2040 (Raspberry Pi Pico)~\cite{rp2040} that drives the
+motor, the air pump (via a MOSFET), and the sensors. The wireless protocol is a
+small ASCII vocabulary (streamed values plus engage/release and configuration
+bytes). The complete iOS source, firmware, mechanical (CAD/3D-print) designs, and
+documentation are released as open source~\cite{repo}.
+
+\section{Deployment and evaluation}
+bFaaaP has been used in public settings since 2018, including piano recitals,
+university festivals, an international assistive-equipment exhibition, and
+full concerts (2024 and 2025). In these settings, players who cannot use the foot
+pedal---including a wheelchair user---performed pieces requiring sustain. This
+paper reports a deployment/feasibility evaluation; a controlled user study with
+quantitative latency, accuracy, and usability metrics is planned future work.
+
+\section{Discussion}
+The approach generalizes beyond the sustain pedal: the same head-angle channel
+could drive other expressive controls or other instruments. Limitations include
+dependence on a clear view of the player's face, per-instrument calibration, and
+the current lack of quantitative user-study data. The Pro mechanism's motor
+choice is also evolving (an earlier smart-servo line was discontinued, motivating
+a closed-loop stepper), which the open hardware documentation tracks.
+
+\section{Intellectual property and openness}
+\label{sec:ip}
+The two-parameter pedal-control method (a head-angle threshold and the press
+speed/preference) is protected by two patents currently in force in Japan
+(JP~6726319~B2, ``Auxiliary pedal system''; JP~7004771~B2, ``Device controller''),
+with an English PCT application as the priority basis (WO~2019/176164).
+\emph{bFaaaP} is a registered trademark and the glasses-mounted motion sensor used
+in early prototypes is a registered design. The project is nonetheless released as
+open source to maximize reach. Licensing of the patents generally depends on the
+intended embodiment; however, \textbf{for uses with a genuinely public, open
+purpose the authors intend to grant a licence free of charge} (please contact the
+corresponding author). For software reuse, a license with an explicit patent grant
+is recommended.
+
+\section{Conclusion}
+bFaaaP turns a small head movement into expressive piano-pedal control, realized
+both as a non-destructive robotic actuator for acoustic pianos and as an
+electronic switch for digital instruments, from a single smartphone controller.
+By open-sourcing the full system we hope to make pedal-based piano performance
+\emph{inclusive}---available to anyone, regardless of whether they can use a foot.
+
+\section*{Acknowledgments}
+We thank the bFaaaP and Platanus members and collaborators, and the performers
+and audiences of the demonstration events. Caricature illustrations of the team
+are by Saki Shiokawa.
+
+\section*{Funding}
+This work received no specific grant from any funding agency in the public,
+commercial, or not-for-profit sectors.
+
+\section*{Conflict of interest}
+T.S. and H.N. are inventors on the patents underlying bFaaaP (Japan Patent
+No.\ 6726319 and 7004771) and are involved in its commercialization (the
+\emph{bFaaaPSwitch} iOS application and the build-to-order pedal device);
+\emph{bFaaaP} is a registered trademark. The authors otherwise declare no
+competing interests.
+
+\begin{thebibliography}{99}
+\small
+\bibitem{ramirez2023} R.~Ramirez-Melendez. Accessible Digital Music Instruments
+for Motor Disability. In \emph{Neurocognitive Music Therapy}. Springer, 2023.
+doi:10.1007/978-3-031-48635-7\_2.
+\bibitem{duarte2023} E.\,B.~Duarte, I.~Cossette, and M.\,M.~Wanderley. Analysis of
+Accessible Digital Musical Instruments through the lens of disability models: a
+case study. \emph{Frontiers in Computer Science}, 5, 2023.
+doi:10.3389/fcomp.2023.1158476.
+\bibitem{sumak2019} B.~\v{S}umak, M.~\v{S}pindler, M.~Debeljak, M.~Heri\v{c}ko, and
+M.~Pu\v{s}nik. An empirical evaluation of a hands-free computer interaction for
+users with motor disabilities. \emph{Journal of Biomedical Informatics},
+96:103249, 2019. doi:10.1016/j.jbi.2019.103249.
+\bibitem{scimeca2020} L.~Scimeca, C.\,J.~Ng, and F.~Iida. Gaussian process
+inference modelling of dynamic robot control for expressive piano playing.
+\emph{PLOS ONE}, 15(8):e0237826, 2020. doi:10.1371/journal.pone.0237826.
+\bibitem{weinberg2020} G.~Weinberg, M.~Bretan, G.~Hoffman, and S.~Driscoll.
+\emph{Robotic Musicianship: Embodied Artificial Creativity and Mechatronic
+Musical Expression}. Springer, 2020. doi:10.1007/978-3-030-38930-7.
+\bibitem{zappi2012} V.~Zappi, A.~Pistillo, S.~Calinon, and A.~Brogni. Music
+expression with a robot manipulator used as a bidirectional tangible interface.
+\emph{EURASIP Journal on Audio, Speech, and Music Processing}, 2012:2, 2012.
+doi:10.1186/1687-4722-2012-2.
+\bibitem{arkit} Apple Inc. ARKit: tracking and visualizing faces (developer
+documentation). \url{https://developer.apple.com/documentation/arkit}.
+\bibitem{nus} Nordic Semiconductor. Nordic UART Service (NUS).
+\url{https://docs.nordicsemi.com/}.
+\bibitem{rp2040} Raspberry Pi Ltd. RP2040 datasheet, 2024.
+\url{https://www.raspberrypi.com/documentation/microcontrollers/}.
+\bibitem{repo} bFaaaP project. Project site \url{https://bfaaap.com}; open-source
+repository \url{https://github.com/TomoShishido/bfaaap_opensource}, 2026.
+\end{thebibliography}
+
+\end{document}

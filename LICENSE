@@ -1,0 +1,33 @@
+LICENSE — TO BE CHOSEN BEFORE PUBLICATION
+=========================================
+
+No open-source license has been selected for this project yet. Until a license
+is chosen and added here, **all rights are reserved** and the contents must not
+be treated as freely reusable.
+
+Recommended options (decide per the project's goals):
+
+  - Software (iOS app, firmware):   MIT  or  Apache-2.0
+  - Hardware (CAD, 3D-print files):  CERN-OHL-S/-W  or  CC-BY-4.0 / CC-BY-SA-4.0
+  - Documentation:                   CC-BY-4.0
+
+Note: a dual approach (software under MIT/Apache, hardware under CERN-OHL or
+CC-BY-SA) is common for projects that ship both code and physical designs.
+
+PATENTS: the pedal-control method (head-angle threshold + press speed) is patented
+in Japan -- JP 6726319 B2 "Auxiliary pedal system" and JP 7004771 B2 "Device
+controller"; priority-basis PCT (English): WO 2019/176164. Patent licensing
+generally depends on the counterparty's intended embodiment, BUT for genuinely
+public/open-purpose uses the authors intend to grant a licence FREE OF CHARGE.
+In particular, for products or services that help people with disabilities (and
+others who need it) participate in society more inclusively -- even commercial,
+paid ones -- bFaaaP-related patent licensing is, as a matter of policy, granted
+FREE OF CHARGE. Contact Tomoyuki Shishido (https://bfaaap.com ; ORCID
+0000-0002-8944-2088). For software reuse, also prefer a licence with an explicit
+PATENT GRANT (e.g. Apache-2.0). See README (Patents) and PUBLISHING-CHECKLIST.md.
+
+Third-party components retain their own licenses and are NOT relicensed:
+  - firmware/libraries/iq-module-communication-arduino/  → see its LICENSE file
+  - Motor datasheets (motor/) are vendor copyright — referenced, not redistributed.
+
+ACTION: replace this file with the chosen license text before going public.

@@ -1,0 +1,54 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Secrets / credentials — NEVER commit
+*.p8
+AuthKey_*.p8
+**/private_keys/
+*.mobileprovision
+*.p12
+*.cer
+secrets/
+.env
+
+# Xcode / build artifacts
+build/
+DerivedData/
+*.xcarchive
+*.ipa
+*.dSYM/
+xcuserdata/
+*.xcuserstate
+
+# Arduino / PlatformIO build output
+.pio/
+*.elf
+*.uf2
+*.hex.bak
+
+# FreeCAD backups
+*.FCStd1
+*.FCBak
+
+# Slicer temp
+*.gcode
+
+# LaTeX build artifacts (keep .tex / .pdf)
+*.aux
+*.bbl
+*.blg
+*.toc
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+bfaaap_arxiv_latex/*.log
+
+# Editor
+*.swp
+*~
+.vscode/
+.idea/
