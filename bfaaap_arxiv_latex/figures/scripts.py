@@ -65,26 +65,28 @@ def arrow(ax, p1, p2, label=None, lw=1.4, color="#222222", rad=0.0, fs=8, loff=(
 
 # ---------------------------------------------------------------- Figure 1
 def fig_architecture():
-    fig, ax = plt.subplots(figsize=(9.2, 3.9))
-    ax.set_xlim(0, 12.5); ax.set_ylim(0, 4.7); ax.axis("off")
+    fig, ax = plt.subplots(figsize=(9.4, 3.9))
+    ax.set_xlim(0, 12.95); ax.set_ylim(0, 4.7); ax.axis("off")
 
     ax.text(0.52, 2.45, "Player\nhead motion", ha="center", va="center", fontsize=8.6)
     A = box(ax, 1.35, 1.82, 2.80, 1.28, "iOS controller\n(ARKit face tracking,\nCoreBluetooth)", fs=8.2)
     B = box(ax, 5.10, 1.82, 2.05, 1.28, "BLE board\n(nRF52840,\nBluefruit)", fs=8.2)
-    SW = box(ax, 8.20, 3.28, 4.05, 0.98, "Sustain-pedal jack\n(Switch: electronic)", fc=GREEN_F, ec=GREEN_E, fs=8.2)
-    C = box(ax, 8.20, 1.88, 4.05, 0.98, "Pico main board\n(RP2040)", fs=8.2)
-    D = box(ax, 8.20, 0.42, 4.05, 0.98, "motor -> belt -> leadscrew ->\npush-rod -> pedal (Pro)", fc=ORANGE_F, ec=ORANGE_E, fs=8.2)
+    SW = box(ax, 8.55, 3.28, 4.05, 0.98, "Sustain-pedal jack\n(Switch: electronic)", fc=GREEN_F, ec=GREEN_E, fs=8.2)
+    C = box(ax, 8.55, 1.88, 4.05, 0.98, "Pico main board\n(RP2040)", fs=8.2)
+    D = box(ax, 8.55, 0.42, 4.05, 0.98, "motor -> belt -> leadscrew ->\npush-rod -> pedal (Pro)", fc=ORANGE_F, ec=ORANGE_E, fs=8.2)
 
     arrow(ax, (1.00, 2.45), (1.35, 2.45))
     arrow(ax, (4.15, 2.45), (5.10, 2.45))
-    ax.text(4.62, 2.92, "BLE (NUS):\nvalues + N/F", ha="center", va="center", fontsize=7.6)
+    # label lifted above the box tops (y=3.10) so it never overlaps either box
+    ax.text(4.62, 3.62, "BLE (NUS):\nvalues + N/F", ha="center", va="center", fontsize=7.4)
     # BLE board -> Switch jack (curved up) and -> Pico (horizontal)
-    ax.add_patch(FancyArrowPatch((7.15, 2.80), (8.20, 3.62), arrowstyle="-|>",
+    ax.add_patch(FancyArrowPatch((7.15, 2.80), (8.55, 3.62), arrowstyle="-|>",
                  mutation_scale=12, lw=1.4, color="#222222",
                  connectionstyle="arc3,rad=0.18"))
     ax.text(7.42, 3.42, "GP13\non/off", ha="left", va="center", fontsize=7.3)
-    arrow(ax, (7.15, 2.22), (8.20, 2.34))
-    ax.text(7.66, 1.96, "UART (1 byte)", ha="center", va="top", fontsize=7.3)
+    arrow(ax, (7.15, 2.22), (8.55, 2.30))
+    # UART label sits in the (widened) gap, above the arrow and clear of both boxes
+    ax.text(7.85, 2.54, "UART (1 byte)", ha="center", va="bottom", fontsize=7.2)
     arrow(ax, (10.22, 1.88), (10.22, 1.40))
     ax.text(10.48, 1.64, "drive", ha="left", va="center", fontsize=7.6, color="#222")
     save(fig, "fig_architecture")
@@ -266,10 +268,87 @@ def fig_overview():
     save(fig, "fig_overview")
 
 
+# ------------------------------------------------ Figure: control vs prior art
+def fig_control_vs_priorart():
+    """The key novelty visual: bFaaaP's quantitative, user-tunable mapping
+    (offset dead-zone + user multiplier -> continuous, proportional pedal command)
+    vs. binary on/off prior art (a head switch). Patent-validated ranges."""
+    fig, ax = plt.subplots(figsize=(7.0, 3.1))
+    x = np.linspace(0, 20, 500)
+    # prior art: binary on/off at a fixed threshold (~8 deg), full or nothing
+    prior = np.where(x >= 8, 99, 0)
+    ax.step(x, prior, where="post", color=GREY_E, lw=2.0, ls="--",
+            label="prior art: binary on/off (head switch)")
+    # bFaaaP: offset dead-zone + user-selected multiplier (two example settings)
+    for off, m, c, lab in [(5, 10, BLUE_E, "bFaaaP: offset 5$^{\\circ}$, $m{=}10$"),
+                           (3, 30, GREEN_E, "bFaaaP: offset 3$^{\\circ}$, $m{=}30$")]:
+        v = np.clip((x - off) * m, 0, 99)
+        ax.plot(x, v, color=c, lw=2.2, label=lab)
+    ax.axvspan(0, 5, color="#f2f2f2", alpha=0.8)
+    ax.text(2.4, 52, "dead-zone\n(offset, $3$--$10^{\\circ}$)", ha="center", va="center",
+            fontsize=7.2, color=GREY_E, rotation=90)
+    ax.annotate("user-tunable\nslope = multiplier\n($10$--$50$)", (7.0, 40), (10.5, 22),
+                fontsize=7.6, color=BLUE_E,
+                arrowprops=dict(arrowstyle="->", color=BLUE_E))
+    ax.set_xlabel(r"head pitch above neutral (deg)")
+    ax.set_ylabel("pedal command (0--99)")
+    ax.set_title("Quantitative, user-tunable mapping vs. binary prior art", fontsize=9.5)
+    ax.set_xlim(0, 20); ax.set_ylim(-4, 110)
+    ax.grid(alpha=0.25); ax.legend(fontsize=7.4, loc="lower right")
+    save(fig, "fig_control_vs_priorart")
+
+
+# ------------------------------------------------ Figure: APEE clinical results
+def fig_apee_results():
+    """Clinical (APEE) results from the patent specification (Tables 3 and 4):
+    (a) sustain effect (tone-vibration area relative to no-pedal), and
+    (b) bFaaaP vs the user's own foot (no significant difference)."""
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.6, 3.1))
+
+    # (a) sustain effect: pattern 0 / 1 / 2 (means +/- SD), n = 34
+    labels = ["no pedal\n(pat. 0)", "bFaaaP\npat. 1", "bFaaaP\npat. 2"]
+    means = [1.00, 1.59, 1.80]; sds = [0.0, 0.32, 0.44]
+    fcs = [GREY_F, BLUE_F, GREEN_F]; ecs = [GREY_E, BLUE_E, GREEN_E]
+    ax1.bar(range(3), means, yerr=sds, capsize=4, color=fcs, edgecolor=ecs, linewidth=1.3)
+    ax1.set_xticks(range(3)); ax1.set_xticklabels(labels, fontsize=8)
+    ax1.set_ylabel("relative tone-vibration area")
+    ax1.set_title("(a) sustain effect ($n{=}34$)", fontsize=9)
+    ax1.set_ylim(0, 2.5)
+
+    def sig(ax, x1, x2, y, txt):
+        ax.plot([x1, x1, x2, x2], [y, y + 0.04, y + 0.04, y], color="#333", lw=1)
+        ax.text((x1 + x2) / 2, y + 0.05, txt, ha="center", va="bottom", fontsize=7)
+    sig(ax1, 0, 1, 1.95, "$p{<}0.01$")
+    sig(ax1, 1, 2, 2.12, "$p{<}0.01$")
+    sig(ax1, 0, 2, 2.30, "$p{<}0.01$")
+    ax1.grid(axis="y", alpha=0.25)
+
+    # (b) bFaaaP vs own foot (Class I controls): pattern 1 and 2, not significant
+    groups = ["pattern 1", "pattern 2"]
+    b = [1.59, 1.80]; f = [1.47, 1.70]; bsd = [0.32, 0.44]; fsd = [0.32, 0.44]
+    xpos = np.arange(2); w = 0.36
+    ax2.bar(xpos - w / 2, b, w, yerr=bsd, capsize=3, color=BLUE_F, edgecolor=BLUE_E,
+            linewidth=1.2, label="bFaaaP ($n{=}34$)")
+    ax2.bar(xpos + w / 2, f, w, yerr=fsd, capsize=3, color=GREY_F, edgecolor=GREY_E,
+            linewidth=1.2, label="own foot ($n{=}9$)")
+    ax2.set_xticks(xpos); ax2.set_xticklabels(groups, fontsize=8)
+    ax2.set_ylabel("relative tone-vibration area")
+    ax2.set_ylim(0, 2.5)
+    ax2.set_title("(b) bFaaaP vs. own foot", fontsize=9)
+    ax2.text(0, 2.12, "n.s.", ha="center", fontsize=8)
+    ax2.text(1, 2.30, "n.s.", ha="center", fontsize=8)
+    ax2.legend(fontsize=7.0, loc="lower center")
+    ax2.grid(axis="y", alpha=0.25)
+    fig.tight_layout()
+    save(fig, "fig_apee_results")
+
+
 if __name__ == "__main__":
     fig_overview()
     fig_architecture()
     fig_control()
     fig_rate_decoupling()
     fig_pro_mechanism()
+    fig_control_vs_priorart()
+    fig_apee_results()
     print("done.")

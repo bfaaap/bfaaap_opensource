@@ -1,0 +1,176 @@
+% =====================================================================
+% Draft section for 作業7 (paper full revision) — §5
+% "Implementation Procedure" — instruction-style, to sub-subsection level.
+% Compiles in BOTH arXiv (article) and TACCESS (acmart). Cites: repo,
+% rp2040, arkit. Cross-refs: sec:realization, sec:clinical, sec:airback,
+% tab:participants (APEE participant table in §3.3).
+% Honest reproducibility note: a consolidated wiring schematic and a
+% build-clean main firmware are being finalized with the device co-author;
+% the repository's hardware notes track the remaining gaps.
+% =====================================================================
+
+\section{Implementation Procedure}
+\label{sec:impl}
+
+This section is written as a reproducibility guide: all software is open source
+and the hardware design files (CAD, print files, firmware sketches, bill of
+materials) are published in the project repository~\cite{repo}, so that a reader
+can rebuild the shared iOS controller, the \emph{Pro} acoustic device (the
+primary, hardware-intensive build), and the \emph{Switch} electronic device, and
+re-run the APEE-style evaluation of Section~\ref{sec:clinical}. Steps reference
+the realized architecture of Section~\ref{sec:realization}; paths below are
+folders in the repository.
+
+\subsection{Open-source repository and prerequisites}
+\label{sec:impl-repo}
+
+\subsubsection{Repository layout}
+\label{sec:impl-layout}
+The repository~\cite{repo} separates the shared controller from the two device
+lines: \texttt{ios-app/} (app source plus \texttt{CODE-STRUCTURE},
+\texttt{DESIGN-HIGHLIGHTS}, \texttt{BLE-CONNECTION-FLOW}, and \texttt{BUILD}
+notes); \texttt{device-pro-acoustic/} (\texttt{firmware/}, \texttt{hardware/}
+CAD and 3D-print files, \texttt{motor/}, \texttt{assembly/}, and a hardware
+availability note); \texttt{device-switch-electronic/}; shared \texttt{docs/}
+(\texttt{architecture/}, \texttt{operation/}, \texttt{toolchain/},
+\texttt{user-manual/}); and \texttt{bfaaap\_patent\_info/}. Code carries no
+personal signing identifiers, so a new developer supplies their own team and
+bundle identifier.
+
+\subsubsection{Toolchain prerequisites}
+\label{sec:impl-toolchain}
+The controller is built with Xcode and requires an Apple developer team and a
+TrueDepth (Face~ID-class) iPhone or iPad, because ARKit face tracking is
+device-only~\cite{arkit}. The device firmware is built from VS~Code with
+PlatformIO (or the Arduino extension), the Adafruit nRF52 board support package
+for the BLE board and the \texttt{arduino-pico} core for the RP2040 main
+board~\cite{rp2040}. The 3D-printed parts are produced with any slicer; the
+\texttt{docs/toolchain/} guide gives flashing and slicing details.
+
+\subsection{Building the iOS controller (shared by Pro and Switch)}
+\label{sec:impl-ios}
+
+\subsubsection{Configure signing and build}
+\label{sec:impl-ios-build}
+Clone the repository, open \texttt{ios-app/src}, set \texttt{DEVELOPMENT\_TEAM}
+and the bundle identifier to your own (placeholders are provided), keep automatic
+signing, and build to a connected TrueDepth device. The \texttt{ios-app/BUILD}
+note lists the exact steps; no proprietary credentials are needed.
+
+\subsubsection{Run and verify AR$\rightarrow$BLE operation}
+\label{sec:impl-ios-verify}
+On first launch, grant camera permission; the play screen shows the head-tracking
+state and turns red once the head passes the threshold. With a powered device
+nearby, the app discovers and name-filters \texttt{bFaaaPSwitch\_n}, connects to
+the selected channel, and begins streaming once the BLE write characteristic is
+ready.
+
+\subsubsection{Individualized pre-setting (offset and multiplier)}
+\label{sec:impl-preset}
+Before playing, the player performs a one-time \emph{individualized pre-setting}
+step in the app: they choose the threshold start-point (offset) and the multiplier
+to match their own comfortable range and speed of head motion, and the app stores
+this preset. This step is what turns the control law of
+Section~\ref{sec:control-law} into \emph{individualized control}---the same device
+serves an able-footed adult, a child, and a player with restricted head motion,
+each with their own offset/multiplier (e.g.\ the tracheostomy participant of
+Section~\ref{sec:impact} chose a small offset and a large multiplier). Treat this
+preset as a required deployment step for each new player.
+
+\subsection{Building the Pro device (acoustic; primary)}
+\label{sec:impl-pro}
+
+\subsubsection{Mechanical assembly and 3D-printed parts}
+\label{sec:impl-pro-mech}
+The chassis is an aluminum-extrusion frame with 3D-printed housings (the
+reference parts were printed on a 305\,mm-class printer in PLA+); the largest part
+needs a bed of about $\ge$300\,mm and $\sim$200\,mm of height. The drivetrain is
+motor~$\rightarrow$ timing belt $\rightarrow$ lead screw $\rightarrow$ push-rod
+(Section~\ref{sec:pro-chain}). The CAD, print files, and the bill of materials
+are in \texttt{device-pro-acoustic/hardware/}.
+
+\subsubsection{Electronics, motor drive, and power}
+\label{sec:impl-pro-elec}
+Two boards are used: an nRF52840-class BLE board and an RP2040 main board joined
+by UART. The \emph{reference} design published here uses an \emph{IQ smart-servo}
+motor driven over a serial interface; because that motor is now end of life, the
+\emph{next} version will use a closed-loop stepping motor (which accepts a
+DRV8825-compatible STEP/DIR interface; the specific motor model is not yet
+decided), but that firmware is still in development and is not the reference here
+(the hardware-availability note documents the planned substitution). Pedal
+reaction is sensed from \emph{motor power} rather than current, because power is
+robust to supply-voltage variation (on the IQ version the power is read by command
+from the motor); a commercial DC supply sized for the motor is recommended. A \emph{single-sheet KiCad
+schematic} of the reference (IQ) generation --- giving the full board-to-board
+wiring and the Pico pin map (BLE UART on GP0/GP1, the HX711 on GP2/GP3, the
+IQ-motor serial on GP4/GP5, the air-pump MOSFET on GP12, and the slider
+potentiometer on ADC0/GP26) and two power rails (+5\,V logic, +24\,V motor) ---
+is included in the repository~\cite{repo}; a stepper-version schematic and a
+build-clean stepper firmware are still being finalized with the device co-author.
+
+\subsubsection{Airback (reaction anchoring) and hand controller}
+\label{sec:impl-pro-air}
+Wire the air pump through a power MOSFET to a controller GPIO, plumb it to an air
+bag, and connect a small hand controller (an upper-limit \emph{slide
+potentiometer} read on ADC0/GP26, plus a pump on/off switch). At power-up the
+firmware inflates the airback until the
+pressure threshold anchors the device, then self-calibrates the lower travel end
+from the motor-power limit (a DIP switch sets the pressing force, $\sim$20--35\,W,
+which is piano-dependent; Section~\ref{sec:airback}).
+
+\subsubsection{Firmware flashing and device naming}
+\label{sec:impl-pro-fw}
+Flash the BLE board through its UF2 bootloader (Adafruit nRF52 workflow) and the
+RP2040 through BOOTSEL with the \texttt{arduino-pico} core, following
+\texttt{docs/toolchain/}. The advertised name (\texttt{bFaaaPSwitch\_1}..\texttt{\_4})
+is stored in the BLE board's flash so several units can coexist on distinct
+channels.
+
+\subsubsection{On-piano setup and self-calibration}
+\label{sec:impl-pro-setup}
+Place the device on a board spanning the pedals, align the push-rod over the
+sustain (damper) pedal, inflate the airback until the unit is firmly anchored,
+let the actuator auto-find the lower end against the pedal, set the upper end with
+the slider, and pick the on-type/off-type to match the instrument
+(\texttt{docs/operation/}). The setup is non-destructive and portable, which is
+what makes concert use --- not only home use --- practical.
+
+\subsection{Building the Switch device (electronic)}
+\label{sec:impl-switch}
+
+\subsubsection{Electronics and sustain-jack interface}
+\label{sec:impl-switch-elec}
+The Switch needs only the nRF52840-class board plus a relay or optocoupler from a
+GPIO pin to the instrument's sustain jack (a 6.3\,mm plug); there is no motor,
+drivetrain, or airback. An RGB LED provides the idle/armed/engaged color
+feedback.
+
+\subsubsection{Setup}
+\label{sec:impl-switch-setup}
+Connect the lead to the digital piano's sustain jack, pair the channel in the
+app, and set the on-type/off-type to match the jack polarity. Operation then
+follows the same head-angle control law as the Pro device.
+
+\subsection{Reproducing the APEE evaluation}
+\label{sec:impl-apee}
+
+\subsubsection{Test protocol}
+\label{sec:impl-apee-protocol}
+Recruit participants by class (I: able to use their own feet, as control; II:
+children; III: users with leg/neck disabilities). Each participant practices the
+reference score (the motif do--do--do, re--re--re, mi--mi--mi repeated four
+times), selects an offset and multiplier to taste, and records three conditions:
+no pedal (pattern~0), bFaaaP pedal pattern~1, and bFaaaP pedal pattern~2,
+followed by a short questionnaire (the participant table is
+Table~\ref{tab:participants}).
+
+\subsubsection{Analysis and statistics}
+\label{sec:impl-apee-analysis}
+Import each recording into an audio analyzer (Sonic Visualiser), export the
+note regions as images, and measure a tone-vibration area (TVA) with ImageJ's
+particle analysis. Normalize the no-pedal condition to $1.00$ and express
+patterns~1 and~2 as ratios, then compare conditions with paired $t$-tests and
+compare across classes, piano experience, and instruments with one-way ANOVA.
+This reproduces the result tables of Section~\ref{sec:clinical}, in which bFaaaP
+significantly increased sustain ($p<0.01$) and was statistically
+indistinguishable from a participant's own foot ($p>0.05$).

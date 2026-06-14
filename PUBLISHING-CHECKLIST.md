@@ -39,6 +39,18 @@ before pushing to a public GitHub repository.
       copyright**, intentionally **not redistributed** (referenced only). Keep it so.
 - [ ] `device-pro-acoustic/firmware/libraries/iq-module-communication-arduino/` —
       keep its original `LICENSE`/attribution intact; verify redistribution is allowed.
+- [ ] `device-pro-acoustic/hardware/schematic/` — the circuit schematic + block /
+      power diagrams are by **Reo Taguchi** (github.com/reodon), imported from
+      `reodon/copy_bfaaap_pro`, which has **no license file**. **Get Taguchi's
+      consent and a license** before public release; ideally also obtain the
+      **KiCad source** (only a PNG export is available; reportedly in Discord).
+- [ ] `device-pro-acoustic/hardware/cad/from-discord-2025/` and
+      `3d-print/from-discord-2025/` — CAD/STL shared by **H. Narusawa** in the team
+      **Discord**. **Get the author's consent + a license** before public release.
+- [ ] `device-pro-acoustic/hardware/PARTS-REFERENCE.md` + `hardware/reference/` —
+      adapted from `TomoShishido/bfaaapteam` (`docs/hardware.md`); confirm that
+      repo's content can be reused publicly. `DISCORD-FINDINGS.md` summarizes a
+      **private Discord**; build photos/videos are **kept out** of the repo.
 
 ## 4. Project license & patents
 

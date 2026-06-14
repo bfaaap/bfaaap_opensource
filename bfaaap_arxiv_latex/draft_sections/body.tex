@@ -1,0 +1,493 @@
+% Shared paper body (Introduction -> Conclusion), included by BOTH
+% main.tex (arXiv, article) and main_taccess.tex (TACCESS, acmart).
+% Figures use \Description{} (acmart defines it; article no-ops it via
+% \providecommand). Edit here once; both papers stay in sync.
+
+\section{Introduction}
+\label{sec:intro}
+Expressive piano performance relies heavily on the \emph{sustain (damper) pedal},
+which is operated by the foot. This foot requirement excludes a population that
+\emph{can} play the keys but cannot operate the pedal: wheelchair users and others
+with lower-limb impairments, small children whose feet do not yet reach the
+pedals, and some elderly and severely disabled players. The project began in 2018
+from exactly such a request: a wheelchair-using client asked whether the piano
+pedal could be motorized so that it could be ``pressed.''
+
+Crucially, the goal is not merely to switch a note on and off, but to let a player
+produce their \emph{own intended pedalling}---the timing and depth that expressive
+performance requires. We therefore frame bFaaaP as an \emph{inclusive design} and
+a \emph{human--machine interaction}: a smartphone controller that senses head
+angle with AI face tracking, paired with two device families that realize the
+pedal action---one for acoustic pianos and one for digital instruments. Accessible
+and assistive musical instruments~\cite{frid2019,ramirez2023,duarte2023,eyeharp},
+hands-free head-based interfaces~\cite{sumak2019,varona2008,manresa2014,arkit}, and
+robotic musical actuation~\cite{weinberg2020,scimeca2020,zappi2012} each inform the
+design, and existing assistive pedal aids~\cite{canassist,steingraeber,mouthpedal2008}
+show the need; bFaaaP differs in \emph{how} it reproduces intended pedalling and in
+\emph{evidence} that it does so.
+
+The contributions of this paper are:
+\begin{enumerate}
+  \item \textbf{An inclusive, hands-free head-angle interaction} that reproduces a
+  pianist's intended pedalling, delivered by one smartphone controller and two
+  co-equal device realizations (acoustic \emph{Pro}, electronic \emph{Switch}).
+  \item \textbf{The control \emph{law}, not the architecture, as the novelty}: a
+  quantitative, user-tunable mapping---angular dead-zone (offset $3$--$10^\circ$),
+  user multiplier ($10$--$50$), full action within $+2$--$10^\circ$, and a
+  pre-adjustable response speed---rather than the bare head$\rightarrow$pedal chain,
+  which prior art anticipates (Section~\ref{sec:control-law}).
+  \item \textbf{Human-subject clinical-style validation} (APEE, 15 participants):
+  bFaaaP increases sustained-tone energy ($p<0.01$), is indistinguishable from a
+  player's own foot ($p>0.05$), and works equally across adults, children, and
+  people with disabilities (Section~\ref{sec:clinical}).
+  \item \textbf{Concrete inclusive impact for named populations}, including a
+  participant with a leg disability and a tracheostomy, and an estimate of the
+  population served (Section~\ref{sec:impact}).
+  \item \textbf{Eyes-free, display-free operation suited to live performance}, with
+  public-concert evidence (Section~\ref{sec:eyesfree}).
+  \item \textbf{A reproducible, open-source realization} with a real-time
+  AR$\leftrightarrow$BLE rate-decoupling design and a non-destructive pneumatic
+  anchor (Sections~\ref{sec:realization} and~\ref{sec:impl}).
+\end{enumerate}
+
+% =====================================================================
+\section{Related work}
+\label{sec:related}
+
+\subsection{Assistive piano-pedal systems}
+Several systems let players who cannot use their feet operate a piano pedal.
+University of Victoria's CanAssist built a head-tilt ``Head-Activated Piano
+Pedal'' for a wheelchair pianist: a floor device presses the pedal under control
+of a headband sensor, engaging on a downward tilt and releasing on an upward
+tilt~\cite{canassist}. Steingraeber \& S\"ohne offers, for wheelchair pianists,
+electromagnetic pedal control integrated into the instrument, driven by helmet
+inclination sensors, a neck bracelet with reed switches, or a bite-force sensor
+that also conveys intermediate pedal positions~\cite{steingraeber,mouthpedal2008}.
+Electromechanical pedal activators for players with disabilities appear in the
+patent literature~\cite{hinsley1988,uspedal2008,uspedal2017}. bFaaaP differs by
+(i)~using a \emph{commodity smartphone} as the head sensor; (ii)~a
+\emph{quantitative, user-tunable} control law clinically tuned to the player;
+(iii)~\emph{non-destructive} placement on an \emph{unmodified} acoustic piano via
+pneumatic anchoring; and (iv)~being \emph{open source}.
+
+\subsection{Robotic and mechatronic musical actuation}
+Robotic and mechatronic systems perform music expressively, including
+piano-playing robots and pedal automation~\cite{weinberg2020,scimeca2020,zappi2012,piano_manipulator2025,ctf_actuator2020}.
+Such systems usually \emph{replace} the performer; bFaaaP instead \emph{augments}
+a human performer, mapping the player's own head motion to the pedal so the
+musical intention remains the player's.
+
+\subsection{Hands-free, head-based human--computer interfaces}
+Head movement (and gaze) is a well-studied accessible input for users with limited
+hand use---for pointer control, software switches, and hands-free
+operation~\cite{sumak2019,varona2008,manresa2014}---and commodity smartphone AR
+frameworks now provide robust on-device face/head pose
+estimation~\cite{arkit}. bFaaaP applies this idea to a continuous, expressive
+musical control with performance-grade timing.
+
+\subsection{Accessible digital musical instruments}
+Accessible digital musical instruments (ADMIs) make music-making reachable for
+people with motor disabilities through tangible, gaze, audio, and adapted
+interfaces~\cite{frid2019,ramirez2023,duarte2023,eyeharp}. bFaaaP is complementary:
+rather than a new instrument, it makes the \emph{conventional piano}'s pedal
+accessible, on both acoustic and digital instruments.
+
+% =====================================================================
+\section{Results}
+\label{sec:results}
+
+\subsection{bFaaaP as a new inclusive design}
+\label{sec:inclusive-design}
+bFaaaP is one smartphone controller plus two co-equal device realizations
+(Figures~\ref{fig:overview} and~\ref{fig:arch}). The smartphone
+(iOS; an iPhone/iPad with a TrueDepth front camera) tracks the player's head
+pitch with AR face tracking and computes a control value, which it transmits over
+a Nordic UART Service (NUS) BLE link. The device then operates the pedal so a note
+sustains while the head is tilted past a threshold and releases when the head
+returns. The same controller and control law serve \textbf{Pro} (a motor presses
+an \emph{acoustic} piano's sustain pedal) and \textbf{Switch} (the sustain of a
+\emph{digital} instrument is actuated electronically through its pedal jack).
+We treat the two as co-equal: Pro restores pedalling on the
+instruments where it is hardest (unmodified grands and uprights), while Switch's
+simplicity gives it very broad, low-cost reach across digital pianos and
+keyboards. The design intent throughout is to reproduce the player's
+\emph{intended} pedalling, not merely to enable an on/off effect.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_overview.pdf}
+\Description{Seven panels. (a) and (b) show the iOS app screen, white when neutral
+and red when the pedal is engaged. (c) is a flow diagram: head tilt to smartphone
+AI to BLE to the pedal device, branching to the Pro motor or the Switch electronic
+output, producing a sustained note. (d) shows the Pro device pressing an acoustic
+piano pedal on an anti-slip mat. (e) shows the hand controller with a slider and
+button. (f) shows the Switch unit next to a digital keyboard with the app on a
+tablet. (g) shows the Switch status LED in off, ready, and engaged colours.}
+\caption{System overview. \textbf{(a,b)} The shared iOS controller's play screen
+gives live feedback by colour: neutral (white/grey) below the head-angle threshold
+(a) and red once the head is tilted past it so the pedal engages (b).
+\textbf{(c)} Operating principle: a head tilt is sensed by smartphone AI (ARKit
+face tracking) and relayed over a BLE link (Nordic UART Service) to the pedal
+device, realized either as a motor that presses an acoustic pedal (\emph{Pro}) or
+as an electronic sustain switch (\emph{Switch}). \textbf{(d)} The Pro device
+pressing an acoustic piano's sustain pedal. \textbf{(e)} The Pro hand controller.
+\textbf{(f)} The Switch unit beside a digital keyboard, with the same iOS app on
+the tablet. \textbf{(g)} The Switch status LED mirrors the app state.}
+\label{fig:overview}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_architecture.pdf}
+\Description{Block diagram. Player head motion feeds the iOS controller (ARKit face
+tracking, CoreBluetooth), which sends BLE Nordic UART values plus engage/release
+signals to an nRF52840 BLE board. The BLE board either drives the sustain-pedal
+jack directly for the Switch line, or forwards one byte over UART to a Pico RP2040
+main board that drives the motor, belt, lead screw, and push-rod for the Pro line.}
+\caption{System architecture. One smartphone controller drives two co-equal device
+realizations (Switch: electronic; Pro: robotic).}
+\label{fig:arch}
+\end{figure}
+
+\subsection{The contribution is the control law, not the architecture}
+\label{sec:control-law}
+Let $\theta$ be the (downward) head pitch reported by the face tracker and
+$\theta_{\mathrm{off}}$ a user-calibrated offset. The transmitted pedal value is
+\begin{equation}
+v = \mathrm{clamp}\big(\,(\theta-\theta_{\mathrm{off}})\cdot m,\;0,\;99\,\big),
+\label{eq:law}
+\end{equation}
+where $m$ is a user-selected multiplier. The validated parameter ranges are an
+offset upper limit of $3$--$10^\circ$ and a multiplier of $10$--$50$, chosen so
+that a further $2$--$10^\circ$ of tilt reaches full pedal action
+(Figure~\ref{fig:control}a). Engage/release events use \emph{hysteresis}: engage
+when $\theta-\theta_{\mathrm{off}}\ge\tau$ while released, release when
+$\theta-\theta_{\mathrm{off}}<\tau-\delta$ while engaged, with a small dead-band
+$\delta$ (Figure~\ref{fig:control}b). The \emph{response speed} beyond the offset
+is itself adjustable in advance to the player.
+
+This quantitative, user-tunable mapping---not the head$\rightarrow$pedal
+architecture---is the inventive core. Patent examination of the underlying method
+found the bare architecture (a head sensor, a processor, an actuator, and a pedal)
+anticipated or obvious in view of a head-activated piano pedal~\cite{canassist}
+combined with head-gesture display/headset prior art~\cite{hmd_jp2017,headset_jp2012};
+the claims were granted on the \emph{specific} offset/multiplier law and the
+pre-adjustable response speed~\cite{jp6726319,jp7004771}. Figure~\ref{fig:cvp}
+contrasts the two: where binary prior art emits a fixed on/off at a single
+threshold, bFaaaP produces a continuous, proportional command whose dead-zone and
+slope each user pre-sets to taste. This per-player pre-setting of the offset and
+multiplier yields an \emph{individualized control}---which is precisely what lets
+very different players (Section~\ref{sec:impact}) reproduce their intended
+pedalling. The mapping is realized in software, and the per-player preset is a
+one-time deployment step, as described in Sections~\ref{sec:law-sw}
+and~\ref{sec:impl-preset}.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_control.pdf}
+\Description{Two plots. Left: transmitted value versus head angle above the offset,
+rising linearly with the multiplier and clamped at 99. Right: pedal state versus
+head angle showing a hysteresis loop with a dead-band between the engage and
+release thresholds.}
+\caption{Head-angle control law (Eq.~\ref{eq:law}). (a) The transmitted value maps
+the head angle above the offset, scaled by the user multiplier and clamped.
+(b) Engage/release use hysteresis with a small dead-band to avoid chatter.}
+\label{fig:control}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.92\linewidth]{figures/fig_control_vs_priorart.pdf}
+\Description{Line plot of pedal command versus head pitch above neutral. A dashed
+grey step shows binary on/off prior art switching fully on at a single threshold.
+Two solid lines show bFaaaP with a dead-zone offset and a user-tunable slope
+(multiplier): one with offset five degrees and multiplier ten, one with offset
+three degrees and multiplier thirty, both rising proportionally and clamping at the
+maximum.}
+\caption{The novelty is quantitative and user-tunable. Binary prior art emits a
+fixed on/off at one threshold; bFaaaP yields a proportional command whose dead-zone
+(offset $3$--$10^\circ$) and slope (multiplier $10$--$50$) the user sets.}
+\label{fig:cvp}
+\end{figure}
+
+\subsection{Clinical validation: the Auxiliary Pedal Effect Evaluation (APEE)}
+\label{sec:clinical}
+The control law and its parameter ranges were established and validated in a
+human-subject study, the Auxiliary Pedal Effect Evaluation (APEE), reported in the
+patent specification~\cite{jp6726319} and summarized here. Fifteen participants
+were grouped into three classes (Table~\ref{tab:participants}): Class~I, adults who
+\emph{can} use their own feet (controls); Class~II, children whose feet do not
+reach the pedals; and Class~III, people with leg/neck disabilities. Each
+participant practised a fixed motif and recorded it under three conditions:
+\emph{pattern~0} (no pedal), \emph{pattern~1} and \emph{pattern~2} (two pedalling
+patterns using bFaaaP); Class~I additionally recorded with their own foot as a
+control. Each recording was analysed by measuring a tone-vibration area (TVA) from
+the audio (via Sonic Visualiser and ImageJ), with pattern~0 normalized to $1.00$.
+
+\begin{table}[tbp]
+\caption{APEE participants ($n=15$), grouped by class, with the offset and
+multiplier ranges they chose. Overall, offsets spanned $3$--$19^\circ$ (with
+$5$--$10^\circ$ preferred) and multipliers $8$--$50$ ($20$--$40$ preferred).}
+\label{tab:participants}
+\small
+\begin{tabular}{@{}llp{4.6cm}cc@{}}
+\toprule
+Class & $n$ & Participants & Offset (deg) & Multiplier \\
+\midrule
+I (control) & 7 & adults able to use their own feet (incl.\ one elderly) & 5--19 & 15--40 \\
+II & 5 & children (ages 7--11) & 5 & 20--30 \\
+III & 3 & adults with disabilities: leg disability ($\times2$); leg disability + tracheostomy ($\times1$) & 3--10 & 30--50 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{bFaaaP produces a strong, controllable sustain.}
+Relative to no pedal, both bFaaaP patterns significantly increased the
+sustained-tone energy, and the two patterns differed from each other
+(Table~\ref{tab:sustain}, Figure~\ref{fig:apee}a)---evidence that the device gives
+not just ``a'' sustain but a \emph{controllable} one.
+
+\begin{table}[tbp]
+\caption{Sustain effect: tone-vibration area relative to no pedal ($n=34$ bFaaaP
+recordings). All paired comparisons are significant ($p<0.01$).}
+\label{tab:sustain}
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Condition & Mean (rel.\ TVA) & SD \\
+\midrule
+Pattern 0 (no pedal)   & 1.00 & 0.00 \\
+Pattern 1 (bFaaaP)     & 1.59 & 0.32 \\
+Pattern 2 (bFaaaP)     & 1.80 & 0.44 \\
+\midrule
+\multicolumn{3}{@{}l}{Paired $t$-test: P0--P1 $p=4.6{\times}10^{-12}$; P0--P2 $p=7.3{\times}10^{-12}$;}\\
+\multicolumn{3}{@{}l}{P1--P2 $p=2.3{\times}10^{-4}$.}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{bFaaaP is statistically equivalent to the player's own foot.}
+For Class~I participants, who could pedal with their own foot, the sustain
+achieved with bFaaaP did not differ significantly from the sustain achieved with
+their foot (Table~\ref{tab:vsfoot}, Figure~\ref{fig:apee}b). In other words,
+bFaaaP reproduces foot-quality pedalling---the basis for our claim that it
+realizes the player's \emph{intended} pedalling rather than a coarse substitute.
+
+\begin{table}[tbp]
+\caption{bFaaaP vs.\ the player's own foot (Class~I). No significant difference
+(two-sided $t$-test; equal variances not rejected, $F$-test $p>0.05$).}
+\label{tab:vsfoot}
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Condition & bFaaaP ($n{=}34$) & own foot ($n{=}9$) & $t$-test $p$ \\
+\midrule
+Pattern 1 & 1.59 & 1.47 & 0.33 (n.s.) \\
+Pattern 2 & 1.80 & 1.70 & 0.43 (n.s.) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_apee_results.pdf}
+\Description{Two bar charts. (a) Sustain effect: relative tone-vibration area for
+no pedal (1.00), bFaaaP pattern 1 (1.59), and bFaaaP pattern 2 (1.80), with error
+bars; all pairwise comparisons marked p less than 0.01. (b) bFaaaP versus own foot
+for patterns 1 and 2, with overlapping error bars marked not significant.}
+\caption{APEE clinical results. (a) Both bFaaaP patterns significantly increase the
+sustained-tone energy over no pedal ($p<0.01$). (b) bFaaaP is statistically
+indistinguishable from the player's own foot (n.s.).}
+\label{fig:apee}
+\end{figure}
+
+\paragraph{Piano experience did not matter; instrument did.}
+Splitting participants by piano experience ($\ge5$ vs.\ $<5$ years) showed no
+significant score difference ($t$-test $p>0.05$), indicating the device is usable
+without extensive training; differences \emph{between pianos} were significant
+(one-way ANOVA, $p<0.05$), as expected for different instruments.
+
+\subsection{Concrete inclusive impact across populations}
+\label{sec:impact}
+A central accessibility finding is that the sustain effect did \emph{not} differ
+significantly across the three participant classes (Table~\ref{tab:classes}):
+adults, children, and people with disabilities all benefited comparably. bFaaaP is
+thus not a narrow aid but a broadly inclusive one.
+
+\begin{table}[tbp]
+\caption{Sustain effect across participant classes (one-way ANOVA). No significant
+difference between adults (I), children (II), and people with disabilities (III).}
+\label{tab:classes}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Pattern & Class I & Class II & Class III & ANOVA $p$ \\
+\midrule
+Pattern 1 & 1.54 ($n{=}18$) & 1.78 ($n{=}10$) & 1.43 ($n{=}6$) & 0.068 (n.s.) \\
+Pattern 2 & 1.75 ($n{=}18$) & 1.91 ($n{=}10$) & 1.75 ($n{=}6$) & 0.66 (n.s.) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The user-tunable control law is what makes this breadth possible. One Class~III
+participant had a leg disability \emph{and} a tracheostomy, which restricted her
+range of head motion; she chose a \emph{small} offset ($3$--$5^\circ$) and a
+\emph{large} multiplier ($40$--$50$) so that her limited tilt still spanned the
+full pedal, and performed the target passage successfully. People with a
+tracheostomy are a substantial population---a 2018 national survey reported on the
+order of 7{,}395 patients on tracheostomy positive-pressure ventilation in Japan
+alone~\cite{tppv2018}, with many more having a tracheostomy generally---so a
+design that explicitly serves restricted head motion has real reach.
+
+A short post-study questionnaire (Table~\ref{tab:survey}) found most participants
+enjoyed bFaaaP and rated it positively; the most common reservation concerned
+ease of use, consistent with participant comments that releasing the pedal is
+slightly harder than pressing it and that ``the more you practise, the easier it
+becomes.''
+
+\begin{table}[tbp]
+\caption{Post-study questionnaire ($n=15$; counts of respondents).}
+\label{tab:survey}
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Question & Positive & Neutral & Negative \\
+\midrule
+Was it enjoyable?     & 9.0 & 5.0 & 1 \\
+Easy to use?          & 3.0 & 10.0 & 2 \\
+Does it look good?    & 4.5 & 7.5 & 3 \\
+Is the name good?     & 8.0 & 6.0 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Eyes-free, display-free control for live performance}
+\label{sec:eyesfree}
+A design insight, sharpened during patent examination, is that head-gesture
+interfaces that depend on a \emph{visual indicator}---e.g., a head-mounted display
+showing whether a threshold is crossed~\cite{hmd_jp2017}---are unsuitable for a
+\emph{performing pianist}, who must look at the score, the keys, and the audience.
+bFaaaP is deliberately \emph{eyes-free and display-free}: the player feels the
+sustain in the sound, and the only optional feedback (the app screen turning red,
+or the Switch LED) is for a helper, not the performer. This makes the interaction
+fit for live use, which we have validated in the field rather than only in the lab:
+bFaaaP has appeared in piano recitals, university festivals, an international
+assistive-equipment exhibition, and full public concerts (2024 and 2025), with a
+documented device-setup walkthrough during one concert~\cite{repo}. Players who
+cannot use the foot pedal---including a wheelchair user---performed pieces
+requiring sustain before live audiences.
+
+% --- 3.6 System realization (drafted to sub-subsection level) ---
+\input{draft_sections/3_6_system_realization}
+
+% =====================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Inclusive design and human--machine interaction}
+bFaaaP reframes pedal access from ``enable on/off'' to ``reproduce intended
+pedalling.'' The clinical equivalence to the player's own foot
+(Table~\ref{tab:vsfoot}) and the controllable difference between pedalling
+patterns (Table~\ref{tab:sustain}) indicate that the head channel carries genuine
+musical intention, not just a trigger. As a human--machine interaction this is a
+favourable trade: a single, natural degree of freedom (head tilt), made expressive
+by a quantitative law the user owns.
+
+\subsection{Accessibility impact across populations}
+Because the effect is statistically uniform across adults, children, and people
+with disabilities (Table~\ref{tab:classes}), bFaaaP is inclusive by evidence, not
+just by aspiration. The tunable law extends the reach to severe cases such as
+restricted head motion from a tracheostomy (Section~\ref{sec:impact}), and the
+two device lines cover both the acoustic instruments where pedalling is hardest to
+restore and the large installed base of digital pianos.
+
+\subsection{Comparison with existing systems}
+Table~\ref{tab:comparison} compares bFaaaP with representative prior systems on a
+literature basis. Relative to Steingraeber's instrument-integrated electromagnetic
+control~\cite{steingraeber,mouthpedal2008} and CanAssist's head-activated
+pedal~\cite{canassist}, bFaaaP is distinguished by a commodity-smartphone sensor,
+a quantitative \emph{user-tunable} (rather than binary) law, \emph{non-destructive}
+placement on an unmodified piano, explicit \emph{clinical} validation, and open
+source release. Its main present limitations are a dependence on a clear view of
+the face and per-instrument calibration (discussed below).
+
+\begin{table}[tbp]
+\caption{Comparison with representative assistive piano-pedal approaches
+(literature-based; n.r.\ = not reported).}
+\label{tab:comparison}
+\small
+\begin{tabular}{@{}p{2.9cm}p{2.7cm}cccc@{}}
+\toprule
+System & Input & Non-destructive & User-tunable & Commodity sensor & Open source \\
+\midrule
+\textbf{bFaaaP} (Pro/Switch) & head angle, smartphone AR & yes (airback) & yes (offset+mult.+speed) & yes & yes \\
+Steingraeber~\cite{steingraeber,mouthpedal2008} & helmet tilt / neck reed / bite force & no (integrated) & partial (bite) & no & no \\
+CanAssist~\cite{canassist} & head tilt, headband & yes (floor unit) & no (binary) & no & no \\
+Electromech.\ activators~\cite{hinsley1988,uspedal2008,uspedal2017} & varied & varies & typically binary & no & no \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Non-destructive anchoring and portability (airback)}
+A practical contribution is the pneumatic \emph{airback}
+(Section~\ref{sec:airback}). Pressing a pedal creates a reaction force that would
+push a light device away; rather than bolt the unit to a valuable, shared
+instrument, bFaaaP inflates a bag under a neighbouring pedal to absorb that force.
+The result is a device that is lightweight, mechanically simple, strongly anchored,
+and quick to set up and remove---so it suits not only home practice but
+\emph{concert} use on instruments that must not be modified. This portability is a
+meaningful accessibility property: it lets a player bring their pedalling to many
+venues rather than to one adapted piano.
+
+\subsection{Generality and the practical value of the controller}
+\label{sec:generality}
+The smartphone controller is, we argue, the component of highest practical value.
+It is a quantitative, user-tunable head-angle channel built on commodity hardware,
+and nothing about it is specific to a pedal: the same controller already drives two
+different actuators (a motor and an electronic switch), and the underlying
+device-controller method is patented independently of the pedal
+application~\cite{jp7004771}, covering electronic instruments and, more broadly,
+``any device.'' This generality matters in two ways. First, the \emph{Switch} line
+shows how cheaply the controller scales---an electronic sustain needs no
+drivetrain---so head-angle pedalling can reach the very large installed base of
+digital pianos and keyboards at low cost. Second, the controller is a reusable
+\emph{inclusive input}: the same eyes-free, tunable head channel could operate
+other expressive controls, other instruments, or assistive devices beyond music.
+We therefore see bFaaaP not only as a pedal aid but as a platform for inclusive,
+hands-free control of a wide range of products and services.
+
+\subsection{Limitations and future work}
+bFaaaP depends on a clear view of the player's face and on per-instrument
+calibration, and the present quantitative evidence is the APEE re-analysis plus
+field deployments rather than a controlled, pre-registered user study with latency
+and usability instruments; such a study (including more participants with
+disabilities) is planned. The reference Pro design published here uses an IQ
+smart-servo motor; because that motor is now end of life, a closed-loop stepping
+motor (with a DRV8825-compatible interface) is being developed as its successor,
+but that firmware is still early and is not yet the reference, as the open
+hardware documentation tracks. The Switch line invites its own formal evaluation;
+and while a single-sheet KiCad schematic of the IQ reference generation is already
+available in the repository, a stepper-version schematic and a build-clean
+stepper-firmware reference are still being finalized with the device co-author.
+Planned next-generation simplifications include a single 24\,V supply with
+on-board 5\,V regulation, and an airback that stays closed with only a release
+mechanism (and possibly pump-current rather than a pressure sensor) to make setup
+faster and more robust.
+
+% --- 5. Implementation Procedure (drafted to sub-subsection level) ---
+\input{draft_sections/5_implementation_procedure}
+
+% =====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+bFaaaP turns a small, natural head movement into expressive, foot-quality
+piano-pedal control. Its inventive core is a quantitative, user-tunable control
+law---an angular dead-zone, a user multiplier, and a pre-adjustable response
+speed---validated in a human-subject study to be statistically equivalent to a
+player's own foot and effective across adults, children, and people with
+disabilities, including a participant with a tracheostomy. One commodity-smartphone
+controller drives two co-equal realizations: a non-destructive robotic actuator
+for acoustic pianos and an electronic switch for digital instruments. By
+open-sourcing the full system---and offering the patented method free of charge for
+inclusive uses---we aim to make pedal-based piano performance inclusive: available
+to anyone, regardless of whether they can use a foot.

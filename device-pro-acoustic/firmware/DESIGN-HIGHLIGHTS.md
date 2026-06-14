@@ -89,7 +89,7 @@ flowchart TD
     D -->|"no, elapsed < 30s"| C
     D -->|"timeout 30s and still < low_p"| E["error beep (GP13), halt"]
     D -->|"yes -> device anchored"| F["2) auto_set(): step the drive toward the LOWER end"]
-    F --> G{"motor current (= reaction force / torque) >= threshold?"}
+    F --> G{"motor power (= reaction force / torque) >= threshold?"}
     G -->|no| F
     G -->|"yes -> hard stop hit"| H["back off a little; LOWER limit = down_pos"]
     H --> I([enter loop])
@@ -130,13 +130,24 @@ later pushes the sustain pedal.
 
 **2) Lower end (下端) — automatic, by reaction force — `auto_set()`.**
 The drive is stepped toward the pedal until it physically bottoms out. The
-firmware watches the **motor current**, which is proportional to **torque /
-reaction force**: when the push‑rod meets the hard stop the current rises past a
+firmware watches the **motor _power_**, which is proportional to **torque /
+reaction force**: when the push‑rod meets the hard stop the power rises past a
 threshold (`mot_cu_down`). That contact point (after a small back‑off) becomes
 the **lower limit `down_pos`** — the deepest the pedal is pressed. A safety cap
-(~65 mm) stops the rod being driven out. (IQ‑motor version: the force can come
-from the IQ module's power/current telemetry; stepper version: from an analog
-current sense.)
+(~65 mm) stops the rod being driven out.
+
+> **Why power, not current (per device co‑author):** the threshold is on **electrical
+> power**, not current, because the **current changes with the input voltage**
+> whereas **power stays consistent across supply voltages** — so a commercial,
+> off‑the‑shelf power supply can be used without re‑tuning. On the **IQ (v039B)**
+> version the power is **read by command from the IQ motor** (its telemetry). For
+> the planned **stepper successor**, the power‑measurement method is **not yet
+> decided** (no IQ telemetry).
+>
+> **Threshold value (v039B):** piano‑dependent (reaction force differs); set by a
+> **DIP switch** = **base 20 W + DIP, 1 W steps → 20–35 W** (20 W alone was too
+> weak; too strong makes the rod slip). The DIP switch also sets the lift above the
+> hard stop (5–20 mm), and a **50 mm travel cap** stops the rod being driven out.
 
 **3) Upper end (上端) — manual, by slider — `offset_AD_read()`.**
 The top of travel — where the pedal rests / releases — is **not** auto‑detected.
@@ -170,14 +181,19 @@ range; incoming `0–99` values from the app are mapped linearly between them
    small head jitter, so the motor isn't re‑commanded constantly.
 5. **Lower limit auto (by force), upper limit manual (by slider).** The lower
    end is found automatically — no limit switch — from the **rise in motor
-   current (reaction force/torque)** at the hard stop; the upper end is set
-   **live by the hand‑controller slider** (ADC A3). See *Self‑calibration &
-   anchoring* above. (The force thresholds are piano‑dependent and still need
-   real values.)
-6. **IQ trajectory control (v039B).** One command sets target displacement +
-   duration; the IQ servo then drives there and **holds against the pedal's
-   reaction force**. After the IQ motor was discontinued this was replaced by a
-   closed‑loop **stepper** (v052B).
+   _power_ (reaction force/torque)** at the hard stop; **power is used rather than
+   current because current changes with the supply voltage while power does not**
+   (so a commercial power supply needs no re‑tuning). The upper end is set
+   **live by the hand‑controller slider**. See *Self‑calibration & anchoring*
+   above. (The force/power thresholds are piano‑dependent and still need real
+   values.)
+6. **IQ trajectory control — the reference version (v039B).** One command sets
+   target displacement + duration; the IQ servo then drives there and **holds
+   against the pedal's reaction force**. This IQ version is the **current
+   reference design**. Because the IQ motor was discontinued, the **next** version
+   will use a closed‑loop **stepping motor** (which accepts a DRV8825‑compatible
+   STEP/DIR interface); that sketch (v052B) is still early development (see
+   *Status & caveats*).
 7. **Air‑jack anchoring at boot** with pressure feedback, a 30 s timeout, and an
    audible error if pressure can't be reached — so the unit is fixed before any
    pedal force is applied.

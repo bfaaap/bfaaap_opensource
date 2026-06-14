@@ -23,10 +23,15 @@ main board over a wired UART.
 ItsyBitsy nRF52840 Express** (the Switch firmware drives its **onboard DotStar**
 on `DATAPIN 8 / CLOCKPIN 6`; pin labels `13/USB/G/B/3V/RST` match the internal
 wiring sketch); main board = **Raspberry Pi Pico**; pump driver = **n‑MOSFET
-2SK4017** on GP12; air‑pressure sensor = **HX711**; pedal reaction force =
-analog motor‑current sense; upper‑limit input = a **slide potentiometer** wired
-in (via an RJ45/LAN cable from the hand controller). Stepper generation (v052B)
-prototyped with a **DRV8825** STEP/DIR driver. See
+2SK4017** on GP12; air‑pressure sensor = **HX711**; pedal reaction force = from
+**motor _power_** (not current — power is supply‑voltage‑robust; on the IQ version
+the power is read **by command from the IQ motor**); upper‑limit input = a
+hand‑controller **slide potentiometer ("slide volume")** on **ADC0/GP26**
+(confirmed; the body's RJ45/LAN socket is currently unused). The **next**
+generation will use a closed‑loop stepper with a **DRV8825‑compatible** STEP/DIR
+interface (**specific motor model not yet decided**; DRV8825 itself is the old
+standard module used only in early plain‑stepper tests); the v052B stepper sketch
+is early development and a buildable version is **not currently available**. See
 [`../assembly/`](../assembly/) for the full BOM and
 [`../HARDWARE-AVAILABILITY.md`](../HARDWARE-AVAILABILITY.md) for replacements.
 

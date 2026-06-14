@@ -67,9 +67,12 @@ keep the link bug‑free. See
 
 - iPhone / iPad with **TrueDepth front camera** (Face ID) — for head tracking
 - **Raspberry Pi Pico** (main) + **Adafruit ItsyBitsy nRF52840 Express** (BLE bridge, onboard DotStar)
-- **IQ‑FORTIQ‑M42BLS‑100** motor (EOL → closed‑loop stepper / DRV8825) driving a
+- **IQ‑FORTIQ‑M42BLS‑100** motor (**current reference, v039B**; EOL → successor is a
+  closed‑loop stepper with a **DRV8825‑compatible interface**) driving a
   **2GT belt → T10 lead screw → push‑rod** on an **aluminium‑extrusion frame**
-- **HX711** pressure sensor, **2SK4017** MOSFET (pump), **slide pot** (travel limit), **24 V PSU**
+- **HX711** air‑pressure sensor, **2SK4017** MOSFET (pump), a **travel‑limit slider**
+  (exact part being confirmed), **commercial 24 V PSU**
+  *(self‑calibration thresholds use motor **power**, not current, so supply voltage doesn't matter)*
 - 3D‑printed parts (PLA+) + **airback** anchoring kit (air jack 119×11 cm + pump + hand controller)
 - Full BOM with part numbers/prices: [`device-pro-acoustic/assembly/`](device-pro-acoustic/assembly/)
 
@@ -115,10 +118,14 @@ library under `device-pro-acoustic/firmware/libraries/`).
 - **User manual:** [`docs/user-manual/`](docs/user-manual/) ·
   **History:** [`docs/HISTORY.md`](docs/HISTORY.md) ·
   **Members:** [`docs/members/`](docs/members/)
-- **📄 Preprint (paper):** a LaTeX manuscript describing the system and its
-  control method is in [`bfaaap_arxiv_latex/`](bfaaap_arxiv_latex/) (planned for
-  arXiv; **arXiv ID to be added**). Authors: T. Shishido (corresponding),
-  H. Narusawa.
+- **📄 Preprint (paper):** a LaTeX manuscript is in
+  [`bfaaap_arxiv_latex/`](bfaaap_arxiv_latex/) in **two synchronized versions** —
+  a generic **arXiv** preprint (`main.tex`) and an **ACM TACCESS** submission
+  (`main_taccess.tex`). It frames bFaaaP as an inclusive design / human–machine
+  interaction whose inventive core is a **quantitative, user‑tunable head‑angle
+  control law**, validated by a **human‑subject clinical evaluation (APEE)**
+  (planned for arXiv; **arXiv ID to be added**). Authors: T. Shishido
+  (corresponding), H. Narusawa.
 
 ## Patents, trademark & design
 
@@ -137,6 +144,24 @@ JPO (J‑PlatPat) records are reachable by number and from the inventors' ORCID
 (e.g. T. Shishido — <https://orcid.org/0000-0002-8944-2088>). Inventors:
 H. Narusawa, M. Ootaki, T. Shishido, K. Yamaguchi, D. Tokushige. **bFaaaP®** is a
 registered trademark; the glasses‑mounted motion sensor is a registered design.
+
+**Family & what was actually granted.** JP 6726319 (the *Pro* acoustic pedal
+robot) is the Japan national phase of the English PCT; JP 7004771 (the head‑angle
+*controller*, generalizing beyond the pedal) is a **divisional** of it. Examination
+found the bare architecture (head sensor → processor → actuator → pedal) already
+known from a head‑activated piano pedal (CanAssist, U. Victoria) plus head‑gesture
+HMD/headset references; the patents were granted on the **specific, human‑subject‑
+validated control law** — a small **offset/dead‑zone (upper limit 3–10°)**, a
+**user‑selected multiplier (10–50)**, **full pedal action within +2–10°**, and a
+**pre‑adjustable response speed** — demonstrated usable by people with leg
+disability and even a tracheostomy.
+
+📂 **Full prosecution file, prior‑art citations, and a plain‑language patent guide:**
+[`bfaaap_patent_info/`](bfaaap_patent_info/) — start with
+[`bfaaap_patent_info/general_description/`](bfaaap_patent_info/general_description/README.md)
+(Japanese patent procedure with diagrams, the English‑PCT→JP family, dated
+prosecution timelines, examiner‑vs‑applicant points, the ISR citation list, and
+academic take‑aways for the papers).
 
 ### Patent licensing
 

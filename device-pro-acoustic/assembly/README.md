@@ -46,8 +46,8 @@ Crowd Supply). Total ≈ **¥56,700** + power supply (¥2,000–7,600).
 | **BLE board** | **Adafruit ItsyBitsy nRF52840 Express** (onboard DotStar) | Bluetooth ↔ UART bridge; pins 13/USB/G/B/3V/RST |
 | **Pump driver** | **n‑MOSFET 2SK4017** | GP12 → pump |
 | **Pressure sensor** | **HX711** (used as air‑pressure sensor) | air‑jack pressure feedback |
-| **Upper‑limit input** | **slide potentiometer** | sets the travel top (read on an ADC) |
-| **Hand controller link** | **LAN connector + LAN cable (RJ45)** | carries slider + switch signals to the body |
+| **Upper‑limit input** | **slide potentiometer ("slide volume")** ✅ | sets the travel top; read on Pico **ADC0/GP26** (confirmed by the device co‑author) |
+| **Hand controller link** | LAN connector + cable (RJ45) — *legacy* | listed in the original BOM but **currently unused** (per the device co‑author); the pot + switch are wired in directly |
 | Misc | 8‑pin connector, tact switch, power switch, LED, resistors, capacitors, wire | |
 
 ### Power

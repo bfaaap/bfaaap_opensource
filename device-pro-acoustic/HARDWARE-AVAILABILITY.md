@@ -12,8 +12,8 @@
 
 | Component (original, per BOM) | Status | Suggested replacement | Code change |
 |----------------------|--------|-----------------------|-------------|
-| **IQ‑FORTIQ‑M42BLS‑100** (IQ motor, 100 W) | **EOL** — firmware notes IQ supply stopped | **Closed‑loop stepper** (team prototyped with **DRV8825**; integrated option: MKS SERVO42C/D) | Moderate (STEP/DIR or serial position) |
-| **Adafruit ItsyBitsy nRF52840 Express** (onboard DotStar) | Current | same, or **Adafruit Feather nRF52840** / **Seeed XIAO nRF52840** | Minimal (same Bluefruit API; mind the DotStar pins) |
+| **IQ‑FORTIQ‑M42BLS‑100** (IQ motor, 100 W) — **current reference (v039B)** | **EOL** — firmware notes IQ supply stopped | **Closed‑loop stepper** with a **DRV8825‑compatible** interface (integrated option: MKS SERVO42C/D). *Note:* DRV8825 itself is the old standard module used only in early plain‑stepper tests; it is **not** the new motor | Moderate (STEP/DIR or serial position) |
+| **nRF52840 BLE board** — Pro uses **Akizuki `AE-NRF52840` (g117484)** or **Adafruit Feather nRF52840 Express (4062)** (per the team `hardware.md` + schematic; *not* ItsyBitsy — that's the Switch's DotStar LED variant) | Current | any nRF52840 + Adafruit nRF52 BSP | Minimal (same Bluefruit API; Pro firmware has no LED routine) |
 | **Raspberry Pi Pico** main board | Current | **Pico** / **Pico 2 (RP2350)** | None (mind ADC pins) |
 | **HX711** (air‑pressure sensor) | Current/common | Any HX711 breakout | None |
 | **n‑MOSFET 2SK4017** (pump drive) | Common | any logic‑level n‑MOSFET | None |
@@ -23,12 +23,16 @@
 
 ## 1. Drive motor — IQ / Fortiq → closed‑loop stepper
 
-**What happened.** The original Pro device used the **IQ‑FORTIQ‑M42BLS‑100**
-(IQ Motion Control, 100 W; ≈¥33,000 on Crowd Supply). The project's own firmware
-notes the **IQ motor supply stopped** (`IQモーターの供給停止…`), and the latest
-sketch (`v052B`) was rewritten for a **closed‑loop stepping motor** — the team
-prototyped the stepper path with a **DRV8825** STEP/DIR driver (see the
-`DRV8825_TEST` / `updown_test_naru` design notes). IQ Motion Control now operates
+**What happened.** The **current reference** Pro device (firmware **v039B**) uses
+the **IQ‑FORTIQ‑M42BLS‑100** (IQ Motion Control, 100 W; ≈¥33,000 on Crowd Supply).
+The project's own firmware notes the **IQ motor supply stopped**
+(`IQモーターの供給停止…`); the **next** version is being rewritten for a
+**closed‑loop stepping motor** (which exposes a **DRV8825‑compatible** STEP/DIR
+interface). **The specific successor motor is not yet decided** (device co‑author,
+2026‑06‑14). Early plain‑stepper tests used a stock **DRV8825** module (see the
+`DRV8825_TEST` / `updown_test_naru` design notes) — but **DRV8825 is an old,
+standard module, not the new motor itself**, and the stepper sketch (`v052B`) is
+still early development. IQ Motion Control now operates
 as **Vertiq**; the small IQ modules are no longer easy to obtain, while the
 industrial **Fortiq** line may still exist — confirm directly with the vendor.
 (An even earlier prototype used an **Oriental Motor** αSTEP‑class motor driven via
@@ -66,10 +70,17 @@ and what a *closed‑loop* (not open‑loop) stepper also does. The anchoring
    `trajectory_angular_displacement`) and lets you read encoder position/load
    back for the auto‑calibration.
 3. **Lower‑limit by force still works.** Closed‑loop drivers report **load /
-   current**, so the "drive down until reaction force rises → set `down_pos`"
-   calibration can read load over serial instead of the analog current sense.
-   Set real values for the thresholds (`mot_cu_down`, etc.), which are currently
-   placeholders.
+   power**, so the "drive down until reaction force rises → set `down_pos`"
+   calibration can read load over serial. **Threshold on _power_, not current**
+   (per the device co‑author): current changes with the supply voltage, whereas
+   power stays consistent, so a commercial power supply can be used without
+   re‑tuning. On the **IQ version the power is read by command from the IQ motor**;
+   for a stepper successor the **power‑measurement method is not yet decided**.
+   **Threshold value (v039B):** the pressing power is **piano‑dependent**, set by a
+   **DIP switch** = **base 20 W + DIP (1 W steps) → 20–35 W** (20 W alone proved
+   too weak; too strong makes the rod slip). A **50 mm travel cap** prevents the
+   push‑rod from being driven out; the DIP switch also sets the lift above the
+   hard stop (**5–20 mm**).
 4. **Add an enable/limit safety.** Use the driver's stall/overcurrent and,
    ideally, a hardware limit so a mis‑set threshold can't over‑drive the rod.
 
@@ -107,12 +118,14 @@ to your board's actual pin labels (the XIAO's pin map differs from the Feather's
 The Pico (RP2040) is current, and **Pico 2 (RP2350)** is the newer generation;
 both are supported by the `arduino-pico` core. Little to change.
 
-**Tip — watch the ADC pins.** The firmware reads `A0`, `A1`, and **`A3`**. On a
-stock Pico, `A0–A2` = GP26–GP28, but **`A3` (GP29) is wired to the on‑board VSYS
-voltage divider**, not a free analog input. So **move the slider input off `A3`**
-(e.g. to `A2`/GP28) or use an external ADC (e.g. ADS1115) when consolidating the
-sensors (motor current, air pressure, slider) — the current sketch reuses A0 for
-two purposes, which also needs cleaning up.
+**Tip — watch the ADC pins (resolved by the schematic).** Some firmware reads
+`A3`; on a stock Pico **`A3` (GP29) is the on‑board VSYS voltage divider**, not a
+free analog input. The **circuit schematic** (see
+[`hardware/schematic/`](hardware/schematic/)) puts the slider potentiometer on
+**`ADC0` / GP26**, which is correct — so **align the firmware to the schematic
+(slider on ADC0/GP26)** rather than `A3`. When consolidating the analog inputs
+(motor power/load, air pressure, slider), also clean up the sketch's reuse of `A0`
+for two purposes.
 
 ---
 

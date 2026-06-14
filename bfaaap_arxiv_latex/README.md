@@ -1,23 +1,61 @@
 # bFaaaP — arXiv preprint (LaTeX)
 
-**Draft 1** of a preprint describing the bFaaaP system (the head-angle control
-method, the Pro robotic actuator + airback anchoring, and the Switch electronic
-actuator).
+A preprint describing the bFaaaP system, framed as an **inclusive design /
+human–machine interaction**: the **quantitative, user‑tunable head‑angle control
+law** (the inventive core per patent examination), its **human‑subject clinical
+validation (APEE)**, and the two co‑equal device realizations — the **Pro**
+robotic actuator + airback anchoring for acoustic pianos and the **Switch**
+electronic actuator for digital instruments.
 
-- Manuscript: [`main.tex`](main.tex) — self-contained, compiles with **pdfLaTeX**
-  (standard packages only).
+- Manuscripts compile with **pdfLaTeX + BibTeX**.
 - Authors: **Tomoyuki Shishido** (corresponding & first author),
   **Hiroyuki Narusawa**.
 
+## Two versions of the manuscript
+
+- [`main.tex`](main.tex) — **generic preprint** (`article` class), self-contained,
+  for arXiv.
+- [`main_taccess.tex`](main_taccess.tex) — **ACM TACCESS submission version**
+  (`acmart`, `[manuscript,review,screen]`, `\acmJournal{TACCESS}`), with CCS
+  concepts, keywords, ORCID, figure `\Description` alt-text, and the **ACM Reference
+  Format** bibliography from [`refs.bib`](refs.bib). See
+  [`JOURNAL-TARGETS.md`](JOURNAL-TARGETS.md) for the TACCESS submission rules,
+  suggested editors, and reviewer candidates. *(For double-anonymous review, add the
+  `anonymous` class option and strip identifying text.)*
+
 ## Build
+
+Both papers now use **BibTeX** (`refs.bib`) and **share one body**
+(`draft_sections/body.tex`, which itself `\input`s the System‑realization and
+Implementation‑Procedure sections), so the two versions stay in sync — edit the
+shared files once.
 
 ```sh
 # 1) (re)generate figures — requires matplotlib + numpy
 python3 figures/scripts.py        # writes figures/*.pdf (vector) and *.png (600 DPI)
-# 2) compile
+# 2a) generic preprint (arXiv, article)
 pdflatex main.tex
-pdflatex main.tex                 # run twice to resolve references
+bibtex   main
+pdflatex main.tex
+pdflatex main.tex                 # resolve refs/citations
+# 2b) ACM TACCESS version (acmart, ACM-Reference-Format)
+pdflatex main_taccess.tex
+bibtex   main_taccess
+pdflatex main_taccess.tex
+pdflatex main_taccess.tex
 ```
+
+## Structure (shared body)
+
+- `main.tex` / `main_taccess.tex` — per‑version preamble (class, title, authors,
+  abstract, CCS/keywords) + declarations + bibliography.
+- [`draft_sections/body.tex`](draft_sections/body.tex) — the **shared** body
+  (Introduction → Conclusion), included by both papers.
+- [`draft_sections/3_6_system_realization.tex`](draft_sections/3_6_system_realization.tex)
+  and [`draft_sections/5_implementation_procedure.tex`](draft_sections/5_implementation_procedure.tex)
+  — sub‑subsection‑level sections, `\input` from the body.
+- Figure alt‑text uses `\Description{}` (acmart defines it; `main.tex` provides a
+  no‑op so the shared body also compiles under `article`).
 
 ## Figures
 
@@ -26,11 +64,13 @@ publication quality:
 
 - [`figures/scripts.py`](figures/scripts.py) — one small function per figure;
   outputs both a **vector PDF** (used by LaTeX) and a **600 DPI PNG** (≥ 300 DPI).
-- `fig_overview` (photos of the iOS screen + the Pro device, with an operating-
-  principle diagram; uses `overview_ios.jpg` and `overview_device.png`),
-  `fig_architecture` (system data flow), `fig_control` (angle→value mapping +
-  engage/release hysteresis), `fig_rate_decoupling` (AR vs BLE timing),
-  `fig_pro_mechanism` (drivetrain + airback).
+- `fig_overview` (real photos of the iOS screen, the Pro device, and the Switch,
+  with an operating‑principle diagram), `fig_architecture` (system data flow),
+  `fig_control` (angle→value mapping + engage/release hysteresis),
+  **`fig_control_vs_priorart`** (quantitative user‑tunable mapping vs.\ binary
+  prior art), `fig_rate_decoupling` (AR vs BLE timing), `fig_pro_mechanism`
+  (drivetrain + airback), and **`fig_apee_results`** (clinical APEE results:
+  sustain effect and bFaaaP‑vs‑own‑foot).
 
 Edit `scripts.py` and re-run it to change any figure, then recompile.
 
@@ -46,21 +86,43 @@ Edit `scripts.py` and re-run it to change any figure, then recompile.
 (The project originally considered `cs.RO`; we recommend `cs.HC` primary with
 `cs.RO` cross-list. Final choice is the authors'.)
 
+## Where to submit (journal targets)
+
+A vetted shortlist of candidate journals — by topic fit, with open-access fees
+(APC), impact factor, peer-review rigor, and a predatory-journal avoidance guide —
+is in **[`JOURNAL-TARGETS.md`](JOURNAL-TARGETS.md)**. Short version: the strongest
+fit is an **accessibility / rehabilitation-engineering** venue
+(ACM TACCESS, or J. of NeuroEngineering and Rehabilitation), with robotics
+(IEEE RA-L, Frontiers in Robotics and AI) and reputable broad venues
+(Scientific Reports, IEEE Access, PeerJ CS) as alternatives.
+
 ## Status / TODO before submission
 
 - [x] Author affiliations set per T.\,Shishido's recent record
   (SeemeData Labs, Inc.; Shishido \& Associates), with ORCID. **Conflict of
   interest** and **Funding** sections added.
-- [ ] Add the corresponding author's **email** (paywalled source; to confirm).
+- [x] Corresponding author's **email** added (`shishid@saaipf.com`).
 - [x] **Related work** citations added (accessible DMIs, hands-free/head HCI,
   robotic piano/music).
-- [x] Vector/300+ DPI figures generated by `figures/scripts.py` (overview with
-  photos, architecture, control, rate‑decoupling, Pro mechanism).
-- [ ] Optionally add more device/airback **photos** and the Mermaid flowcharts
-  from the repo for the camera‑ready version.
+- [x] Vector/300+ DPI figures generated by `figures/scripts.py` (overview,
+  architecture, control, **control‑vs‑prior‑art**, rate‑decoupling, Pro mechanism,
+  **APEE results**).
+- [x] **Full revision (logic‑level rewrite):** reframed as inclusive design / HMI;
+  Results restructured (inclusive design → control law → APEE clinical validation
+  → inclusive impact → eyes‑free performance → system realization); Discussion
+  expanded (incl.\ comparison table + controller generality); Implementation
+  Procedure added; declarations (COI / patent availability / data & code).
+- [x] **APEE clinical data** (patent Tables) added as primary data: participants,
+  sustain effect, bFaaaP‑vs‑own‑foot, class ANOVA, questionnaire.
+- [x] **References expanded** (`refs.bib`, ~32 entries): the two patents + PCT, the
+  prior art cited during examination, and re‑searched comparison/HCI/accessibility
+  literature.
 - [ ] Decide the project **license + patent grant** (see
   [`../PUBLISHING-CHECKLIST.md`](../PUBLISHING-CHECKLIST.md)).
-- [ ] Optionally add a quantitative user study (latency/accuracy/usability).
+- [ ] Optionally add a controlled, pre‑registered **user study**
+  (latency/accuracy/usability) beyond the APEE re‑analysis.
+- [ ] (TACCESS) Regenerate **CCS Concepts** with the ACM CCS tool; confirm the
+  current single/double‑anonymous setting before submission.
 - [ ] After posting, add the **arXiv ID/DOI** here and in the top
   [`../README.md`](../README.md).
 

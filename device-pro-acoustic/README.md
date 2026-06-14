@@ -13,10 +13,12 @@ mechanism keeps the whole unit from sliding under the motor's reaction force.
 | Folder | What |
 |--------|------|
 | [`firmware/`](firmware/) | RP2040 / Raspberry Pi Pico firmware + the IQ motor library |
-| [`hardware/`](hardware/) | Mechanical design: `cad/` (FreeCAD), `3d-print/` (STL/3MF), `airback/`, `enclosure-labels/` |
+| [`hardware/`](hardware/) | Mechanical design: `cad/` (FreeCAD), `3d-print/` (STL/3MF), `airback/`, **`schematic/`** (circuit), **`reference/`**, `enclosure-labels/` |
+| [`hardware/PARTS-REFERENCE.md`](hardware/PARTS-REFERENCE.md) | **Authoritative parts list** (boards, motor, connectors) with vendor links |
 | [`motor/`](motor/) | Which motor to use + links to vendor docs |
 | [`assembly/`](assembly/) | Build guide & bill of materials |
 | [`HARDWARE-AVAILABILITY.md`](HARDWARE-AVAILABILITY.md) | ⚠️ EOL parts (IQ motor) + current replacements + firmware‑adaptation tips + links |
+| [`DISCORD-FINDINGS.md`](DISCORD-FINDINGS.md) | Engineering summary from the team Discord + co‑author Q&A (parts, calibration, dev env, next‑gen ideas) |
 
 ## How a press happens
 

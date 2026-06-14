@@ -44,11 +44,16 @@ line operates the same from the app's side.)
 2. **Select the channel** matching your device (1–4). The app connects only to a
    `bFaaaPSwitch_n` device.
 3. Hold the iPhone/iPad so the **front (TrueDepth) camera sees your face**.
-4. **Calibrate the neutral position** (the offset / zero) so a normal head pose
-   means "pedal up".
-5. Adjust the **multiplier slider** for sensitivity (how much head tilt = full
-   pedal).
-6. **Tilt your head** to engage the sustain; return to neutral to release. The
+4. **Individualized pre‑setting (one‑time per player — important).** In the app,
+   set the **threshold start‑point (offset)** so a normal head pose means
+   "pedal up", and set the **multiplier** for how much head tilt reaches a full
+   pedal. **Each player presets these to their own comfortable range and speed of
+   head motion**, and the app stores the preset. This is what makes the control
+   **individualized**: the same device serves an able‑footed adult, a child, and a
+   player with restricted head motion — e.g. someone whose neck movement is limited
+   picks a **small offset and a large multiplier**. Redo this preset for each new
+   player or sitting position.
+5. **Tilt your head** to engage the sustain; return to neutral to release. The
    screen is **white at rest and turns red when engaged**, so you can see the
    state at a glance. (Same app and behaviour for both Pro and Switch.)
 

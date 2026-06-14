@@ -35,9 +35,14 @@ The air pump is operated by a small **hand controller** with:
 **Physical realization (from device photos):** the air jack is a **blue
 inflatable bag** placed on a **non‑slip rubber mat**, connected by a tube to a
 **quick‑connect air fitting** on the body's I/O panel (which also carries a
-**toggle switch** and an **RJ45 jack** for the hand controller). The hand
-controller is a 3D‑printed hand‑held unit (~13–15 cm) with the slide
-potentiometer and a button, wired to the body through an **RJ45 / LAN cable**.
+**toggle switch** and a socket for the hand controller). The hand controller is a
+3D‑printed hand‑held unit (~13–15 cm) with a slider and a button.
+
+> ✅ **Confirmed (device co‑author, 2026‑06‑14):** the travel‑limit input is a
+> **slide potentiometer ("slide volume")**, read on the Pico **ADC0/GP26**. The
+> **RJ45/LAN socket on the body is currently *unused*** (legacy) — the hand
+> controller's potentiometer and switch are wired in directly (see the
+> [schematic](../schematic/)).
 
 ## Status
 

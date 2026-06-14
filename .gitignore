@@ -45,6 +45,7 @@ xcuserdata/
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+*.cut
 bfaaap_arxiv_latex/*.log
 
 # Editor
