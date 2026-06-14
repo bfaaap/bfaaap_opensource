@@ -38,6 +38,16 @@ inflatable bag** placed on a **non‑slip rubber mat**, connected by a tube to a
 **toggle switch** and a socket for the hand controller). The hand controller is a
 3D‑printed hand‑held unit (~13–15 cm) with a slider and a button.
 
+The blue **air‑pump wedge ("air‑jack")** and the aluminium **drive unit** are
+visible together in this build photo (the metal **air valve** — rubber‑visible
+side is the input — is shown next to it):
+
+![Disassembled Pro showing the blue airback wedge, the aluminium drive unit, motor and boards](../photos/pro_components_airback_and_drive.jpg)
+
+![Airback metal air valve close-up](../photos/airback_air_valve.jpg)
+
+More build photos: [`../photos/`](../photos/).
+
 > ✅ **Confirmed (device co‑author, 2026‑06‑14):** the travel‑limit input is a
 > **slide potentiometer ("slide volume")**, read on the Pico **ADC0/GP26**. The
 > **RJ45/LAN socket on the body is currently *unused*** (legacy) — the hand

@@ -49,6 +49,9 @@ before pushing to a public GitHub repository.
       **Discord**. **Narusawa consented (2026-06-14)** to co-authorship, GitHub name
       credit, and including this CAD. *(A project license still needs to be chosen
       before publishing — see §4.)*
+- [ ] `device-pro-acoustic/hardware/photos/` — build photos (airback + drive unit)
+      by **R. Taguchi** from the Discord. **Get the photographer's consent** before
+      public release (no people/PII shown; consent still needed).
 - [ ] `device-pro-acoustic/hardware/PARTS-REFERENCE.md` + `hardware/reference/` —
       adapted from `TomoShishido/bfaaapteam` (`docs/hardware.md`); confirm that
       repo's content can be reused publicly. `DISCORD-FINDINGS.md` summarizes a

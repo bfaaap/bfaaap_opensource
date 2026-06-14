@@ -9,8 +9,12 @@ hardware/
 ├── 3d-print/          Ready-to-print meshes (.stl) and slicer projects (.3mf)
 ├── airback/           Anchoring mechanism (air bag + pump + hand controller)
 ├── schematic/         Circuit schematic + block/power diagrams (by R. Taguchi)
+├── photos/            Real build photos (airback + drive unit; by R. Taguchi)
 └── enclosure-labels/  Product / enclosure label artwork (review before publishing)
 ```
+
+> 📷 **Build photos** of the airback and drive unit are in
+> [`photos/`](photos/) (from the team Discord).
 
 > 📐 **Wiring:** a **single‑sheet KiCad schematic** of the whole Pro device (IQ /
 > v039B reference generation) is in [`schematic/`](schematic/), together with the
