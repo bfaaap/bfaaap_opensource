@@ -56,8 +56,11 @@ before pushing to a public GitHub repository.
 
 ## 4. Project license & patents
 
-- [ ] Choose and add the project `LICENSE` (see the placeholder file).
-      Suggested: software MIT/Apache-2.0, hardware CERN-OHL or CC-BY-SA-4.0.
+- [ ] Choose and add the project `LICENSE` (see the proposed plan in `LICENSE`).
+      **Proposed (pending final decision):** software → **Apache-2.0** (explicit
+      patent grant), hardware → **CERN-OHL-W-2.0** (alt. CERN-OHL-S / CC-BY-SA-4.0),
+      documentation → **CC-BY-4.0**. Then replace `LICENSE` with the actual texts
+      and add per-layer license files.
 - [ ] **Patent decision (important).** The control method is patented in Japan —
       **JP 6726319 B2** (Auxiliary pedal system) and **JP 7004771 B2** (Device
       controller); priority‑basis PCT **WO 2019/176164**. Policy (in README/LICENSE):

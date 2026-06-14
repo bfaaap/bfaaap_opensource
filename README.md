@@ -94,9 +94,21 @@ keep the link bug‑free. See
 
 ## License
 
-Project license is **not yet chosen** — see [`LICENSE`](LICENSE) and the
-checklist. Third‑party components keep their own licenses (e.g. the IQ module
-library under `device-pro-acoustic/firmware/libraries/`).
+A final license is **not yet adopted** (decision pending). The **proposed** plan
+(see [`LICENSE`](LICENSE)) is a three‑layer split:
+
+| Layer | Proposed license | Why |
+|------|------------------|-----|
+| **Software** (iOS app, firmware) | **Apache‑2.0** | explicit **patent grant** (important for a patented project); MIT is silent on patents |
+| **Hardware** (CAD, 3D‑print, schematic) | **CERN‑OHL‑W‑2.0** *(alt. CERN‑OHL‑S / CC‑BY‑SA‑4.0)* | open‑hardware license for physical designs |
+| **Documentation** | **CC‑BY‑4.0** | attribution for prose/figures |
+
+Patents are handled separately (free for public/inclusive uses — see
+[Patent licensing](#patent-licensing)). Third‑party components keep their own
+licenses (e.g. the IQ module library under
+`device-pro-acoustic/firmware/libraries/`); imported schematic/CAD need
+contributor consent before public release (see
+[`PUBLISHING-CHECKLIST.md`](PUBLISHING-CHECKLIST.md)).
 
 ## Demo & links
 

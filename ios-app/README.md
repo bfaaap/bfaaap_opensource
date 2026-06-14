@@ -31,3 +31,6 @@ BLE protocol is identical; only the device hardware differs.
 
 Start with [`CODE-STRUCTURE.md`](CODE-STRUCTURE.md), then
 [`DESIGN-HIGHLIGHTS.md`](DESIGN-HIGHLIGHTS.md), then build via [`BUILD.md`](BUILD.md).
+
+---
+**License (proposed, pending final decision):** the iOS app source is intended to be released under the **Apache License 2.0** (explicit patent grant). See [`../LICENSE`](../LICENSE).

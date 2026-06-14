@@ -61,3 +61,6 @@ version also add the IQ library. Hold **BOOTSEL**, upload, verify pins/parameter
 > TODO before publishing: exact wiring (motor driver ↔ Pico, BLE board ↔ Pico),
 > pinned board‑core/library versions, motor & driver part numbers, and the
 > calibration constants. Tracked in the project's reproducibility gap analysis.
+
+---
+**License (proposed, pending final decision):** firmware is intended to be released under the **Apache License 2.0** (explicit patent grant). Third‑party libraries (e.g. the IQ module library) keep their own licenses. See [`../../LICENSE`](../../LICENSE).

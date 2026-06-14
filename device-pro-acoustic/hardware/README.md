@@ -41,3 +41,6 @@ hardware/
 - Print material/orientation/supports: document recommended settings.
 - Wiring (motor ↔ Pico) and the airback pump/controller schematic: to be added.
 - Reconcile CAD ↔ STL revisions and add a per‑part index before publishing.
+
+---
+**License (proposed, pending final decision):** the hardware designs (CAD, 3D‑print files, schematic) are intended to be released under **CERN‑OHL‑W‑2.0** (alt. CERN‑OHL‑S / CC‑BY‑SA‑4.0). Imported schematic/CAD need contributor consent first. See [`../../LICENSE`](../../LICENSE).

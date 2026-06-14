@@ -1,33 +1,57 @@
-LICENSE — TO BE CHOSEN BEFORE PUBLICATION
-=========================================
+LICENSE — PROPOSED (NOT YET FINAL)
+==================================
 
-No open-source license has been selected for this project yet. Until a license
-is chosen and added here, **all rights are reserved** and the contents must not
-be treated as freely reusable.
+A final license has **not yet been formally adopted**. Until the chosen license
+texts are added here, **all rights are reserved** and the contents must not be
+treated as freely reusable. The scheme below is the project's **proposed plan**
+(subject to the authors' final decision before publication).
 
-Recommended options (decide per the project's goals):
+PROPOSED LICENSING (three layers)
+---------------------------------
 
-  - Software (iOS app, firmware):   MIT  or  Apache-2.0
-  - Hardware (CAD, 3D-print files):  CERN-OHL-S/-W  or  CC-BY-4.0 / CC-BY-SA-4.0
-  - Documentation:                   CC-BY-4.0
+  - Software  (iOS app, firmware)              ->  Apache License 2.0
+  - Hardware  (CAD, 3D-print files, schematic) ->  CERN-OHL-W-2.0
+                                                   (alt.: CERN-OHL-S-2.0 or CC-BY-SA-4.0)
+  - Documentation                              ->  CC-BY-4.0
 
-Note: a dual approach (software under MIT/Apache, hardware under CERN-OHL or
-CC-BY-SA) is common for projects that ship both code and physical designs.
+Why this split:
+  - Apache-2.0 for code gives users an EXPLICIT PATENT GRANT (plus a patent-
+    retaliation clause), which matters for a patented project; MIT is silent on
+    patents. Apache also keeps trademarks separate (protecting bFaaaP(R)).
+  - Hardware and documentation are not software, so they use an open-hardware /
+    Creative-Commons license rather than a software license.
 
-PATENTS: the pedal-control method (head-angle threshold + press speed) is patented
-in Japan -- JP 6726319 B2 "Auxiliary pedal system" and JP 7004771 B2 "Device
-controller"; priority-basis PCT (English): WO 2019/176164. Patent licensing
-generally depends on the counterparty's intended embodiment, BUT for genuinely
-public/open-purpose uses the authors intend to grant a licence FREE OF CHARGE.
-In particular, for products or services that help people with disabilities (and
-others who need it) participate in society more inclusively -- even commercial,
-paid ones -- bFaaaP-related patent licensing is, as a matter of policy, granted
-FREE OF CHARGE. Contact Tomoyuki Shishido (https://bfaaap.com ; ORCID
-0000-0002-8944-2088). For software reuse, also prefer a licence with an explicit
-PATENT GRANT (e.g. Apache-2.0). See README (Patents) and PUBLISHING-CHECKLIST.md.
+PATENTS
+-------
+The pedal-control method (head-angle threshold + press speed/preference) is
+patented in Japan -- JP 6726319 B2 "Auxiliary pedal system" and JP 7004771 B2
+"Device controller"; priority-basis PCT (English): WO 2019/176164. Patentees:
+Tomoyuki Shishido and Ootaki & Architects (Otaki Architectural Office).
 
-Third-party components retain their own licenses and are NOT relicensed:
-  - firmware/libraries/iq-module-communication-arduino/  → see its LICENSE file
-  - Motor datasheets (motor/) are vendor copyright — referenced, not redistributed.
+Patent licensing generally depends on the counterparty's intended embodiment,
+BUT for genuinely public/open-purpose uses the authors intend to grant a licence
+FREE OF CHARGE. In particular, for products or services that help people with
+disabilities (and others who need it) participate in society more inclusively --
+even commercial, paid ones -- bFaaaP-related patent licensing is, as a matter of
+policy, granted FREE OF CHARGE. Contact Tomoyuki Shishido (https://bfaaap.com ;
+ORCID 0000-0002-8944-2088).
 
-ACTION: replace this file with the chosen license text before going public.
+Scope note: the Apache-2.0 patent grant covers contributions as distributed (the
+code). The right to PRACTISE the invention in a physical device is governed by the
+separate patent policy above; the NOTICE/README states this so the two are not
+confused.
+
+THIRD-PARTY COMPONENTS (retain their own licenses, NOT relicensed)
+-----------------------------------------------------------------
+  - device-pro-acoustic/firmware/libraries/iq-module-communication-arduino/
+        -> keep its own LICENSE/attribution.
+  - device-pro-acoustic/motor/ datasheets -> vendor copyright (referenced, not
+        redistributed).
+  - device-pro-acoustic/hardware/schematic/ (R. Taguchi), .../from-discord-2025/
+        CAD (H. Narusawa), and PARTS-REFERENCE/reference (from
+        TomoShishido/bfaaapteam) -> contributor CONSENT + a license are required
+        before public release (Narusawa has consented; Taguchi pending). See
+        PUBLISHING-CHECKLIST.md.
+
+ACTION before going public: confirm the choices above, then replace this file with
+the actual license texts (and add per-layer LICENSE files as needed).
