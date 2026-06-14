@@ -12,15 +12,16 @@ reference generation. It supersedes earlier guesses about the BLE board.
 | Role | Part | Vendor / link |
 |------|------|---------------|
 | **Main board (pedal/motor control)** | **Raspberry Pi Pico** (RP2040) | [raspberrypi.com](https://www.raspberrypi.com/products/raspberry-pi-pico/) · [datasheet](https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf) · pinout in [`reference/rpi_pico_pinout.svg`](reference/rpi_pico_pinout.svg) |
-| **BLE board (receiver)** — option 1 | **nRF52840 BLE board (Akizuki `AE-NRF52840`, `g117484`)** | [akizukidenshi g117484](https://akizukidenshi.com/catalog/g/g117484/) · [datasheet](https://akizukidenshi.com/goodsaffix/AE-NRF52840.pdf) |
-| **BLE board (receiver)** — option 2 | **Adafruit Feather nRF52840 Express** (ID 4062) | [adafruit.com/product/4062](https://www.adafruit.com/product/4062) · [guide](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather) |
+| **BLE board (receiver)** — **confirmed** | **nRF52840 BLE board (Akizuki `AE-NRF52840`, `g117484`)** ✅ | [akizukidenshi g117484](https://akizukidenshi.com/catalog/g/g117484/) · [datasheet](https://akizukidenshi.com/goodsaffix/AE-NRF52840.pdf) |
+| **BLE board (receiver)** — alternative | **Adafruit Feather nRF52840 Express** (ID 4062) | [adafruit.com/product/4062](https://www.adafruit.com/product/4062) · [guide](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather) |
 
-> **BLE board note.** The team's hardware reference and Taguchi's schematic use the
-> **Akizuki AE‑NRF52840 / Adafruit Feather nRF52840**, *not* the ItsyBitsy. The
-> ItsyBitsy/DotStar appears in the **Switch** firmware's colour‑LED routine; the
-> **Pro** BLE firmware is "the Switch BLE code minus the LED and sleep routines"
-> (per the device co‑author), so the Pro board needs no DotStar. (Which exact board
-> ships is still being finalized — see the questions docs.)
+> **BLE board (confirmed by the device co‑author, 2026‑06‑14):** the shipping board
+> is the **Akizuki `AE-NRF52840` (g117484)** — chosen because it is **cheaper**,
+> uses the **same BLE module**, and reports the **same board ID** (the Adafruit
+> Feather nRF52840 is a compatible alternative). It is **not** the ItsyBitsy: the
+> ItsyBitsy/DotStar appears in the **Switch** firmware's colour‑LED routine, while
+> the **Pro** BLE firmware is "the Switch BLE code minus the LED and sleep
+> routines," so the Pro board needs no DotStar.
 
 ## Drive motor
 

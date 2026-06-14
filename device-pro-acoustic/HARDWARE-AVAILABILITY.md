@@ -13,7 +13,7 @@
 | Component (original, per BOM) | Status | Suggested replacement | Code change |
 |----------------------|--------|-----------------------|-------------|
 | **IQ‑FORTIQ‑M42BLS‑100** (IQ motor, 100 W) — **current reference (v039B)** | **EOL** — firmware notes IQ supply stopped | **Closed‑loop stepper** with a **DRV8825‑compatible** interface (integrated option: MKS SERVO42C/D). *Note:* DRV8825 itself is the old standard module used only in early plain‑stepper tests; it is **not** the new motor | Moderate (STEP/DIR or serial position) |
-| **nRF52840 BLE board** — Pro uses **Akizuki `AE-NRF52840` (g117484)** or **Adafruit Feather nRF52840 Express (4062)** (per the team `hardware.md` + schematic; *not* ItsyBitsy — that's the Switch's DotStar LED variant) | Current | any nRF52840 + Adafruit nRF52 BSP | Minimal (same Bluefruit API; Pro firmware has no LED routine) |
+| **nRF52840 BLE board** — Pro uses **Akizuki `AE-NRF52840` (g117484)** ✅ (confirmed: cheaper, same BLE module, same board ID); **Adafruit Feather nRF52840 (4062)** is a compatible alternative. *Not* ItsyBitsy (that's the Switch's DotStar LED variant). | Current | any nRF52840 + Adafruit nRF52 BSP | Minimal (same Bluefruit API; Pro firmware has no LED routine) |
 | **Raspberry Pi Pico** main board | Current | **Pico** / **Pico 2 (RP2350)** | None (mind ADC pins) |
 | **HX711** (air‑pressure sensor) | Current/common | Any HX711 breakout | None |
 | **n‑MOSFET 2SK4017** (pump drive) | Common | any logic‑level n‑MOSFET | None |

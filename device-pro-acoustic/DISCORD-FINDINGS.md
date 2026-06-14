@@ -14,11 +14,12 @@
 See [`hardware/PARTS-REFERENCE.md`](hardware/PARTS-REFERENCE.md) for vendor links
 and [`hardware/schematic/`](hardware/schematic/) for the schematic + pin map.
 
-- **Boards:** Raspberry Pi **Pico** (main) + **nRF52840 BLE board** —
-  **Akizuki `AE-NRF52840` (g117484)** or **Adafruit Feather nRF52840 Express
-  (4062)** (re-stocked at Akizuki, 2025-03). *Not* the ItsyBitsy: the ItsyBitsy/
-  DotStar is the **Switch**'s LED variant; the **Pro** BLE firmware = the Switch
-  BLE code **minus the LED and sleep routines**.
+- **Boards:** Raspberry Pi **Pico** (main) + **nRF52840 BLE board** = the
+  **Akizuki `AE-NRF52840` (g117484)** (confirmed by the co-author: cheaper, same
+  BLE module, same board ID; re-stocked at Akizuki 2025-03). The **Adafruit
+  Feather nRF52840 Express (4062)** is a compatible alternative. *Not* the
+  ItsyBitsy: the ItsyBitsy/DotStar is the **Switch**'s LED variant; the **Pro**
+  BLE firmware = the Switch BLE code **minus the LED and sleep routines**.
 - **Motor:** IQ **Fortiq BLS42** (M42BLS, 100 W), **+24 V**, serial via
   `H1_RX`/`H2_TX` ↔ Pico GP4/GP5. Connectors: TBL009-254-07GY-2GY (signal),
   TBLH10-350-02BK (power), 3-pin Dupont header.
@@ -85,8 +86,14 @@ These are explicitly **future-device tasks**:
 - **Mechanical BOM:** no suitable ready data found; will likely need to be
   **measured from the parts** (still pending).
 
-## 6. Still open (asked of the co-authors)
-- Stepper successor: exact motor model; power/load measurement method.
-- Mechanical BOM (screws/bearings, part↔STL map, print orientation).
-- Switch: relay/optocoupler part + sustain-jack wiring (n/f polarity).
-- Exact BLE board that ships; consent/license for the imported CAD & schematic.
+## 6. Status of open items (co-author Q&A)
+- ✅ **BLE board resolved:** Akizuki **AE-NRF52840 (g117484)** (cheaper, same BLE
+  module, same board ID).
+- ✅ **Consent (Narusawa, 2026-06-14):** agreed to **co-authorship**, **GitHub name
+  credit**, and **including the Discord CAD** in the (eventually public) repo.
+- ⏳ **Deferred until after the co-author's hospital discharge:** mechanical BOM
+  (screws/bearings, part↔STL map, print orientation); Switch relay/optocoupler
+  part + sustain-jack wiring (n/f polarity).
+- ⏳ **Undecided:** stepper successor motor model + power/load measurement method.
+- ⏳ **Taguchi:** schematic KiCad source (in Discord), and consent/license for the
+  imported schematic + `bfaaapteam` content.

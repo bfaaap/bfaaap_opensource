@@ -27,9 +27,10 @@ The KiCad sheet is the **single‑sheet system schematic** the project needed. I
 matches the **IQ (v039B) reference** firmware. Key facts read directly from it:
 
 ### Boards & main parts
-- **BLE board** — drawn as an **Adafruit Feather (generic)** symbol. *(The BOM
-  and other docs list an Adafruit **ItsyBitsy nRF52840**; which exact board is
-  used is an open question below — the generic Feather may be a stand‑in symbol.)*
+- **BLE board** — drawn as an **Adafruit Feather (generic)** symbol; the actual
+  board is the **Akizuki `AE-NRF52840` (g117484)** (confirmed by the co‑author —
+  cheaper, same BLE module, same board ID; the Feather symbol is a stand‑in, and
+  the Adafruit Feather nRF52840 is a compatible alternative).
 - **Main board** — **Raspberry Pi Pico (RP2040)**.
 - **Motor** — **M1 = M42BLS** (the IQ‑FORTIQ‑M42BLS), powered from **+24 V**,
   controlled over a **serial** pair (`H1_RX` / `H2_TX`).
@@ -77,8 +78,9 @@ between the two dates.
 - **Schematic source location:** the original files are **in the team's Discord
   (`bFaaaP`)** — see open question 2 (asking Taguchi to share them for the repo).
 
-## Open questions for Taguchi (see CLAUDE.md §43, §45)
-1. Exact BLE board: **Adafruit Feather** (as drawn) or **ItsyBitsy nRF52840** (as in the BOM)?
+## Open questions for Taguchi (see CLAUDE.md §43, §45, §48)
+1. ~~Exact BLE board~~ — **resolved:** the board is the **Akizuki `AE-NRF52840`
+   (g117484)** (co‑author, 2026‑06‑14); the Feather symbol is a stand‑in.
 2. The **KiCad source** is reportedly in the team's Discord — can the
    `.kicad_sch`/`.kicad_pro` (and any **PCB/Gerbers**) be shared for the repo
    (only a PNG export is here)?
