@@ -1,7 +1,7 @@
 # Pro device — parts reference (boards, motor, connectors)
 
 > **Source / attribution.** Adapted from the team's `bfaaapteam` repository
-> (`docs/hardware.md`, by R. Taguchi & H. Narusawa) and the team Discord.
+> (`docs/hardware.md`, by Taguchi & H. Narusawa) and the team Discord.
 > Reference images are in [`reference/`](reference/).
 
 This is the **authoritative parts list with vendor links** for the IQ (v039B)

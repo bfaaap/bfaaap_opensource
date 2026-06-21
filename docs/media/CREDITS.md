@@ -30,7 +30,7 @@ Generated with matplotlib (data/process figures). **CC‑BY‑4.0.**
 
 - `poster_concert_*.jpg`, `bfaaap_promotion.png` — bFaaaP event posters/promotion. **© bFaaaP team / Platanus.**
 - `../members/*.jpg|png` — member caricatures by **Saki Shiokawa (塩川紗季)**.
-- `../../device-pro-acoustic/hardware/photos/*.jpg` — build photos. **© bFaaaP team** (R. Taguchi).
+- `../../device-pro-acoustic/hardware/photos/*.jpg` — build photos. **© bFaaaP team** (Taguchi).
 
 > Generation note: AI figures are produced locally with the private tooling in
 > `AI-assistedSupport/` (not part of this repo); only the **output images** are committed
