@@ -1,18 +1,24 @@
-LICENSE — PROPOSED (NOT YET FINAL)
-==================================
+LICENSE
+=======
 
-A final license has **not yet been formally adopted**. Until the chosen license
-texts are added here, **all rights are reserved** and the contents must not be
-treated as freely reusable. The scheme below is the project's **proposed plan**
-(subject to the authors' final decision before publication).
+This project is multi-licensed **by layer**. Each file is governed by the license
+for its layer below. SPDX license identifiers are used throughout; the full,
+verbatim license texts are in the `LICENSES/` directory.
 
-PROPOSED LICENSING (three layers)
----------------------------------
+LICENSING (three layers) — ADOPTED
+----------------------------------
 
-  - Software  (iOS app, firmware)              ->  Apache License 2.0
-  - Hardware  (CAD, 3D-print files, schematic) ->  CERN-OHL-W-2.0
-                                                   (alt.: CERN-OHL-S-2.0 or CC-BY-SA-4.0)
-  - Documentation                              ->  CC-BY-4.0
+  - Software   (iOS app, firmware)               ->  Apache-2.0        (LICENSES/Apache-2.0.txt)
+  - Hardware   (CAD, 3D-print files, schematic)  ->  CERN-OHL-W-2.0    (LICENSES/CERN-OHL-W-2.0.txt)
+  - Documentation                                ->  CC-BY-4.0         (LICENSES/CC-BY-4.0.txt)
+
+Copyright (c) 2020-2026 Tomoyuki Shishido and the bFaaaP contributors.
+
+Which layer a file is in:
+  - ios-app/** and **/firmware/**                 -> Apache-2.0
+  - **/hardware/** (CAD, schematic, 3D-print)     -> CERN-OHL-W-2.0
+  - docs/** and documentation (*.md, figures)     -> CC-BY-4.0
+  Each subtree's README also states its layer; when in doubt, contact the authors.
 
 Why this split:
   - Apache-2.0 for code gives users an EXPLICIT PATENT GRANT (plus a patent-
@@ -41,17 +47,29 @@ code). The right to PRACTISE the invention in a physical device is governed by t
 separate patent policy above; the NOTICE/README states this so the two are not
 confused.
 
+CONTRIBUTOR CONSENT (imported, contributor-authored materials)
+--------------------------------------------------------------
+The following contributed materials are included WITH the contributor's consent
+and are released under the layer license above:
+  - device-pro-acoustic/hardware/schematic/ (incl. KiCad sources) and
+    device-pro-acoustic/hardware/photos/ (build photos)
+        -- Taguchi (github.com/reodon). CONSENTED 2026-06-18; the author has
+        agreed to waive rights to the maximum extent to permit open release.
+        Licensed under the hardware layer (CERN-OHL-W-2.0).
+  - device-pro-acoustic/.../from-discord-2025/ CAD
+        -- H. Narusawa. CONSENTED. Licensed under the hardware layer (CERN-OHL-W-2.0).
+  - PARTS-REFERENCE/reference (from TomoShishido/bfaaapteam)
+        -- the project's own material.
+
 THIRD-PARTY COMPONENTS (retain their own licenses, NOT relicensed)
 -----------------------------------------------------------------
   - device-pro-acoustic/firmware/libraries/iq-module-communication-arduino/
-        -> keep its own LICENSE/attribution.
+        -> keeps its own LICENSE/attribution.
   - device-pro-acoustic/motor/ datasheets -> vendor copyright (referenced, not
         redistributed).
-  - device-pro-acoustic/hardware/schematic/ (R. Taguchi), .../from-discord-2025/
-        CAD (H. Narusawa), and PARTS-REFERENCE/reference (from
-        TomoShishido/bfaaapteam) -> contributor CONSENT + a license are required
-        before public release (Narusawa has consented; Taguchi pending). See
-        PUBLISHING-CHECKLIST.md.
 
-ACTION before going public: confirm the choices above, then replace this file with
-the actual license texts (and add per-layer LICENSE files as needed).
+TRADEMARKS
+----------
+"bFaaaP" and the bFaaaP logo are trademarks of the authors and are NOT licensed by
+the licenses above (Apache-2.0 sec. 6). Use that could imply endorsement requires
+permission.

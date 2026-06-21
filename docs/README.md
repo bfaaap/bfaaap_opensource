@@ -28,4 +28,4 @@ iOS code documentation is in [`../ios-app/`](../ios-app/)
 > separate `i18n/` subfolders.
 
 ---
-**License (proposed, pending final decision):** documentation is intended to be released under **CC‑BY‑4.0**. See [`../LICENSE`](../LICENSE).
+**License (adopted):** documentation is released under **CC‑BY‑4.0**. See [`../LICENSE`](../LICENSE).

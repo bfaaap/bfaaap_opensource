@@ -6,7 +6,7 @@
 > Personal/build photos and videos are **not** published (kept private); CAD/code
 > imported here need author **consent + license** before public release
 > (see [`../PUBLISHING-CHECKLIST.md`](../PUBLISHING-CHECKLIST.md)).
-> Contributors referenced: H. Narusawa (device/firmware), R. Taguchi (schematic,
+> Contributors referenced: H. Narusawa (device/firmware), Taguchi (schematic,
 > build), M. Ootaki, H. Tanaka, T. Shishido.
 
 ## 1. Confirmed parts & wiring (IQ / v039B reference)
@@ -95,5 +95,7 @@ These are explicitly **future-device tasks**:
   (screws/bearings, part↔STL map, print orientation); Switch relay/optocoupler
   part + sustain-jack wiring (n/f polarity).
 - ⏳ **Undecided:** stepper successor motor model + power/load measurement method.
-- ⏳ **Taguchi:** schematic KiCad source (in Discord), and consent/license for the
-  imported schematic + `bfaaapteam` content.
+- ✅ **Taguchi:** consent/license **obtained (2026-06-18)** for the imported schematic
+  + build photos (hardware layer → CERN-OHL-W-2.0). KiCad source still to be shared
+  from Discord (a detailed technical reply is coming). `bfaaapteam` is the project's
+  own content.

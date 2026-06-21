@@ -59,9 +59,9 @@ A **patent engineer (特許技術者)** at SK Patent firm who supports bFaaaP on
 
 ---
 
-### Kana — *piano tuner*
+### kana — *piano tuner*
 
-![Kana](kana.png)
+![kana](kana.png)
 
 A **piano tuner**, raised by musician parents. She studied performance, then chose
 tuning to see the piano "from a different angle." She reflects deeply on how the
