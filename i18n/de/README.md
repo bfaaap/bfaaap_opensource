@@ -15,8 +15,8 @@ mit der vollen Ausdruckskraft des Pedals spielen können. Und es ist **Open Sour
 Repository enthält alles, um das Gerät zu bauen und den Controller selbst zu betreiben.
 
 ### Hier starten
-🌱 **Neu?** → [**Die bFaaaP‑Geschichte**](../../docs/story.md) · [Funktionsweise](docs/how-it-works.md) · [Glossar](../../docs/GLOSSARY.md)
-🔧 **Selber bauen** → [**Selbst bauen**](../../docs/build/) (iOS · Pro · Switch)
+🌱 **Neu?** → [**Die bFaaaP‑Geschichte**](docs/story.md) · [Funktionsweise](docs/how-it-works.md) · [Glossar](docs/GLOSSARY.md)
+🔧 **Selber bauen** → [**Selbst bauen**](docs/build/) (iOS · Pro · Switch)
 🗂 **Quelldateien finden** → [Quellenübersicht](../../docs/SOURCE-MAP.md) — welche Datei/Abbildung/Code zu welcher Erklärung gehört
 🤖 **Hilfe bekommen** → [KI‑gestützter Support](docs/ai-support.md) · 💛 [Projekt unterstützen](SUPPORT.md)
 
@@ -64,7 +64,7 @@ Siehe [`ios-app/DESIGN-HIGHLIGHTS.md`](../../ios-app/DESIGN-HIGHLIGHTS.md).
 
 ## Selber bauen
 
-Öffne den [**Build‑Hub**](../../docs/build/) und wähle eine Linie. Kurzfassung (Pro):
+Öffne den [**Build‑Hub**](docs/build/) und wähle eine Linie. Kurzfassung (Pro):
 
 1. Mechanische Teile **drucken & montieren** — [`device-pro-acoustic/hardware/`](../../device-pro-acoustic/hardware/).
 2. Beide Boards **verdrahten & flashen** — [`docs/toolchain/`](../../docs/toolchain/) (VS Code / PlatformIO / Arduino).
@@ -93,7 +93,7 @@ Maintainern geprüftes Q&A (keine Sofortantwort; echte Menschen prüfen jede Ant
 
 bFaaaP begann **2018** mit dem Wunsch einer Rollstuhlnutzerin, Klavier zu spielen, und wuchs zu
 einem Team aus Ingenieuren und Musikern. Den ganzen Weg — mit Vorstellung der Mitglieder und
-**allen Aufführungs‑Videos** — gibt es in **[Die bFaaaP‑Geschichte](../../docs/story.md)**.
+**allen Aufführungs‑Videos** — gibt es in **[Die bFaaaP‑Geschichte](docs/story.md)**.
 
 ![Platanus with bFaaaP — Konzert](../../docs/media/poster_concert_pro_2025.jpg)
 

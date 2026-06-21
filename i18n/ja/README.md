@@ -14,8 +14,8 @@
 このリポジトリには、装置を作りコントローラを動かすために必要なものが**すべて**そろっています。
 
 ### はじめに
-🌱 **初めての方へ** → [**bFaaaP の物語**](../../docs/story.md) · [仕組み](docs/how-it-works.md) · [用語集](../../docs/GLOSSARY.md)
-🔧 **作ってみる** → [**自分で作る**](../../docs/build/)（iOS・Pro・Switch）
+🌱 **初めての方へ** → [**bFaaaP の物語**](docs/story.md) · [仕組み](docs/how-it-works.md) · [用語集](docs/GLOSSARY.md)
+🔧 **作ってみる** → [**自分で作る**](docs/build/)（iOS・Pro・Switch）
 🗂 **元ファイルを探す** → [ソースマップ](../../docs/SOURCE-MAP.md) —— どの図/コードがどの説明に対応するか
 🤖 **質問する** → [AI支援サポート](docs/ai-support.md) · 💛 [プロジェクトを支援](SUPPORT.md)
 
@@ -62,7 +62,7 @@
 
 ## 自分で作る
 
-[**ビルド・ハブ**](../../docs/build/) を開いて系列を選んでください。手短に言うと（Pro）：
+[**ビルド・ハブ**](docs/build/) を開いて系列を選んでください。手短に言うと（Pro）：
 
 1. 機構部品を**印刷・組立** —— [`device-pro-acoustic/hardware/`](../../device-pro-acoustic/hardware/)。
 2. 両ボードを**配線・書き込み** —— [`docs/toolchain/`](../../docs/toolchain/)（VS Code / PlatformIO / Arduino）。
@@ -90,7 +90,7 @@
 
 bFaaaP は **2018年**、ある車椅子ユーザーの「ピアノを弾きたい」という願いから始まり、エンジニアと音楽家の
 チームへと育ちました。メンバー紹介と**すべての演奏動画**を含むその歩みは
-**[bFaaaP の物語](../../docs/story.md)** で。
+**[bFaaaP の物語](docs/story.md)** で。
 
 ![Platanus with bFaaaP —— コンサート](../../docs/media/poster_concert_pro_2025.jpg)
 

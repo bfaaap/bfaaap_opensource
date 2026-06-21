@@ -2,7 +2,7 @@
 
 > 🌐 [English](../../../docs/how-it-works.md) · **日本語** · [Deutsch](../../de/docs/how-it-works.md)
 
-初めての方へ。ここでは全体の考え方を平易に説明します。分からない用語は[用語集](../../../docs/GLOSSARY.md)を参照してください。
+初めての方へ。ここでは全体の考え方を平易に説明します。分からない用語は[用語集](GLOSSARY.md)を参照してください。
 
 ![あなたの意図 → 顔認識 → Bluetooth → コントローラ](../../../docs/media/illustrations/intl-how-it-works.png)
 
@@ -40,7 +40,7 @@
 iPhone/iPadアプリ ──BLE (i00–i99)──▶ BLEボード (nRF52840) ──UART (1バイト)──▶ Pico (RP2040) ──▶ ペダル
 ```
 **Pico** がモーター（Pro）またはスイッチ（Switch）を駆動する頭脳、**nRF52840** が Bluetooth を担当します。
-配線・部品・手順は[自分で作る](../../../docs/build/)へ。
+配線・部品・手順は[自分で作る](build/)へ。
 
 ---
-→ 次へ：[自分で作る](../../../docs/build/) · [bFaaaP の物語](../../../docs/story.md) · [用語集](../../../docs/GLOSSARY.md) · [ソースマップ](../../../docs/SOURCE-MAP.md)
+→ 次へ：[自分で作る](build/) · [bFaaaP の物語](story.md) · [用語集](GLOSSARY.md) · [ソースマップ](../../../docs/SOURCE-MAP.md)

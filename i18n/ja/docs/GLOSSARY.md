@@ -49,4 +49,4 @@
 - **Apache‑2.0 / CERN‑OHL‑W / CC‑BY** —— **ソフトウェア / ハードウェア / ドキュメント**の各層のオープンライセンス。
   [`LICENSE`](../../../LICENSE) を参照。
 
-→ 戻る：[仕組み](how-it-works.md) · [自分で作る](build/) · [物語](../../../docs/story.md)
+→ 戻る：[仕組み](how-it-works.md) · [自分で作る](build/) · [物語](story.md)

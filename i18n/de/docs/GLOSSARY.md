@@ -56,4 +56,4 @@ erklärt. (Weitere Begriffe kommen hinzu, während die Bauanleitungen wachsen.)
 - **Apache‑2.0 / CERN‑OHL‑W / CC‑BY** — die offenen Lizenzen für die Schichten **Software / Hardware /
   Dokumentation**. Siehe [`LICENSE`](../../../LICENSE).
 
-→ Zurück zu: [Funktionsweise](how-it-works.md) · [Selbst bauen](build/) · [Die Geschichte](../../../docs/story.md)
+→ Zurück zu: [Funktionsweise](how-it-works.md) · [Selbst bauen](build/) · [Die Geschichte](story.md)

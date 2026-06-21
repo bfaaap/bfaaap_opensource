@@ -3,7 +3,7 @@
 > 🌐 [English](../../../docs/how-it-works.md) · [日本語](../../ja/docs/how-it-works.md) · **Deutsch**
 
 Neu hier? Diese Seite erklärt die ganze Idee in einfachen Worten. Unbekannte Begriffe stehen im
-[Glossar](../../../docs/GLOSSARY.md).
+[Glossar](GLOSSARY.md).
 
 ![Deine Absicht → Gesichtserkennung → Bluetooth → Controller](../../../docs/media/illustrations/intl-how-it-works.png)
 
@@ -46,7 +46,7 @@ Trick mit großer Wirkung — siehe [`ios-app/DESIGN-HIGHLIGHTS.md`](../../../io
 iPhone/iPad‑App ──BLE (i00–i99)──▶ BLE‑Board (nRF52840) ──UART (1 Byte)──▶ Pico (RP2040) ──▶ Pedal
 ```
 Der **Pico** ist das Gehirn, das den Motor (Pro) oder den Schalter (Switch) ansteuert; das
-**nRF52840** übernimmt Bluetooth. Verdrahtung, Teile und Schritt‑für‑Schritt: [Selbst bauen](../../../docs/build/).
+**nRF52840** übernimmt Bluetooth. Verdrahtung, Teile und Schritt‑für‑Schritt: [Selbst bauen](build/).
 
 ---
-→ Weiter: [Selbst bauen](../../../docs/build/) · [Die bFaaaP‑Geschichte](../../../docs/story.md) · [Glossar](../../../docs/GLOSSARY.md) · [Quellenübersicht](../../../docs/SOURCE-MAP.md)
+→ Weiter: [Selbst bauen](build/) · [Die bFaaaP‑Geschichte](story.md) · [Glossar](GLOSSARY.md) · [Quellenübersicht](../../../docs/SOURCE-MAP.md)
