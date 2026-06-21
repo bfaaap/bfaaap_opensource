@@ -23,6 +23,18 @@ needed.
    - **Switch** (digital piano): the device **electronically** closes the sustain through the
      instrument's pedal jack — no motor at all.
 
+### The control law — how a tilt becomes a pedal press
+This is the heart of bFaaaP (and what its patents cover). A small **dead-zone (offset)** means
+small, involuntary head movements do nothing; past your threshold, the pedal follows your tilt
+with a **multiplier** you choose, reaching full pedal within a few degrees. A little **hysteresis**
+(engage vs. release) keeps it from chattering.
+
+![Control law: head angle to pedal, with dead-zone, multiplier and hysteresis](media/diagrams/control-law.png)
+
+You tune the **threshold** and **multiplier** to yourself in the iOS app. (Background: the
+patented scheme uses an offset upper limit of 3–10°, a multiplier of 10–50, and full pedal action
+within +2–10°. See the [patent guide](../bfaaap_patent_info/general_description/README.md).)
+
 ## A neat design detail
 The phone produces head angles *much faster* than Bluetooth should send them. So the app
 **paces** the radio (a ~100 ms timer + throttling) to keep the link rock‑solid. It's a small
@@ -37,4 +49,4 @@ handles Bluetooth. For the wiring, parts, and step‑by‑step build, see
 [Build it yourself](build/).
 
 ---
-→ Next: [Build it yourself](build/) · [The bFaaaP story](story.md) · [Glossary](GLOSSARY.md)
+→ Next: [Build it yourself](build/) · [The bFaaaP story](story.md) · [Glossary](GLOSSARY.md) · [Source map (files behind each topic)](SOURCE-MAP.md)

@@ -2,7 +2,8 @@
 
 bFaaaP is open source — you can build the **iOS app** and either device. This hub points to
 each build track. New to the terms? See the [glossary](../GLOSSARY.md) and
-[how it works](../how-it-works.md) first. Stuck? ask in [AI‑assisted Support](../ai-support.md).
+[how it works](../how-it-works.md) first. Want the file behind any part/figure/code? see the
+[source map](../SOURCE-MAP.md). Stuck? ask in [AI‑assisted Support](../ai-support.md).
 
 ![Pro for acoustic pianos, Switch for digital pianos](../media/illustrations/intl-pro-switch.png)
 

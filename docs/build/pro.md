@@ -13,6 +13,9 @@ the terms? see the [glossary](../GLOSSARY.md). Stuck? [ask in AI‑assisted Supp
        ─▶ 5. Flash firmware ─▶ 6. Mount + airback ─▶ 7. Set force & calibrate ─▶ 8. Pair & play
 ```
 
+![Pro build steps and the repository files each step uses](../media/diagrams/pro-build-flow.png)
+<sub>Every step maps to specific repo files — full index in the [source map](../SOURCE-MAP.md).</sub>
+
 ![Pro drive mechanism](../media/diagrams/pro-mechanism.png)
 
 ## Before you start — what you need
@@ -73,5 +76,33 @@ Flash **two boards** (full steps in [`docs/toolchain/`](../toolchain/)):
 ## Step 8 — Pair the app & play
 Build/install the [iOS app](ios.md), pair over Bluetooth, set your **threshold** & **speed**, calibrate the head‑angle zero — and play. See [`docs/operation/`](../operation/).
 
+## Mechanical BOM & CAD reference
+
+The full reconstructed BOM (with prices, off‑the‑shelf parts) is in
+[`assembly/README.md`](../../device-pro-acoustic/assembly/README.md). Below are the **3D‑printed
+parts** with dimensions **measured from the CAD (BREP)** and the **editable source file** for each,
+so you can print or modify any part.
+
+> 🚧 The **final variant** of each part and the **fastener list** are being confirmed with the
+> hardware author (H. Narusawa); the files below are the latest from the Discord CAD set.
+
+| Printed part | Size (mm, L×W×H) | Editable CAD — `device-pro-acoustic/hardware/cad/from-discord-2025/` |
+|---|---|---|
+| New housing **AA** | 135×120×62 | `bFaaaP_AA.FCStd` (STL: `3d-print/from-discord-2025/bFaaaP_AA-A.stl`) |
+| New housing **CC / DD** | 250×100×60 / 250×100×10 | STL `bFaaaP_CC-CC.stl` / `bFaaaP_DD-DD.stl` *(needs a large printer)* |
+| Base + airjack | 292×124×50 | `bfaaap_base_plus_airjack2.FCStd` |
+| Base + holder (osae) | 260×121×55 | `bfaaap_base_plus_osae_d.FCStd` |
+| Air box | 200×125×35 | `bfaaap_airbox_a_2.FCStd` *(variants a/a‑1/a‑2/c exist)* |
+| Slider (travel limit) | 243×132×25 | `bfaaap_slide2_20241028.FCStd` |
+| DIP‑switch box | 60×30×6 | `bfaaap_dipsw_box_top_bot.FCStd` |
+| Hand‑controller knobs | 50×50×10 / 50×50×20 | `bfaaap_nob_a.FCStd` / `bfaaap_nob_b.FCStd` |
+| Push‑rod | (see CAD) | `bfaaap_push_poll.FCStd` |
+| **Drive assembly (reference layout)** | 530×290×216 | `bfaaap_belt_gotai14.FCStd` |
+
+Off‑the‑shelf mechanical parts (IQ motor, **T10 lead screw ~150 mm**, **2GT‑262 belt**, **T60
+pulleys** 5/10 mm bore, bearings, **4040 / 2040 / 20100** aluminium extrusion, **air jack 119×11 cm**,
+φ3 pump): see the [assembly BOM](../../device-pro-acoustic/assembly/README.md). For the full
+file ↔ topic index, see the [**source map**](../SOURCE-MAP.md).
+
 ---
-→ [Build hub](README.md) · [iOS build](ios.md) · [Switch build](switch.md) · [How it works](../how-it-works.md)
+→ [Build hub](README.md) · [iOS build](ios.md) · [Switch build](switch.md) · [How it works](../how-it-works.md) · [Source map](../SOURCE-MAP.md)

@@ -15,6 +15,7 @@ to build the device and run the controller **yourself**.
 ### Start here
 🌱 **New?** → [**The bFaaaP story**](docs/story.md) · [How it works](docs/how-it-works.md) · [Glossary](docs/GLOSSARY.md)
 🔧 **Make one** → [**Build it yourself**](docs/build/) (iOS · Pro · Switch)
+🗂 **Find any source** → [Source map](docs/SOURCE-MAP.md) — which file / figure / code backs each topic
 🤖 **Get help** → [AI‑assisted Support](docs/ai-support.md) · 💛 [Support the project](SUPPORT.md)
 
 > Status: this folder (`github_opensource/`) is the staging area being prepared for public
