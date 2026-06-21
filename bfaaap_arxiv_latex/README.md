@@ -11,46 +11,35 @@ electronic actuator for digital instruments.
 - Authors: **Tomoyuki Shishido** (corresponding & first author),
   **Hiroyuki Narusawa**.
 
-## Two versions of the manuscript
+## The manuscript
 
 - [`main.tex`](main.tex) — **generic preprint** (`article` class), self-contained,
-  for arXiv.
-- [`main_taccess.tex`](main_taccess.tex) — **ACM TACCESS submission version**
-  (`acmart`, `[manuscript,review,screen]`, `\acmJournal{TACCESS}`), with CCS
-  concepts, keywords, ORCID, figure `\Description` alt-text, and the **ACM Reference
-  Format** bibliography from [`refs.bib`](refs.bib). See
-  [`JOURNAL-TARGETS.md`](JOURNAL-TARGETS.md) for the TACCESS submission rules,
-  suggested editors, and reviewer candidates. *(For double-anonymous review, add the
-  `anonymous` class option and strip identifying text.)*
+  for arXiv, with the **shared body** and BibTeX bibliography from [`refs.bib`](refs.bib).
+
+> A peer-reviewed **ACM TACCESS** version of this paper is maintained **privately**
+> (outside this public repo) and shares the same body/figures. It is not included here.
 
 ## Build
 
-Both papers now use **BibTeX** (`refs.bib`) and **share one body**
-(`draft_sections/body.tex`, which itself `\input`s the System‑realization and
-Implementation‑Procedure sections), so the two versions stay in sync — edit the
-shared files once.
+Uses **BibTeX** (`refs.bib`) and a shared body (`draft_sections/body.tex`, which
+itself `\input`s the System‑realization and Implementation‑Procedure sections).
 
 ```sh
 # 1) (re)generate figures — requires matplotlib + numpy
 python3 figures/scripts.py        # writes figures/*.pdf (vector) and *.png (600 DPI)
-# 2a) generic preprint (arXiv, article)
+# 2) generic preprint (arXiv, article)
 pdflatex main.tex
 bibtex   main
 pdflatex main.tex
 pdflatex main.tex                 # resolve refs/citations
-# 2b) ACM TACCESS version (acmart, ACM-Reference-Format)
-pdflatex main_taccess.tex
-bibtex   main_taccess
-pdflatex main_taccess.tex
-pdflatex main_taccess.tex
 ```
 
 ## Structure (shared body)
 
-- `main.tex` / `main_taccess.tex` — per‑version preamble (class, title, authors,
-  abstract, CCS/keywords) + declarations + bibliography.
-- [`draft_sections/body.tex`](draft_sections/body.tex) — the **shared** body
-  (Introduction → Conclusion), included by both papers.
+- `main.tex` — preamble (class, title, authors, abstract) + declarations + bibliography.
+- [`draft_sections/body.tex`](draft_sections/body.tex) — the body
+  (Introduction → Conclusion), `\input` by `main.tex` (and shared with the private
+  TACCESS version).
 - [`draft_sections/3_6_system_realization.tex`](draft_sections/3_6_system_realization.tex)
   and [`draft_sections/5_implementation_procedure.tex`](draft_sections/5_implementation_procedure.tex)
   — sub‑subsection‑level sections, `\input` from the body.
@@ -86,15 +75,10 @@ Edit `scripts.py` and re-run it to change any figure, then recompile.
 (The project originally considered `cs.RO`; we recommend `cs.HC` primary with
 `cs.RO` cross-list. Final choice is the authors'.)
 
-## Where to submit (journal targets)
+## Where to submit
 
-A vetted shortlist of candidate journals — by topic fit, with open-access fees
-(APC), impact factor, peer-review rigor, and a predatory-journal avoidance guide —
-is in **[`JOURNAL-TARGETS.md`](JOURNAL-TARGETS.md)**. Short version: the strongest
-fit is an **accessibility / rehabilitation-engineering** venue
-(ACM TACCESS, or J. of NeuroEngineering and Rehabilitation), with robotics
-(IEEE RA-L, Frontiers in Robotics and AI) and reputable broad venues
-(Scientific Reports, IEEE Access, PeerJ CS) as alternatives.
+Journal/venue selection and submission planning are maintained **privately** by the
+authors (outside this public repo). This folder holds the **arXiv preprint** only.
 
 ## Status / TODO before submission
 
@@ -121,8 +105,6 @@ fit is an **accessibility / rehabilitation-engineering** venue
   [`../PUBLISHING-CHECKLIST.md`](../PUBLISHING-CHECKLIST.md)).
 - [ ] Optionally add a controlled, pre‑registered **user study**
   (latency/accuracy/usability) beyond the APEE re‑analysis.
-- [ ] (TACCESS) Regenerate **CCS Concepts** with the ACM CCS tool; confirm the
-  current single/double‑anonymous setting before submission.
 - [ ] After posting, add the **arXiv ID/DOI** here and in the top
   [`../README.md`](../README.md).
 
