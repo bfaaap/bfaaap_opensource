@@ -1,6 +1,6 @@
 # Operating bFaaaP
 
-> 日本語・ドイツ語版は後日 `i18n/` 配下に追加予定（English first）.
+> 🌐 **English** · [日本語](../../i18n/ja/docs/operation/README.md) · [Deutsch](../../i18n/de/docs/operation/README.md)
 
 A short guide to using the system day to day. (Pro / acoustic line; the Switch
 line operates the same from the app's side.)

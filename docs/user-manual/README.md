@@ -1,5 +1,7 @@
 # bFaaaP — user manual (app + device)
 
+> 🌐 **English** · [日本語](../../i18n/ja/docs/user-manual/README.md) · [Deutsch](../../i18n/de/docs/user-manual/README.md)
+
 Adapted from the project's public manual (<https://scrapbox.io/bfaaap/switch>).
 This is the **published Switch** manual; the Pro device is set up the same from
 the app's side (Pro physical install is shown in the
