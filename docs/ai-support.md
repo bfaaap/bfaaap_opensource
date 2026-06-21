@@ -1,5 +1,7 @@
 # 🤖 AI‑assisted Support
 
+> 🌐 **English** · [日本語](../i18n/ja/docs/ai-support.md) · [Deutsch](../i18n/de/docs/ai-support.md)
+
 Building bFaaaP yourself? **Ask us in [GitHub Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions) (Q&A).**
 This is our flagship help service: you ask a question, and you get an answer **drafted with
 AI from this repository's own materials, then checked by the bFaaaP team** before it's posted.

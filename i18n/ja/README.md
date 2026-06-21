@@ -1,6 +1,6 @@
 # bFaaaP — 自分で作れる、ハンズフリーのピアノ・ペダル 🎹
 
-> 🌐 [English](../../README.md) · **日本語** · Deutsch（準備中）
+> 🌐 [English](../../README.md) · **日本語** · [Deutsch](../de/README.md)
 
 ![bFaaaP — 頭の傾きでペダルを操作](../../docs/media/illustrations/hero-opensource.png)
 

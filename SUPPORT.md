@@ -1,5 +1,7 @@
 # 💛 Support bFaaaP
 
+> 🌐 **English** · [日本語](i18n/ja/SUPPORT.md) · [Deutsch](i18n/de/SUPPORT.md)
+
 ![Hands holding a piano with a growing sprout, surrounded by a community](docs/media/illustrations/intl-support.png)
 
 bFaaaP is an **open‑source, inclusive** project. The devices aren't sold — everything is

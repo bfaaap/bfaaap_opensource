@@ -1,6 +1,6 @@
 # bFaaaP の仕組み（やさしい版）
 
-> 🌐 [English](../../../docs/how-it-works.md) · **日本語** · Deutsch（準備中）
+> 🌐 [English](../../../docs/how-it-works.md) · **日本語** · [Deutsch](../../de/docs/how-it-works.md)
 
 初めての方へ。ここでは全体の考え方を平易に説明します。分からない用語は[用語集](../../../docs/GLOSSARY.md)を参照してください。
 

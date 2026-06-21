@@ -1,6 +1,6 @@
 # 💛 bFaaaP を支援する
 
-> 🌐 [English](../../SUPPORT.md) · **日本語** · Deutsch（準備中）
+> 🌐 [English](../../SUPPORT.md) · **日本語** · [Deutsch](../de/SUPPORT.md)
 
 ![ピアノと若芽を手で支え、人々のコミュニティに囲まれる](../../docs/media/illustrations/intl-support.png)
 

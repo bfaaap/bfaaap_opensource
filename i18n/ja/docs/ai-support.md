@@ -1,6 +1,6 @@
 # 🤖 AI支援サポート
 
-> 🌐 [English](../../../docs/ai-support.md) · **日本語** · Deutsch（準備中）
+> 🌐 [English](../../../docs/ai-support.md) · **日本語** · [Deutsch](../../de/docs/ai-support.md)
 
 bFaaaP を自分で作っていますか？ **[GitHub Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions)（Q&A）で質問してください。**
 これは私たちの目玉のサポートです。質問すると、**このリポジトリの資料からAIが回答の下書きを作り、bFaaaP チームが

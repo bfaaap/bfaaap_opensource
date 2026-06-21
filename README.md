@@ -1,5 +1,7 @@
 # bFaaaP — a hands‑free piano pedal you can build 🎹
 
+> 🌐 **English** · [日本語](i18n/ja/README.md) · [Deutsch](i18n/de/README.md)
+
 ![bFaaaP — play the pedal with a tilt of your head](docs/media/illustrations/hero-opensource.png)
 
 > **bFaaaP** — *(**b**arrier‑**F**ree **a**ssist **a**s **a** **P**edal)* — is an **AI

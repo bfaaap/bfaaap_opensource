@@ -1,5 +1,7 @@
 # How bFaaaP works (the friendly version)
 
+> 🌐 **English** · [日本語](../i18n/ja/docs/how-it-works.md) · [Deutsch](../i18n/de/docs/how-it-works.md)
+
 New here? This page explains the whole idea in plain words. For any unfamiliar term, see the
 [glossary](GLOSSARY.md).
 
