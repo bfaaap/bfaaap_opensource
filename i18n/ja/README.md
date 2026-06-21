@@ -14,7 +14,7 @@
 このリポジトリには、装置を作りコントローラを動かすために必要なものが**すべて**そろっています。
 
 ### はじめに
-🌱 **初めての方へ** → [**bFaaaP の物語**](../../docs/story.md) · [仕組み](docs/how-it-works.md) · [用語集](docs/GLOSSARY.md)
+🌱 **初めての方へ** → [**bFaaaP の物語**](../../docs/story.md) · [仕組み](docs/how-it-works.md) · [用語集](../../docs/GLOSSARY.md)
 🔧 **作ってみる** → [**自分で作る**](../../docs/build/)（iOS・Pro・Switch）
 🗂 **元ファイルを探す** → [ソースマップ](../../docs/SOURCE-MAP.md) —— どの図/コードがどの説明に対応するか
 🤖 **質問する** → [AI支援サポート](docs/ai-support.md) · 💛 [プロジェクトを支援](SUPPORT.md)

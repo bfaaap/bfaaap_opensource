@@ -4,7 +4,7 @@ The project documentation is written **English‑first** (repo root + [`../docs/
 Translated mirrors live here:
 
 - 🇯🇵 **日本語** → [`ja/`](ja/) — start at [`ja/README.md`](ja/README.md)
-- 🇩🇪 **Deutsch** → [`de/`](de/) — start at [`de/README.md`](de/README.md)
+- 🇩🇪 **Deutsch** → `de/` — *in Vorbereitung / 準備中*
 
 Each translated page has a 🌐 language switcher at the top. **Images, figures, code, CAD, and
 schematics are not translated** — the translated pages link back to the shared assets in
