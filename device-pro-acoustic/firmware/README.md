@@ -63,4 +63,4 @@ version also add the IQ library. Hold **BOOTSEL**, upload, verify pins/parameter
 > calibration constants. Tracked in the project's reproducibility gap analysis.
 
 ---
-**License (proposed, pending final decision):** firmware is intended to be released under the **Apache License 2.0** (explicit patent grant). Third‑party libraries (e.g. the IQ module library) keep their own licenses. See [`../../LICENSE`](../../LICENSE).
+**License (adopted):** firmware is released under the **Apache License 2.0** (explicit patent grant). Third‑party libraries (e.g. the IQ module library) keep their own licenses. See [`../../LICENSE`](../../LICENSE).

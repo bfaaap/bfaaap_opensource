@@ -2,12 +2,11 @@
 
 Real photos of a bFaaaP **Pro** unit during build/disassembly, showing the
 **airback (air‑jack) mechanism** and the **drive unit**. From the team Discord
-(`#ハード`, 2025), by **Reo Taguchi**.
+(`#ハード`, 2025), by **Taguchi**.
 
-> ⚠️ **Consent.** These are contributor photos; **consent is required before
-> public release** (tracked in
-> [`../../../PUBLISHING-CHECKLIST.md`](../../../PUBLISHING-CHECKLIST.md)). They
-> contain no people or personal information.
+> ✅ **Consent obtained (2026-06-18).** Taguchi (photographer) **consented**;
+> released under the project **hardware layer (CERN-OHL-W-2.0)** — see
+> [`../../../LICENSE`](../../../LICENSE). They contain no people or personal information.
 
 ## Airback (reaction-force anchoring)
 

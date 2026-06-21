@@ -1,0 +1,7 @@
+# GitHub "Sponsor" button for bFaaaP.
+# `paypal:` is not offered by GitHub in all countries, so we use custom links.
+# When the PayPal.me handle is created, add it to the list below.
+custom:
+  - "https://bfaaap.com/support/"
+  - "https://paypal.me/ShishidoAssociates1"
+# github: []            # (optional) enable after GitHub Sponsors is approved

@@ -1,14 +1,16 @@
 # Pro device — circuit schematic & diagrams
 
-> **Source / attribution.** These diagrams are by **Reo Taguchi** (GitHub
+> **Source / attribution.** These diagrams are by **Taguchi** (GitHub
 > [`reodon`](https://github.com/reodon)), imported from the repository
 > [`reodon/copy_bfaaap_pro`](https://github.com/reodon/copy_bfaaap_pro)
 > (`kicad/` and `original/`). They correspond to the **IQ‑motor reference
 > generation (firmware v039B)**.
 >
-> ⚠️ **License/consent pending.** The source repository has no license file.
-> Confirm Taguchi's consent and a license before public release (tracked in
-> [`../../../PUBLISHING-CHECKLIST.md`](../../../PUBLISHING-CHECKLIST.md)).
+> ✅ **Consent obtained / licensed (2026-06-18).** Taguchi **consented** and
+> agreed to waive rights to the maximum extent; these diagrams are released under
+> the project **hardware layer (CERN-OHL-W-2.0)** — see
+> [`../../../LICENSE`](../../../LICENSE) and
+> [`../../../PUBLISHING-CHECKLIST.md`](../../../PUBLISHING-CHECKLIST.md).
 
 ## Files
 

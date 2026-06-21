@@ -8,8 +8,8 @@ hardware/
 ├── cad/               FreeCAD source files (.FCStd) — editable design
 ├── 3d-print/          Ready-to-print meshes (.stl) and slicer projects (.3mf)
 ├── airback/           Anchoring mechanism (air bag + pump + hand controller)
-├── schematic/         Circuit schematic + block/power diagrams (by R. Taguchi)
-├── photos/            Real build photos (airback + drive unit; by R. Taguchi)
+├── schematic/         Circuit schematic + block/power diagrams (by Taguchi)
+├── photos/            Real build photos (airback + drive unit; by Taguchi)
 └── enclosure-labels/  Product / enclosure label artwork (review before publishing)
 ```
 
@@ -47,4 +47,4 @@ hardware/
 - Reconcile CAD ↔ STL revisions and add a per‑part index before publishing.
 
 ---
-**License (proposed, pending final decision):** the hardware designs (CAD, 3D‑print files, schematic) are intended to be released under **CERN‑OHL‑W‑2.0** (alt. CERN‑OHL‑S / CC‑BY‑SA‑4.0). Imported schematic/CAD need contributor consent first. See [`../../LICENSE`](../../LICENSE).
+**License (adopted):** the hardware designs (CAD, 3D‑print files, schematic) are released under **CERN‑OHL‑W‑2.0**. Imported schematic/CAD/photos by Taguchi are included **with consent (2026‑06‑18)**. See [`../../LICENSE`](../../LICENSE).

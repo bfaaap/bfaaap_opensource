@@ -120,10 +120,12 @@ nutze den **Sponsor**‑Button dieses Repos.
 
 ## Lizenz
 
-Eine endgültige Lizenz ist **vorgeschlagen** (siehe [`LICENSE`](../../LICENSE); vollständige Texte in
-`LICENSES/`): eine dreischichtige Aufteilung — **Apache‑2.0** (Software: iOS‑App, Firmware; mit
-ausdrücklicher Patentgewährung), **CERN‑OHL‑W‑2.0** (Hardware: CAD, 3D‑Druck, Schaltplan),
-**CC‑BY‑4.0** (Dokumentation). Drittkomponenten behalten ihre eigenen Lizenzen (z. B. die IQ‑Modul‑Bibliothek).
+Das Projekt ist **schichtweise mehrfachlizenziert (verabschiedet).** Vollständige Texte in
+[`LICENSES/`](../../LICENSES/); die Aufteilung (siehe [`LICENSE`](../../LICENSE)) — **Apache‑2.0**
+(Software: iOS‑App, Firmware; mit ausdrücklicher Patentgewährung), **CERN‑OHL‑W‑2.0** (Hardware: CAD,
+3D‑Druck, Schaltplan), **CC‑BY‑4.0** (Dokumentation). Drittkomponenten behalten ihre eigenen Lizenzen
+(z. B. die IQ‑Modul‑Bibliothek). Importierte Beiträge (Schaltplan/CAD/Fotos) sind **mit Zustimmung**
+enthalten (alle Mitglieder haben zugestimmt — siehe [`PUBLISHING-CHECKLIST.md`](../../PUBLISHING-CHECKLIST.md)).
 
 ## 📄 Forschung
 

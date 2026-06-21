@@ -39,19 +39,20 @@ before pushing to a public GitHub repository.
       copyright**, intentionally **not redistributed** (referenced only). Keep it so.
 - [ ] `device-pro-acoustic/firmware/libraries/iq-module-communication-arduino/` —
       keep its original `LICENSE`/attribution intact; verify redistribution is allowed.
-- [ ] `device-pro-acoustic/hardware/schematic/` — the circuit schematic + block /
-      power diagrams are by **Reo Taguchi** (github.com/reodon), imported from
-      `reodon/copy_bfaaap_pro`, which has **no license file**. **Get Taguchi's
-      consent and a license** before public release; ideally also obtain the
-      **KiCad source** (only a PNG export is available; reportedly in Discord).
+- [x] `device-pro-acoustic/hardware/schematic/` — the circuit schematic + block /
+      power diagrams are by **Taguchi** (github.com/reodon), imported from
+      `reodon/copy_bfaaap_pro`, which had **no license file**. **Taguchi consented
+      (2026-06-18)** and agreed to waive rights to the maximum extent → released
+      under the hardware layer (**CERN-OHL-W-2.0**). KiCad source to be added when
+      provided (a detailed technical reply is coming from Taguchi).
 - [x] `device-pro-acoustic/hardware/cad/from-discord-2025/` and
       `3d-print/from-discord-2025/` — CAD/STL shared by **H. Narusawa** in the team
       **Discord**. **Narusawa consented (2026-06-14)** to co-authorship, GitHub name
       credit, and including this CAD. *(A project license still needs to be chosen
       before publishing — see §4.)*
-- [ ] `device-pro-acoustic/hardware/photos/` — build photos (airback + drive unit)
-      by **R. Taguchi** from the Discord. **Get the photographer's consent** before
-      public release (no people/PII shown; consent still needed).
+- [x] `device-pro-acoustic/hardware/photos/` — build photos (airback + drive unit)
+      by **Taguchi** from the Discord. **Taguchi (photographer) consented
+      (2026-06-18)** (no people/PII shown).
 - [ ] `device-pro-acoustic/hardware/PARTS-REFERENCE.md` + `hardware/reference/` —
       adapted from `TomoShishido/bfaaapteam` (`docs/hardware.md`); confirm that
       repo's content can be reused publicly. `DISCORD-FINDINGS.md` summarizes a
@@ -59,11 +60,11 @@ before pushing to a public GitHub repository.
 
 ## 4. Project license & patents
 
-- [ ] Choose and add the project `LICENSE` (see the proposed plan in `LICENSE`).
-      **Proposed (pending final decision):** software → **Apache-2.0** (explicit
-      patent grant), hardware → **CERN-OHL-W-2.0** (alt. CERN-OHL-S / CC-BY-SA-4.0),
-      documentation → **CC-BY-4.0**. Then replace `LICENSE` with the actual texts
-      and add per-layer license files.
+- [x] Project `LICENSE` **adopted** (2026-06-18): software → **Apache-2.0** (explicit
+      patent grant), hardware → **CERN-OHL-W-2.0**, documentation → **CC-BY-4.0**.
+      Full, verbatim texts added under [`LICENSES/`](LICENSES/) (Apache-2.0,
+      CERN-OHL-W-2.0, CC-BY-4.0); top-level `LICENSE` records the layer split,
+      patents, contributor consent, and third-party components.
 - [ ] **Patent decision (important).** The control method is patented in Japan —
       **JP 6726319 B2** (Auxiliary pedal system) and **JP 7004771 B2** (Device
       controller); priority‑basis PCT **WO 2019/176164**. Policy (in README/LICENSE):
