@@ -91,6 +91,18 @@ to expressive sustained sound through bFaaaP — *"bFaaaP may switch on the hear
 
 ---
 
+### 川口 洋慶 — Hiroyoshi Kawaguchi — *keyboards & engineering*
+
+![Hiroyoshi Kawaguchi](kawaguchi.jpg)
+
+A student from Nagasaki at **Tokyo Tech (System & Control)**, active in the
+Platanus piano circle and a band keyboardist (prog/metal). Skills include
+**programming** (Python, MATLAB, C, JavaScript, HTML/CSS) and deep‑learning /
+sensing research; piano since age 3. He helps with **keyboard applications** and
+development.
+
+---
+
 ### 田中 遥斗 — Haruto Tanaka — *electrical engineering*
 
 ![Haruto Tanaka](tanaka.jpg)

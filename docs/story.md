@@ -72,6 +72,7 @@ hand‑drawn caricatures by **Saki Shiokawa (塩川紗季)**.*
 | ![kana](members/kana.png) | **kana** | **Piano tuner.** Sees the pedal + finger technique as one phrase — and bFaaaP as that ideal made real. |
 | ![Fehmiju Fati](members/member2020.png) | **Fehmiju Fati** | **Composer / computer music.** International awards; studied computer music in Japan; joined KORG sound development. |
 | ![Midori](members/midori.png) | **Midori** | **Music & healthcare.** *"bFaaaP may switch on the heart, too."* |
+| ![Hiroyoshi Kawaguchi](members/kawaguchi.jpg) | **Hiroyoshi Kawaguchi** 川口洋慶 | **Keyboards & engineering.** Tokyo Tech (System & Control); programming + deep‑learning; piano since age 3. |
 | ![Haruto Tanaka](members/tanaka.jpg) | **Haruto Tanaka** 田中遥斗 | **Electrical engineering.** Tokyo Tech; wants to extend Switch beyond the piano. |
 | ![Taguchi](members/taguchi.jpg) | **Taguchi** 田口 | **Software engineering.** Deepening bFaaaP know‑how to improve it from user feedback. |
 
