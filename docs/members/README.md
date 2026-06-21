@@ -1,5 +1,7 @@
 # bFaaaP members
 
+> 🌐 **English** · [日本語](../../i18n/ja/docs/members/README.md) · [Deutsch](../../i18n/de/docs/members/README.md)
+
 The people behind bFaaaP (the **Platanus** group). Portraits are the project's own
 hand‑drawn caricatures from <https://bfaaap.com/メンバー紹介/>, illustrated by
 **Saki Shiokawa (塩川紗季)**. *(Personal contact details from the source pages are

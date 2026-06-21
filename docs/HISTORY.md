@@ -1,5 +1,7 @@
 # bFaaaP — project history
 
+> 🌐 **English** · [日本語](../i18n/ja/docs/HISTORY.md) · [Deutsch](../i18n/de/docs/HISTORY.md)
+
 ![Platanus with bFaaaP poster](media/poster_concert_pro_2025.jpg)
 
 *bFaaaP = **b**arrier-**F**ree **a**ssist **a**s **a** **P**edal — an AI assistive

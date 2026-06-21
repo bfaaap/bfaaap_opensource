@@ -1,5 +1,7 @@
 # Architecture
 
+> 🌐 **English** · [日本語](../../i18n/ja/docs/architecture/README.md) · [Deutsch](../../i18n/de/docs/architecture/README.md)
+
 ## Signal chain
 
 1. **Head tracking (iOS).** The controller app uses ARKit `ARFaceTrackingConfiguration`

@@ -1,6 +1,6 @@
 # Toolchain — flashing, testing & running (VSCode‑centric)
 
-> English first; 日本語・ドイツ語版は後日 `i18n/` 配下に追加予定。
+> 🌐 **English** · [日本語](../../i18n/ja/docs/toolchain/README.md) · [Deutsch](../../i18n/de/docs/toolchain/README.md)
 
 This project has **three different build targets**, each with its own tooling:
 
