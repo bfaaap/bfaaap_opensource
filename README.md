@@ -117,8 +117,8 @@ the **Sponsor** button on this repo.
 
 ## License
 
-A final license is **proposed** (see [`LICENSE`](LICENSE) / [`LICENSES/`](LICENSES/)): a
-three‑layer split — **Apache‑2.0** (software: iOS app, firmware; explicit patent grant),
+A final license is **proposed** (see [`LICENSE`](LICENSE); full license texts live in
+`LICENSES/`): a three‑layer split — **Apache‑2.0** (software: iOS app, firmware; explicit patent grant),
 **CERN‑OHL‑W‑2.0** (hardware: CAD, 3D‑print, schematic), **CC‑BY‑4.0** (documentation).
 Third‑party components keep their own licenses (e.g. the IQ module library).
 
