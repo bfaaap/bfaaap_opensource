@@ -1,5 +1,7 @@
 # bFaaaP — video guide
 
+> 🌐 **English** · [日本語](../../i18n/ja/docs/videos/README.md) · [Deutsch](../../i18n/de/docs/videos/README.md)
+
 A guide to the bFaaaP videos published on YouTube, **grouped by category** and
 **newest first** within each group. Channel:
 <https://www.youtube.com/channel/UCcAvTy1k8rHs2WrEKPx1amg>
