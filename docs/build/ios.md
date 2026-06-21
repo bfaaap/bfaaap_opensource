@@ -1,5 +1,7 @@
 # 📱 Build the **iOS app**
 
+> 🌐 **English** · [日本語](../../i18n/ja/docs/build/ios.md) · [Deutsch](../../i18n/de/docs/build/ios.md)
+
 The app is required for **both** devices (Pro and Switch). It reads your head angle with Face‑ID
 face tracking and sends pedal commands over Bluetooth. You can also just **download it** from the
 App Store — building from source is for developers who want to customise or contribute.

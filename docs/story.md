@@ -1,5 +1,7 @@
 # The bFaaaP Story 🎹
 
+> 🌐 **English** · [日本語](../i18n/ja/docs/story.md) · [Deutsch](../i18n/de/docs/story.md)
+
 *From one person's wish — to a hands‑free piano pedal that **anyone can build**.*
 
 ![A pianist playing, the pedal pressed by a small friendly device](media/illustrations/intl-what-bfaaap.png)

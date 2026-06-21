@@ -1,5 +1,7 @@
 # 🔧 Build it yourself
 
+> 🌐 **English** · [日本語](../../i18n/ja/docs/build/README.md) · [Deutsch](../../i18n/de/docs/build/README.md)
+
 bFaaaP is open source — you can build the **iOS app** and either device. This hub points to
 each build track. New to the terms? See the [glossary](../GLOSSARY.md) and
 [how it works](../how-it-works.md) first. Want the file behind any part/figure/code? see the

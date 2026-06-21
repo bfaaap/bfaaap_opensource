@@ -1,5 +1,7 @@
 # 🎹 Build the **Pro** (acoustic piano)
 
+> 🌐 **English** · [日本語](../../i18n/ja/docs/build/pro.md) · [Deutsch](../../i18n/de/docs/build/pro.md)
+
 Step‑by‑step guide to build the Pro device — a small motor that presses an acoustic piano's
 sustain pedal, anchored by an *airback* air‑cushion (nothing is screwed to the piano). New to
 the terms? see the [glossary](../GLOSSARY.md). Stuck? [ask in AI‑assisted Support](../ai-support.md).

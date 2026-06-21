@@ -1,5 +1,7 @@
 # Glossary — bFaaaP terms, in plain words
 
+> 🌐 **English** · [日本語](../i18n/ja/docs/GLOSSARY.md) · [Deutsch](../i18n/de/docs/GLOSSARY.md)
+
 New to electronics, 3D printing, or app building? Here are the words you'll meet, explained
 simply. (More terms will be added as the build guides grow.)
 

@@ -1,5 +1,7 @@
 # 🎛️ Build the **Switch** (digital piano / keyboard)
 
+> 🌐 **English** · [日本語](../../i18n/ja/docs/build/switch.md) · [Deutsch](../../i18n/de/docs/build/switch.md)
+
 The Switch is the small, inexpensive version for **digital** pianos and keyboards. Instead of a
 motor, it switches the sustain **electronically** through the instrument's **sustain‑pedal jack** —
 no motor, no airback. It uses the **same iOS app** and BLE board as the Pro.
