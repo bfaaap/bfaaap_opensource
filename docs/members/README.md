@@ -59,9 +59,9 @@ A **patent engineer (特許技術者)** at SK Patent firm who supports bFaaaP on
 
 ---
 
-### Kana — *piano tuner*
+### kana — *piano tuner*
 
-![Kana](kana.png)
+![kana](kana.png)
 
 A **piano tuner**, raised by musician parents. She studied performance, then chose
 tuning to see the piano "from a different angle." She reflects deeply on how the
@@ -88,18 +88,6 @@ course), and joined **KORG**'s sound‑data development in 2019.
 Started piano at about 5. She now works in **healthcare**; a piano nearby calms
 her. Moved by Shishido's period‑style (non‑sustained) Sarabande, she looks forward
 to expressive sustained sound through bFaaaP — *"bFaaaP may switch on the heart, too."*
-
----
-
-### 川口 洋慶 — Hiroyoshi Kawaguchi — *keyboards & engineering*
-
-![Hiroyoshi Kawaguchi](kawaguchi.jpg)
-
-A student from Nagasaki at **Tokyo Tech (System & Control)**, active in the
-Platanus piano circle and a band keyboardist (prog/metal). Skills include
-**programming** (Python, MATLAB, C, JavaScript, HTML/CSS) and deep‑learning /
-sensing research; piano since age 3. He helps with **keyboard applications** and
-development.
 
 ---
 
