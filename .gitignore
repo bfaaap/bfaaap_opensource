@@ -16,6 +16,8 @@ secrets/
 
 # Xcode / build artifacts
 build/
+!docs/build/
+!docs/build/**
 DerivedData/
 *.xcarchive
 *.ipa
