@@ -1,5 +1,7 @@
 # Source map — which files back each explanation
 
+> 🌐 **English** · [日本語](../i18n/ja/docs/SOURCE-MAP.md) · [Deutsch](../i18n/de/docs/SOURCE-MAP.md)
+
 A single index of **what is explained where**, and **which source file, CAD model, schematic,
 code, photo, or figure it corresponds to** (with its location in this repository). Use this to
 jump from any topic to its authoritative files. All paths are relative to the repo root
