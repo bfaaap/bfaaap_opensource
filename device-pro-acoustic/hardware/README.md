@@ -9,9 +9,14 @@ hardware/
 ├── 3d-print/          Ready-to-print meshes (.stl) and slicer projects (.3mf)
 ├── airback/           Anchoring mechanism (air bag + pump + hand controller)
 ├── schematic/         Circuit schematic + block/power diagrams (by Taguchi)
+├── reference-design/  AI-draft adaptable architecture + mechanical layout (simplified)
 ├── photos/            Real build photos (airback + drive unit; by Taguchi)
 └── enclosure-labels/  Product / enclosure label artwork (review before publishing)
 ```
+
+> 🧭 **New to the Pro?** Start with the **[`reference-design/`](reference-design/)** —
+> an AI-draft, *adaptable* system architecture + mechanical layout that explains how the
+> whole device fits together (and what you can simplify or swap).
 
 > 📷 **Build photos** of the airback and drive unit are in
 > [`photos/`](photos/) (from the team Discord).
@@ -32,7 +37,7 @@ hardware/
 | **Drivetrain** | Motor → **2GT‑262 timing belt** + **T60 pulleys** → **T10 lead screw** (~150 mm) → push‑rod. Bearings: flanged + thrust + collar. | `cad/`, BOM in [`../assembly/`](../assembly/) |
 | **Frame** | **Aluminium extrusion** (4040 / 2040 / 20100) + T‑slot/2020 brackets, with 3D‑printed parts (PLA+). | `cad/`, `3d-print/` |
 | **Hand controller** | A small box with a **travel‑limit slide potentiometer ("slide volume")** + pump on/off + switch. The [schematic](schematic/) wires it as a potentiometer (wiper → **ADC0/GP26**) plus a push switch. *(Per the device co‑author: the slide volume is correct; the **RJ45/LAN socket on the body is currently unused** — legacy.)* | [`airback/`](airback/), [`schematic/`](schematic/) |
-| **Airback** | Inflatable **air jack (119 × 11 cm)** under a neighbouring pedal; **air pump (φ3)** via a **2SK4017 MOSFET**; keeps the unit from moving under the motor's reaction force. | [`airback/`](airback/) |
+| **Airback** | A stock **WINBAG air jack** (160 × 150 mm, ≤50 mm, 135 kg) under a neighbouring pedal; inflated by its **manual bulb** or an electric **air pump on GP12** (2SK4017 MOSFET); keeps the unit from moving under the motor's reaction force. | [`airback/`](airback/) |
 
 ## Workflow
 
