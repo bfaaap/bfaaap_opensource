@@ -58,7 +58,7 @@ management. The **hardware** around it is now specified too:
 device-switch-electronic/
 ├── firmware/    ✅ standalone BLE-board firmware (on/off via GP13)   ← added 2026-06-24
 ├── hardware/    ✅ RU1J002YN low-side MOSFET + reference schematic   ← added 2026-06-24
-└── assembly/    ⏳ enclosure / 2×AA holder (only packaging left)
+└── assembly/    ◑ AI-draft enclosure: parametric SCAD + STL + drawing ← added 2026-06-24
 ```
 
 **Confirmed by Narusawa (2026‑06‑24):** board = **ItsyBitsy nRF52840 Express**; the
@@ -66,8 +66,9 @@ GP13 switching element is a **ROHM `RU1J002YN`** N-channel logic-level MOSFET (n
 series resistor); **no A1 button** — power on / wake with **RESET**; powered by
 **2× AA cells** (battery level shown by the **DotStar dimming**); the 2021‑10‑07
 firmware is **final**. The Switch hardware is now **fully specified** — the
-reference schematic (RU1J002YN low‑side switch) is in [`hardware/`](hardware/).
-Only enclosure / battery‑holder packaging remains.
+reference schematic (RU1J002YN low‑side switch) is in [`hardware/`](hardware/), and
+an **AI-draft 3D-printable enclosure** (parametric OpenSCAD + STL + drawing) is in
+[`assembly/`](assembly/) — *untested; verify against your parts before printing*.
 
 See the shared [`../docs/architecture/`](../docs/architecture/) for the BLE
 protocol and [`../ios-app/`](../ios-app/) for the controller.

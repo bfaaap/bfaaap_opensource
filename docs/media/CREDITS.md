@@ -41,6 +41,7 @@ Generated with matplotlib (data/process figures). **CC‑BY‑4.0.**
 | `../history/bfaaap-1-original/anchoring-weight-vs-airback.png` | bFaaaP 1 vs today: reaction force resisted by metal weight in a bottom compartment → anchored by the airback (matplotlib; history) |
 | `../../device-pro-acoustic/hardware/reference/pico_pinout_bfaaap.png` | Raspberry Pi Pico — bFaaaP Pro pin map (matplotlib; **redrawn to replace an unknown‑license image**; official pinout: raspberrypi.com) |
 | `../../device-pro-acoustic/hardware/reference/fortiq42_interface_bfaaap.png` | IQ Fortiq BLS42 connector & bFaaaP wiring (matplotlib; **redrawn to replace a vendor image**; authoritative pinout: Vertiq docs) |
+| `../../device-switch-electronic/assembly/switch-enclosure-reference.png` | bFaaaP Switch 3D-printable enclosure — reference drawing (matplotlib; **AI draft design**; paired with `.scad` + `.stl`) |
 
 ## Photos & posters (`./`, member portraits, device photos)
 
