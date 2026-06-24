@@ -25,6 +25,20 @@ Sicherheit assistiver Geräte.
 
 Nützliche Fragen **verbessern** oft auch diese Doku — deine Frage hilft also allen, die als Nächstes bauen.
 
+## Zwei Spuren: sofort beantwortbar vs. braucht die Bauenden
+
+Wenn deine Frage eintrifft, sortieren wir sie in eine von zwei Spuren:
+
+- **① Sofort beantwortbar** — die Antwort steht bereits in diesem Repository (Bauanleitungen,
+  Schaltpläne, Firmware, Teileliste). Die KI entwirft sie aus der Doku, das Team prüft sie.
+  *Die meisten Fragen sind hier — und am schnellsten.*
+- **② Braucht die Bauenden** — die Antwort braucht Informationen, die nur die Gerätemacher haben
+  und noch nicht veröffentlicht sind (z. B. eine exakte mechanische Teilenummer oder die nächste
+  Motorwahl). Wir leiten deine Frage an sie weiter; sobald sie antworten, posten wir es **und
+  ergänzen die Doku**, damit die Nächsten es direkt finden. *Das dauert etwas länger.*
+
+So oder so hilft deine Frage — Antworten der Spur ② werden zu neuer Dokumentation.
+
 ## So stellst du eine gute Frage
 - Sag, ob es um die **iOS‑App, das Pro‑Gerät oder das Switch‑Gerät** geht.
 - Nenne, **was du versucht hast**, deine Teile/Boards und jede **Fehlermeldung oder Foto**.

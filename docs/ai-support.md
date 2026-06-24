@@ -25,6 +25,20 @@ things that matter — wiring, 24 V power, Bluetooth/radio rules, and assistive�
 Useful questions often **improve these docs** too — so your question helps everyone who
 builds bFaaaP next.
 
+## Two tracks: answerable now vs. needs the makers
+
+When your question arrives, we sort it into one of two tracks:
+
+- **① Answerable now** — the answer is already in this repository (build guides,
+  schematics, firmware, the parts list). The AI drafts it from the docs and the team
+  reviews it. *Most questions are here, and these are the fastest.*
+- **② Needs the makers** — the answer needs information only the device makers have yet
+  to publish (e.g. an exact mechanical part number, or the next motor choice). We forward
+  your question to them; once they answer we post it **and add it to the docs**, so the
+  next builder finds it directly. *These take a little longer.*
+
+Either way your question helps — track ② answers become new documentation.
+
 ## How to ask a good question
 
 - Say whether it's about the **iOS app, the Pro device, or the Switch device**.
