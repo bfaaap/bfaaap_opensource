@@ -6,18 +6,19 @@ The Switch is the small, inexpensive version for **digital** pianos and keyboard
 motor, it switches the sustain **electronically** through the instrument's **sustain‑pedal jack** —
 no motor, no airback. It uses the **same iOS app** and BLE board as the Pro.
 
-> 🚧 **Draft.** The Switch hardware is being finalised; a couple of details (the switching
-> element and the sustain‑jack polarity) are pending from the maker — see the deferred items in
-> [`DISCORD-FINDINGS.md`](../../device-pro-acoustic/DISCORD-FINDINGS.md). The
-> **[Switch user‑manual video](https://youtu.be/XOVENtBsOp4)** shows it in use.
+> 🚧 **Draft.** Most Switch hardware is now confirmed (board = ItsyBitsy nRF52840; a **MOSFET** on
+> `GP13` switches the sustain line, **no series resistor**); the remaining detail is the exact MOSFET
+> part + its wiring — see [`device-switch-electronic/firmware/`](../../device-switch-electronic/firmware/).
+> The **[Switch user‑manual video](https://youtu.be/XOVENtBsOp4)** shows it in use.
 
 ```
  1. Get the BLE board ─▶ 2. Add the sustain switch ─▶ 3. Wire to the pedal jack ─▶ 4. Flash ─▶ 5. Pair & use
 ```
 
 ## Before you start
-- An **nRF52840** BLE board (same family as the Pro's)
-- A **switching element** for the sustain line — e.g. a small **relay or optocoupler** *(exact part TBD)*
+- An **Adafruit ItsyBitsy nRF52840** BLE board (the Switch's board; has the onboard DotStar)
+- A **MOSFET** to switch the sustain line (**no series resistor**) *(exact part TBD)*
+- **2× AA batteries** for power (no USB charging)
 - A connector for the instrument's **sustain‑pedal jack** (commonly a 6.3 mm / TS jack)
 - An iPhone/iPad with **Face ID** + the [iOS app](ios.md)
 
@@ -28,12 +29,13 @@ Flash the **standalone Switch firmware**
 Confirm it advertises (`bFaaaPSwitch_1…4`) in a BLE scanner.
 
 ## Step 2 — Add the sustain switch
-Connect the switching element (relay/optocoupler) so the BLE board's output line opens/closes the
-sustain contact. *(Reference circuit being finalised.)*
+Drive a **MOSFET** from the BLE board's `GP13` so it opens/closes the sustain contact (no series
+resistor). *(Exact MOSFET part + gate/drain/source wiring being finalised.)*
 
 ## Step 3 — Wire to the pedal jack
-Wire the switch across the instrument's **sustain‑pedal jack**. Mind the **polarity / normally‑open
-vs normally‑closed** behaviour of your instrument *(being confirmed)*.
+Wire the MOSFET across the instrument's **sustain‑pedal jack** (TS tip/sleeve). Match the **polarity /
+normally‑open vs normally‑closed** behaviour of your instrument with the app's **on‑type / off‑type**
+toggle (`n` / `f`).
 
 ## Step 4 — Pair & use
 Build/install the [iOS app](ios.md), connect over Bluetooth, set your **threshold** and **speed**,

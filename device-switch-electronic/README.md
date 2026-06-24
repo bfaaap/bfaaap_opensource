@@ -25,16 +25,17 @@ turns **red** and the sustain engages; head up → released.
 ## How it works
 
 ```
- iOS app ──BLE (N / F)──▶ BLE board (nRF52) ──GP13 on/off──▶ relay / opto
+ iOS app ──BLE (N / F)──▶ BLE board (nRF52) ──GP13 on/off──▶ MOSFET
                                                               │
                                                               ▼
                                               digital piano sustain‑pedal jack
 ```
 
-A relay or opto‑isolator on the BLE board's `GP13` output bridges the sustain
-jack's contacts — the same wiring most digital pianos expect from a normal
-momentary sustain pedal (tip/sleeve). Polarity / normally‑open vs normally‑closed
-is handled by the on‑type / off‑type setting (`n` / `f`).
+A **MOSFET** on the BLE board's `GP13` output bridges the sustain jack's contacts
+(confirmed by Narusawa, 2026‑06‑24 — **no series resistor**) — the same wiring most
+digital pianos expect from a normal momentary sustain pedal (tip/sleeve). Polarity
+/ normally‑open vs normally‑closed is handled by the on‑type / off‑type setting
+(`n` / `f`).
 
 ## Connection & certification
 
@@ -56,13 +57,16 @@ management. What is **still TODO** is the **hardware** around it:
 ```
 device-switch-electronic/
 ├── firmware/    ✅ standalone BLE-board firmware (on/off via GP13)  ← added 2026-06-24
-├── hardware/    ⏳ relay/opto + sustain-jack adapter + enclosure   (TBD with the maker)
+├── hardware/    ◑ MOSFET on GP13 + sustain-jack adapter + enclosure (key facts known)
 └── assembly/    ⏳
 ```
 
-The switching element on GP13 (relay/opto/MOSFET part), the sustain-jack wiring,
-and the enclosure/battery are still to be confirmed with the hardware author
-(Narusawa) — see "Open questions" in [`firmware/README.md`](firmware/README.md).
+**Confirmed by Narusawa (2026‑06‑24):** board = **ItsyBitsy nRF52840 Express**; the
+GP13 switching element is a **MOSFET** (no series resistor); **no A1 button** — power
+on / wake with **RESET**; powered by **2× AA cells** (battery level shown by the
+**DotStar dimming**); the 2021‑10‑07 firmware is **final**. Still to confirm: the
+**exact MOSFET part + its wiring to the TS jack** (Narusawa is checking) — see "Open
+questions" in [`firmware/README.md`](firmware/README.md).
 
 See the shared [`../docs/architecture/`](../docs/architecture/) for the BLE
 protocol and [`../ios-app/`](../ios-app/) for the controller.

@@ -6,9 +6,10 @@ Der Switch ist die kleine, günstige Version für **digitale** Klaviere und Keyb
 Motors schaltet er das Sustain **elektronisch** über die **Pedalbuchse** des Instruments — kein
 Motor, kein Airback. Er nutzt **dieselbe iOS‑App und dasselbe BLE‑Board** wie der Pro.
 
-> 🚧 **Entwurf:** die Switch‑Hardware wird finalisiert; einige Details (das Schaltelement und die
-> Polarität der Sustain‑Buchse) stehen noch von den Bauenden aus — siehe die zurückgestellten Punkte
-> in [`DISCORD-FINDINGS.md`](../../../../device-pro-acoustic/DISCORD-FINDINGS.md). Das
+> 🚧 **Entwurf:** der Großteil der Switch‑Hardware ist nun bestätigt (Board = ItsyBitsy nRF52840; ein
+> **MOSFET** an `GP13` schaltet die Sustain‑Leitung, **kein Serienwiderstand**). Offen bleibt nur das
+> genaue MOSFET‑Bauteil und seine Verdrahtung — siehe
+> [`device-switch-electronic/firmware/`](../../../../device-switch-electronic/firmware/). Das
 > **[Switch‑Handbuch‑Video](https://youtu.be/XOVENtBsOp4)** zeigt die Anwendung.
 
 ```
@@ -16,8 +17,9 @@ Motor, kein Airback. Er nutzt **dieselbe iOS‑App und dasselbe BLE‑Board** wi
 ```
 
 ## Bevor du beginnst
-- Ein **nRF52840**‑BLE‑Board (gleiche Familie wie beim Pro)
-- Ein **Schaltelement** für die Sustain‑Leitung — z. B. ein kleines **Relais oder Optokoppler** *(genaues Teil noch offen)*
+- Ein **Adafruit ItsyBitsy nRF52840**‑BLE‑Board (das Board des Switch; mit der onboard‑DotStar)
+- Ein **MOSFET** zum Schalten der Sustain‑Leitung (**kein Serienwiderstand**) *(genaues Teil noch offen)*
+- **2× AA‑Batterien** zur Stromversorgung (kein USB‑Laden)
 - Ein Stecker für die **Sustain‑Pedalbuchse** des Instruments (meist 6,3‑mm‑/TS‑Klinke)
 - Ein iPhone/iPad mit Face ID + die [iOS‑App](ios.md)
 
@@ -29,12 +31,13 @@ nRF52840 (RESET zweimal tippen → UF2‑Bootloader → hochladen). Alle Schritt
 BLE‑Scanner erscheint.
 
 ## Schritt 2 — Sustain‑Schalter ergänzen
-Verbinde das Schaltelement (Relais/Optokoppler) so, dass die Ausgangsleitung des BLE‑Boards den
-Sustain‑Kontakt öffnet/schließt. *(Referenzschaltung wird finalisiert.)*
+Steuere über `GP13` des BLE‑Boards einen **MOSFET** an, der den Sustain‑Kontakt öffnet/schließt (kein
+Serienwiderstand). *(Genaues MOSFET‑Bauteil + Gate/Drain/Source‑Verdrahtung wird finalisiert.)*
 
 ## Schritt 3 — An die Pedalbuchse verdrahten
-Verdrahte den Schalter über die **Sustain‑Pedalbuchse** des Instruments. Achte auf die **Polarität /
-Öffner‑ vs. Schließer‑Verhalten** deines Instruments *(wird bestätigt)*.
+Verdrahte den MOSFET über die **Sustain‑Pedalbuchse** des Instruments (TS Spitze/Schaft). Passe die
+**Polarität / Öffner‑ vs. Schließer‑Verhalten** mit dem **On‑Typ / Off‑Typ**‑Schalter der App
+(`n` / `f`) an.
 
 ## Schritt 4 — Koppeln & nutzen
 Baue/installiere die [iOS‑App](ios.md), verbinde dich per Bluetooth, stelle deine **Schwelle** und

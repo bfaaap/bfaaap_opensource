@@ -71,12 +71,14 @@ The iOS app writes one byte at a time:
 ## Output → sustain jack
 
 `GP13` is the on/off output. For a digital piano you bridge the instrument's
-**sustain-pedal jack** (commonly a 6.3 mm / TS jack) with a **relay or
-optocoupler** driven from `GP13`. The **on-mode / off-mode** (`n`/`f`) selects
-normally-open vs normally-closed so it matches the host instrument's polarity.
+**sustain-pedal jack** (commonly a 6.3 mm / TS jack) with a **MOSFET** driven from
+`GP13` (confirmed by Narusawa, 2026‑06‑24 — *not* a relay or optocoupler), with
+**no series resistor** on the sustain line. The **on-mode / off-mode** (`n`/`f`)
+selects normally-open vs normally-closed so it matches the host instrument's
+polarity.
 
-> The exact switching element (relay/opto/MOSFET part) and the jack wiring are
-> **hardware**, not firmware — still to be confirmed (see "Open questions" and the
+> The **MOSFET part number and the exact gate/drain/source wiring to the TS jack**
+> are not in the firmware — still to be confirmed (see "Open questions" and the
 > [device README](../README.md)).
 
 ## Channels (run several at once)
@@ -96,9 +98,14 @@ different colour **while the sustain is engaged**. Brightness drops once connect
 - **Deep sleep** (`sd_power_system_off`) when: no central connects within ~30 s of
   power-on; on the `P` command; on a channel change; or when the **A1 button is
   held LOW for ≥ 5 s**.
-- **Wake** by pulling **`A1` to GND** (`INPUT_PULLUP_SENSE`) — e.g. the on/wake
-  button. The A1 pin doubles as the alternative power button when the board's
-  RESET button is awkward to reach.
+- **Wake:** the firmware wakes on **`A1` → GND** (`INPUT_PULLUP_SENSE`), **but the
+  shipped Switch has no A1 button** (confirmed by Narusawa, 2026‑06‑24) — you
+  **power on / wake it with the board's RESET button**. The A1 code path is
+  optional/unused in the built device.
+- **Battery:** **2× AA cells** (replaceable primary cells — *not* a USB-charged
+  LiPo; confirmed by Narusawa, 2026‑06‑24). Remaining charge is **shown by the
+  onboard DotStar dimming** as the cells deplete (no numeric fuel gauge —
+  consistent with the firmware writing a fixed `100%` over BLE).
 
 ## Build / flash
 
@@ -108,19 +115,21 @@ UF2 bootloader, and upload the sketch. Full VSCode/Arduino steps:
 shared with the controller — see [`../../docs/architecture/`](../../docs/architecture/)
 and the [iOS app](../../ios-app/).
 
-## Open questions (hardware, for reproduction)
+## Hardware — confirmed by Narusawa (2026-06-24)
 
-These are **not** answered by the firmware and are needed to rebuild the Switch:
+- **Board:** Adafruit **ItsyBitsy nRF52840 Express** (confirmed).
+- **Switching element on GP13:** a **MOSFET** (not a relay/opto).
+- **Sustain line:** **no series resistor**; polarity handled by on/off-mode (`n`/`f`).
+- **Controls:** **no A1 button** — power on / wake with the **RESET** button.
+- **Power:** **2× AA cells** (replaceable, not USB-rechargeable); battery level
+  shown by the **DotStar dimming** (no numeric gauge).
+- **Firmware:** the **2021-10-07** sketch is the **final/current** version.
 
-1. The **switching element on GP13** — relay vs optocoupler vs MOSFET, and the
-   exact part / reference circuit between GP13 and the sustain jack.
-2. **Sustain-jack wiring** — TS tip/sleeve mapping, any series resistor, and which
-   instruments need *off-mode* (inverted) polarity.
-3. **Enclosure / battery / charging** — what powers the ItsyBitsy (LiPo / coin /
-   USB), is there charging, and is the A1 wake button a simple pushbutton to GND?
-   (The firmware reports a fixed `100%`, so there may be no real fuel gauge.)
-4. Is the **2021-10-07** sketch the **current reference**, or is there a newer
-   Switch firmware?
+## Open questions (residual, for a full rebuild)
+
+1. The **exact MOSFET part** and its **gate/drain/source wiring to the TS jack**
+   — Narusawa confirmed it is a MOSFET with no series resistor and is **checking
+   the part number and the circuit** (2026‑06‑24); to be filled in when shared.
 
 ---
 **License (adopted):** firmware is released under the **Apache License 2.0**
