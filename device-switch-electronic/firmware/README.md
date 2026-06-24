@@ -74,10 +74,12 @@ The iOS app writes one byte at a time:
 **sustain-pedal jack** (commonly a 6.3 mm / TS jack) with a **ROHM `RU1J002YN`**
 N-channel MOSFET driven from `GP13` (confirmed by Narusawa, 2026‑06‑24 — *not* a
 relay or optocoupler), with **no series resistor** on the sustain line. The
-`RU1J002YN` is a **logic-level** part (Vgs(th) ≈ 0.8 V; 50 V / 200 mA; SOT-323-3
-with a built-in gate–source protection diode), so the **3.3 V `GP13`** output
-drives it fully. The **on-mode / off-mode** (`n`/`f`) selects normally-open vs
-normally-closed so it matches the host instrument's polarity.
+`RU1J002YN` is a **0.9 V-drive logic-level** part (Vgs(th) = 0.3–0.8 V; 50 V /
+±200 mA; R_DS(on) ≤ 2.2 Ω; **UMT3F / SOT-323FL** package with a built-in ESD
+protection diode — [ROHM datasheet](https://www.rohm.com/products/transistors/mosfets/standard/ru1j002yn-product)),
+so the **3.3 V `GP13`** output drives it fully on. The **on-mode / off-mode**
+(`n`/`f`) selects normally-open vs normally-closed so it matches the host
+instrument's polarity.
 
 > Wiring: a standard **low-side switch** — gate ← `GP13`, drain/source across the
 > TS jack's tip/sleeve, **no series resistor**. (Narusawa is preparing the exact

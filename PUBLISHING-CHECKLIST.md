@@ -37,6 +37,9 @@ before pushing to a public GitHub repository.
 
 - [ ] `device-pro-acoustic/motor/` — IQ / Fortiq datasheets are **vendor
       copyright**, intentionally **not redistributed** (referenced only). Keep it so.
+- [x] **ROHM `RU1J002YN` MOSFET datasheet** (Switch) — vendor copyright (© ROHM).
+      Narusawa shared the PDF privately (2026-06-24); it is **kept out of the repo**
+      and **referenced by link only** (docs link to the official ROHM product page).
 - [ ] `device-pro-acoustic/firmware/libraries/iq-module-communication-arduino/` —
       keep its original `LICENSE`/attribution intact; verify redistribution is allowed.
 - [x] `device-pro-acoustic/hardware/schematic/` — the circuit schematic + block /
