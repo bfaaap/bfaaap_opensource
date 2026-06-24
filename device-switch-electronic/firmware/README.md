@@ -81,9 +81,9 @@ so the **3.3 V `GP13`** output drives it fully on. The **on-mode / off-mode**
 (`n`/`f`) selects normally-open vs normally-closed so it matches the host
 instrument's polarity.
 
-> Wiring: a standard **low-side switch** — gate ← `GP13`, drain/source across the
-> TS jack's tip/sleeve, **no series resistor**. (Narusawa is preparing the exact
-> reference-circuit drawing.)
+> Wiring: a standard **low-side switch** — gate ← `GP13`, **drain → sustain-jack
+> tip**, **source → GND** (= jack sleeve), **no series resistor**. Full reference
+> schematic (Narusawa, 2026‑06‑24): [`../hardware/`](../hardware/).
 
 ## Channels (run several at once)
 
@@ -129,11 +129,12 @@ and the [iOS app](../../ios-app/).
   shown by the **DotStar dimming** (no numeric gauge).
 - **Firmware:** the **2021-10-07** sketch is the **final/current** version.
 
-## Open questions (residual, for a full rebuild)
+## Reproduction status — complete ✅
 
-- **Nothing blocking.** The switching MOSFET is the **ROHM `RU1J002YN`** (no series
-  resistor). The only nicety still to add is Narusawa's exact reference-circuit
-  drawing of the low-side switch, which he is preparing.
+The Switch hardware is **fully specified** — nothing blocks a rebuild. The switching
+MOSFET is the **ROHM `RU1J002YN`** wired as a low-side switch (no series resistor);
+the full **reference schematic** (Narusawa, 2026‑06‑24) is in
+[`../hardware/`](../hardware/).
 
 ---
 **License (adopted):** firmware is released under the **Apache License 2.0**

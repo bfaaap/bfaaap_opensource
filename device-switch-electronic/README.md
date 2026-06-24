@@ -52,22 +52,22 @@ is handled by the on‑type / off‑type setting (`n` / `f`).
 The **firmware is now in the repo** — see [`firmware/`](firmware/) for the
 standalone nRF52 sketch (`bFaaaPSW_20211007_for_ex_fs_J_13_ymc`), its full BLE
 command protocol, the GP13 on/off behaviour, channel selection, and power
-management. What is **still TODO** is the **hardware** around it:
+management. The **hardware** around it is now specified too:
 
 ```
 device-switch-electronic/
-├── firmware/    ✅ standalone BLE-board firmware (on/off via GP13)  ← added 2026-06-24
-├── hardware/    ◑ RU1J002YN MOSFET on GP13 + sustain-jack adapter + 2×AA + enclosure (specified)
-└── assembly/    ⏳
+├── firmware/    ✅ standalone BLE-board firmware (on/off via GP13)   ← added 2026-06-24
+├── hardware/    ✅ RU1J002YN low-side MOSFET + reference schematic   ← added 2026-06-24
+└── assembly/    ⏳ enclosure / 2×AA holder (only packaging left)
 ```
 
 **Confirmed by Narusawa (2026‑06‑24):** board = **ItsyBitsy nRF52840 Express**; the
 GP13 switching element is a **ROHM `RU1J002YN`** N-channel logic-level MOSFET (no
 series resistor); **no A1 button** — power on / wake with **RESET**; powered by
 **2× AA cells** (battery level shown by the **DotStar dimming**); the 2021‑10‑07
-firmware is **final**. The Switch hardware is now essentially fully specified —
-see [`firmware/README.md`](firmware/README.md) (only Narusawa's exact
-reference-circuit drawing is still to be added).
+firmware is **final**. The Switch hardware is now **fully specified** — the
+reference schematic (RU1J002YN low‑side switch) is in [`hardware/`](hardware/).
+Only enclosure / battery‑holder packaging remains.
 
 See the shared [`../docs/architecture/`](../docs/architecture/) for the BLE
 protocol and [`../ios-app/`](../ios-app/) for the controller.
