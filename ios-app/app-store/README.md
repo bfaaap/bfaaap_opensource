@@ -13,7 +13,7 @@ The iOS controller app is published on the App Store (available for now):
 | Price | ¥4,500 |
 | Version | 2.0 (min iOS 14.5) |
 | Category | Entertainment |
-| Bundle ID | `jp.ne.cyberhome.ad.shishid.switch1` |
+| Bundle ID | (the developer's own reverse‑DNS ID; this repo ships the placeholder `com.example.bfaaap`) |
 | Rating | ★5 (2 ratings) |
 
 ## Description (summary)

@@ -7,6 +7,19 @@
 
 import SwiftUI
 
+/// Central place for the in-app links.
+/// NOTE: point `githubRepo` / `aiSupport` to the official bFaaaP open-source
+/// repository (GitHub Discussions is used for AI-assisted Q&A support).
+private enum AppLinks {
+    static let projectSite  = URL(string: "https://bfaaap.com/")!
+    static let aiSupport    = URL(string: "https://github.com/")!   // TODO: https://github.com/<org>/<repo>/discussions
+    static let githubRepo   = URL(string: "https://github.com/")!   // TODO: https://github.com/<org>/<repo>
+    static let instructions = URL(string: "https://scrapbox.io/bfaaap/SwitchInstructions")!
+    static let privacy      = URL(string: "https://bfaaap.com/privacypolicy/")!
+    static let healthSafety = URL(string: "https://bfaaap.com/healthsafety-information/")!
+    static let eula         = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!
+}
+
 struct SupportPageView: View {
     @Binding var uiState: ViewID
     
@@ -87,16 +100,17 @@ struct SupportPageView: View {
                     .frame(width: frameWidth / 2.5,height: frameWidth / 2.5)
                     .cornerRadius(25)
                     .padding([.top, .leading, .trailing])
+                ScrollView {
                 VStack{
                     Button("取扱説明書") {
-                        openURL(URL(string: "https://scrapbox.io/bfaaap/SwitchInstructions")!)
+                        openURL(AppLinks.instructions)
                     }
                     .font(.title)
                     .foregroundColor(Color.blue)
                     .padding([.leading, .trailing, .bottom])
-                    
-                    Button("プライバシーポリシー") {
-                        openURL(URL(string:"https://bfaaap.com/privacypolicy/")!)
+
+                    Button("オープンソースプロジェクト") {
+                        openURL(AppLinks.projectSite)
                     }
                     .font(.title3)
                     .frame(width: frameWidth - spacing * 4, height: spacing * 3, alignment: .center)
@@ -104,9 +118,29 @@ struct SupportPageView: View {
                     .background(Color.white).opacity(0.5)
                     .cornerRadius(15, antialiased: true)
                     .padding(.horizontal)
-                    
+
+                    Button("サポート・Q&A（AI対応）") {
+                        openURL(AppLinks.aiSupport)
+                    }
+                    .font(.title3)
+                    .frame(width: frameWidth - spacing * 4, height: spacing * 3, alignment: .center)
+                    .foregroundColor(Color.black)
+                    .background(Color.white).opacity(0.5)
+                    .cornerRadius(15, antialiased: true)
+                    .padding(.horizontal)
+
+                    Button("プライバシーポリシー") {
+                        openURL(AppLinks.privacy)
+                    }
+                    .font(.title3)
+                    .frame(width: frameWidth - spacing * 4, height: spacing * 3, alignment: .center)
+                    .foregroundColor(Color.black)
+                    .background(Color.white).opacity(0.5)
+                    .cornerRadius(15, antialiased: true)
+                    .padding(.horizontal)
+
                     Button("健康上の注意") {
-                        openURL(URL(string: "https://bfaaap.com/healthsafety-information/")!)
+                        openURL(AppLinks.healthSafety)
                     }
                     .font(.title2)
                     .frame(width: frameWidth - spacing * 4, height: spacing * 3, alignment: .center)
@@ -114,9 +148,9 @@ struct SupportPageView: View {
                     .background(Color.white).opacity(0.5)
                     .cornerRadius(15, antialiased: true)
                     .padding()
-                    
+
                     Button("利用規約") {
-                        openURL(URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!)
+                        openURL(AppLinks.eula)
                     }
                     .font(.title2)
                     .frame(width: frameWidth - spacing * 4, height: spacing * 3, alignment: .center)
@@ -125,6 +159,7 @@ struct SupportPageView: View {
                     .cornerRadius(15, antialiased: true)
                     .padding()
                 }//VStackここまで
+                }//ScrollViewここまで
                 Spacer()
             }//VStackここまで
         }//ZStackここまで
