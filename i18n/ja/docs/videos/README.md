@@ -24,6 +24,10 @@ Platanus メンバーが実際に bFaaaP を使って演奏するイベント。
   大学祭での短い Pro デモ。
 - **2023‑07‑23 · 03:45** —— *bFaaaP Pro ムジカーザ 2023‑07‑23* —— <https://www.youtube.com/watch?v=S45xN5yFaRo>
   ムジカーザ（代々木上原）でのリサイタル。
+- **2022‑09‑05** —— *夏の響演2022（7大学合同演奏会）* —— <https://youtu.be/uXMLea6_eKM>
+  この**正式な大学合同演奏会**（豊洲シビックセンターホール）で、東工大**プラタナス**のメンバーが
+  **bFaaaP** を用いて「花の歌」を演奏。他大学の奏者と並んで設置でき、実際の演奏会の短い転換時間でも
+  使える実例です。イベント情報: <https://natsunokyoen2022.github.io/>
 - **2022‑04‑06 · 06:55** —— *ピアノ発表会 bFaaaP Pro 令和4年4月2日* —— <https://www.youtube.com/watch?v=O8X2gEqEU6k>
 - **2020‑11‑05 · 16:06** —— *bFaaaP Performance MusicFair 2020* —— <https://www.youtube.com/watch?v=6_y9MI1IdTQ>
 - **2020‑11‑05 · 06:39** —— *New bFaaaP6 MusicFair 2020* —— <https://www.youtube.com/watch?v=j1ZIJ53j7NE>

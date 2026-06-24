@@ -104,7 +104,7 @@ toggled from the app by sending `n` or `f`, to suit different pianos/use cases.
 UIApplication.shared.isIdleTimerDisabled = true
 ```
 
-For a hands‑free assistive instrument the display and camera must never sleep
+For a foot‑free assistive instrument the display and camera must never sleep
 mid‑performance; the flag is set on launch and on scene activation, and cleared
 when backgrounded.
 

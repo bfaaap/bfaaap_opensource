@@ -2,7 +2,7 @@
 
 > 🌐 **English** · [日本語](../i18n/ja/docs/story.md) · [Deutsch](../i18n/de/docs/story.md)
 
-*From one person's wish — to a hands‑free piano pedal that **anyone can build**.*
+*From one person's wish — to a foot‑free piano pedal that **anyone can build**.*
 
 ![A pianist playing, the pedal pressed by a small friendly device](media/illustrations/intl-what-bfaaap.png)
 
@@ -72,7 +72,7 @@ hand‑drawn caricatures by **Saki Shiokawa (塩川紗季)**.*
 | ![Kyoko Yamaguchi](members/yamaguchi-kyoko.jpg) | **Kyoko Yamaguchi** 山口恭子 | **Piano & pedagogy.** ~15 years teaching; champions a new, IT‑era pedal technique. |
 | ![Daisuke Tokushige](members/tokushige-daisuke.jpg) | **Daisuke Tokushige** 徳重大輔 | **Intellectual property.** Patent engineer supporting bFaaaP's patents. |
 | ![kana](members/kana.png) | **kana** | **Piano tuner.** Sees the pedal + finger technique as one phrase — and bFaaaP as that ideal made real. |
-| ![Fehmiju Fati](members/member2020.png) | **Fehmiju Fati** | **Composer / computer music.** International awards; studied computer music in Japan; joined KORG sound development. |
+| ![Fehmiju Fati](members/member2020.png) | **Fehmiju Fati** | **Composer / computer music.** International awards; studied computer music in Japan; joined KORG sound development; volunteered with bFaaaP, 2019–2023. |
 | ![Midori](members/midori.png) | **Midori** | **Music & healthcare.** *"bFaaaP may switch on the heart, too."* |
 | ![Hiroyoshi Kawaguchi](members/kawaguchi.jpg) | **Hiroyoshi Kawaguchi** 川口洋慶 | **Keyboards & engineering.** Tokyo Tech (System & Control); programming + deep‑learning; piano since age 3. |
 | ![Haruto Tanaka](members/tanaka.jpg) | **Haruto Tanaka** 田中遥斗 | **Electrical engineering.** Tokyo Tech; wants to extend Switch beyond the piano. |
@@ -100,6 +100,7 @@ highlights by category (newest first).
 - **▶ [Suzukake Science Day 2024](https://www.youtube.com/watch?v=B820ctNblJE)** · 35:02
 - **▶ [工大祭2023 — bFaaaP Pro](https://www.youtube.com/watch?v=9Sc8G1ESa-g)** · 02:40
 - **▶ [bFaaaP Pro at MUSICASA, 2023‑07‑23](https://www.youtube.com/watch?v=S45xN5yFaRo)** · 03:45
+- **▶ [Natsu‑no‑Kyoen 2022 — a seven‑university joint concert](https://youtu.be/uXMLea6_eKM)** (Toyosu Civic Center Hall, 2022‑09‑05) — a Tokyo Tech **Platanus** member played *Blumenlied* (花の歌) with **bFaaaP**, set up among the other performers at a **formal multi‑university concert** ([event site](https://natsunokyoen2022.github.io/)).
 - **▶ [Piano recital, 2022‑04‑02 (Pro)](https://www.youtube.com/watch?v=O8X2gEqEU6k)** · 06:55
 - **▶ [bFaaaP Performance, MusicFair 2020](https://www.youtube.com/watch?v=6_y9MI1IdTQ)** · 16:06
 - **▶ [New bFaaaP6, MusicFair 2020](https://www.youtube.com/watch?v=j1ZIJ53j7NE)** · 06:39

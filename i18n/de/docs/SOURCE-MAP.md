@@ -85,6 +85,9 @@ zu seinen maßgeblichen Dateien. Pfade sind relativ zur Repo‑Wurzel (`github_o
 
 Illustrationen (`docs/media/illustrations/`) und vollständige Credits: [`docs/media/CREDITS.md`](../../../docs/media/CREDITS.md).
 
+Zitierte Quellen — gespeicherte Kopien der Open-Access-Artikel und der Patente, dazu stabile Links
+und Zugriffsdaten für alles Übrige: [`docs/references/`](../../../docs/references/README.md).
+
 > Hinweis: KI‑Abbildungen werden vom privaten Werkzeug in `AI-assistedSupport/` erzeugt (außerhalb des
 > Repos); nur die **Ausgabebilder** sind eingecheckt. Fotos sind direkt eingecheckt (keine externen
 > Links auf bfaaap.com).

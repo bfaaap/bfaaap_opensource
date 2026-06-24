@@ -18,7 +18,8 @@ simply. (More terms will be added as the build guides grow.)
 - **ARKit / TrueDepth** — Apple's face‑tracking technology (the Face‑ID camera). bFaaaP uses it
   to measure your **head angle**.
 - **Head angle / threshold** — how far you tilt. When the tilt passes a set point (**threshold**)
-  the pedal engages; you tune the threshold and speed to suit you.
+  the pedal engages; you preset the threshold (offset) and the multiplier to suit you, and those
+  two together set the response speed (how fast the pedal follows your head).
 
 ## The link
 - **BLE (Bluetooth Low Energy)** — short‑range wireless. The phone sends the head angle to the
@@ -39,8 +40,11 @@ simply. (More terms will be added as the build guides grow.)
 - **Closed‑loop motor / IQ‑Fortiq** — the Pro's motor; "closed‑loop" means it knows its own
   position/force, so it can press precisely. (The original is end‑of‑life; a stepper successor is
   planned.)
-- **Airback** — an air‑cushion that gently holds the Pro device in place by pressing a neighbouring
-  pedal, so nothing is screwed to the piano.
+- **Airback** — a **coined term** (not "airbag"): bFaaaP's inflatable, **air‑braced anchor**. An
+  air‑cushion inflates under a neighbouring pedal and absorbs the actuator's reaction force, so the
+  Pro device is held firmly on an *unmodified* piano — nothing is screwed on (non‑destructive,
+  quick to remove). The name is *air* + *back* (to brace / support), not the safety "airbag". See
+  [How it works](how-it-works.md#why-airback-a-coined-term-not-airbag).
 - **HX711** — a tiny amplifier chip that reads the air‑pressure sensor.
 - **MOSFET (2SK4017)** — an electronic switch the Pico uses to turn the air pump on/off.
 - **DIP switch** — a row of tiny physical switches on the board used to set the pedal **pressing

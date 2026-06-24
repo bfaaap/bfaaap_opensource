@@ -18,8 +18,8 @@ device families (Pro for acoustic pianos, Switch for digital instruments), joine
 by a deliberately simple wireless protocol and, on the Pro device, a short wired
 link that separates two timing domains. This subsection describes each stage and
 where the quantitative parameters (offset upper limit $3$--$10^{\circ}$,
-multiplier $10$--$50$, full action within $+2$--$10^{\circ}$, and a user-tunable
-response speed) physically live in the stack.
+multiplier $10$--$50$, full action within $+2$--$10^{\circ}$, and the response
+speed that those two presets produce) physically live in the stack.
 
 \subsubsection{Realized pipeline: one controller, two devices, a wired bridge}
 \label{sec:pipeline}
@@ -40,7 +40,7 @@ estimate head pose at roughly $60$\,fps~\cite{arkit}. A session delegate updates
 a single shared head-tilt variable on every frame; the downward pitch component
 is the control signal. Because face tracking is hardware-bound, the controller
 runs on a physical iPhone/iPad rather than a simulator, and the screen is kept
-awake during play so the hands-free session is uninterrupted.
+awake during play so the foot-free session is uninterrupted.
 
 \subsubsection{The quantitative control law in software}
 \label{sec:law-sw}
@@ -56,8 +56,9 @@ $\theta_{\mathrm{off}}$ by a small dead-band while the pedal is engaged. Because
 the events are edge-triggered with a state guard, one head dip produces exactly
 one engage and one release, eliminating chatter near the threshold. The
 \emph{response speed} (how fast the command tracks the head beyond the offset) is
-adjustable in advance to each user's preference, which is what lets users with a
-restricted range of motion (small offset, large multiplier) operate the system.
+not a separate control but a secondary, temporal effect of the user's \emph{offset}
+and \emph{multiplier} presets---which is what lets users with a restricted range of
+motion (small offset, large multiplier) obtain a fast response.
 
 \subsubsection{Decoupling AR sampling from BLE transmission}
 \label{sec:decoupling}
@@ -93,8 +94,8 @@ UART Service (NUS)~\cite{nus} using write-without-response for low latency. The
 protocol is intentionally tiny: a continuous value (\texttt{i00}..\texttt{i99}),
 engage/release events, channel-rename commands, and an on-type/off-type toggle.
 The play screen turns from white to red once the head passes the threshold,
-giving the performer eyes-free confirmation that matches the device-side
-indicator (Section~\ref{sec:switch}).
+giving a visual confirmation (for a helper or for setup) that matches the
+device-side indicator (Section~\ref{sec:switch}).
 
 \subsubsection{Pro device: BLE board $\rightarrow$ microcontroller $\rightarrow$ drivetrain $\rightarrow$ pedal}
 \label{sec:pro-chain}
@@ -122,7 +123,8 @@ absorbs the reaction force and anchors the unit on an unmodified piano.}
 \subsubsection{Reaction-force anchoring (airback) and sensorless self-calibration}
 \label{sec:airback}
 Two device-side mechanisms make the Pro practical on an \emph{unmodified}
-acoustic piano. First, an \emph{airback}: at power-up a pump (driven through a
+acoustic piano. First, an \emph{airback} (a term we coined for an inflatable,
+air-braced anchor---\emph{not} a safety ``airbag''): at power-up a pump (driven through a
 power MOSFET) inflates an air bag placed under an adjacent pedal until a pressure
 threshold is reached, absorbing the actuator's reaction force so the lightweight
 device stays put without being bolted to the instrument (a non-destructive

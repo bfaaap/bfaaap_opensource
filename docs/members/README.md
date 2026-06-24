@@ -79,7 +79,8 @@ embodiment of that ideal.
 A composer from the former Yugoslavia: accordion & piano from age 8, violin and
 composition at Istanbul (MA in musicology), many international awards. Came to
 Japan in 2015, studied computer music at Kunitachi College of Music (doctoral
-course), and joined **KORG**'s sound‑data development in 2019.
+course), and joined **KORG**'s sound‑data development in 2019. Volunteered with
+the bFaaaP project from 2019 to 2023.
 
 ---
 

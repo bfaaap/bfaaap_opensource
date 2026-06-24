@@ -20,7 +20,7 @@ each build track. New to the terms? See the [glossary](../GLOSSARY.md) and
 ## The big picture
 ```
 [ Build & install the iOS app ]  ──┐
-                                   ├─▶  pair over Bluetooth  ──▶  play hands‑free
+                                   ├─▶  pair over Bluetooth  ──▶  play foot‑free
 [ Build a device: Pro or Switch ] ─┘
 ```
 

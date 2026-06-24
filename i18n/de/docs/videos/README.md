@@ -26,6 +26,11 @@ Vollständige Veranstaltungen, bei denen Platanus‑Mitglieder mit bFaaaP Klavie
   Kurze Pro‑Demo beim Uni‑Festival.
 - **23.07.2023 · 03:45** — *bFaaaP Pro @ MUSICASA 2023‑07‑23* — <https://www.youtube.com/watch?v=S45xN5yFaRo>
   Ein Recital in der MUSICASA‑Halle (Yoyogi‑Uehara).
+- **05.09.2022** — *Natsu‑no‑Kyoen 2022 (夏の響演) — gemeinsames Konzert von sieben Universitäten* — <https://youtu.be/uXMLea6_eKM>
+  Bei diesem **formellen Hochschulkonzert** (Toyosu Civic Center Hall, Tokio) spielte ein Mitglied von
+  **Platanus** (Tokyo Tech) *Blumenlied* (花の歌) mit **bFaaaP**, aufgebaut neben den anderen Mitwirkenden —
+  ein Beleg, dass das Gerät auch in den kurzen Umbaupausen eines echten Konzerts funktioniert. Eventseite:
+  <https://natsunokyoen2022.github.io/>
 - **06.04.2022 · 06:55** — *Klaviervorspiel bFaaaP Pro, 02.04.2022* — <https://www.youtube.com/watch?v=O8X2gEqEU6k>
 - **05.11.2020 · 16:06** — *bFaaaP Performance MusicFair 2020* — <https://www.youtube.com/watch?v=6_y9MI1IdTQ>
 - **05.11.2020 · 06:39** — *New bFaaaP6 MusicFair 2020* — <https://www.youtube.com/watch?v=j1ZIJ53j7NE>

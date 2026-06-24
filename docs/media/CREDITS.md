@@ -17,6 +17,8 @@ bFaaaP project. **© Shishido & Associates.**
 | `intl-pro-switch.png` | Pro (acoustic) vs Switch (digital) |
 | `intl-support.png` | Support / community |
 | `intl-build-community.png` | Build / community |
+| `control-law-key.png` | The control law as the "key": a head tilt unlocking the player's own intended, natural pedalling (how-it-works) |
+| `apee-children.png` | An APEE session: children & a wheelchair user taking the friendly piano test (apee-study) |
 
 ## Diagrams (`diagrams/`)
 
@@ -25,6 +27,14 @@ Generated with matplotlib (data/process figures). **CC‑BY‑4.0.**
 | File | Use |
 |------|-----|
 | `ai-support-timeline.png` | How AI‑assisted Support works (timeline) |
+| `illustrations/airback-anchoring.png` | The Pro **"airback"** reaction‑force anchoring — mechanism schematic (matplotlib, hand‑drawn by the maintainer, **not** Gemini) |
+| `diagrams/fig-control-law.png` | Paper **Figure 3** — head‑angle control law (matplotlib; rendered from `bfaaap_arxiv_latex/figures/fig_control.pdf`) |
+| `diagrams/fig-control-vs-priorart.png` | Paper **Figure 4** — quantitative, user‑tunable mapping vs. binary prior art (matplotlib; from `fig_control_vs_priorart.pdf`) |
+| `diagrams/fig-apee-pipeline.png` | APEE method end‑to‑end — score/patterns → record → TVA → normalize → result (paper figure) |
+| `diagrams/fig-apee-test-score.png` | The actual APEE test score, pedal patterns 1 & 2 (reproduced from the patent figures) |
+| `diagrams/fig-apee-tva.png` | Computing the sustain score from the tone‑vibration area (paper figure) |
+| `diagrams/fig-apee-results.png` | APEE clinical results (paper figure) |
+| `diagrams/table-apee-data.png` | **Appendix A** — full anonymized APEE per‑recording data (matplotlib table, parsed from `appendix_apee_data.tex`) |
 
 ## Photos & posters (`./`, member portraits, device photos)
 

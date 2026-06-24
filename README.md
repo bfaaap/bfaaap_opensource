@@ -1,4 +1,4 @@
-# bFaaaP — a hands‑free piano pedal you can build 🎹
+# bFaaaP — a foot‑free piano pedal you can build 🎹
 
 > 🌐 **English** · [日本語](i18n/ja/README.md) · [Deutsch](i18n/de/README.md)
 
@@ -137,9 +137,10 @@ TACCESS version is maintained privately.)*
 
 ## Patents, trademark & design
 
-The control method — generating the pedal signal from **two parameters: a head‑angle
-*threshold* (an offset range within which the actuator is not driven) and the *press speed* /
-user preference** — is patented. **Two patents are in force in Japan**, with an English **PCT**
+The control method — a quantitative, user‑tunable control law in which the player presets an
+angular **dead‑zone (offset)** (a range within which the actuator is not driven) and a
+**multiplier**, which together fix a secondary, temporal **response speed** (how fast the actuator
+follows the head past the dead‑zone) — is patented. **Two patents are in force in Japan**, with an English **PCT**
 as priority basis:
 
 | Kind | Number | Title | Link |

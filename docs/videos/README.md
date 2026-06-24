@@ -33,6 +33,13 @@ Full events where Platanus members actually perform on piano using bFaaaP.
 - **2023‑07‑23 · 03:45** — *bFaaaP Pro ムジカーザ 2023‑07‑23* (at MUSICASA) —
   <https://www.youtube.com/watch?v=S45xN5yFaRo>
   A recital at the MUSICASA hall (Yoyogi‑Uehara).
+- **2022‑09‑05** — *Natsu‑no‑Kyoen 2022 (夏の響演) — a seven‑university joint concert* —
+  <https://youtu.be/uXMLea6_eKM>
+  At this **formal multi‑university concert** (Toyosu Civic Center Hall, Tokyo), a
+  Tokyo Tech **Platanus** member performed *Blumenlied* (花の歌, "Flower Song") using
+  **bFaaaP**, set up among the other performers on the shared stage — evidence that the
+  device fits a real concert's tight changeover. Event site:
+  <https://natsunokyoen2022.github.io/>
 - **2022‑04‑06 · 06:55** — *ピアノ発表会 bFaaaP Pro 令和4年4月2日* (piano recital,
   2022‑04‑02) — <https://www.youtube.com/watch?v=O8X2gEqEU6k>
 - **2020‑11‑05 · 16:06** — *bFaaaP Performance MusicFair 2020* —

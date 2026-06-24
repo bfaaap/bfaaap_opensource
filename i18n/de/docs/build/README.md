@@ -20,7 +20,7 @@ Hängengeblieben? Frag im [KI‑gestützten Support](../ai-support.md).
 ## Das große Ganze
 ```
 [ iOS‑App bauen & installieren ]  ──┐
-                                    ├─▶ per Bluetooth koppeln ──▶ freihändig spielen
+                                    ├─▶ per Bluetooth koppeln ──▶ fußfrei spielen
 [ Gerät bauen: Pro oder Switch ] ───┘
 ```
 

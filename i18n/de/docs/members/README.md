@@ -76,7 +76,8 @@ Verwirklichung dieses Ideals.
 Ein Komponist aus dem ehemaligen Jugoslawien: Akkordeon & Klavier ab dem 8. Lebensjahr, Violine und
 Komposition in Istanbul (M.A. Musikwissenschaft), zahlreiche internationale Auszeichnungen. 2015 nach
 Japan, studierte Computermusik am Kunitachi College of Music (Doktorandenkurs) und ging 2019 zur
-Sounddatenentwicklung bei **KORG**.
+Sounddatenentwicklung bei **KORG**. Wirkte von 2019 bis 2023 ehrenamtlich am
+bFaaaP‑Projekt mit.
 
 ---
 

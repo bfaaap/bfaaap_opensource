@@ -1,4 +1,4 @@
-# bFaaaP — ein freihändiges Klavierpedal zum Selberbauen 🎹
+# bFaaaP — ein fußfreies Klavierpedal zum Selberbauen 🎹
 
 > 🌐 [English](../../README.md) · [日本語](../ja/README.md) · **Deutsch**
 

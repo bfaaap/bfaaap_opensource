@@ -33,8 +33,9 @@ Connect the iPhone/iPad by USB, select it as the run destination, and press **Ru
 first launch, **allow Camera (face tracking)** and **Bluetooth** when prompted.
 
 ## Step 4 — Pair & tune
-Turn on the bFaaaP device, connect from the app, and set your **threshold** (how far to tilt) and
-**response speed**. See the BLE flow in [`ios-app/BLE-CONNECTION-FLOW.md`](../../ios-app/BLE-CONNECTION-FLOW.md)
+Turn on the bFaaaP device, connect from the app, and set your **threshold (offset)** (how far to
+tilt) and **multiplier** (sensitivity); together these two presets give your **response speed** —
+how fast the pedal follows your head. See the BLE flow in [`ios-app/BLE-CONNECTION-FLOW.md`](../../ios-app/BLE-CONNECTION-FLOW.md)
 and operation in [`docs/operation/`](../operation/).
 
 > Prefer not to build? Get it on the **App Store**: <https://apps.apple.com/jp/app/bfaaapswitch/id1545866059>

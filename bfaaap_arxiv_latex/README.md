@@ -66,7 +66,7 @@ Edit `scripts.py` and re-run it to change any figure, then recompile.
 ## Suggested arXiv category
 
 - **Primary: `cs.HC`** (Human–Computer Interaction) — the core novelty is a
-  hands-free head-angle interaction technique and accessibility.
+  foot-free head-angle interaction technique and accessibility.
 - **Cross-list: `cs.RO`** (Robotics) — the pedal actuator, airback anchoring, and
   closed-loop control.
 - Optional cross-list: **`eess.SY` / `cs.SY`** (Systems and Control) — the
@@ -110,3 +110,7 @@ authors (outside this public repo). This folder holds the **arXiv preprint** onl
 
 The technical content is drawn from this repository; see
 [`../docs/`](../docs/) and the device/app design notes for details and figures.
+
+**Cited references** are verified (June 2026) and archived: saved PDFs of the
+open‑access papers and the patents, plus stable links and access dates for the rest,
+are in [`../docs/references/`](../docs/references/README.md).

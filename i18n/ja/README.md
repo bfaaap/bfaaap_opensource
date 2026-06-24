@@ -1,4 +1,4 @@
-# bFaaaP — 自分で作れる、ハンズフリーのピアノ・ペダル 🎹
+# bFaaaP — 自分で作れる、フットフリーのピアノ・ペダル 🎹
 
 > 🌐 [English](../../README.md) · **日本語** · [Deutsch](../de/README.md)
 

@@ -85,5 +85,7 @@
 
 イラスト（`docs/media/illustrations/`）と全クレジット：[`docs/media/CREDITS.md`](../../../docs/media/CREDITS.md)。
 
+引用文献 —— オープンアクセス論文と特許の保存PDF、その他は安定URLとアクセス日：[`docs/references/`](../../../docs/references/README.md)。
+
 > 注：AI図は `AI-assistedSupport/` の private ツールで生成（リポジトリ外）。**出力画像のみ**を同梱。写真は直接同梱
 > （bfaaap.com への外部リンクなし）。

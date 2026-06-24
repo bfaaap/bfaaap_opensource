@@ -13,6 +13,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{longtable}
 \usepackage{xcolor}
 \usepackage{fancyvrb}
 \usepackage[hidelinks]{hyperref}
@@ -24,7 +25,7 @@
 \providecommand{\Description}[1]{}
 
 \title{\textbf{bFaaaP: An Inclusive, Head-Angle Piano-Pedal Interaction that
-Quantitatively Reproduces a Pianist's Intended Pedalling---Hands-Free, for
+Quantitatively Reproduces a Pianist's Intended Pedalling---Foot-Free, for
 Acoustic and Electronic Pianos}}
 
 \author[1,2]{Tomoyuki Shishido\thanks{Corresponding author and first author.
@@ -44,37 +45,35 @@ ORCID: \href{https://orcid.org/0000-0002-8944-2088}{0000-0002-8944-2088}
 \maketitle
 
 \begin{abstract}
-Expressive piano performance depends on the sustain (damper) pedal, which is
-operated by foot---excluding players who cannot readily use their feet:
-wheelchair users and others with lower-limb impairments, small children whose
-feet do not reach the pedals, and some elderly and severely disabled players. We
-present \textbf{bFaaaP} (\emph{barrier-Free assist as a Pedal}), an inclusive,
-hands-free human--machine interaction that operates the pedal from the angle of
-the player's \emph{head}. A smartphone tracks head pose with on-device
-augmented-reality (AR) face tracking and streams a compact command over Bluetooth
-Low Energy (BLE) to a pedal device. Our central claim, supported by patent
-examination, is that the contribution is \emph{not} the head$\rightarrow$pedal
-architecture (which prior art anticipates) but a \emph{quantitative, user-tunable
-control law}: a small angular dead-zone (offset upper limit $3$--$10^\circ$), a
-user-selected multiplier ($10$--$50$), full pedal action within a further
-$2$--$10^\circ$, and a pre-adjustable response speed. These ranges were obtained
-from---and the system validated by---a human-subject Auxiliary Pedal Effect
-Evaluation (APEE) with 15 participants (adults, children, and people with
-disabilities): bFaaaP significantly increased sustained-tone energy ($p<0.01$)
-and was statistically indistinguishable from a player's own foot ($p>0.05$), with
-no significant difference across participant classes. One participant with a leg
-disability and a tracheostomy performed successfully using a small offset and a
-large multiplier. Two co-equal device realizations share one controller: a
-non-destructive robotic actuator for acoustic pianos (\emph{Pro}), anchored by a
-pneumatic ``airback'' that absorbs the reaction force; and an electronic sustain
-switch for digital instruments (\emph{Switch}), whose simplicity gives it broad
-practical reach. A key engineering insight decouples the fast AR sampling rate
-from the slower BLE rate. The system has run in public concerts from 2018 to
-2026, and we release the full hardware and software as open source.
+Expressive piano performance depends on the sustain (damper) pedal, operated by
+foot---excluding players who cannot readily use their feet: wheelchair users and
+others with lower-limb impairments, small children, and some elderly or disabled
+players. We present \textbf{bFaaaP} (\emph{barrier-Free assist as a Pedal}), an
+inclusive, foot-free interaction that operates the pedal from the angle of the
+player's \emph{head}: a smartphone tracks head pose with on-device augmented-reality
+(AR) face tracking and streams a compact command over Bluetooth Low Energy (BLE) to
+a pedal device. Supported by patent examination, our central claim is \emph{not} the
+head$\rightarrow$pedal architecture (anticipated by prior art) but a quantitative,
+user-tunable control law---the patentable ``key'' to a natural, expressive result:
+the player presets a small angular dead-zone (offset $3$--$10^\circ$) and a
+multiplier ($10$--$50$), which together fix a secondary, pre-adjustable response
+speed that reproduces the pianist's intended pedalling. An engineering trick
+decouples the fast AR sampling from the slower BLE rate. Two co-equal realizations
+share one controller: a non-destructive robotic actuator for acoustic pianos
+(\emph{Pro}), anchored by a pneumatic ``airback'' (our coined term for an inflatable
+air-braced anchor) that absorbs the reaction force without modifying the instrument;
+and an electronic sustain switch for digital pianos (\emph{Switch}). In a
+human-subject Auxiliary Pedal Effect Evaluation (APEE) with 15 participants, bFaaaP
+significantly increased sustained-tone energy ($p<0.01$) and was statistically
+indistinguishable from a player's own foot ($p>0.05$), with no significant difference
+across classes; one participant with a leg disability and a tracheostomy performed
+successfully. With nothing worn on the face and fast setup, bFaaaP has run in formal
+public concerts (2018--2026). We release the full hardware and software as open
+source.
 \end{abstract}
 
 \noindent\textbf{Keywords:} assistive technology; accessibility; inclusive design;
-human--machine interaction; hands-free interaction; head-gesture interface;
+human--machine interaction; foot-free interaction; head-gesture interface;
 robotic actuation; accessible musical instruments; clinical evaluation;
 open hardware; Bluetooth Low Energy.
 
@@ -97,7 +96,7 @@ Caricature illustrations of the team are by Saki Shiokawa.
 This bFaaaP project was supported by Shishido \& Associates.
 
 \section*{Conflict of interest/Competing interests}
-T.S.\ is a chief technology officer at SeemeData Labs, Inc.\ and a chief Japanese
+T.S.\ is a chief technology officer at SeemeData Labs, Inc.\ and chief Japanese
 patent attorney at Shishido \& Associates. T.S., M.O., and H.N.\ are among the
 inventors on the patents underlying bFaaaP (JP~6726319 and JP~7004771;
 PCT~WO~2019/176164), which are held by T.~Shishido and Ootaki \& Architects, and
@@ -107,7 +106,7 @@ authors otherwise declare no competing interests.
 
 \section*{Patent availability}
 The control method is protected by JP~6726319~B2 and JP~7004771~B2 (priority basis:
-PCT~WO~2019/176164). As a matter of policy the authors intend to license the
+PCT~WO~2019/176164~\cite{pct2019}). As a matter of policy the authors intend to license the
 patents \emph{free of charge} for genuinely public/open uses and, in particular,
 for products or services that enable inclusive social participation by people with
 disabilities---even commercial ones. Please contact the corresponding author.
@@ -123,6 +122,10 @@ explicit patent grant), \emph{hardware} designs (CAD/3D-print/schematic) under
 practising the patented invention in a device is governed by the separate patent
 policy above.
 
+% =====================================================================
+\input{draft_sections/appendix_apee_data}
+
+% =====================================================================
 \bibliographystyle{unsrt}
 \bibliography{refs}
 

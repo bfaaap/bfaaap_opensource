@@ -28,13 +28,14 @@ show the need; bFaaaP differs in \emph{how} it reproduces intended pedalling and
 
 The contributions of this paper are:
 \begin{enumerate}
-  \item \textbf{An inclusive, hands-free head-angle interaction} that reproduces a
+  \item \textbf{An inclusive, foot-free head-angle interaction} that reproduces a
   pianist's intended pedalling, delivered by one smartphone controller and two
   co-equal device realizations (acoustic \emph{Pro}, electronic \emph{Switch}).
   \item \textbf{The control \emph{law}, not the architecture, as the novelty}: a
   quantitative, user-tunable mapping---angular dead-zone (offset $3$--$10^\circ$),
-  user multiplier ($10$--$50$), full action within $+2$--$10^\circ$, and a
-  pre-adjustable response speed---rather than the bare head$\rightarrow$pedal chain,
+  user multiplier ($10$--$50$), full action within $+2$--$10^\circ$, and the
+  pre-adjustable response speed these presets yield---rather than the bare
+  head$\rightarrow$pedal chain,
   which prior art anticipates (Section~\ref{sec:control-law}).
   \item \textbf{Human-subject clinical-style validation} (APEE, 15 participants):
   bFaaaP increases sustained-tone energy ($p<0.01$), is indistinguishable from a
@@ -43,7 +44,8 @@ The contributions of this paper are:
   \item \textbf{Concrete inclusive impact for named populations}, including a
   participant with a leg disability and a tracheostomy, and an estimate of the
   population served (Section~\ref{sec:impact}).
-  \item \textbf{Eyes-free, display-free operation suited to live performance}, with
+  \item \textbf{Operation suited to live performance}---nothing is worn on the
+  performer's face, and setup is fast on an unmodified instrument---with
   public-concert evidence (Section~\ref{sec:eyesfree}).
   \item \textbf{A reproducible, open-source realization} with a real-time
   AR$\leftrightarrow$BLE rate-decoupling design and a non-destructive pneumatic
@@ -163,16 +165,26 @@ that a further $2$--$10^\circ$ of tilt reaches full pedal action
 (Figure~\ref{fig:control}a). Engage/release events use \emph{hysteresis}: engage
 when $\theta-\theta_{\mathrm{off}}\ge\tau$ while released, release when
 $\theta-\theta_{\mathrm{off}}<\tau-\delta$ while engaged, with a small dead-band
-$\delta$ (Figure~\ref{fig:control}b). The \emph{response speed} beyond the offset
-is itself adjustable in advance to the player.
+$\delta$ (Figure~\ref{fig:control}b). The player presets just two quantities to
+taste: the \emph{offset} (\emph{where} the response begins) and the
+\emph{multiplier} (\emph{how much} pedal value each degree of tilt produces). These
+two presets in turn fix a \emph{secondary, temporal} characteristic we call the
+\emph{response speed}---\emph{how fast} the pedal actuator follows the head once it
+is past the offset. A small offset with a large multiplier, for example, gives a
+fast response that suits a player with a restricted range of head motion (on the Pro
+device this also raises the actuator's commanded movement speed). The player thus
+realizes a preferred response speed \emph{indirectly}, by pre-setting the offset and
+multiplier rather than by setting a separate ``speed'' control.
 
 This quantitative, user-tunable mapping---not the head$\rightarrow$pedal
 architecture---is the inventive core. Patent examination of the underlying method
 found the bare architecture (a head sensor, a processor, an actuator, and a pedal)
 anticipated or obvious in view of a head-activated piano pedal~\cite{canassist}
-combined with head-gesture display/headset prior art~\cite{hmd_jp2017,headset_jp2012};
+combined with head-gesture display, head-motion, and headset prior
+art~\cite{hmd_jp2017,headset_jp2012,colopl_jp2017,titech_jp2014,alps_us2018}, and
+with an existing pedal-performance aid~\cite{yamaha_jp2006};
 the claims were granted on the \emph{specific} offset/multiplier law and the
-pre-adjustable response speed~\cite{jp6726319,jp7004771}. Figure~\ref{fig:cvp}
+pre-adjustable response speed it yields~\cite{jp6726319,jp7004771}. Figure~\ref{fig:cvp}
 contrasts the two: where binary prior art emits a fixed on/off at a single
 threshold, bFaaaP produces a continuous, proportional command whose dead-zone and
 slope each user pre-sets to taste. This per-player pre-setting of the offset and
@@ -212,17 +224,75 @@ fixed on/off at one threshold; bFaaaP yields a proportional command whose dead-z
 
 \subsection{Clinical validation: the Auxiliary Pedal Effect Evaluation (APEE)}
 \label{sec:clinical}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_apee_pipeline.pdf}
+\Description{A five-stage pipeline. Stage 1: the test motif with pedalling patterns
+0 (no pedal), 1 (re-pedal at each three-note group), and 2 (held across groups).
+Stage 2: each pattern is played and recorded. Stage 3: the tone-vibration area (TVA)
+of each recording's waveform is measured with Sonic Visualiser and ImageJ. Stage 4:
+the no-pedal area is set to 1.00 and the score is the ratio TVA_n over TVA_0.
+Stage 5: the result, relative sustain 1.00, 1.59, 1.80, significant at p below 0.01
+and not significantly different from the player's own foot.}
+\caption{The APEE method end to end: from the test score and its two pedalling
+patterns, through recording and tone-vibration-area (TVA) measurement, to the
+normalized sustain score (TVA$_n$/TVA$_0$) and the result.}
+\label{fig:apee_pipeline}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\linewidth,trim=0 0 0 70,clip]{figures/fig_apee_test_score.pdf}
+\Description{The study score: the motif do-do-do, re-re-re, mi-mi-mi in 3/4 time,
+repeated four times. Under each system, two rows of horizontal pedal-down spans mark
+the two pedalling patterns: the lower row (pattern 1) is broken into one span per
+three-note group, i.e. the pedal is re-pressed at each group; the upper row
+(pattern 2) is a single long span held across the groups.}
+\caption{The APEE test score and its two pedalling patterns (the actual study score,
+reproduced from the patent application, PCT Fig.~23/24). The motif
+(do--do--do, re--re--re, mi--mi--mi; $3/4$, repeated four times) is played three ways.
+The horizontal bars beneath each staff are the pedal-down spans: \textbf{pattern~1}
+(lower row) re-pedals at each three-note group, whereas \textbf{pattern~2} (upper row,
+one long bar) holds the pedal across the groups for a longer, more connected
+sustain---which is why pattern~2 yields more sustained-tone energy than pattern~1
+(Table~\ref{tab:sustain}). \emph{Pattern~0} (not drawn) is the same motif played with
+no pedal.}
+\label{fig:apee_score_real}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_tva_method.pdf}
+\Description{Three waveform panels for the same motif: no pedal (TVA0), bFaaaP
+pattern 1 (TVA1), and pattern 2 (TVA2). The shaded, rectified waveform area grows
+with sustain. With TVA0 set to 1.00, each pattern's score is TVA_n over TVA_0;
+the measured means are 1.00, 1.59, and 1.80.}
+\caption{Computing the sustain score from the tone-vibration area (TVA). Each
+recording's waveform area (shaded) is measured; with the no-pedal area set to
+$1.00$, each pattern's score is TVA$_n$/TVA$_0$. Measured means: $1.00$, $1.59$,
+$1.80$.}
+\label{fig:tva}
+\end{figure}
+
 The control law and its parameter ranges were established and validated in a
 human-subject study, the Auxiliary Pedal Effect Evaluation (APEE), reported in the
-patent specification~\cite{jp6726319} and summarized here. Fifteen participants
+patent specification~\cite{jp6726319} and summarized here;
+Figure~\ref{fig:apee_pipeline} shows the method end to end. Fifteen participants
 were grouped into three classes (Table~\ref{tab:participants}): Class~I, adults who
 \emph{can} use their own feet (controls); Class~II, children whose feet do not
 reach the pedals; and Class~III, people with leg/neck disabilities. Each
 participant practised a fixed motif and recorded it under three conditions:
-\emph{pattern~0} (no pedal), \emph{pattern~1} and \emph{pattern~2} (two pedalling
-patterns using bFaaaP); Class~I additionally recorded with their own foot as a
-control. Each recording was analysed by measuring a tone-vibration area (TVA) from
-the audio (via Sonic Visualiser and ImageJ), with pattern~0 normalized to $1.00$.
+\emph{pattern~0}, the motif with no sustain pedal (the baseline); and
+\emph{pattern~1} and \emph{pattern~2}, the \emph{same} motif played with bFaaaP
+under two prescribed sustain-pedalling patterns marked in the study score
+(Figure~\ref{fig:apee_score_real}): pattern~1 re-pedals at each three-note group,
+whereas pattern~2 holds the pedal across the groups for a longer, more connected
+sustain, so pattern~2 is the more sustained of the two. Class~I additionally
+recorded with their
+own foot as a control. Each recording was analysed by measuring a tone-vibration
+area (TVA) from the audio (via Sonic Visualiser and ImageJ), with pattern~0
+normalized to $1.00$ (Figure~\ref{fig:tva}).
 
 \begin{table}[tbp]
 \caption{APEE participants ($n=15$), grouped by class, with the offset and
@@ -333,11 +403,19 @@ The user-tunable control law is what makes this breadth possible. One Class~III
 participant had a leg disability \emph{and} a tracheostomy, which restricted her
 range of head motion; she chose a \emph{small} offset ($3$--$5^\circ$) and a
 \emph{large} multiplier ($40$--$50$) so that her limited tilt still spanned the
-full pedal, and performed the target passage successfully. People with a
-tracheostomy are a substantial population---a 2018 national survey reported on the
-order of 7{,}395 patients on tracheostomy positive-pressure ventilation in Japan
-alone~\cite{tppv2018}, with many more having a tracheostomy generally---so a
-design that explicitly serves restricted head motion has real reach.
+full pedal, and performed the target passage successfully. The population that
+benefits is large and worldwide. Long-term ventilation---often delivered through a
+tracheostomy, which restricts head motion---reaches, for example, about $7{,}700$
+people on home tracheostomy positive-pressure ventilation in Japan as of 2020 (and
+$\sim$21{,}000 on home ventilation overall)~\cite{hmv_japan2020}, around $21{,}500$
+home-ventilation users across the 16 European countries of the Eurovent
+survey~\cite{eurovent2005}, and $4{,}334$ in Canada~\cite{hmv_canada2015}; reported
+home-ventilation prevalence runs about $6.6$--$13$ per $100{,}000$ in high-income
+countries and has been rising. More broadly still, the people who cannot readily use
+a foot pedal are far more numerous: the World Health Organization estimates that
+about $80$~million people---roughly $1\%$ of the world's population---need a
+wheelchair~\cite{who_wheelchair2023}. A design that explicitly serves restricted head
+motion, and that runs on a commodity smartphone, therefore has real, global reach.
 
 A short post-study questionnaire (Table~\ref{tab:survey}) found most participants
 enjoyed bFaaaP and rated it positively; the most common reservation concerned
@@ -361,21 +439,41 @@ Is the name good?     & 8.0 & 6.0 & 1 \\
 \end{tabular}
 \end{table}
 
-\subsection{Eyes-free, display-free control for live performance}
+\subsection{Practical fit for live performance: nothing worn on the face, fast setup}
 \label{sec:eyesfree}
 A design insight, sharpened during patent examination, is that head-gesture
-interfaces that depend on a \emph{visual indicator}---e.g., a head-mounted display
-showing whether a threshold is crossed~\cite{hmd_jp2017}---are unsuitable for a
-\emph{performing pianist}, who must look at the score, the keys, and the audience.
-bFaaaP is deliberately \emph{eyes-free and display-free}: the player feels the
-sustain in the sound, and the only optional feedback (the app screen turning red,
-or the Switch LED) is for a helper, not the performer. This makes the interaction
-fit for live use, which we have validated in the field rather than only in the lab:
-bFaaaP has appeared in piano recitals, university festivals, an international
-assistive-equipment exhibition, and full public concerts (2024 and 2025), with a
-documented device-setup walkthrough during one concert~\cite{repo}. Players who
-cannot use the foot pedal---including a wheelchair user---performed pieces
-requiring sustain before live audiences.
+interfaces that depend on a \emph{visual indicator}---for example, a head-mounted
+display that shows the wearer whether a threshold has been crossed~\cite{hmd_jp2017}---are
+ill-suited to a \emph{performing pianist}, who must keep looking at the score, the
+keys, and the audience and cannot wear a display while playing. bFaaaP places the
+sensor off the body entirely: the smartphone rests on the \emph{music stand} and
+reads the player's head angle from there, so \emph{nothing is attached to the
+performer's face or head}. This is a deliberate contrast with display- or
+headband-based prior art---a head-mounted display, or CanAssist's head-tilt pedal
+for the wheelchair pianist ``Emily,'' which sensed head motion with a sensor worn on
+a \emph{headband}~\cite{canassist}. The player simply feels the sustain in the sound;
+the only optional cue (the app screen turning red, or the Switch LED) is a visual aid
+for a helper or for setup, not something the performer must watch.
+
+For live use, the \emph{ease and speed of setup} matter as much as the interaction
+itself, because a concert stage is shared and the changeover between performers is
+short. Because bFaaaP is simply placed---the Switch lead plugged into the digital
+instrument, or the Pro unit rested over the pedals and anchored by the airback on an
+\emph{unmodified} acoustic piano---with nothing worn by the player, it can be installed
+quickly, within the same changeover window as the other performers. We have validated
+this in the field rather than only in the lab: bFaaaP has appeared in piano recitals,
+university festivals, an international assistive-equipment exhibition, and full public
+concerts from 2018 onward, with players who cannot use the foot pedal---including a
+wheelchair user---performing pieces that require sustain before live
+audiences~\cite{repo,videos}. A representative \emph{formal} multi-performer example
+is the seven-university joint concert \emph{Natsu-no-Kyoen 2022} (Toyosu Civic
+Center Hall, Tokyo, 5~September 2022), where a Tokyo~Tech Platanus member
+performed the piano piece \emph{Blumenlied} (``Flower Song'') with bFaaaP, set up
+among the other performers on the shared stage~\cite{concert_kyoen2022}---the same
+tight changeover faced by every performer. The on-instrument setup itself is
+documented in the 2025 Suzukake Science-Day concert recording (the first author's
+walkthrough at 25:01--28:32)~\cite{concert_suzukake2025}, with a dedicated,
+step-by-step Pro installation guide also available~\cite{video_pro_setup}.
 
 % --- 3.6 System realization (drafted to sub-subsection level) ---
 \input{draft_sections/3_6_system_realization}
@@ -401,6 +499,98 @@ restricted head motion from a tracheostomy (Section~\ref{sec:impact}), and the
 two device lines cover both the acoustic instruments where pedalling is hardest to
 restore and the large installed base of digital pianos.
 
+\subsection{Population scale, and the controller as an accessibility-control channel}
+\label{sec:access-channel}
+The people whom a foot-free, head-controlled interface could serve are numerous and
+worldwide, and two largely distinct populations are illustrative. First, people who
+cannot readily use a foot pedal because of lower-limb impairment overlap strongly with
+\emph{wheelchair users}: the World Health Organization estimates that $\sim$80~million
+people---about $1\%$ of the world's population---need a wheelchair~\cite{who_wheelchair2023},
+and national surveys report from hundreds of thousands to millions of users in individual
+countries (Table~\ref{tab:wheelchair}). Second, people with \emph{restricted head
+motion}---for example from a tracheostomy and long-term ventilation, the hardest case our
+study addressed---number in the thousands to tens of thousands per country on home
+ventilation alone (Table~\ref{tab:hmv}). We caution that the figures in both tables come
+from heterogeneous surveys with different definitions and metrics and are \emph{not}
+strictly comparable; we report them to convey scale, not for precise cross-country
+ranking, and we note that WHO publishes only a single \emph{global} wheelchair estimate
+rather than a country-by-country table~\cite{who_great2022}.
+
+\begin{table}[tbp]
+\caption{Wheelchair users (or people who \emph{need} a wheelchair), by region. Metrics,
+definitions, and years differ and are not strictly comparable (see note).}
+\label{tab:wheelchair}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lp{5.2cm}ll@{}}
+\toprule
+Region & Estimate & Year & Source \\
+\midrule
+World & $\sim$80 million ($\sim$1\% of population) \emph{need} a wheelchair & --- & WHO~\cite{who_wheelchair2023,who_great2022} \\
+USA & 3.6 million users (1.5\%, aged 15+) & 2010 & US Census~\cite{us_census_disability2010} \\
+UK (England) & $\sim$1.2 million users (estimate) & 2017 & NHS England~\cite{nhs_wheelchair} \\
+Canada & 288{,}800 wheelchair/scooter users ($\sim$1.0\%) & 2012 & \cite{wc_canada_smith2016} \\
+Japan & $\sim$818{,}000 manual wheelchairs in use ($\sim$0.6\%) & 2019 & \cite{wc_japan_shirogane2019} \\
+Australia & $\sim$119{,}000 manual-wheelchair users (65+); 679{,}000 use mobility aids & 2018 & AIHW~\cite{wc_australia_aihw} \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+{\footnotesize \emph{Note.} Definitions differ (``users'' vs.\ ``need''; community-only
+vs.\ all; age cut-offs), so totals are not strictly comparable. Germany has no official
+wheelchair-user count. WHO gives only a single global estimate.}
+\end{table}
+
+\begin{table}[tbp]
+\caption{Home mechanical ventilation (HMV) and its invasive/tracheostomy subset, by
+country. Metric \emph{types} differ (see note).}
+\label{tab:hmv}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrll l@{}}
+\toprule
+Country & HMV users & Invasive (trach.) & /100k & Source \\
+\midrule
+Japan & $\sim$21{,}000 & 7{,}700 (TPPV) & --- & 2020~\cite{hmv_japan2020} \\
+Europe (16 countries) & 21{,}526 & varies & 6.6 & 2002~\cite{eurovent2005} \\
+Canada & 4{,}334 & $\sim$18\% & 12.9 & 2012~\cite{hmv_canada2015} \\
+Poland & 12{,}616 & --- & 2.8$\to$20.0 & 2009--19~\cite{hmv_poland2022} \\
+Hungary & 384 & 40 (10.4\%) & 3.9 & 2018~\cite{hmv_hungary2018} \\
+South Korea & --- & 62.8\% trach. & 9.3 & 2016~\cite{hmv_korea2019} \\
+Germany & $\sim$17{,}000/yr$^{\dagger}$ & $\sim$6\% & --- & 2018~\cite{hmv_germany2021} \\
+USA & no registry$^{\ddagger}$ & --- & --- & ---~\cite{us_trach_mehta2015} \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+{\footnotesize \emph{Note.} Metric types differ: point-prevalence headcount (Japan),
+prevalence per 100{,}000 (Europe, Canada, Poland, Hungary, South Korea),
+$^{\dagger}$inpatient \emph{episodes/year} not living prevalence (Germany), and
+$^{\ddagger}$no national home-ventilation registry in the USA (hospital data show home
+discharge of tracheostomy-ventilation patients declining). Not strictly comparable.}
+\end{table}
+
+What makes bFaaaP relevant to these groups is its \emph{controller} rather than the pedal.
+The controller is a commodity-smartphone, quantitative, user-tunable head-angle channel
+that (i)~is \emph{foot-free}, so it does not depend on the lower limbs that wheelchair users
+often cannot use; (ii)~attaches \emph{nothing to the face or head}---the phone sits on a
+stand---which matters for people with a tracheostomy, facial sensitivity, or who must keep
+the airway and face clear; and (iii)~is \emph{tunable to a restricted range of motion}: as
+the Class~III participant showed, a small offset with a large multiplier lets a few degrees
+of residual head movement span the full output (Section~\ref{sec:impact}). These are
+precisely the constraints the two populations above present. Because the head-angle signal
+is a continuous, pre-set, \emph{proportional} value---not a single on/off switch---it is a
+general \emph{accessibility-control} primitive: the same channel that here meters a sustain
+pedal could, in principle, meter other graded controls (an environmental-control setting, a
+communication-aid scan rate, a powered-device level). The device-controller method is
+patented independently of the pedal and explicitly spans ``any device''~\cite{jp7004771},
+and the \emph{Switch} line already shows how cheaply the controller retargets to a new
+actuator. We present this as a discussion-level argument and a direction for future work:
+bFaaaP \emph{validates} the channel for expressive piano pedalling, and its tunable,
+face-free, foot-free design suggests the same controller could contribute to accessibility
+control for the much larger populations of Tables~\ref{tab:wheelchair}
+and~\ref{tab:hmv}---which we have not yet validated and leave to future work.
+
 \subsection{Comparison with existing systems}
 Table~\ref{tab:comparison} compares bFaaaP with representative prior systems on a
 literature basis. Relative to Steingraeber's instrument-integrated electromagnetic
@@ -420,7 +610,7 @@ the face and per-instrument calibration (discussed below).
 \toprule
 System & Input & Non-destructive & User-tunable & Commodity sensor & Open source \\
 \midrule
-\textbf{bFaaaP} (Pro/Switch) & head angle, smartphone AR & yes (airback) & yes (offset+mult.+speed) & yes & yes \\
+\textbf{bFaaaP} (Pro/Switch) & head angle, smartphone AR & yes (airback) & yes (offset+mult.$\rightarrow$speed) & yes & yes \\
 Steingraeber~\cite{steingraeber,mouthpedal2008} & helmet tilt / neck reed / bite force & no (integrated) & partial (bite) & no & no \\
 CanAssist~\cite{canassist} & head tilt, headband & yes (floor unit) & no (binary) & no & no \\
 Electromech.\ activators~\cite{hinsley1988,uspedal2008,uspedal2017} & varied & varies & typically binary & no & no \\
@@ -451,7 +641,7 @@ application~\cite{jp7004771}, covering electronic instruments and, more broadly,
 shows how cheaply the controller scales---an electronic sustain needs no
 drivetrain---so head-angle pedalling can reach the very large installed base of
 digital pianos and keyboards at low cost. Second, the controller is a reusable
-\emph{inclusive input}: the same eyes-free, tunable head channel could operate
+\emph{inclusive input}: the tunable head channel could operate
 other expressive controls, other instruments, or assistive devices beyond music.
 We therefore see bFaaaP not only as a pedal aid but as a platform for inclusive,
 hands-free control of a wide range of products and services.
@@ -482,8 +672,10 @@ faster and more robust.
 \label{sec:conclusion}
 bFaaaP turns a small, natural head movement into expressive, foot-quality
 piano-pedal control. Its inventive core is a quantitative, user-tunable control
-law---an angular dead-zone, a user multiplier, and a pre-adjustable response
-speed---validated in a human-subject study to be statistically equivalent to a
+law---an angular dead-zone and a user multiplier that the player presets, which
+together fix a secondary, temporal \emph{response speed} (how fast the pedal
+actuator follows the head past the dead-zone)---validated in a human-subject study
+to be statistically equivalent to a
 player's own foot and effective across adults, children, and people with
 disabilities, including a participant with a tracheostomy. One commodity-smartphone
 controller drives two co-equal realizations: a non-destructive robotic actuator

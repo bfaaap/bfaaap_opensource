@@ -18,7 +18,8 @@ erklärt. (Weitere Begriffe kommen hinzu, während die Bauanleitungen wachsen.)
 - **ARKit / TrueDepth** — Apples Gesichts‑Tracking (die Face‑ID‑Kamera). bFaaaP misst damit den
   **Kopfwinkel**.
 - **Kopfwinkel / Schwelle** — wie weit du neigst. Übersteigt die Neigung einen Sollwert (**Schwelle**),
-  greift das Pedal ein; Schwelle und Geschwindigkeit stellst du auf dich ein.
+  greift das Pedal ein; du stellst die **Schwelle (Offset)** und den **Faktor** auf dich ein, und beide
+  zusammen ergeben die Reaktionsgeschwindigkeit (wie schnell das Pedal dem Kopf folgt).
 
 ## Die Verbindung
 - **BLE (Bluetooth Low Energy)** — kurzreichweitiger Funk. Das Telefon sendet den Kopfwinkel per BLE
@@ -37,8 +38,11 @@ erklärt. (Weitere Begriffe kommen hinzu, während die Bauanleitungen wachsen.)
 - **arduino‑pico (Philhower)‑Core** — das Board‑Support‑Paket, mit dem der Pico Arduino‑Code ausführt.
 - **Closed‑Loop‑Motor / IQ‑Fortiq** — der Motor des Pro; „Closed Loop“ heißt, er kennt seine eigene
   Position/Kraft und kann präzise drücken. (Das Original ist abgekündigt — EOL; ein Schrittmotor‑Nachfolger ist geplant.)
-- **Airback** — ein Luftkissen, das das Pro‑Gerät sanft fixiert, indem es ein Nachbarpedal drückt —
-  nichts wird ans Klavier geschraubt.
+- **Airback** — ein **geprägter Begriff** (kein „airbag"): bFaaaPs aufblasbarer, **luftgestützter
+  Anker**. Ein Luftkissen bläst sich unter einem Nachbarpedal auf und nimmt die Reaktionskraft des
+  Aktuators auf, sodass das Pro‑Gerät auf einem *unveränderten* Klavier fest sitzt — nichts wird
+  angeschraubt (zerstörungsfrei, schnell abnehmbar). Der Name ist *air* + *back* (stützen), nicht
+  das Sicherheits‑„airbag". → [Wie es funktioniert](how-it-works.md)
 - **HX711** — ein winziger Verstärker‑Chip, der den Luftdrucksensor ausliest.
 - **MOSFET (2SK4017)** — ein elektronischer Schalter, mit dem der Pico die Luftpumpe ein-/ausschaltet.
 - **DIP‑Schalter** — eine Reihe winziger physischer Schalter auf der Platine, um die **Pedaldruckkraft**

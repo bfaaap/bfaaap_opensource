@@ -35,8 +35,9 @@ Verbinde iPhone/iPad per USB, wähle es als Ziel und drücke **Run (▶)**. Erla
 **Kamera (Gesichts‑Tracking)** und **Bluetooth**.
 
 ## Schritt 4 — Koppeln & einstellen
-Schalte das bFaaaP‑Gerät ein und verbinde dich aus der App. Stelle deine **Schwelle** (wie weit
-neigen) und **Reaktionsgeschwindigkeit** ein. Den BLE‑Ablauf siehe
+Schalte das bFaaaP‑Gerät ein und verbinde dich aus der App. Stelle deine **Schwelle (Offset)** (wie
+weit neigen) und deinen **Faktor** (Empfindlichkeit) ein; beide zusammen ergeben deine
+**Reaktionsgeschwindigkeit** (wie schnell das Pedal dem Kopf folgt). Den BLE‑Ablauf siehe
 [`ios-app/BLE-CONNECTION-FLOW.md`](../../../../ios-app/BLE-CONNECTION-FLOW.md), den Betrieb in
 [`docs/operation/`](../../../../docs/operation/).
 

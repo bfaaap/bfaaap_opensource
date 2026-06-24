@@ -343,6 +343,199 @@ def fig_apee_results():
     save(fig, "fig_apee_results")
 
 
+# ------------------------------------------------ Figure: APEE test score + pedal patterns
+def fig_apee_score():
+    """The APEE test score and the two pedalling patterns (reconstruction of the
+    patent/PCT score figure, WO2019176164 Fig. 23). The motif do-do-do, re-re-re,
+    mi-mi-mi (3/4) is repeated four times. It is played three ways: pattern 0 (no
+    pedal), and two bFaaaP pedalling patterns shown as pedal-down spans -- pattern 1
+    changes the pedal at each three-note group, pattern 2 holds it across the groups
+    for a longer, more connected sustain (hence pattern 2 > pattern 1 in sustain)."""
+    fig, ax = plt.subplots(figsize=(7.6, 2.5))
+    pitches = {"do": 0, "re": 1, "mi": 2}
+    groups = ["do", "re", "mi"]              # three-note groups
+    note_w, gap = 0.30, 0.06                 # block width and inter-note gap
+    grp_span = 3 * note_w + 2 * gap          # width of a 3-note group
+    grp_gap = 0.22                           # silence between groups (pattern-1 lift)
+    rep_gap = 0.42                           # gap between the four repetitions
+    y_note = {0: 2.55, 1: 2.80, 2: 3.05}     # pitch rows (do/re/mi)
+    p1_y, p2_y = 1.85, 1.35                   # pedal-span rows
+    x = 2.5                                   # leave room at left for row labels
+    ax.set_xlim(0, 15.6); ax.set_ylim(0.7, 3.6); ax.axis("off")
+    # pitch row guide labels
+    for nm, r in pitches.items():
+        ax.text(0.05, y_note[r], nm, ha="left", va="center", fontsize=7, color="#999")
+    for rep in range(4):
+        rep_x0 = x
+        for gi, g in enumerate(groups):
+            gx0 = x
+            for k in range(3):                # three notes of the group
+                ax.add_patch(Rectangle((x, y_note[pitches[g]] - 0.07), note_w, 0.14,
+                             facecolor="#333", edgecolor="none"))
+                x += note_w + (gap if k < 2 else 0)
+            # pattern 1: one span per three-note group (re-pedal at each group)
+            ax.add_patch(Rectangle((gx0, p1_y - 0.06), grp_span, 0.12,
+                         facecolor=BLUE_E, edgecolor="none"))
+            x += grp_gap
+        rep_x1 = x - grp_gap
+        # pattern 2: one long span across the whole repetition (held across groups)
+        ax.add_patch(Rectangle((rep_x0, p2_y - 0.06), rep_x1 - rep_x0, 0.12,
+                     facecolor=GREEN_E, edgecolor="none"))
+        x += rep_gap
+    ax.text(x + 0.05, (y_note[0] + y_note[2]) / 2, "...", fontsize=10, va="center")
+    # row labels on the right
+    ax.text(0.05, p1_y, "Pedal pattern 1", ha="left", va="center", fontsize=7.6, color=BLUE_E)
+    ax.text(0.05, p2_y, "Pedal pattern 2", ha="left", va="center", fontsize=7.6, color=GREEN_E)
+    ax.text(0.05, 3.42, "motif (3/4): do do do | re re re | mi mi mi  -- repeated 4x",
+            ha="left", va="center", fontsize=7.6, color="#444")
+    ax.annotate("re-pedal each group", (3.01, p1_y - 0.10), (3.4, p1_y - 0.52),
+                fontsize=6.6, color=BLUE_E, ha="center",
+                arrowprops=dict(arrowstyle="->", color=BLUE_E, lw=0.8))
+    ax.annotate("held across groups", (4.25, p2_y - 0.10), (5.6, p2_y - 0.42),
+                fontsize=6.6, color=GREEN_E, ha="center",
+                arrowprops=dict(arrowstyle="->", color=GREEN_E, lw=0.8))
+    ax.set_title("APEE test score and the two pedalling patterns", fontsize=9.5)
+    save(fig, "fig_apee_score")
+
+
+# ------------------------------------------------ Figure: TVA ratio method
+def fig_tva_method():
+    """How the sustain score is computed: the tone-vibration area (TVA) ratio.
+    The same motif is recorded three ways; each waveform's area is measured
+    (Sonic Visualiser -> ImageJ). The no-pedal area TVA0 is set to 1.00 and each
+    bFaaaP pattern's score is TVA_n / TVA0. More sustain -> larger area. The panel
+    waveforms are schematic; the ratios (1.00, 1.59, 1.80) are the measured APEE
+    study means (patent JP6726319, Table 3)."""
+    fs = 3000.0
+    onset, n = 0.40, 9                                    # 9-note motif
+    pitches = [262, 262, 262, 294, 294, 294, 330, 330, 330]
+    T = onset * n + 0.8
+    t = np.linspace(0, T, int(T * fs))
+
+    def wave(decay):                                     # additive damped sines
+        y = np.zeros_like(t)
+        for i, f0 in enumerate(pitches):
+            t0 = i * onset
+            m = t >= t0
+            y[m] += np.exp(-decay * (t[m] - t0)) * np.sin(2 * np.pi * f0 * (t[m] - t0))
+        return y
+
+    panels = [("TVA$_0$  (no pedal)", 11.0, GREY_E, GREY_F, 1.00),
+              ("TVA$_1$  (pattern 1)", 3.3, BLUE_E, BLUE_F, 1.59),
+              ("TVA$_2$  (pattern 2)", 2.1, GREEN_E, GREEN_F, 1.80)]
+    waves = [wave(d) for _, d, _, _, _ in panels]
+    gmax = max(np.abs(w).max() for w in waves)
+
+    fig = plt.figure(figsize=(7.9, 3.7))
+    gs = fig.add_gridspec(2, 3, height_ratios=[3.0, 1.0], hspace=0.6, wspace=0.18)
+    for j, ((lab, _, ec, fc, ratio), w) in enumerate(zip(panels, waves)):
+        ax = fig.add_subplot(gs[0, j])
+        wn = w / gmax
+        ax.plot(t, wn, color=ec, lw=0.4)
+        ax.fill_between(t, np.abs(wn), color=fc, alpha=0.55, lw=0)   # the "area" (TVA)
+        ax.set_xlim(0, T); ax.set_ylim(-1.08, 1.08)
+        for s in ax.spines.values():
+            s.set_edgecolor("#333"); s.set_linewidth(1.0)
+        # title carries the panel name + its relative area
+        ax.set_title(f"{lab}\narea = {ratio:.2f}", fontsize=9.2, color=ec)
+        # axes: amplitude (A.U.) is the y scale; time is relative (recording tempo
+        # is not in the study data), shown as an arrow with no fabricated ms values.
+        ax.set_xticks([])
+        ax.set_xlabel("Time (a.u.) " + r"$\rightarrow$", fontsize=8.6)
+        ax.set_yticks([-1, 0, 1])
+        if j == 0:
+            ax.set_ylabel("Amplitude (A.U.)", fontsize=8.6)
+            ax.tick_params(axis="y", labelsize=8.0)
+        else:
+            ax.set_yticklabels([])
+    axf = fig.add_subplot(gs[1, :]); axf.axis("off")
+    axf.text(0.5, 0.74, "TVA = tone-vibration area (shaded). "
+             r"TVA$_0\equiv1.00$;  score = TVA$_n$ / TVA$_0$.",
+             ha="center", va="center", fontsize=9.6)
+    axf.text(0.5, 0.18, "Measured APEE means: TVA$_0$ = 1.00,  "
+             "TVA$_1$/TVA$_0$ = 1.59,  TVA$_2$/TVA$_0$ = 1.80",
+             ha="center", va="center", fontsize=9.0, color="#333")
+    fig.suptitle("Computing the sustain score from the tone-vibration area (TVA)",
+                 fontsize=10.2, y=1.0)
+    save(fig, "fig_tva_method")
+
+
+# ------------------------------------------------ Figure: APEE pipeline (big picture)
+def fig_apee_pipeline():
+    """End-to-end overview of the APEE method: from the test score and its two
+    pedalling patterns, through recording each take, to measuring the waveform
+    tone-vibration area (TVA), normalising, taking the ratio, and the result.
+    Redesigned for readability: taller boxes, larger fonts, minimal text per box
+    (details live in the caption and the dedicated figures)."""
+    fig, ax = plt.subplots(figsize=(9.9, 3.9))
+    ax.set_xlim(0, 104); ax.set_ylim(0, 40); ax.axis("off")
+    W, H, Y0, SP = 18.0, 32.0, 3.5, 21.0
+    x0 = [1 + i * SP for i in range(5)]
+    titles = ["1. Score +\n2 patterns", "2. Record\n3 takes",
+              "3. Measure\narea (TVA)", "4. Normalise\n& ratio", "5. Result"]
+    for x, t in zip(x0, titles):
+        ax.add_patch(FancyBboxPatch((x, Y0), W, H, boxstyle="round,pad=0.3,rounding_size=1.4",
+                     linewidth=1.5, edgecolor=BLUE_E, facecolor=BLUE_F))
+        ax.text(x + W / 2, Y0 + H - 1.6, t, ha="center", va="top", fontsize=10.5, fontweight="bold")
+    for x in x0[:-1]:
+        ax.add_patch(FancyArrowPatch((x + W, Y0 + H / 2), (x + SP, Y0 + H / 2),
+                     arrowstyle="-|>", mutation_scale=18, lw=2.1, color="#333"))
+
+    # Stage 1: the three pedalling patterns as mini pedal-down rows (P0/P1/P2)
+    rows = [("P0", GREY_E, "none"), ("P1", BLUE_E, "seg3"), ("P2", GREEN_E, "long")]
+    for i, (lab, col, kind) in enumerate(rows):
+        ry = Y0 + 21 - i * 5.0
+        ax.text(x0[0] + 2.5, ry, lab, ha="left", va="center", fontsize=9.0,
+                fontweight="bold", color=col)
+        bx = x0[0] + 7.0; span = 9.5
+        if kind == "none":
+            ax.plot([bx, bx + span], [ry, ry], color=col, ls=":", lw=1.5)
+        elif kind == "seg3":
+            for k in range(3):
+                ax.add_patch(Rectangle((bx + k * (span / 3), ry - 0.8), span / 3 * 0.8, 1.6,
+                             facecolor=col, edgecolor="none"))
+        else:
+            ax.add_patch(Rectangle((bx, ry - 0.8), span, 1.6, facecolor=col, edgecolor="none"))
+    ax.text(x0[0] + W / 2, Y0 + 3.2, "P1 re-pedals · P2 holds", ha="center", va="center",
+            fontsize=7.6, color="#555")
+
+    # Stage 2: record three takes
+    ax.text(x0[1] + W / 2, Y0 + H - 8.5, "play and record\neach pattern\n(iPhone, .wav)",
+            ha="center", va="top", fontsize=9.0)
+    ax.text(x0[1] + W / 2, Y0 + 6.5, "3 takes:\nP0 · P1 · P2", ha="center", va="center",
+            fontsize=8.6)
+
+    # Stage 3: a decaying waveform with shaded (rectified) area = TVA
+    sx0 = x0[2] + 2.5; sw = W - 5.0; sb = Y0 + 19.0; sh = 6.5
+    tt = np.linspace(0, 1, 320)
+    amp = np.exp(-2.3 * tt) * np.sin(2 * np.pi * 9 * tt)
+    xs = sx0 + sw * tt
+    ax.fill_between(xs, sb, sb + sh * np.abs(amp), color=BLUE_F, lw=0)
+    ax.plot(xs, sb + sh * amp * 0.5, color=BLUE_E, lw=0.6)
+    ax.text(x0[2] + W / 2, Y0 + 14.0, "tone-vibration\narea (TVA)", ha="center", va="top", fontsize=8.8)
+    ax.text(x0[2] + W / 2, Y0 + 6.5, "Sonic Visualiser\n→ ImageJ", ha="center", va="top", fontsize=7.8)
+
+    # Stage 4: the formula
+    ax.text(x0[3] + W / 2, Y0 + 21, "TVA$_0 \\equiv 1.00$", ha="center", va="center", fontsize=10.0)
+    ax.text(x0[3] + W / 2, Y0 + 12, "score =\nTVA$_n$ / TVA$_0$", ha="center", va="center", fontsize=10.0)
+
+    # Stage 5: mini result bar chart + significance
+    bb = Y0 + 8.5; bscale = 12.0; bw = 2.9; bgap = 1.9
+    res = [("P0", 1.00, GREY_F, GREY_E), ("P1", 1.59, BLUE_F, BLUE_E), ("P2", 1.80, GREEN_F, GREEN_E)]
+    bx0 = x0[4] + 3.2
+    for i, (lab, v, fc, ec) in enumerate(res):
+        bx = bx0 + i * (bw + bgap)
+        ax.add_patch(Rectangle((bx, bb), bw, v / 1.80 * bscale, facecolor=fc, edgecolor=ec, lw=1.1))
+        ax.text(bx + bw / 2, bb - 1.2, lab, ha="center", va="top", fontsize=7.6)
+        ax.text(bx + bw / 2, bb + v / 1.80 * bscale + 0.5, f"{v:.2f}", ha="center", va="bottom", fontsize=7.2)
+    ax.text(x0[4] + W / 2, Y0 + H - 8.0, "relative sustain", ha="center", va="top", fontsize=8.0)
+    ax.text(x0[4] + W / 2, Y0 + 3.2, "$p<0.01$ · $\\approx$ own foot", ha="center", va="center", fontsize=7.4)
+
+    fig.suptitle("The APEE pipeline: from score and pedalling patterns to a quantitative sustain score",
+                 fontsize=10.5, y=1.0)
+    save(fig, "fig_apee_pipeline")
+
+
 if __name__ == "__main__":
     fig_overview()
     fig_architecture()
@@ -351,4 +544,7 @@ if __name__ == "__main__":
     fig_pro_mechanism()
     fig_control_vs_priorart()
     fig_apee_results()
+    fig_apee_score()
+    fig_tva_method()
+    fig_apee_pipeline()
     print("done.")
