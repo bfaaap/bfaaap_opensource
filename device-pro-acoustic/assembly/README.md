@@ -34,9 +34,9 @@ Crowd Supply). Total ≈ **¥56,700** + power supply (¥2,000–7,600).
 
 | Part | Spec | Notes |
 |------|------|-------|
-| **Air jack** | **119 × 11 cm** | inflatable anchor under a neighbouring pedal |
-| **Air pump** | φ3 | inflates the air jack |
-| Pneumatic fittings/tube | T‑fitting 3 mm, tubing | |
+| **Air jack (airback)** | **WINBAG** air jack — 160 × 150 mm, up to 50 mm, **135 kg** | off-the-shelf inflatable anchor under a neighbouring pedal — see [`../hardware/airback/`](../hardware/airback/) for specs + where to buy |
+| **Air pump** | the WINBAG's built-in **hand squeeze-bulb** (+ bleed valve) | inflates / deflates the air jack |
+| Pneumatic fittings/tube | as supplied with the WINBAG (its own hose) | |
 
 ### Electronics
 

@@ -54,8 +54,36 @@ More build photos: [`../photos/`](../photos/).
 > controller's potentiometer and switch are wired in directly (see the
 > [schematic](../schematic/)).
 
+## Identified part & dimensions (device photos + product match, 2026-06-24)
+
+The airback is an **off-the-shelf inflatable air jack — a WINBAG (ウィンバッグ)**: the
+blue handheld "air wedge / air cushion" used to lift, level and align doors, windows
+and appliances. The blue fabric pouch, hand **squeeze-bulb pump** and **red bleed
+valve** in the device photos match it exactly. **You don't fabricate it — you buy one.**
+
+| Spec (official WINBAG) | Value |
+|------------------------|-------|
+| **Size (flat)** | **160 × 150 mm** (palm-size); weight **79 g** |
+| **Inflates to** | **up to 50 mm** thick — bridges the gap under a neighbouring pedal |
+| **Load capacity** | **135 kg** per bag (the *CONNECT* version links several, up to ~450 kg) |
+| **Pump / deflate** | integrated **hand squeeze-bulb** + **bleed valve** |
+| **Brand / origin** | **WINBAG** (Denmark); JP distributor 竣栄工業 / トラスコ中山 |
+
+Reference drawing: [`airback-dimensions.png`](airback-dimensions.png).
+
+### Where to buy
+- **Japan:** Amazon.co.jp / モノタロウ / コメリ / ファクトリーギア — search **「ウィンバッグ」
+  / 「WINBAG エアジャッキ」** (e.g. *WINBAG CONNECT 135kg*, item 17635). Maker page:
+  竣栄工業 <https://www.shun-ei.co.jp/winbag/>.
+- **International:** search **"WINBAG"** / **"air wedge pump bag"** / **"air shim"** at
+  Toolstation, Lowe's, Amazon (Rhino Strong / Gute / EasyWedge are equivalent clones).
+
+> Any equivalent **~135 kg air wedge** with a squeeze-bulb pump and a bleed valve
+> works — only the function matters (bridge the gap under a neighbouring pedal, hold
+> the reaction force). This supersedes the BOM's rough "air jack ≈ 11.9 × 11 cm" note.
+
 ## Status
 
-This is an overview based on the current design. **Detailed materials,
-dimensions, the pump/controller schematic, and assembly photos will be added
-later.** Treat this page as the concept; the specifics are TODO.
+The airback is now **fully identified** — a stock **WINBAG** air jack with known
+dimensions, a reference drawing, and purchase links above. The only remaining
+nice-to-have is documenting the pump/valve plumbing on the body's I/O panel.
