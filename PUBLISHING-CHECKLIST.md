@@ -104,5 +104,16 @@ before pushing to a public GitHub repository.
 
 ## 7. Final
 
-- [ ] `git init`, review `git status` against `.gitignore`, commit, and only then
-      create the public remote.
+- [x] **Git history purge — DONE (2026-06-24).** The peer-review files
+      (`bfaaap_arxiv_latex/main_taccess.tex|.pdf`, `JOURNAL-TARGETS.md`, naming 12
+      suggested reviewers/editors) were stripped from **all** history with
+      `git-filter-repo`, `main` was **force-pushed**, and the obsolete
+      `feature/docs-overhaul` + `feature/i18n-reference-docs` remote branches (which
+      still carried the old history) were **deleted**. Verified: gone from
+      `origin/main` history, 0 sensitive objects, working content unchanged. A
+      private backup bundle exists outside the repo — **delete it before going
+      public**. For absolute certainty, ask **GitHub Support to expire unreachable
+      objects** before flipping the repo to public (do NOT delete/recreate the repo —
+      it holds the AI-support Discussions).
+- [ ] Working tree is on the existing private remote; review `git status` against
+      `.gitignore`, then change repository visibility to **public** (final step).
