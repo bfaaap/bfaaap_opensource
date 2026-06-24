@@ -1,8 +1,10 @@
 # Pro device — parts reference (boards, motor, connectors)
 
-> **Source / attribution.** Adapted from the team's `bfaaapteam` repository
-> (`docs/hardware.md`, by Taguchi & H. Narusawa) and the team Discord.
-> Reference images are in [`reference/`](reference/).
+> **Source / attribution.** The parts **data** is from the team's `bfaaapteam`
+> repository (`docs/hardware.md`, by Taguchi & H. Narusawa) and the team Discord.
+> The reference **figures** in [`reference/`](reference/) are **original
+> bFaaaP-project drawings** (CC BY 4.0), redrawn from the public pinouts — the
+> earlier third-party images (of uncertain license) were removed.
 
 This is the **authoritative parts list with vendor links** for the IQ (v039B)
 reference generation. It supersedes earlier guesses about the BLE board.
@@ -11,7 +13,7 @@ reference generation. It supersedes earlier guesses about the BLE board.
 
 | Role | Part | Vendor / link |
 |------|------|---------------|
-| **Main board (pedal/motor control)** | **Raspberry Pi Pico** (RP2040) | [raspberrypi.com](https://www.raspberrypi.com/products/raspberry-pi-pico/) · [datasheet](https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf) · pinout in [`reference/rpi_pico_pinout.svg`](reference/rpi_pico_pinout.svg) |
+| **Main board (pedal/motor control)** | **Raspberry Pi Pico** (RP2040) | [raspberrypi.com](https://www.raspberrypi.com/products/raspberry-pi-pico/) · [datasheet](https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf) · bFaaaP pin map: [`reference/pico_pinout_bfaaap.png`](reference/pico_pinout_bfaaap.png) |
 | **BLE board (receiver)** — **confirmed** | **nRF52840 BLE board (Akizuki `AE-NRF52840`, `g117484`)** ✅ | [akizukidenshi g117484](https://akizukidenshi.com/catalog/g/g117484/) · [datasheet](https://akizukidenshi.com/goodsaffix/AE-NRF52840.pdf) |
 | **BLE board (receiver)** — alternative | **Adafruit Feather nRF52840 Express** (ID 4062) | [adafruit.com/product/4062](https://www.adafruit.com/product/4062) · [guide](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather) |
 
@@ -28,7 +30,7 @@ reference generation. It supersedes earlier guesses about the BLE board.
 | Item | Detail |
 |------|--------|
 | **Motor** | **IQ Fortiq BLS42** (a.k.a. M42BLS / `IQ-FORTIQ-M42BLS-100`, 100 W) — [Crowd Supply](https://www.crowdsupply.com/iq-motion-control/iq-fortiq-bls42) · [Vertiq docs](https://iqmotion.readthedocs.io/en/latest/modules/fortiq_42XX.html) · [datasheet](https://iqmotion.readthedocs.io/en/latest/_downloads/c01d03f5e3ec159b4621b16c13126158/fortiq_datasheet.pdf) |
-| **Electrical interface** | CANL, CANH, ADC, GPIO1‑3, HPO (7‑pin signal) + V‑/V+; the `H1_RX` / `H2_TX` pair is used as **serial** (also supports PWM/Dir, Step). See [`reference/fortiq42_electrical-interface.png`](reference/fortiq42_electrical-interface.png). |
+| **Electrical interface** | CANL, CANH, ADC, GPIO1‑3, HPO (7‑pin signal) + V‑/V+; the `H1_RX` / `H2_TX` pair is used as **serial** (also supports PWM/Dir, Step). Authoritative pinout: [Vertiq docs](https://iqmotion.readthedocs.io/en/latest/modules/fortiq_42XX.html); our redrawn wiring: [`reference/fortiq42_interface_bfaaap.png`](reference/fortiq42_interface_bfaaap.png). |
 | **Signal terminal** | Same Sky (CUI) **TBL009-254-07GY-2GY** (7‑pos, 2.54 mm, screwless, 26–18 AWG) |
 | **Power terminal** | Same Sky (CUI) **TBLH10-350-02BK** (2‑pos, 3.5 mm, 24–16 AWG) |
 | **3‑pin header** | generic ("Dupont") 3P housing ([akizuki g112152](https://akizukidenshi.com/catalog/g/g112152/)) |

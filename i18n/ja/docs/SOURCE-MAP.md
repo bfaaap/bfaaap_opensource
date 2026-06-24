@@ -40,7 +40,7 @@
 ## 4. 電子・配線
 | トピック | 📄 説明 | ⚡ 回路図 / 📷 写真 |
 |------|---------|-------------------|
-| 部品表（ボード・モーター・コネクタ） | [`hardware/PARTS-REFERENCE`](../../../device-pro-acoustic/hardware/PARTS-REFERENCE.md) | ⚡ [`fortiq42`](../../../device-pro-acoustic/hardware/reference/fortiq42_electrical-interface.png) |
+| 部品表（ボード・モーター・コネクタ） | [`hardware/PARTS-REFERENCE`](../../../device-pro-acoustic/hardware/PARTS-REFERENCE.md) | ⚡ [`fortiq42`](../../../device-pro-acoustic/hardware/reference/fortiq42_interface_bfaaap.png) |
 | 回路図 | [`schematic/README`](../../../device-pro-acoustic/hardware/schematic/README.md) | ⚡ `hardware/schematic/schematic_2025-03-05_kicad.png` · `block-diagram.png` · `power-supply-options.png` |
 | ピン配（GP4/5 モーター・GP2/3 HX711・GP12 ポンプ・ADC0 スライダ） | [`firmware/DESIGN-HIGHLIGHTS`](../../../device-pro-acoustic/firmware/DESIGN-HIGHLIGHTS.md) ＋ `.ino` | ⚡ 上記回路図 |
 | I/Oパネル・電源 | [`hardware/photos/README`](../../../device-pro-acoustic/hardware/photos/README.md) | 📷 `hardware/photos/pro_io_panel.jpg` ほか |

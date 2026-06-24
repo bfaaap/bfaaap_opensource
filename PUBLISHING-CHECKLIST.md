@@ -55,14 +55,17 @@ before pushing to a public GitHub repository.
 - [x] `device-pro-acoustic/hardware/photos/` — build photos (airback + drive unit)
       by **Taguchi** from the Discord. **Taguchi (photographer) consented
       (2026-06-18)** (no people/PII shown).
-- [ ] `device-pro-acoustic/hardware/PARTS-REFERENCE.md` + `hardware/reference/` —
-      adapted from `TomoShishido/bfaaapteam` (`docs/hardware.md`); confirm that
-      repo's content can be reused publicly. `DISCORD-FINDINGS.md` summarizes a
+- [x] `device-pro-acoustic/hardware/PARTS-REFERENCE.md` + `hardware/reference/` —
+      parts **data** adapted from `TomoShishido/bfaaapteam` (`docs/hardware.md`, by
+      consented co-authors Taguchi & Narusawa). `DISCORD-FINDINGS.md` summarizes a
       **private Discord**; build photos/videos are **kept out** of the repo.
-      ⚠️ **Taguchi (2026-06-24):** the **images in that legacy `docs/hardware.md`
-      were brought in from elsewhere — original license unknown.** Before going
-      public, **verify provenance / obtain permission, or replace** any such image
-      reused here (Taguchi's *own* schematic/photos are separately consented above).
+      ✅ **Image provenance resolved (2026-06-24):** Taguchi flagged that the two
+      images in the legacy `docs/hardware.md` (`rpi_pico/pinout.svg`,
+      `fortiq42/electrical-interface.png`) were brought in from elsewhere with
+      **unknown license**. Both were **removed** and **replaced with original
+      bFaaaP-project matplotlib drawings** (`pico_pinout_bfaaap.png`,
+      `fortiq42_interface_bfaaap.png`, CC BY 4.0) plus links to the official
+      Raspberry Pi / Vertiq sources. No third-party images of uncertain license remain.
 
 ## 4. Project license & patents
 

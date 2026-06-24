@@ -40,7 +40,7 @@ zu seinen maßgeblichen Dateien. Pfade sind relativ zur Repo‑Wurzel (`github_o
 ## 4. Elektronik / Verdrahtung
 | Thema | 📄 Erklärung | ⚡ Schaltplan / 📷 Foto |
 |-------|--------------|------------------------|
-| Teileliste (Boards, Motor, Stecker) | [`hardware/PARTS-REFERENCE`](../../../device-pro-acoustic/hardware/PARTS-REFERENCE.md) | ⚡ [`fortiq42`](../../../device-pro-acoustic/hardware/reference/fortiq42_electrical-interface.png) |
+| Teileliste (Boards, Motor, Stecker) | [`hardware/PARTS-REFERENCE`](../../../device-pro-acoustic/hardware/PARTS-REFERENCE.md) | ⚡ [`fortiq42`](../../../device-pro-acoustic/hardware/reference/fortiq42_interface_bfaaap.png) |
 | Schaltplan | [`schematic/README`](../../../device-pro-acoustic/hardware/schematic/README.md) | ⚡ `hardware/schematic/schematic_2025-03-05_kicad.png` · `block-diagram.png` · `power-supply-options.png` |
 | Pin‑Belegung (GP4/5 Motor, GP2/3 HX711, GP12 Pumpe, ADC0 Schieber) | [`firmware/DESIGN-HIGHLIGHTS`](../../../device-pro-acoustic/firmware/DESIGN-HIGHLIGHTS.md) + `.ino` | ⚡ Schaltplan oben |
 | I/O‑Panel & Strom | [`hardware/photos/README`](../../../device-pro-acoustic/hardware/photos/README.md) | 📷 `hardware/photos/pro_io_panel.jpg` usw. |

@@ -41,7 +41,7 @@ jump from any topic to its authoritative files. All paths are relative to the re
 ## 4. Electronics / wiring
 | Topic | 📄 Explanation | ⚡ schematic / 📷 photo |
 |------|----------------|------------------------|
-| Parts list (boards, motor, connectors) | [`hardware/PARTS-REFERENCE.md`](../device-pro-acoustic/hardware/PARTS-REFERENCE.md) | ⚡ [`hardware/reference/fortiq42_electrical-interface.png`](../device-pro-acoustic/hardware/reference/fortiq42_electrical-interface.png) |
+| Parts list (boards, motor, connectors) | [`hardware/PARTS-REFERENCE.md`](../device-pro-acoustic/hardware/PARTS-REFERENCE.md) | ⚡ [`hardware/reference/fortiq42_interface_bfaaap.png`](../device-pro-acoustic/hardware/reference/fortiq42_interface_bfaaap.png) |
 | Circuit schematic | [`hardware/schematic/README.md`](../device-pro-acoustic/hardware/schematic/README.md) | ⚡ `hardware/schematic/schematic_2025-03-05_kicad.png` · `block-diagram.png` · `power-supply-options.png` |
 | Pin map (GP4/5 motor, GP2/3 HX711, GP12 pump, ADC0 slider) | [`firmware/DESIGN-HIGHLIGHTS.md`](../device-pro-acoustic/firmware/DESIGN-HIGHLIGHTS.md) + the `.ino` | ⚡ schematic above |
 | I/O panel & power | [`hardware/photos/README.md`](../device-pro-acoustic/hardware/photos/README.md) | 📷 `hardware/photos/pro_io_panel.jpg` · `pro_power_connector.jpg` · `pro_printed_io_panels.jpg` |
