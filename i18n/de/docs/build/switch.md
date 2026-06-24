@@ -18,7 +18,7 @@ Motor, kein Airback. Er nutzt **dieselbe iOS‑App und dasselbe BLE‑Board** wi
 
 ## Bevor du beginnst
 - Ein **Adafruit ItsyBitsy nRF52840**‑BLE‑Board (das Board des Switch; mit der onboard‑DotStar)
-- Ein **MOSFET** zum Schalten der Sustain‑Leitung (**kein Serienwiderstand**) *(genaues Teil noch offen)*
+- Ein **ROHM `RU1J002YN`** N‑Kanal‑Logiklevel‑**MOSFET** zum Schalten der Sustain‑Leitung (**kein Serienwiderstand**)
 - **2× AA‑Batterien** zur Stromversorgung (kein USB‑Laden)
 - Ein Stecker für die **Sustain‑Pedalbuchse** des Instruments (meist 6,3‑mm‑/TS‑Klinke)
 - Ein iPhone/iPad mit Face ID + die [iOS‑App](ios.md)

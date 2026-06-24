@@ -17,7 +17,7 @@ no motor, no airback. It uses the **same iOS app** and BLE board as the Pro.
 
 ## Before you start
 - An **Adafruit ItsyBitsy nRF52840** BLE board (the Switch's board; has the onboard DotStar)
-- A **MOSFET** to switch the sustain line (**no series resistor**) *(exact part TBD)*
+- A **ROHM `RU1J002YN`** N-channel logic-level **MOSFET** to switch the sustain line (**no series resistor**)
 - **2× AA batteries** for power (no USB charging)
 - A connector for the instrument's **sustain‑pedal jack** (commonly a 6.3 mm / TS jack)
 - An iPhone/iPad with **Face ID** + the [iOS app](ios.md)

@@ -31,11 +31,11 @@ turns **red** and the sustain engages; head up → released.
                                               digital piano sustain‑pedal jack
 ```
 
-A **MOSFET** on the BLE board's `GP13` output bridges the sustain jack's contacts
-(confirmed by Narusawa, 2026‑06‑24 — **no series resistor**) — the same wiring most
-digital pianos expect from a normal momentary sustain pedal (tip/sleeve). Polarity
-/ normally‑open vs normally‑closed is handled by the on‑type / off‑type setting
-(`n` / `f`).
+A **ROHM `RU1J002YN`** N-channel (logic-level) **MOSFET** on the BLE board's `GP13`
+output bridges the sustain jack's contacts (confirmed by Narusawa, 2026‑06‑24 —
+**no series resistor**) — the same wiring most digital pianos expect from a normal
+momentary sustain pedal (tip/sleeve). Polarity / normally‑open vs normally‑closed
+is handled by the on‑type / off‑type setting (`n` / `f`).
 
 ## Connection & certification
 
@@ -57,16 +57,17 @@ management. What is **still TODO** is the **hardware** around it:
 ```
 device-switch-electronic/
 ├── firmware/    ✅ standalone BLE-board firmware (on/off via GP13)  ← added 2026-06-24
-├── hardware/    ◑ MOSFET on GP13 + sustain-jack adapter + enclosure (key facts known)
+├── hardware/    ◑ RU1J002YN MOSFET on GP13 + sustain-jack adapter + 2×AA + enclosure (specified)
 └── assembly/    ⏳
 ```
 
 **Confirmed by Narusawa (2026‑06‑24):** board = **ItsyBitsy nRF52840 Express**; the
-GP13 switching element is a **MOSFET** (no series resistor); **no A1 button** — power
-on / wake with **RESET**; powered by **2× AA cells** (battery level shown by the
-**DotStar dimming**); the 2021‑10‑07 firmware is **final**. Still to confirm: the
-**exact MOSFET part + its wiring to the TS jack** (Narusawa is checking) — see "Open
-questions" in [`firmware/README.md`](firmware/README.md).
+GP13 switching element is a **ROHM `RU1J002YN`** N-channel logic-level MOSFET (no
+series resistor); **no A1 button** — power on / wake with **RESET**; powered by
+**2× AA cells** (battery level shown by the **DotStar dimming**); the 2021‑10‑07
+firmware is **final**. The Switch hardware is now essentially fully specified —
+see [`firmware/README.md`](firmware/README.md) (only Narusawa's exact
+reference-circuit drawing is still to be added).
 
 See the shared [`../docs/architecture/`](../docs/architecture/) for the BLE
 protocol and [`../ios-app/`](../ios-app/) for the controller.

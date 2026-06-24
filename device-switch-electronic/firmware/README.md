@@ -71,15 +71,17 @@ The iOS app writes one byte at a time:
 ## Output → sustain jack
 
 `GP13` is the on/off output. For a digital piano you bridge the instrument's
-**sustain-pedal jack** (commonly a 6.3 mm / TS jack) with a **MOSFET** driven from
-`GP13` (confirmed by Narusawa, 2026‑06‑24 — *not* a relay or optocoupler), with
-**no series resistor** on the sustain line. The **on-mode / off-mode** (`n`/`f`)
-selects normally-open vs normally-closed so it matches the host instrument's
-polarity.
+**sustain-pedal jack** (commonly a 6.3 mm / TS jack) with a **ROHM `RU1J002YN`**
+N-channel MOSFET driven from `GP13` (confirmed by Narusawa, 2026‑06‑24 — *not* a
+relay or optocoupler), with **no series resistor** on the sustain line. The
+`RU1J002YN` is a **logic-level** part (Vgs(th) ≈ 0.8 V; 50 V / 200 mA; SOT-323-3
+with a built-in gate–source protection diode), so the **3.3 V `GP13`** output
+drives it fully. The **on-mode / off-mode** (`n`/`f`) selects normally-open vs
+normally-closed so it matches the host instrument's polarity.
 
-> The **MOSFET part number and the exact gate/drain/source wiring to the TS jack**
-> are not in the firmware — still to be confirmed (see "Open questions" and the
-> [device README](../README.md)).
+> Wiring: a standard **low-side switch** — gate ← `GP13`, drain/source across the
+> TS jack's tip/sleeve, **no series resistor**. (Narusawa is preparing the exact
+> reference-circuit drawing.)
 
 ## Channels (run several at once)
 
@@ -118,7 +120,7 @@ and the [iOS app](../../ios-app/).
 ## Hardware — confirmed by Narusawa (2026-06-24)
 
 - **Board:** Adafruit **ItsyBitsy nRF52840 Express** (confirmed).
-- **Switching element on GP13:** a **MOSFET** (not a relay/opto).
+- **Switching element on GP13:** a **ROHM `RU1J002YN`** N-channel logic-level MOSFET (not a relay/opto).
 - **Sustain line:** **no series resistor**; polarity handled by on/off-mode (`n`/`f`).
 - **Controls:** **no A1 button** — power on / wake with the **RESET** button.
 - **Power:** **2× AA cells** (replaceable, not USB-rechargeable); battery level
@@ -127,9 +129,9 @@ and the [iOS app](../../ios-app/).
 
 ## Open questions (residual, for a full rebuild)
 
-1. The **exact MOSFET part** and its **gate/drain/source wiring to the TS jack**
-   — Narusawa confirmed it is a MOSFET with no series resistor and is **checking
-   the part number and the circuit** (2026‑06‑24); to be filled in when shared.
+- **Nothing blocking.** The switching MOSFET is the **ROHM `RU1J002YN`** (no series
+  resistor). The only nicety still to add is Narusawa's exact reference-circuit
+  drawing of the low-side switch, which he is preparing.
 
 ---
 **License (adopted):** firmware is released under the **Apache License 2.0**
