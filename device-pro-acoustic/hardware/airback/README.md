@@ -72,6 +72,9 @@ valve** in the device photos match it exactly. **You don't fabricate it — you 
 Reference drawing: [`airback-dimensions.png`](airback-dimensions.png).
 
 ### Where to buy
+
+> Example links to **check specs/availability** — **not** an endorsement or guarantee; verify before buying.
+
 - **Japan:** Amazon.co.jp / モノタロウ / コメリ / ファクトリーギア — search **「ウィンバッグ」
   / 「WINBAG エアジャッキ」** (e.g. *WINBAG CONNECT 135kg*, item 17635). Maker page:
   竣栄工業 <https://www.shun-ei.co.jp/winbag/>.

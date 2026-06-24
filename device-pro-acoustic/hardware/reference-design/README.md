@@ -55,12 +55,47 @@ a WINBAG (hand-inflated) + a 5 V/24 V supply. Everything else is an enhancement.
 ## Enclosure / housing
 
 The Pro "housing" is **not** one printed box (unlike the [Switch](../../../device-switch-electronic/assembly/)).
-It's the **extrusion frame** (buy + cut) plus a few **3D-printed parts**: a **motor mount**,
-**lead-screw bearing blocks**, a **push-rod guide**, and an **electronics box** (Pico + BLE +
-PSU). The electronics box is motor-independent and can be drafted like the Switch case; the
-**mounts are motor-dependent**, so they are best finalised once you pick the motor
-(IQ vs stepper). Ask in [Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions)
-and we can draft the printable parts for your choice.
+It's the **extrusion frame** (buy + cut) plus a few **3D-printed parts**.
+
+**Electronics box (provided — AI draft):** a simple, adaptable 2-part case for the Pico +
+nRF52840 BLE board + MOSFET/terminals, with cable U-notches (power, motor, hand controller),
+two USB slots for flashing, four board standoffs and a screw-down lid:
+
+- [`pro-ebox.scad`](pro-ebox.scad) — **parametric source** (edit the sizes, export STL)
+- [`pro-ebox-base.stl`](pro-ebox-base.stl) · [`pro-ebox-lid.stl`](pro-ebox-lid.stl) — watertight, ready to slice (≈100 × 78 × 38 mm)
+
+**Motor-dependent parts (not here):** the **motor mount**, **lead-screw bearing blocks** and
+**push-rod guide** depend on the motor/screw you choose, so they're best finalised once you
+pick the motor (IQ vs stepper). Ask in
+[Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions) and we can draft
+them for your build.
+
+## Suggested parts — examples only (AI-suggested, not endorsed)
+
+> ⚠️ **Read this first.** The links below are **examples the AI lists as *possibilities*** so
+> you can open them and **check the spec / size / form factor** yourself. They are **NOT
+> recommendations, endorsements, or guarantees** — neither the bFaaaP project nor the AI
+> verifies the sellers, prices, quality, or that any item actually fits your build. **You are
+> responsible for confirming voltage, current, dimensions and compatibility before buying.**
+> Most are **search links** (so they keep showing current options); availability varies by region.
+
+| Subsystem | What to look for | Example links (examples only) |
+|-----------|------------------|-------------------------------|
+| Controller | **Raspberry Pi Pico** (RP2040) | [raspberrypi.com](https://www.raspberrypi.com/products/raspberry-pi-pico/) · [Amazon search](https://www.amazon.com/s?k=raspberry+pi+pico) |
+| BLE board | **Akizuki AE-NRF52840** / Adafruit Feather nRF52840 | [akizukidenshi](https://akizukidenshi.com/catalog/g/g117484/) · [adafruit 4062](https://www.adafruit.com/product/4062) |
+| Motor (option A) | IQ Fortiq M42BLS (serial) — **EOL** | [Crowd Supply](https://www.crowdsupply.com/iq-motion-control/iq-fortiq-bls42) |
+| Motor (option B) | **closed-loop stepper**, STEP/DIR (e.g. NEMA17 + driver, or MKS SERVO42) | [AliExpress search](https://www.aliexpress.com/wholesale?SearchText=nema17+closed+loop+stepper) · [Amazon search](https://www.amazon.com/s?k=closed+loop+stepper+nema17) |
+| Lead screw + nut | **T10** lead screw (~150–300 mm) + brass nut | [Amazon search](https://www.amazon.com/s?k=T10+lead+screw+8mm) · [AliExpress search](https://www.aliexpress.com/wholesale?SearchText=T10+lead+screw) |
+| Belt + pulleys | **GT2 (2GT)** belt + 20T / 60T pulleys | [Amazon search](https://www.amazon.com/s?k=GT2+belt+pulley+kit) |
+| Bearings | flanged + thrust + collar for the screw | [Amazon search](https://www.amazon.com/s?k=lead+screw+bearing+set) |
+| Frame | aluminium extrusion **4040 / 2040** + brackets | [Amazon search](https://www.amazon.com/s?k=aluminium+extrusion+4040) |
+| Airback | **WINBAG** air jack (full buy links + specs) | [see `../airback/`](../airback/) |
+| Air pump (optional) | small **5 V** diaphragm air pump | [Amazon search](https://www.amazon.com/s?k=5V+mini+air+pump+diaphragm) |
+| Switching MOSFET | logic-level N-MOSFET (2SK4017 / RU1J002YN) | [Akizuki search](https://akizukidenshi.com/catalog/goods/search.aspx?search=x&keyword=2SK4017) · [ROHM RU1J002YN](https://www.rohm.com/products/transistors/mosfets/standard/ru1j002yn-product) |
+| Power | SMPS giving **5 V + 24 V** | [Amazon search](https://www.amazon.com/s?k=24V+5V+dual+output+power+supply) |
+
+> Again: these are **starting points to compare specs**, not a vetted BOM. Cross-check every
+> item against the architecture above and the confirmed [`../PARTS-REFERENCE.md`](../PARTS-REFERENCE.md).
 
 ---
 **Credits:** original drawings by the **bFaaaP project** (AI-assisted draft, CC BY 4.0);
