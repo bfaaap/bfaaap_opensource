@@ -21,8 +21,10 @@ Pro と**同じ iOS アプリと BLE ボード**を使います。
 - Face ID 付き iPhone/iPad ＋ [iOSアプリ](ios.md)
 
 ## ステップ1 —— BLEボードに書き込み
-BLEスケッチを nRF52840 に書き込みます（RESET 2回押し → UF2 ブートローダ → アップロード）。手順は
-[`docs/toolchain/`](../../../../docs/toolchain/)。BLE スキャナで広告が見えることを確認。
+**スタンドアロン Switch ファームウェア**
+（[`device-switch-electronic/firmware/`](../../../../device-switch-electronic/firmware/)）を nRF52840
+に書き込みます（RESET 2回押し → UF2 ブートローダ → アップロード）。手順は
+[`docs/toolchain/`](../../../../docs/toolchain/)。BLE スキャナで広告（`bFaaaPSwitch_1…4`）が見えることを確認。
 
 ## ステップ2 —— サステインスイッチを追加
 スイッチング素子（リレー/フォトカプラ）を、BLEボードの出力線がサステイン接点を開閉するように接続します。

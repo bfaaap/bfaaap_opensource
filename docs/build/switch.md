@@ -22,8 +22,10 @@ no motor, no airback. It uses the **same iOS app** and BLE board as the Pro.
 - An iPhone/iPad with **Face ID** + the [iOS app](ios.md)
 
 ## Step 1 — Flash the BLE board
-Flash the BLE sketch to the nRF52840 (double‑tap RESET → UF2 bootloader → upload). Full steps:
-[`docs/toolchain/`](../toolchain/). Confirm it advertises in a BLE scanner.
+Flash the **standalone Switch firmware**
+([`device-switch-electronic/firmware/`](../../device-switch-electronic/firmware/)) to the nRF52840
+(double‑tap RESET → UF2 bootloader → upload). Full steps: [`docs/toolchain/`](../toolchain/).
+Confirm it advertises (`bFaaaPSwitch_1…4`) in a BLE scanner.
 
 ## Step 2 — Add the sustain switch
 Connect the switching element (relay/optocoupler) so the BLE board's output line opens/closes the

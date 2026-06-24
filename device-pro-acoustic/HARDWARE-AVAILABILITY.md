@@ -93,11 +93,14 @@ Fortiq 42 <https://iqmotion.readthedocs.io/en/latest/modules/fortiq_42XX.html>
 
 ## 2. BLE board — nRF52 (Adafruit Bluefruit)
 
-The original board is the **Adafruit ItsyBitsy nRF52840 Express** (the Switch
-firmware drives its **onboard DotStar** RGB LED via `DATAPIN 8 / CLOCKPIN 6`). The
-BLE sketch uses the **Adafruit Bluefruit** stack (`#include <bluefruit.h>`), so it
-runs on any **Adafruit nRF52840** board with only board‑selection changes — keep
-the ItsyBitsy if you want the onboard DotStar status colour.
+For the **Pro**, the board is the **Akizuki `AE-NRF52840`** (confirmed by Taguchi,
+2026‑06‑24); the Pro firmware has no LED routine. The **Adafruit ItsyBitsy
+nRF52840 Express** with its **onboard DotStar** RGB LED (`DATAPIN 8 / CLOCKPIN 6`)
+is the **Switch** line's board (see
+[`../device-switch-electronic/firmware/`](../device-switch-electronic/firmware/)).
+The BLE sketch uses the **Adafruit Bluefruit** stack (`#include <bluefruit.h>`), so
+it runs on any **Adafruit nRF52840** board with only board‑selection changes — pick
+the ItsyBitsy if you want an onboard DotStar status colour.
 
 - **Adafruit Feather nRF52840 Express** — current, well‑documented, easy to wire.
   <https://www.adafruit.com/product/4062>

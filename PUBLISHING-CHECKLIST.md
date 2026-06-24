@@ -43,8 +43,10 @@ before pushing to a public GitHub repository.
       power diagrams are by **Taguchi** (github.com/reodon), imported from
       `reodon/copy_bfaaap_pro`, which had **no license file**. **Taguchi consented
       (2026-06-18)** and agreed to waive rights to the maximum extent → released
-      under the hardware layer (**CERN-OHL-W-2.0**). KiCad source to be added when
-      provided (a detailed technical reply is coming from Taguchi).
+      under the hardware layer (**CERN-OHL-W-2.0**). **KiCad source delivered by
+      Taguchi (2026-06-24)** and **imported** to `hardware/schematic/kicad/`
+      (`.kicad_sch` authoritative; `.kicad_pcb` empty stub) — scanned clean of
+      absolute paths / PII before committing.
 - [x] `device-pro-acoustic/hardware/cad/from-discord-2025/` and
       `3d-print/from-discord-2025/` — CAD/STL shared by **H. Narusawa** in the team
       **Discord**. **Narusawa consented (2026-06-14)** to co-authorship, GitHub name
@@ -57,6 +59,10 @@ before pushing to a public GitHub repository.
       adapted from `TomoShishido/bfaaapteam` (`docs/hardware.md`); confirm that
       repo's content can be reused publicly. `DISCORD-FINDINGS.md` summarizes a
       **private Discord**; build photos/videos are **kept out** of the repo.
+      ⚠️ **Taguchi (2026-06-24):** the **images in that legacy `docs/hardware.md`
+      were brought in from elsewhere — original license unknown.** Before going
+      public, **verify provenance / obtain permission, or replace** any such image
+      reused here (Taguchi's *own* schematic/photos are separately consented above).
 
 ## 4. Project license & patents
 

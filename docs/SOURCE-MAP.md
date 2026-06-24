@@ -32,6 +32,7 @@ jump from any topic to its authoritative files. All paths are relative to the re
 | Overview / which sketch to use | [`device-pro-acoustic/firmware/README.md`](../device-pro-acoustic/firmware/README.md) | — |
 | **Main board (Pico) — reference** | [`firmware/DESIGN-HIGHLIGHTS.md`](../device-pro-acoustic/firmware/DESIGN-HIGHLIGHTS.md), [`firmware/CODE-STRUCTURE.md`](../device-pro-acoustic/firmware/CODE-STRUCTURE.md) | 💻 `device-pro-acoustic/firmware/pico/bFaaaP_autopro_pico_v039B_20250725.ino` |
 | BLE board (nRF52) | [`firmware/README.md`](../device-pro-acoustic/firmware/README.md) | 💻 `device-pro-acoustic/firmware/pico/bFaaaPpro_BLE_2024010309_bord_A.ino` |
+| **Switch device (nRF52, standalone on/off)** | [`switch firmware/README.md`](../device-switch-electronic/firmware/README.md) | 💻 `device-switch-electronic/firmware/bFaaaPSW_20211007_for_ex_fs_J_13_ymc/` |
 | Stepper successor (⚠ early, do not build) | [`HARDWARE-AVAILABILITY.md`](../device-pro-acoustic/HARDWARE-AVAILABILITY.md) | 💻 `…/pico/bFaaaP_autopro_pico_v052B_step_20251111.ino` |
 | Motor comms library | [`firmware/README.md`](../device-pro-acoustic/firmware/README.md) | 💻 `device-pro-acoustic/firmware/libraries/iq-module-communication-arduino/` |
 | Flashing / toolchain | [`docs/toolchain/README.md`](toolchain/README.md) | — |

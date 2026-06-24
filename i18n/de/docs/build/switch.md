@@ -22,8 +22,11 @@ Motor, kein Airback. Er nutzt **dieselbe iOS‑App und dasselbe BLE‑Board** wi
 - Ein iPhone/iPad mit Face ID + die [iOS‑App](ios.md)
 
 ## Schritt 1 — BLE‑Board flashen
-Flashe den BLE‑Sketch auf das nRF52840 (RESET zweimal tippen → UF2‑Bootloader → hochladen). Alle
-Schritte: [`docs/toolchain/`](../../../../docs/toolchain/). Prüfe, dass es in einem BLE‑Scanner erscheint.
+Flashe die **eigenständige Switch‑Firmware**
+([`device-switch-electronic/firmware/`](../../../../device-switch-electronic/firmware/)) auf das
+nRF52840 (RESET zweimal tippen → UF2‑Bootloader → hochladen). Alle Schritte:
+[`docs/toolchain/`](../../../../docs/toolchain/). Prüfe, dass es (`bFaaaPSwitch_1…4`) in einem
+BLE‑Scanner erscheint.
 
 ## Schritt 2 — Sustain‑Schalter ergänzen
 Verbinde das Schaltelement (Relais/Optokoppler) so, dass die Ausgangsleitung des BLE‑Boards den

@@ -43,7 +43,7 @@ Crowd Supply). Total ≈ **¥56,700** + power supply (¥2,000–7,600).
 | Part | Spec | Notes |
 |------|------|-------|
 | **Main board** | **Raspberry Pi Pico** (RP2040) | motor/pump/sensor control |
-| **BLE board** | **Adafruit ItsyBitsy nRF52840 Express** (onboard DotStar) | Bluetooth ↔ UART bridge; pins 13/USB/G/B/3V/RST |
+| **BLE board** | **Akizuki `AE-NRF52840`** (g117484); **Adafruit Feather nRF52840** = compatible alternative | Bluetooth ↔ UART bridge to the Pico on **GP0/GP1**. *Not* the ItsyBitsy/DotStar — that's the **Switch** line's board (confirmed by Taguchi, 2026‑06‑24) |
 | **Pump driver** | **n‑MOSFET 2SK4017** | GP12 → pump |
 | **Pressure sensor** | **HX711** (used as air‑pressure sensor) | air‑jack pressure feedback |
 | **Upper‑limit input** | **slide potentiometer ("slide volume")** ✅ | sets the travel top; read on Pico **ADC0/GP26** (confirmed by the device co‑author) |

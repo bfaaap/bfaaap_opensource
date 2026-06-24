@@ -9,10 +9,10 @@ opening the sustain circuit on command).
 Because there is **no motor, no lead screw, and no airback**, the Switch is much
 simpler than the Pro — essentially the **BLE board on its own** (an **Adafruit
 ItsyBitsy nRF52840 Express**), using its direct on/off output (the firmware drives
-`GP13` on `N`/`F`; see
-[`../device-pro-acoustic/firmware/`](../device-pro-acoustic/firmware/)). The
-board's **onboard DotStar RGB LED** shows the engage state as a colour on the
-device itself (mirroring the app's white→red indicator).
+`GP13` on `N`/`F`). The standalone Switch firmware now lives here in
+[`firmware/`](firmware/) (the same nRF52 BLE-board code as the Pro, minus the
+motor-board bridge). The board's **onboard DotStar RGB LED** shows the engage
+state as a colour on the device itself (mirroring the app's white→red indicator).
 
 The **same iOS app** drives this line — identical head‑angle tracking and BLE
 protocol as the Pro (`N` engage / `F` release; `iNN` is unused for a simple
@@ -48,16 +48,21 @@ is handled by the on‑type / off‑type setting (`n` / `f`).
 
 ## Status
 
-Hardware specifics for the Switch (exact relay/opto, jack wiring, enclosure) are
-**TODO** — to be confirmed with the hardware author (Narusawa). The core is the
-shared BLE board; planned additions:
+The **firmware is now in the repo** — see [`firmware/`](firmware/) for the
+standalone nRF52 sketch (`bFaaaPSW_20211007_for_ex_fs_J_13_ymc`), its full BLE
+command protocol, the GP13 on/off behaviour, channel selection, and power
+management. What is **still TODO** is the **hardware** around it:
 
 ```
 device-switch-electronic/
-├── firmware/    (shared BLE-board firmware; on/off via GP13)
-├── hardware/    (relay/opto + sustain-jack adapter + enclosure)
-└── assembly/
+├── firmware/    ✅ standalone BLE-board firmware (on/off via GP13)  ← added 2026-06-24
+├── hardware/    ⏳ relay/opto + sustain-jack adapter + enclosure   (TBD with the maker)
+└── assembly/    ⏳
 ```
+
+The switching element on GP13 (relay/opto/MOSFET part), the sustain-jack wiring,
+and the enclosure/battery are still to be confirmed with the hardware author
+(Narusawa) — see "Open questions" in [`firmware/README.md`](firmware/README.md).
 
 See the shared [`../docs/architecture/`](../docs/architecture/) for the BLE
 protocol and [`../ios-app/`](../ios-app/) for the controller.

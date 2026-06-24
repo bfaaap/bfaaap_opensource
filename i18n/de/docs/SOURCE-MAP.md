@@ -31,6 +31,7 @@ zu seinen maßgeblichen Dateien. Pfade sind relativ zur Repo‑Wurzel (`github_o
 | Überblick / welcher Sketch | [`firmware/README`](../../../device-pro-acoustic/firmware/README.md) | — |
 | **Hauptplatine (Pico) — Referenz** | [`firmware/DESIGN-HIGHLIGHTS`](../../../device-pro-acoustic/firmware/DESIGN-HIGHLIGHTS.md), [`CODE-STRUCTURE`](../../../device-pro-acoustic/firmware/CODE-STRUCTURE.md) | 💻 `device-pro-acoustic/firmware/pico/bFaaaP_autopro_pico_v039B_20250725.ino` |
 | BLE‑Board (nRF52) | [`firmware/README`](../../../device-pro-acoustic/firmware/README.md) | 💻 `device-pro-acoustic/firmware/pico/bFaaaPpro_BLE_2024010309_bord_A.ino` |
+| **Switch‑Gerät (nRF52, eigenständig on/off)** | [`switch firmware/README`](../../../device-switch-electronic/firmware/README.md) | 💻 `device-switch-electronic/firmware/bFaaaPSW_20211007_for_ex_fs_J_13_ymc/` |
 | Schrittmotor‑Nachfolger (⚠ früh, nicht bauen) | [`HARDWARE-AVAILABILITY`](../../../device-pro-acoustic/HARDWARE-AVAILABILITY.md) | 💻 `…/pico/bFaaaP_autopro_pico_v052B_step_20251111.ino` |
 | Motor‑Kommunikationsbibliothek | [`firmware/README`](../../../device-pro-acoustic/firmware/README.md) | 💻 `device-pro-acoustic/firmware/libraries/iq-module-communication-arduino/` |
 | Flashen / Toolchain | [`toolchain`](toolchain/README.md) | — |

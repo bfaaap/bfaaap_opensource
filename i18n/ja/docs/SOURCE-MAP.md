@@ -31,6 +31,7 @@
 | 概要／どのスケッチを使うか | [`firmware/README`](../../../device-pro-acoustic/firmware/README.md) | — |
 | **メイン（Pico）＝参照** | [`firmware/DESIGN-HIGHLIGHTS`](../../../device-pro-acoustic/firmware/DESIGN-HIGHLIGHTS.md)、[`CODE-STRUCTURE`](../../../device-pro-acoustic/firmware/CODE-STRUCTURE.md) | 💻 `device-pro-acoustic/firmware/pico/bFaaaP_autopro_pico_v039B_20250725.ino` |
 | BLEボード（nRF52） | [`firmware/README`](../../../device-pro-acoustic/firmware/README.md) | 💻 `device-pro-acoustic/firmware/pico/bFaaaPpro_BLE_2024010309_bord_A.ino` |
+| **Switch本体（nRF52・スタンドアロン on/off）** | [`switch firmware/README`](../../../device-switch-electronic/firmware/README.md) | 💻 `device-switch-electronic/firmware/bFaaaPSW_20211007_for_ex_fs_J_13_ymc/` |
 | ステッパ後継（⚠初期・ビルド不可） | [`HARDWARE-AVAILABILITY`](../../../device-pro-acoustic/HARDWARE-AVAILABILITY.md) | 💻 `…/pico/bFaaaP_autopro_pico_v052B_step_20251111.ino` |
 | モーター通信ライブラリ | [`firmware/README`](../../../device-pro-acoustic/firmware/README.md) | 💻 `device-pro-acoustic/firmware/libraries/iq-module-communication-arduino/` |
 | 書込み／ツールチェーン | [`toolchain`](toolchain/README.md) | — |
