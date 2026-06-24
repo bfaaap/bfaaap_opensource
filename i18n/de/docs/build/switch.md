@@ -32,7 +32,8 @@ BLE‑Scanner erscheint.
 
 ## Schritt 2 — Sustain‑Schalter ergänzen
 Steuere über `GP13` des BLE‑Boards einen **MOSFET** an, der den Sustain‑Kontakt öffnet/schließt (kein
-Serienwiderstand). *(Genaues MOSFET‑Bauteil + Gate/Drain/Source‑Verdrahtung wird finalisiert.)*
+Serienwiderstand). Bauteil = **ROHM `RU1J002YN`**; vollständige Referenzschaltung in
+[`device-switch-electronic/hardware/`](../../../../device-switch-electronic/hardware/).
 
 ## Schritt 3 — An die Pedalbuchse verdrahten
 Verdrahte den MOSFET über die **Sustain‑Pedalbuchse** des Instruments (TS Spitze/Schaft). Passe die

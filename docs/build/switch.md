@@ -30,7 +30,8 @@ Confirm it advertises (`bFaaaPSwitch_1…4`) in a BLE scanner.
 
 ## Step 2 — Add the sustain switch
 Drive a **MOSFET** from the BLE board's `GP13` so it opens/closes the sustain contact (no series
-resistor). *(Exact MOSFET part + gate/drain/source wiring being finalised.)*
+resistor). Part = **ROHM `RU1J002YN`**; full reference circuit in
+[`device-switch-electronic/hardware/`](../../device-switch-electronic/hardware/).
 
 ## Step 3 — Wire to the pedal jack
 Wire the MOSFET across the instrument's **sustain‑pedal jack** (TS tip/sleeve). Match the **polarity /
