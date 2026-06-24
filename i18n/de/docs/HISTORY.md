@@ -16,6 +16,9 @@ dem Spiel der Ausdruck fehlte. Aus diesem Wunsch wurde bFaaaP.
 
 Der allererste Prototyp **„bFaaap‑1“** (Klavierpedal‑Versuch #1, **10.02.2018**) war eine weiße,
 mit Beton beschwerte Kiste voller Elektronik und Kabel — „erst einmal *irgendetwas* bauen, das sich bewegt“.
+Die Originalzeichnungen — der **brillenmontierte Sensor** (eine als Design eingetragene Idee) und die
+schalldichte Kammer, mit bereits vorhandenem Regelgesetz — sind, mit Handskizzen, in
+[**bFaaaP 1 — wo die Erfindung begann**](history/bfaaap-1-original/README.md) gesammelt.
 
 ## Frühes Design (bFaaaP1–4)
 

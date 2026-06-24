@@ -17,7 +17,10 @@ bFaaaP.
 
 The very first prototype, **"bFaaap‑1"** (piano‑pedal trial #1, **2018‑02‑10**),
 was a white box weighted with concrete, full of electronics and wiring — "first,
-build *something* that moves."
+build *something* that moves." Its original drawings — the **glasses‑mounted sensor**
+(a design‑registered idea) and the sound‑proof chamber, with the control law already
+in place — are collected, with hand sketches, in
+[**bFaaaP 1 — where the invention began**](history/bfaaap-1-original/README.md).
 
 ## Early design (bFaaaP1–4)
 

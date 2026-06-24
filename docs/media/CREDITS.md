@@ -19,6 +19,7 @@ bFaaaP project. **© Shishido & Associates.**
 | `intl-build-community.png` | Build / community |
 | `control-law-key.png` | The control law as the "key": a head tilt unlocking the player's own intended, natural pedalling (how-it-works) |
 | `apee-children.png` | An APEE session: children & a wheelchair user taking the friendly piano test (apee-study) |
+| `../history/bfaaap-1-original/bfaaap1-pianist-2018.png` | bFaaaP 1 (2018): a pianist wearing the glasses‑mounted sensor (history) |
 
 ## Diagrams (`diagrams/`)
 
@@ -35,6 +36,9 @@ Generated with matplotlib (data/process figures). **CC‑BY‑4.0.**
 | `diagrams/fig-apee-tva.png` | Computing the sustain score from the tone‑vibration area (paper figure) |
 | `diagrams/fig-apee-results.png` | APEE clinical results (paper figure) |
 | `diagrams/table-apee-data.png` | **Appendix A** — full anonymized APEE per‑recording data (matplotlib table, parsed from `appendix_apee_data.tex`) |
+| `../history/bfaaap-1-original/the-invention-from-the-start.png` | bFaaaP 1 — “the invention was already here”: control law constant, sensor/mount evolved (matplotlib; history) |
+| `../history/bfaaap-1-original/then-vs-now-sensor-and-motor.png` | bFaaaP 1 vs today: glasses sensor + large Oriental Motor stepper motor → smartphone + compact/no motor (matplotlib; history) |
+| `../history/bfaaap-1-original/anchoring-weight-vs-airback.png` | bFaaaP 1 vs today: reaction force resisted by metal weight in a bottom compartment → anchored by the airback (matplotlib; history) |
 
 ## Photos & posters (`./`, member portraits, device photos)
 
