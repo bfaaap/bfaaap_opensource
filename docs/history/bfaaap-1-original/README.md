@@ -52,7 +52,7 @@ mass. Reacting the force at its source is far more efficient — so the device c
 smaller and lighter** (the airback is also non‑destructive and quick to set up; see
 [how it works](../../how-it-works.md)).
 
-![Then vs now: bFaaaP 1 (2018) resisted the pedal reaction force with metal weight packed into a compartment at the bottom of its sound-proof chamber housing (big & heavy); today the airback inflates and braces against a neighbouring pedal, anchoring the force to the piano itself, so the device is light & small](anchoring-weight-vs-airback.png)
+![Then vs now: bFaaaP 1 (2018) resisted the pedal reaction force with metal weight packed into one section of its sound-proof chamber housing while the motor on top pressed the sustain pedal, anchoring the force down into the floor (big & heavy); today the airback inflates and braces against a neighbouring pedal, anchoring the force to the piano itself, so the device is light & small](anchoring-weight-vs-airback.png)
 
 ## The original drawings
 

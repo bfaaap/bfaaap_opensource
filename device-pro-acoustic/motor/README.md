@@ -19,7 +19,7 @@ stepper instead.
   Crowd Supply) speaking the IQ serial protocol — only if you can still source one.
 - **Recommended (current):** a closed‑loop stepper. The team prototyped the
   stepper path with a **DRV8825** STEP/DIR driver; an integrated option is the
-  **MKS SERVO42C/D** (NEMA17). The motor drives a **2GT timing belt → T10 lead
+  **MKS SERVO42C/D** (NEMA17). The motor drives a **GT-2 timing belt → T10 lead
   screw → push‑rod**. See [`../HARDWARE-AVAILABILITY.md`](../HARDWARE-AVAILABILITY.md).
 
 ## Documentation (third-party — not redistributed)

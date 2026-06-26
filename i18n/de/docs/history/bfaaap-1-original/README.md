@@ -53,7 +53,7 @@ sie mit Masse zu bekämpfen. Die Kraft an ihrer Quelle abzufangen ist weit effiz
 Gerät **viel kleiner und leichter** werden (der Airback ist zudem zerstörungsfrei und schnell
 aufgebaut; siehe [Funktionsweise](../../how-it-works.md)).
 
-![Damals vs. heute: bFaaaP 1 (2018) hielt der Pedal-Reaktionskraft mit schwerem Metall stand, das in ein Fach im Boden des schalldichten Kammergehäuses gepackt war (groß & schwer); heute bläst sich der Airback auf und stemmt sich gegen ein Nachbarpedal, verankert die Kraft im Klavier selbst, sodass das Gerät leicht & klein ist](../../../../../docs/history/bfaaap-1-original/anchoring-weight-vs-airback.png)
+![Damals vs. heute: bFaaaP 1 (2018) hielt der Pedal-Reaktionskraft mit schwerem Metall stand, das in ein Fach des schalldichten Kammergehäuses gepackt war, während der Motor oben das Pedal drückte und die Kraft in den Boden verankerte (groß & schwer); heute bläst sich der Airback auf und stemmt sich gegen ein Nachbarpedal, verankert die Kraft im Klavier selbst, sodass das Gerät leicht & klein ist](../../../../../docs/history/bfaaap-1-original/anchoring-weight-vs-airback.png)
 
 ## Die Originalzeichnungen
 

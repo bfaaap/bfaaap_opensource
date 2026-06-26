@@ -12,7 +12,7 @@
 
 | Component (original, per BOM) | Status | Suggested replacement | Code change |
 |----------------------|--------|-----------------------|-------------|
-| **IQ‑FORTIQ‑M42BLS‑100** (IQ motor, 100 W) — **current reference (v039B)** | **EOL** — firmware notes IQ supply stopped | **Closed‑loop stepper** with a **DRV8825‑compatible** interface (integrated option: MKS SERVO42C/D). *Note:* DRV8825 itself is the old standard module used only in early plain‑stepper tests; it is **not** the new motor | Moderate (STEP/DIR or serial position) |
+| **IQ‑FORTIQ‑M42BLS‑100** (IQ motor, 100 W) — **current reference (v039B)** | **EOL** — firmware notes IQ supply stopped | **Chosen path (maker, 2026‑06‑26): a closed‑loop NEMA17** — either **MKS SERVO42C/D + a NEMA17**, or a **closed‑loop stepper with a built‑in NEMA17‑class driver** (reads load over UART/CAN). | Moderate (STEP/DIR + serial position; firmware to be drafted) |
 | **nRF52840 BLE board** — Pro uses **Akizuki `AE-NRF52840` (g117484)** ✅ (confirmed: cheaper, same BLE module, same board ID); **Adafruit Feather nRF52840 (4062)** is a compatible alternative. *Not* ItsyBitsy (that's the Switch's DotStar LED variant). | Current | any nRF52840 + Adafruit nRF52 BSP | Minimal (same Bluefruit API; Pro firmware has no LED routine) |
 | **Raspberry Pi Pico** main board | Current | **Pico** / **Pico 2 (RP2350)** | None (mind ADC pins) |
 | **HX711** (air‑pressure sensor) | Current/common | Any HX711 breakout | None |
@@ -28,8 +28,13 @@ the **IQ‑FORTIQ‑M42BLS‑100** (IQ Motion Control, 100 W; ≈¥33,000 on Cro
 The project's own firmware notes the **IQ motor supply stopped**
 (`IQモーターの供給停止…`); the **next** version is being rewritten for a
 **closed‑loop stepping motor** (which exposes a **DRV8825‑compatible** STEP/DIR
-interface). **The specific successor motor is not yet decided** (device co‑author,
-2026‑06‑14). Early plain‑stepper tests used a stock **DRV8825** module (see the
+interface). **Decision (device co‑author, 2026‑06‑26): force‑feedback approach A — a
+closed‑loop driver.** The maker is choosing between **MKS SERVO42C/D + a NEMA17** and a
+**closed‑loop stepping motor with a built‑in NEMA17‑class driver**; both report load /
+following‑error over **UART/CAN**, which restores the IQ‑style "press until the reaction force
+rises" calibration. The **buildable firmware for this configuration is to be drafted (AI‑assisted)
+and bench‑tested**; the CAD is still being added to / swapped out. Early plain‑stepper tests used a
+stock **DRV8825** module (see the
 `DRV8825_TEST` / `updown_test_naru` design notes) — but **DRV8825 is an old,
 standard module, not the new motor itself**, and the stepper sketch (`v052B`) is
 still early development. IQ Motion Control now operates

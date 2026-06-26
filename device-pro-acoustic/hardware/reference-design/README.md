@@ -22,30 +22,53 @@ The Pro is six cooperating subsystems:
 3. **Controller** — a **Raspberry Pi Pico (RP2040)** runs the **position + force loop**:
    target in, **upper-limit slider** on **ADC0/GP26**, motor out, **force feedback** from
    the motor's own power/current.
-4. **Actuation** — a **motor + driver** turns a **lead screw** (via a **2GT belt** +
-   pulleys); the screw's **nut/carriage** drives a **push-rod** that **presses the sustain
-   pedal**.
-5. **Anchoring (airback)** — a **WINBAG air jack** under a *neighbouring* pedal is inflated
-   (electric pump on **GP12**, or its **manual bulb**) and **holds the reaction force** so
-   the unit doesn't slide. See [`../airback/`](../airback/).
+4. **Actuation** — a **motor + driver** (with a small **+5 V cooling fan**) sits **beside** a
+   **vertical lead screw** and drives it through a **GT-2-262 belt** over **two T60 pulleys**
+   (**1:1** — the belt only *offsets* the motor next to the screw, it is not a reduction). The
+   screw (**T10**, **lead 16 mm/rev**, 150 mm) runs down the **left side of the 2040 post**; its
+   **nut/carriage** drives a **push-rod** that **presses straight down on the sustain pedal**.
+5. **Anchoring (airback)** — a **WINBAG air jack** under a *neighbouring* pedal is inflated by a
+   small **electric air pump inside the electronics box** (driven from **GP12** via the **2SK4017**
+   MOSFET, switched by the panel **PUMP SW**) through an **air tube**, and **holds the reaction
+   force** so the unit doesn't slide. (The built device uses the electric pump — **not** the
+   WINBAG's hand bulb.) See [`../airback/`](../airback/).
 6. **Power** — a single SMPS gives **5 V (logic)** + **24 V (motor)**; **SW1 → VSYS**.
+
+The user controls are a small **panel** with the **upper-limit slide volume** (→ ADC0/GP26) and the
+**PUMP SW** (→ the airback pump).
 
 ## Mechanical layout
 
 ![bFaaaP Pro reference mechanical layout](pro-mechanical-layout.png)
 
-The drive unit sits on an **aluminium-extrusion frame** on a **non-slip mat** in front of
-the pedals: motor → belt → **lead screw (T10)** → carriage → **push-rod** → sustain pedal,
-with the **electronics box** (Pico + BLE + PSU) on the frame and the **WINBAG airback**
-tucked under a neighbouring pedal.
+> This layout follows the **device co-author's (H. Narusawa) sketch of the working unit**,
+> so it is closer to the real build than a generic guess (the rest of this page stays an
+> adaptable reference).
+
+The drive is a **vertical column** on an **aluminium-extrusion frame** standing on a
+**non-slip mat** in front of the pedals:
+
+- A **motor + driver** (with a **+5 V cooling fan**) is mounted **beside** the screw near the **top**
+  and drives it through a **GT-2-262 belt** over **two T60 pulleys** (**1:1**).
+- The **vertical lead screw** (**T10**, **lead 16 mm/rev**, 150 mm) runs down the **left side of the
+  2040 post** and carries a **nut/carriage** that travels **down** the frame.
+- The **push-rod** is a **2040 extrusion (L = 75 mm)** with a **15 mm PLA** part on top (holds the
+  screw **nut**) and a **PLA** part below holding a **hard-rubber tip** (total **115 mm**); it
+  **presses straight down on the sustain pedal**.
+- A **WINBAG airback** sits at the **base**; the box's **electric pump** inflates it through an
+  **air tube** under a neighbouring pedal to **anchor the reaction force**.
+- The frame is two extrusions — a **vertical 2040 post (L = 200 mm)** and a **2080 base
+  (L = 200 mm)** — plus a **4040** rail (see the [BOM](../../assembly/)).
+- Two side enclosures plus a control panel: a **power box (PW)** (5 V + 24 V); an **electronics box**
+  holding the **BLE board + Pico + the air-jack pump**; and a **SLIDE VOLUME & PUMP SW** panel.
 
 ## What's adaptable (the point of this draft)
 
 | Choice | Simple / adaptable option |
 |--------|---------------------------|
-| **Motor** | the reference **IQ Fortiq M42BLS** (serial, now EOL) **or** any **closed-loop stepper** with a DRV8825-style **STEP/DIR** interface — the Pico loop is the same |
-| **Airback inflation** | the WINBAG's **manual bulb** (simplest, no electronics) **or** an electric **air pump on GP12** for one-button inflate |
-| **Air-pressure sensor** | **optional** (HX711 on GP2/GP3) — nice for closed-loop airback, not required |
+| **Motor** | the reference **IQ Fortiq M42BLS** (serial, now EOL) **→ chosen successor (2026-06-26): a closed-loop NEMA17** — MKS SERVO42C/D + a NEMA17, or an integrated closed-loop NEMA17 — **STEP/DIR + serial**, reads load for the force step (see [`HARDWARE-AVAILABILITY.md`](../../HARDWARE-AVAILABILITY.md)) |
+| **Airback inflation** | the reference unit uses an **electric pump in the box** (GP12 / 2SK4017, panel PUMP SW) → air tube → WINBAG; the WINBAG's **manual bulb** is a simpler no-electronics alternative |
+| **Air-pressure sensor** | **the stepper successor drops it** (Narusawa, 2026-06-26): **no HX711** — the pump simply runs a **fixed 40 s**, and the air **valve is normally closed** (released only when the unit is removed from the piano). HX711 was the IQ-generation option. |
 | **Frame** | any rigid base that holds the screw axis and resists the push reaction (extrusion is convenient) |
 | **Pedal coupling** | a push-rod onto the sustain pedal; shape it to your piano |
 
@@ -85,10 +108,10 @@ them for your build.
 | BLE board | **Akizuki AE-NRF52840** / Adafruit Feather nRF52840 | [akizukidenshi](https://akizukidenshi.com/catalog/g/g117484/) · [adafruit 4062](https://www.adafruit.com/product/4062) |
 | Motor (option A) | IQ Fortiq M42BLS (serial) — **EOL** | [Crowd Supply](https://www.crowdsupply.com/iq-motion-control/iq-fortiq-bls42) |
 | Motor (option B) | **closed-loop stepper**, STEP/DIR (e.g. NEMA17 + driver, or MKS SERVO42) | [AliExpress search](https://www.aliexpress.com/wholesale?SearchText=nema17+closed+loop+stepper) · [Amazon search](https://www.amazon.com/s?k=closed+loop+stepper+nema17) |
-| Lead screw + nut | **T10** lead screw (~150–300 mm) + brass nut | [Amazon search](https://www.amazon.com/s?k=T10+lead+screw+8mm) · [AliExpress search](https://www.aliexpress.com/wholesale?SearchText=T10+lead+screw) |
-| Belt + pulleys | **GT2 (2GT)** belt + 20T / 60T pulleys | [Amazon search](https://www.amazon.com/s?k=GT2+belt+pulley+kit) |
+| Lead screw + nut | **T10** lead screw, **lead 16 mm/rev**, **150 mm**, vertical + brass nut | [Amazon search](https://www.amazon.com/s?k=T10+lead+screw+8mm) · [AliExpress search](https://www.aliexpress.com/wholesale?SearchText=T10+lead+screw) |
+| Belt + pulleys | **GT-2-262** belt + **T60 / T60** pulleys (1:1; 5 mm bore on the motor, 10 mm on the screw) | [Amazon search](https://www.amazon.com/s?k=GT2+belt+pulley+kit) |
 | Bearings | flanged + thrust + collar for the screw | [Amazon search](https://www.amazon.com/s?k=lead+screw+bearing+set) |
-| Frame | aluminium extrusion **4040 / 2040** + brackets | [Amazon search](https://www.amazon.com/s?k=aluminium+extrusion+4040) |
+| Frame | aluminium extrusion **2040 (vertical, L=200) + 2080 (base, L=200) + 4040** + brackets | [Amazon search](https://www.amazon.com/s?k=aluminium+extrusion+2040) |
 | Airback | **WINBAG** air jack (full buy links + specs) | [see `../airback/`](../airback/) |
 | Air pump (optional) | small **5 V** diaphragm air pump | [Amazon search](https://www.amazon.com/s?k=5V+mini+air+pump+diaphragm) |
 | Switching MOSFET | logic-level N-MOSFET (2SK4017 / RU1J002YN) | [Akizuki search](https://akizukidenshi.com/catalog/goods/search.aspx?search=x&keyword=2SK4017) · [ROHM RU1J002YN](https://www.rohm.com/products/transistors/mosfets/standard/ru1j002yn-product) |

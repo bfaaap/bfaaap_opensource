@@ -16,17 +16,19 @@ Crowd Supply). Total ≈ **¥56,700** + power supply (¥2,000–7,600).
 
 | Part | Spec | Notes |
 |------|------|-------|
-| **Motor** | **IQ‑FORTIQ‑M42BLS‑100** (IQ motor, 100 W) | Crowd Supply, ≈¥33,000. **EOL** → closed‑loop stepper (see availability doc) |
-| Lead screw + nut | **T10**, ~150 mm (cut to length) | converts rotation → linear pedal push |
-| Timing belt | **2GT‑262** | motor → lead screw |
-| Timing pulleys | **T60**, 5 mm & 10 mm bore | |
+| **Motor** | **IQ‑FORTIQ‑M42BLS‑100** (IQ motor, 100 W) | Crowd Supply, ≈¥33,000. **EOL** → planned successor = a **NEMA17 ("17‑type") stepper** of the **same size** (so it fits the existing frame), driven **STEP/DIR** (see availability doc) |
+| Lead screw + nut | **T10**, **lead 16 mm/rev**, **length 150 mm** | converts rotation → linear pedal push |
+| Timing belt | **GT-2‑262** | motor → lead screw |
+| Timing pulleys | **T60**, 5 mm (motor) & 10 mm (screw) bore | 1:1 |
 | Bearings | flanged + thrust + collar | lead‑screw support |
+| **Push‑rod assembly** | a **2040 extrusion, L = 75 mm**, with a **15 mm‑thick PLA** part on top (holds the lead‑screw **nut**) and a **PLA** part at the bottom (holds a **hard‑rubber** tip that contacts the pedal); **total length 115 mm** | the carriage that the nut drives down onto the sustain pedal |
+| **Drive‑motor cooling fan** | small fan on **+5 V** (from the box) | cools the drive motor |
 
 ### Frame & enclosure
 
 | Part | Spec |
 |------|------|
-| Aluminium extrusion | **4040** (60 mm), **2040** (200 mm), **20100** (200 mm) |
+| Aluminium extrusion | **4040** (60 mm), **2040** (200 mm), **2080** (200 mm) |
 | T‑slot / brackets | 20 mm M3 T‑slot, 2020 corner brackets |
 | 3D‑printed parts | **PLA+** filament (see [`../hardware/3d-print/`](../hardware/3d-print/)) |
 
@@ -35,8 +37,8 @@ Crowd Supply). Total ≈ **¥56,700** + power supply (¥2,000–7,600).
 | Part | Spec | Notes |
 |------|------|-------|
 | **Air jack (airback)** | **WINBAG** air jack — 160 × 150 mm, up to 50 mm, **135 kg** | off-the-shelf inflatable anchor under a neighbouring pedal — see [`../hardware/airback/`](../hardware/airback/) for specs + where to buy |
-| **Air pump** | the WINBAG's built-in **hand squeeze-bulb** (+ bleed valve) | inflates / deflates the air jack |
-| Pneumatic fittings/tube | as supplied with the WINBAG (its own hose) | |
+| **Air pump** | a small **electric air pump inside the electronics box** — driven by the **2SK4017** MOSFET on **GP12**, switched by the panel **PUMP SW** | inflates the air jack through an **air tube**. The built device does **not** use the WINBAG's hand squeeze-bulb |
+| Pneumatic tube | **air tube** from the box's pump to the WINBAG (+ the WINBAG's own bleed valve) | carries air from the box to the airback |
 
 ### Electronics
 
@@ -44,7 +46,7 @@ Crowd Supply). Total ≈ **¥56,700** + power supply (¥2,000–7,600).
 |------|------|-------|
 | **Main board** | **Raspberry Pi Pico** (RP2040) | motor/pump/sensor control |
 | **BLE board** | **Akizuki `AE-NRF52840`** (g117484); **Adafruit Feather nRF52840** = compatible alternative | Bluetooth ↔ UART bridge to the Pico on **GP0/GP1**. *Not* the ItsyBitsy/DotStar — that's the **Switch** line's board (confirmed by Taguchi, 2026‑06‑24) |
-| **Pump driver** | **n‑MOSFET 2SK4017** | GP12 → pump |
+| **Pump driver** | **n‑MOSFET 2SK4017** | GP12 → the **electric air pump** (in the box) |
 | **Pressure sensor** | **HX711** (used as air‑pressure sensor) | air‑jack pressure feedback |
 | **Upper‑limit input** | **slide potentiometer ("slide volume")** ✅ | sets the travel top; read on Pico **ADC0/GP26** (confirmed by the device co‑author) |
 | **Hand controller link** | LAN connector + cable (RJ45) — *legacy* | listed in the original BOM but **currently unused** (per the device co‑author); the pot + switch are wired in directly |
@@ -56,16 +58,19 @@ Crowd Supply). Total ≈ **¥56,700** + power supply (¥2,000–7,600).
 |------|------|
 | PSU | **AC100 → DC24V** switching module (≈¥2,000; +5 V variants ≈¥2,600 / ¥7,600) |
 
-> Migration note: the latest firmware (`v052B`) targets a **closed‑loop stepper**
-> (the team prototyped with a **DRV8825** STEP/DIR driver). For currently‑available
-> motor/driver/board choices and how they change the firmware, see
-> [`../HARDWARE-AVAILABILITY.md`](../HARDWARE-AVAILABILITY.md).
+> Migration note: the **planned successor** to the EOL IQ motor is a **NEMA17 ("17‑type")
+> stepper of the same size** (so it reuses the existing frame), driven **STEP/DIR** (the team
+> prototyped with a **DRV8825** driver; the stepper firmware `v052B` is still in development —
+> a buildable version is **not yet finalised**). For currently‑available motor/driver/board
+> choices and how they change the firmware, see [`../HARDWARE-AVAILABILITY.md`](../HARDWARE-AVAILABILITY.md).
 
 ## Build steps (outline)
 
 1. Cut the aluminium extrusions and **print the parts** (`hardware/3d-print/`); assemble the frame.
-2. Mount the **motor → timing belt → lead screw → push‑rod** drivetrain with its bearings.
-3. Fit the **air jack** under a neighbouring pedal and connect the **pump** (+ MOSFET drive).
+2. Build the **vertical** drivetrain: **motor (offset) → GT-2‑262 belt over T60/T60 pulleys (1:1) →
+   vertical T10 lead screw → carriage/nut → push‑rod** (presses straight down), with its bearings.
+3. Fit the **air jack** under a neighbouring pedal and run the **air tube** from the box's **electric
+   pump** (GP12 / 2SK4017, panel PUMP SW) to the WINBAG.
 4. Wire the **Pico ↔ nRF52 board ↔ motor driver ↔ HX711 ↔ slider (via RJ45) ↔ 24 V PSU**
    (see [`../firmware/CODE-STRUCTURE.md`](../firmware/CODE-STRUCTURE.md) and the wiring notes).
 5. **Flash** both boards ([`../../docs/toolchain/`](../../docs/toolchain/)).

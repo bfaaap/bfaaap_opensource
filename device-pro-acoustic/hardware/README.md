@@ -34,8 +34,8 @@ hardware/
 |-----------|--------------|-------|
 | **Controller board** | Raspberry Pi Pico (RP2040) + BLE (Nordic UART). Receives `iNN`/`N`/`F` and commands the motor. | [`../firmware/`](../firmware/) |
 | **Motor** | **IQ‑FORTIQ‑M42BLS‑100** (100 W) — **current reference (v039B)**; EOL → successor is a **closed‑loop stepper with a DRV8825‑compatible interface** (DRV8825 itself = old standard module, early tests only). | [`../motor/`](../motor/) |
-| **Drivetrain** | Motor → **2GT‑262 timing belt** + **T60 pulleys** → **T10 lead screw** (~150 mm) → push‑rod. Bearings: flanged + thrust + collar. | `cad/`, BOM in [`../assembly/`](../assembly/) |
-| **Frame** | **Aluminium extrusion** (4040 / 2040 / 20100) + T‑slot/2020 brackets, with 3D‑printed parts (PLA+). | `cad/`, `3d-print/` |
+| **Drivetrain** | Motor → **GT-2‑262 timing belt** + **T60 pulleys** → **T10 lead screw** (~150 mm) → push‑rod. Bearings: flanged + thrust + collar. | `cad/`, BOM in [`../assembly/`](../assembly/) |
+| **Frame** | **Aluminium extrusion** (4040 / 2040 / 2080) + T‑slot/2020 brackets, with 3D‑printed parts (PLA+). | `cad/`, `3d-print/` |
 | **Hand controller** | A small box with a **travel‑limit slide potentiometer ("slide volume")** + pump on/off + switch. The [schematic](schematic/) wires it as a potentiometer (wiper → **ADC0/GP26**) plus a push switch. *(Per the device co‑author: the slide volume is correct; the **RJ45/LAN socket on the body is currently unused** — legacy.)* | [`airback/`](airback/), [`schematic/`](schematic/) |
 | **Airback** | A stock **WINBAG air jack** (160 × 150 mm, ≤50 mm, 135 kg) under a neighbouring pedal; inflated by its **manual bulb** or an electric **air pump on GP12** (2SK4017 MOSFET); keeps the unit from moving under the motor's reaction force. | [`airback/`](airback/) |
 

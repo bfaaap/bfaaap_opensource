@@ -15,11 +15,22 @@ bFaaaP project. **© Shishido & Associates.**
 | `intl-what-bfaaap.png` | "What is bFaaaP" / story opener |
 | `intl-how-it-works.png` | Concept flow (intent → face → BLE → controller) |
 | `intl-pro-switch.png` | Pro (acoustic) vs Switch (digital) |
+| `pro-play-hero.png` | Pro build hero — playing a grand piano foot‑free (build/pro) |
+| `switch-play-hero.png` | Switch build hero — playing a digital keyboard foot‑free (build/switch) |
+| `ai-team-hero.png` · `ai-team-redraw.png` · `ai-team-motor.png` · `ai-team-firmware.png` | Scenes for [AI & Team Live](../ai-team-live.md) (team + AI; sketch→redraw; choosing the motor; firmware compiles) |
 | `intl-support.png` | Support / community |
 | `intl-build-community.png` | Build / community |
 | `control-law-key.png` | The control law as the "key": a head tilt unlocking the player's own intended, natural pedalling (how-it-works) |
 | `apee-children.png` | An APEE session: children & a wheelchair user taking the friendly piano test (apee-study) |
 | `../history/bfaaap-1-original/bfaaap1-pianist-2018.png` | bFaaaP 1 (2018): a pianist wearing the glasses‑mounted sensor (history) |
+
+### Member avatars (`avatars/`)
+
+Round avatar icons of the team — cropped from the member illustrations (Saki Shiokawa style) —
+plus a friendly **AI‑assistant** avatar (`ai.png`, AI‑generated with Gemini in the same style).
+Used in [AI‑assisted Support](../ai-support.md) Discussions‑style threads. Full list, usage and
+the **display‑name‑only** rule for *kana* / *Midori*: [`avatars/README.md`](avatars/README.md).
+**© Saki Shiokawa / bFaaaP** (member art) · **© Shishido & Associates** (AI avatar).
 
 ## Diagrams (`diagrams/`)
 
@@ -28,6 +39,8 @@ Generated with matplotlib (data/process figures). **CC‑BY‑4.0.**
 | File | Use |
 |------|-----|
 | `ai-support-timeline.png` | How AI‑assisted Support works (timeline) |
+| `ai-team-flow.png` | The AI × team collaboration loop + the story timeline ([AI & Team Live](../ai-team-live.md)) |
+| `bom-evolution.png` | How each unknown BOM/circuit item was pinned down via Q&A (unknown → confirmed) |
 | `illustrations/airback-anchoring.png` | The Pro **"airback"** reaction‑force anchoring — mechanism schematic (matplotlib, hand‑drawn by the maintainer, **not** Gemini) |
 | `diagrams/fig-control-law.png` | Paper **Figure 3** — head‑angle control law (matplotlib; rendered from `bfaaap_arxiv_latex/figures/fig_control.pdf`) |
 | `diagrams/fig-control-vs-priorart.png` | Paper **Figure 4** — quantitative, user‑tunable mapping vs. binary prior art (matplotlib; from `fig_control_vs_priorart.pdf`) |
@@ -44,7 +57,7 @@ Generated with matplotlib (data/process figures). **CC‑BY‑4.0.**
 | `../../device-switch-electronic/assembly/switch-enclosure-reference.png` | bFaaaP Switch 3D-printable enclosure — reference drawing (matplotlib; **AI draft design**; paired with `.scad` + `.stl`) |
 | `../../device-pro-acoustic/hardware/airback/airback-dimensions.png` | bFaaaP Pro airback — WINBAG air jack reference drawing (matplotlib; dims from photos + product match) |
 | `../../device-pro-acoustic/hardware/reference-design/pro-architecture.png` | bFaaaP Pro reference **system architecture** (matplotlib; **AI draft**, adaptable) |
-| `../../device-pro-acoustic/hardware/reference-design/pro-mechanical-layout.png` | bFaaaP Pro reference **mechanical layout** (matplotlib; **AI draft**, side view) |
+| `../../device-pro-acoustic/hardware/reference-design/pro-mechanical-layout.png` | bFaaaP Pro **mechanical layout** — vertical drive (matplotlib; drawn after H. Narusawa's working‑unit sketch) |
 
 ## Photos & posters (`./`, member portraits, device photos)
 

@@ -7,9 +7,15 @@
 bFaaaP は**オープンソースでインクルーシブな**プロジェクトです。装置は販売せず、誰もが作って改良でき、足を使えない
 ピアニストが演奏できるよう、すべてを公開しています。みなさまの支援が、このプロジェクトを無償で成長させ続けます。🙏
 
+## 🙋 製作で困ったら（AI支援サポート）
+**[GitHub Discussions（Q&A）](https://github.com/TomoShishido/bfaaap_opensource/discussions)** で質問できます。
+**本リポジトリの公開資料に基づきAIが回答を下書きし、bFaaaP チームが安全性・正確性を確認**してから投稿します
+——公開・**即答ではありません**（数日かかることがあります）。**どの言語でも**質問でき、同じ言語で回答します。
+有用な回答は**ドキュメントにも反映**します。詳しい流れ：[`docs/ai-support.md`](docs/ai-support.md)。
+
 ## ご支援の使いみち
 - iOSアプリ・ファームウェア・ハードウェア設計の開発と維持
-- **AI支援サポート**（製作の質問に答えるAPI＋メンテナのレビュー —— [`docs/ai-support.md`](docs/ai-support.md) 参照）
+- **AI支援サポート**（製作の質問に答えるAIの下書き＋メンテナのレビュー —— [`docs/ai-support.md`](docs/ai-support.md) 参照）
 - 必要とする作り手・利用者への部品・貸出機
 - 障害のある方のための演奏会・レッスン・デモンストレーション
 
@@ -36,4 +42,4 @@ Stripe の **Payment Link / Buy Button**（カード、Apple Pay、Google Pay；
 ---
 > bFaaaP は **宍戸＆アソシエーツ**が運営しています。ご支援は*オープンなプロジェクトへの応援*であり、
 > **税控除の対象となる寄付ではありません**。音楽をより身近にするためのご協力に感謝します。
-> お問い合わせ：<info@bfaaap.com>
+> 製作のご質問 → **[GitHub Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions)**（AI支援サポート）。その他のお問い合わせ：<shishid@saaipf.com>

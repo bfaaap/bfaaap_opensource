@@ -6,9 +6,13 @@ The Switch is the small, inexpensive version for **digital** pianos and keyboard
 motor, it switches the sustain **electronically** through the instrument's **sustain‑pedal jack** —
 no motor, no airback. It uses the **same iOS app** and BLE board as the Pro.
 
-> 🚧 **Draft.** Most Switch hardware is now confirmed (board = ItsyBitsy nRF52840; a **MOSFET** on
-> `GP13` switches the sustain line, **no series resistor**); the remaining detail is the exact MOSFET
-> part + its wiring — see [`device-switch-electronic/firmware/`](../../device-switch-electronic/firmware/).
+![A player at a digital keyboard plays foot‑free: a phone on a stand reads their head tilt while a tiny box on the keyboard's pedal jack switches the sustain](../media/illustrations/switch-play-hero.png)
+<sub>What you're building toward: foot‑free sustain on a digital piano, from a matchbox‑sized device. Illustration: AI‑generated (Gemini, Saki Shiokawa style) © Shishido &amp; Associates.</sub>
+
+> ✅ **Hardware confirmed.** The Switch electronics are now fully confirmed by the maker (H. Narusawa):
+> board = **ItsyBitsy nRF52840**; a **ROHM `RU1J002YN`** logic‑level N‑MOSFET on **`GP13`** switches the
+> sustain line **low‑side** (**no series resistor**); power = **2× AA**; it **starts on RESET**. The only
+> draft part left is the **printed enclosure** (an AI draft in [`device-switch-electronic/assembly/`](../../device-switch-electronic/assembly/)).
 > The **[Switch user‑manual video](https://youtu.be/XOVENtBsOp4)** shows it in use.
 
 ```
@@ -39,8 +43,9 @@ normally‑open vs normally‑closed** behaviour of your instrument with the app
 toggle (`n` / `f`).
 
 ## Step 4 — Pair & use
-Build/install the [iOS app](ios.md), connect over Bluetooth, set your **threshold** and **speed**,
-and play. See the [Switch user manual](../user-manual/).
+Build/install the [iOS app](ios.md), connect over Bluetooth, preset your **offset (threshold)** and
+**multiplier** (together they set how fast the pedal follows your head), and play. See the
+[Switch user manual](../user-manual/).
 
 ---
 → [Build hub](README.md) · [Pro build](pro.md) · [iOS build](ios.md)

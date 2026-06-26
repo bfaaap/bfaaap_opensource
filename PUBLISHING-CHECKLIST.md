@@ -69,6 +69,12 @@ before pushing to a public GitHub repository.
       bFaaaP-project matplotlib drawings** (`pico_pinout_bfaaap.png`,
       `fortiq42_interface_bfaaap.png`, CC BY 4.0) plus links to the official
       Raspberry Pi / Vertiq sources. No third-party images of uncertain license remain.
+      ✅ **Likely original sources confirmed by Taguchi (2026-06-25):** the Pico image
+      most likely came from the **Raspberry Pi Pico documentation / datasheet**
+      (RP2040-based board) and the motor image from the **Fortiq BLS42 datasheet**
+      (`fortiq_datasheet.pdf`) — i.e. **vendor copyright** (© Raspberry Pi Ltd / © IQ
+      Motion Control). This confirms removing-and-redrawing was the correct call; we
+      redistribute no vendor image and only **link** to those official sources.
 
 ## 4. Project license & patents
 

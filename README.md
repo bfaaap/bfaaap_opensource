@@ -30,9 +30,9 @@ to build the device and run the controller **yourself**.
 
 ![What is bFaaaP — a player using the head‑tilt sensor and smart pedal](docs/media/illustrations/intl-what-bfaaap.png)
 
-A small head movement becomes a pedal press. You set your own **threshold** (how far to tilt)
-and **speed**, so the pedalling is tuned to *you* — not just a crude on/off. See
-[How it works](docs/how-it-works.md) for the friendly explanation.
+A small head movement becomes a pedal press. You preset your own **offset (threshold)** — how far
+to tilt — and a **multiplier**, and together they tune the pedalling to *you* — not just a crude
+on/off. See [How it works](docs/how-it-works.md) for the friendly explanation.
 
 ## Two hardware lines, one app
 
@@ -79,8 +79,9 @@ Q&A (it's not instant; real people check each answer).
 - iPhone / iPad with **TrueDepth** front camera (head tracking)
 - **Raspberry Pi Pico** (main) + **nRF52840** BLE board (bridge)
 - **IQ‑FORTIQ‑M42BLS‑100** motor *(reference v039B; EOL → closed‑loop‑stepper successor with a
-  DRV8825‑compatible interface)* driving a **2GT belt → T10 lead‑screw → push‑rod** on an
-  aluminium‑extrusion frame
+  DRV8825‑compatible interface)*, belt‑coupled (**GT-2‑262 belt → T60/T60 pulleys, 1:1**) to a
+  **vertical T10 lead‑screw** whose carriage drives a **push‑rod straight down** on the sustain
+  pedal — all on a **2040 / 2080 aluminium‑extrusion** frame
 - **HX711** air‑pressure sensor, **2SK4017** MOSFET (pump), travel‑limit slider, **24 V PSU**
   *(self‑calibration uses motor **power**, not current — so supply voltage doesn't matter)*
 - 3D‑printed parts (PLA+) + **airback** anchoring kit

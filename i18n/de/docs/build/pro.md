@@ -7,8 +7,12 @@ akustischen Klaviers, fixiert durch ein *Airback*‑Luftkissen (nichts wird ans 
 Begriffe unklar? Siehe das [Glossar](../GLOSSARY.md). Hängengeblieben? Frag im
 [KI‑gestützten Support](../ai-support.md).
 
-> 🚧 **Entwurf.** Das Grundgerüst steht; einige genaue Pin‑Belegungen und mechanische Maße werden
-> noch von den Bauenden (Narusawa / Taguchi) ergänzt. Das
+![Eine Pianistin spielt einen Flügel fußfrei: ein Smartphone am Notenständer liest die Kopfneigung, während ein kleines Gerät und ein Luftkissen das Haltepedal drücken](../../../../docs/media/illustrations/pro-play-hero.png)
+<sub>Das Ziel: fußfreies Pedalisieren an einem unveränderten Flügel. Illustration: KI‑generiert (Gemini, Stil Saki Shiokawa) © Shishido &amp; Associates.</sub>
+
+> 🚧 **Entwurf.** Der **Schaltplan** (Taguchi) und das **mechanische Layout** (H. Narusawas Bauskizze)
+> sind nun bestätigt und unten eingearbeitet. Noch offen sind die **baubare Firmware des Schrittmotor‑Nachfolgers**
+> (geplant ist ein **NEMA17** gleicher Größe, STEP/DIR; der ursprüngliche Motor ist EOL) und die **endgültige Variante der Druckteile**. Das
 > **[Pro‑Einrichtungs‑Video](https://www.youtube.com/watch?v=_9YopbCYTmI)** zeigt es in echt.
 
 ```
@@ -21,14 +25,23 @@ Begriffe unklar? Siehe das [Glossar](../GLOSSARY.md). Hängengeblieben? Frag im
 
 ![Pro‑Antriebsmechanik](../../../../docs/media/diagrams/pro-mechanism.png)
 
+Der Antrieb ist eine **vertikale Säule**: ein Motor sitzt **neben** der Spindel und die **Druckstange
+drückt senkrecht nach unten** aufs Haltepedal. Das Gesamtbild zeigt das
+**[Referenzdesign](../../../../device-pro-acoustic/hardware/reference-design/)** — ein
+[Systemarchitektur‑Diagramm](../../../../device-pro-acoustic/hardware/reference-design/pro-architecture.png)
+und ein [mechanisches Layout‑Diagramm](../../../../device-pro-acoustic/hardware/reference-design/pro-mechanical-layout.png),
+nach dem realen Gerät gezeichnet.
+
 ## Bevor du beginnst — was du brauchst
 - Einen **3D‑Drucker** (Bett ≥240 mm hilft) + **PLA+**‑Filament
 - Lötkolben, Schaltdraht, einfaches Handwerkzeug
 - Die **Elektronik** (siehe [`PARTS-REFERENCE.md`](../../../../device-pro-acoustic/hardware/PARTS-REFERENCE.md)):
-  Raspberry Pi **Pico**, **nRF52840**‑BLE‑Board, **IQ‑Fortiq**‑Motor *(oder den Schrittmotor‑Nachfolger)*,
-  **HX711**, **2SK4017** MOSFET, Weganschlag‑Schieber, **24‑V‑Netzteil**
-- Rahmenmaterial: **Aluprofil**, **2GT‑Riemen**, **T10‑Gewindespindel**, Druckstange
-- Das **Airback**‑Set (Luftheber + Pumpe + Handsteuerung)
+  Raspberry Pi **Pico**, **nRF52840**‑BLE‑Board, **IQ‑Fortiq**‑Motor *(oder den NEMA17‑Schrittmotor‑Nachfolger)*,
+  ein **+5‑V‑Lüfter**, **HX711**, **2SK4017** MOSFET, Weganschlag‑Schieber, **24‑V‑Netzteil**
+- Rahmenmaterial: **2040‑ + 2080‑ + 4040‑Aluprofil**, ein **GT-2‑262‑Riemen** + **T60/T60‑Riemenscheiben**,
+  eine **T10‑Gewindespindel** (**Steigung 16 mm/U, 150 mm**), Druckstange
+- Das **Airback**‑Set: ein **WINBAG**‑Luftheber + eine kleine **elektrische Luftpumpe** (in der Box,
+  angesteuert über **GP12** per **2SK4017**‑MOSFET und einen Panel‑**PUMP SW**) — das gebaute Gerät nutzt den Handball **nicht**
 - Ein iPhone/iPad mit Face ID + die [iOS‑App](ios.md)
 
 ## Schritt 1 — Mechanische Teile drucken
@@ -38,12 +51,18 @@ Begriffe unklar? Siehe das [Glossar](../GLOSSARY.md). Hängengeblieben? Frag im
 
 ## Schritt 2 — Elektronik beschaffen
 Bestelle die Teile aus [`PARTS-REFERENCE.md`](../../../../device-pro-acoustic/hardware/PARTS-REFERENCE.md).
-**Hinweis:** der originale IQ/Fortiq‑Motor ist **EOL** — siehe [`HARDWARE-AVAILABILITY.md`](../../../../device-pro-acoustic/HARDWARE-AVAILABILITY.md) für den Closed‑Loop‑Schrittmotor‑Nachfolger (DRV8825‑kompatibel).
+**Hinweis:** der originale IQ/Fortiq‑Motor ist **EOL** — der geplante Nachfolger ist ein **NEMA17‑("17‑Typ‑")Schrittmotor gleicher Größe** (nutzt den vorhandenen Rahmen), **STEP/DIR**. Siehe [`HARDWARE-AVAILABILITY.md`](../../../../device-pro-acoustic/HARDWARE-AVAILABILITY.md).
 
 ## Schritt 3 — Antriebseinheit montieren
-1. Baue den Rahmen aus dem Profil.
-2. Setze **Motor → 2GT‑Riemen → T10‑Gewindespindel → Druckstange** so, dass die Stange aufs Pedal fährt.
-3. Montiere die Boards auf dem gedruckten PCB‑Halter.
+Der Antrieb ist eine **vertikale Säule** (siehe das [Referenzdesign](../../../../device-pro-acoustic/hardware/reference-design/)):
+1. Baue den Rahmen — eine **vertikale 2040‑Säule** (L ≈ 200 mm) auf einer **2080‑Basis** (L ≈ 200 mm).
+2. Montiere den **Motor neben der Spindel** (oben) und koppele ihn mit dem **GT-2‑262‑Riemen** über
+   **zwei T60‑Riemenscheiben (1:1)** — der Riemen *versetzt* den Motor nur neben die Spindel, er ist **keine** Untersetzung.
+3. Setze die **vertikale T10‑Gewindespindel** (Steigung **16 mm/U**) an der **linken Seite der 2040‑Säule** ein; ihre
+   **Mutter/Schlitten** fährt am Rahmen hinab und trägt eine **Druckstange** — ein **2040‑Profil L=75 mm** mit einem
+   **15‑mm‑PLA‑Teil** oben (hält die Spindel­mutter) und einem **PLA‑Teil mit Hartgummi‑Spitze** unten (gesamt **115 mm**) —,
+   die **senkrecht nach unten** aufs Haltepedal drückt. Bringe den **+5‑V‑Lüfter** am Motor an.
+4. Bringe die Boards in der gedruckten **Elektronikbox** (BLE + Pico + Airjack‑Pumpe) unter und das Netzteil in der **Strombox (PW)**.
 
 ![Antriebseinheit + Airback‑Komponenten](../../../../device-pro-acoustic/hardware/photos/pro_components_airback_and_drive.jpg)
 
@@ -68,8 +87,9 @@ Flashe **zwei Boards** (alle Schritte in [`docs/toolchain/`](../../../../docs/to
 
 ## Schritt 6 — Am Klavier montieren + Airback
 1. Platziere den Antrieb so, dass die Druckstange über dem Haltepedal sitzt.
-2. Fixiere mit dem **Airback**: den Luftheber gegen ein Nachbarpedal aufpumpen, um die Reaktionskraft
-   aufzunehmen — nichts berührt die Klavieroberfläche. Siehe [`hardware/airback/`](../../../../device-pro-acoustic/hardware/airback/).
+2. Fixiere mit dem **Airback**: führe den **Luftschlauch** von der **elektrischen Pumpe** der Box zum WINBAG
+   und pumpe ihn mit dem Panel‑**PUMP SW** gegen ein Nachbarpedal auf, um
+   die Reaktionskraft aufzunehmen — nichts berührt die Klavieroberfläche. Siehe [`hardware/airback/`](../../../../device-pro-acoustic/hardware/airback/).
 
 ![Airback‑Luftventil](../../../../device-pro-acoustic/hardware/photos/airback_air_valve.jpg)
 
@@ -80,8 +100,10 @@ Flashe **zwei Boards** (alle Schritte in [`docs/toolchain/`](../../../../docs/to
 - Führe die Selbstkalibrierung aus; beobachte den **Serial Monitor @ 115200**. Eine Sicherheitsgrenze stoppt Wege über ~50 mm.
 
 ## Schritt 8 — App koppeln & spielen
-Baue/installiere die [iOS‑App](ios.md), koppele per Bluetooth, stelle **Schwelle** & **Geschwindigkeit**
-ein, kalibriere den Kopfwinkel‑Nullpunkt — und spiele. Siehe [`docs/operation/`](../../../../docs/operation/).
+Baue/installiere die [iOS‑App](ios.md), koppele per Bluetooth, stelle deinen **Offset (Schwelle)** &
+**Multiplikator** ein (zusammen legen sie fest, wie schnell das Pedal dem Kopf folgt — siehe
+[Funktionsweise](../how-it-works.md)), kalibriere den Kopfwinkel‑Nullpunkt — und spiele. Siehe
+[`docs/operation/`](../../../../docs/operation/).
 
 ## Mechanische Stückliste & CAD‑Referenz
 
@@ -105,9 +127,9 @@ Teile** mit aus dem **CAD (BREP) gemessenen Maßen** und der **bearbeitbaren Que
 | Druckstange | (siehe CAD) | `bfaaap_push_poll.FCStd` |
 | **Antriebsbaugruppe (Referenz‑Layout)** | 530×290×216 | `bfaaap_belt_gotai14.FCStd` |
 
-Zukauf‑Mechanikteile (IQ‑Motor, **T10‑Gewindespindel ~150 mm**, **2GT‑262‑Riemen**, **T60‑Riemenscheiben**
-5/10 mm Bohrung, Lager, **4040 / 2040 / 20100** Aluprofil, **Luftheber 119×11 cm**, φ3‑Pumpe): siehe die
-[Stückliste](../../../../device-pro-acoustic/assembly/README.md). Vollständiger Datei‑↔‑Thema‑Index:
+Zukauf‑Mechanikteile (IQ‑Motor → **NEMA17**‑Nachfolger, **T10‑Gewindespindel** Steigung **16 mm/U** / 150 mm, **GT-2‑262‑Riemen**, **T60‑Riemenscheiben**
+5/10 mm Bohrung, Lager, **2040‑ + 2080‑ + 4040‑Aluprofil**, **WINBAG‑Luftheber** 160×150 mm / ≤50 mm / 135 kg
++ elektrische Pumpe der Box): siehe die [Stückliste](../../../../device-pro-acoustic/assembly/README.md). Vollständiger Datei‑↔‑Thema‑Index:
 [**Quellenübersicht**](../../../../docs/SOURCE-MAP.md).
 
 ---

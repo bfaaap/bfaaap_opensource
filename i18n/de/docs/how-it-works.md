@@ -26,8 +26,9 @@ Du **neigst den Kopf** ein wenig; ein iPhone/iPad **sieht die Neigung**; es send
 
 #### Warum „airback" (ein geprägter Begriff, kein „airbag")
 Der **„airback"** ist bFaaaPs aufblasbarer, **luftgestützter Anker** — *kein* „airbag". Ein
-Luftkissen bläst sich unter einem Nachbarpedal auf und nimmt die **Reaktionskraft** des Aktuators
-auf, sodass das **Pro**-Gerät auf einem *unveränderten* akustischen Klavier fest sitzt: **ohne
+Luftkissen (ein **WINBAG**-Luftheber, aufgepumpt von einer kleinen **elektrischen Pumpe im Gerät**
+über einen Luftschlauch) bläst sich unter einem Nachbarpedal auf und nimmt die **Reaktionskraft** des
+Aktuators auf, sodass das **Pro**-Gerät auf einem *unveränderten* akustischen Klavier fest sitzt: **ohne
 Schrauben, zerstörungsfrei und schnell auf-/abzubauen**. Der Name verbindet *air* + *back*
 (stützen/abstützen) und betont das Verankern statt der Sicherheitsbedeutung von „airbag".
 

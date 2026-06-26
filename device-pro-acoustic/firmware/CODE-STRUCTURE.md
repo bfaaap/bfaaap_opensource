@@ -31,11 +31,13 @@ on **+24 V** over a serial pair (`H1_RX` / `H2_TX`); pump driver = **n‑MOSFET
 **motor _power_** (not current — power is supply‑voltage‑robust; on the IQ version
 the power is read **by command from the IQ motor**); upper‑limit input = a
 hand‑controller **slide potentiometer ("slide volume")** on **ADC0/GP26**
-(confirmed; the body's RJ45/LAN socket is currently unused). The **next**
-generation will use a closed‑loop stepper with a **DRV8825‑compatible** STEP/DIR
-interface (**specific motor model not yet decided**; DRV8825 itself is the old
-standard module used only in early plain‑stepper tests); the v052B stepper sketch
-is early development and a buildable version is **not currently available**. See
+(confirmed; the body's RJ45/LAN socket is currently unused). The **next** generation uses a
+**closed‑loop stepper (approach A, chosen by H. Narusawa 2026‑06‑26)**: either **MKS SERVO42C/D +
+a NEMA17**, or an **integrated closed‑loop NEMA17**, driven **STEP/DIR** with the **pressing‑force
+step read from the driver's load over serial** (recovers the IQ "press until the reaction force
+rises" idea). The `v052B` snapshot is an early WIP; a cleaner, compile‑oriented **AI‑draft skeleton**
+(`bFaaaP_autopro_pico_stepperA_draft_20260626.ino`) was written for the maker to bench‑test —
+**untested**, with the driver‑specific protocol left as a TODO. See
 [`../assembly/`](../assembly/) for the full BOM and
 [`../HARDWARE-AVAILABILITY.md`](../HARDWARE-AVAILABILITY.md) for replacements.
 
@@ -45,7 +47,8 @@ is early development and a buildable version is **not currently available**. See
 |--------|-------|------|
 | `bFaaaPpro_BLE_2024010309_bord_A.ino` | **nRF52** (Adafruit Bluefruit) | BLE ↔ UART bridge. Advertises `bFaaaPSwitch_1…4`, NUS, OTA DFU, battery. Also drives **GP13 directly** for on/off. |
 | `bFaaaP_autopro_pico_v039B_20250725.ino` | **RP2040 / Pico** | Main board, **IQ / Fortiq motor** version. |
-| `bFaaaP_autopro_pico_v052B_step_20251111.ino` | **RP2040 / Pico** | Main board, **closed‑loop stepper** version (latest; IQ motor was discontinued). ⚠ development snapshot — see notes. |
+| `bFaaaP_autopro_pico_v052B_step_20251111.ino` | **RP2040 / Pico** | Main board, **closed‑loop stepper** version (latest maker WIP; IQ motor was discontinued). ⚠ development snapshot — see notes. |
+| `bFaaaP_autopro_pico_stepperA_draft_20260626.ino` | **RP2040 / Pico** | **AI‑draft skeleton** for the chosen **approach A** (closed‑loop NEMA17, STEP/DIR + serial load read). **Compiles** (confirmed by Narusawa, 2026‑06‑26) but **untested** — for the bench. Successor airback: **no HX711**, **fixed 40 s** inflate, **valve normally closed** (release on removal); STEP rate slowed (80 µs was too fast). Driver protocol = TODO. |
 | `…_v039B_…_shishido_v.ino` | RP2040 / Pico | A variant of v039B. |
 
 ## Two roles of the BLE board

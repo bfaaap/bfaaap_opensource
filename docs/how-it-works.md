@@ -18,7 +18,8 @@ needed.
 2. **The phone reads it.** Apple's face‑tracking (**ARKit / TrueDepth**) measures your head
    angle and turns it into a number, 0–99 %.
 3. **Bluetooth carries it.** The app sends small messages (`i00`–`i99`) over **BLE** to the
-   pedal device. You set your own **threshold** (how far to tilt) and **speed**, so it fits you.
+   pedal device. You preset your own **offset (threshold)** — how far to tilt — and a **multiplier**,
+   so it fits you (together they set how fast the pedal follows; you don't set a separate "speed").
 4. **The device presses the pedal.**
    - **Pro** (acoustic piano): a small **motor** pushes a rod onto the sustain pedal; an
      **airback** cushion anchors it without touching the piano's finish.
@@ -27,6 +28,7 @@ needed.
 
 #### Why "airback" (a coined term, not "airbag")
 The **"airback"** is bFaaaP's inflatable, **air‑braced anchor** — *not* an "airbag". An air cushion
+(a **WINBAG** air jack, inflated by a small **electric pump inside the device** through an air tube)
 inflates under a neighbouring pedal and absorbs the actuator's reaction force, so the **Pro** device
 stays firmly in place on an *unmodified* acoustic piano: **no bolts, non‑destructive, and quick to
 set up and remove**. The name joins *air* + *back* (to back / brace / support), emphasising the

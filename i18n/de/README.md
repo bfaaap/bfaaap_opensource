@@ -79,7 +79,7 @@ Maintainern geprüftes Q&A (keine Sofortantwort; echte Menschen prüfen jede Ant
 - iPhone / iPad mit **TrueDepth**‑Frontkamera (Kopf‑Tracking)
 - **Raspberry Pi Pico** (Hauptplatine) + **nRF52840** BLE‑Board (Brücke)
 - **IQ‑FORTIQ‑M42BLS‑100** Motor *(Referenz v039B; EOL → Nachfolger: Closed‑Loop‑Schrittmotor mit
-  DRV8825‑kompatibler Schnittstelle)*, treibt **2GT‑Riemen → T10‑Gewindespindel → Druckstange** auf
+  DRV8825‑kompatibler Schnittstelle)*, treibt **GT-2‑Riemen → T10‑Gewindespindel → Druckstange** auf
   einem Aluprofil‑Rahmen
 - **HX711** Luftdrucksensor, **2SK4017** MOSFET (Pumpe), Weganschlag‑Schieber, **24‑V‑Netzteil**
   *(die Selbstkalibrierung nutzt die Motor‑**Leistung**, nicht den Strom — die Versorgungsspannung spielt also keine Rolle)*

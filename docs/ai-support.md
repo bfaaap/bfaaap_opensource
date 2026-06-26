@@ -39,6 +39,11 @@ When your question arrives, we sort it into one of two tracks:
 
 Either way your question helps — track ② answers become new documentation.
 
+> 🎭 **Watch it live:** [**bFaaaP — AI & Team, Live**](ai-team-live.md) — a behind‑the‑scenes
+> commentary of the AI and the makers building bFaaaP **together** (figures, illustrations, and the
+> firmware the AI wrote, reviewed live by the team). The fun, and the *why*, of team‑collaboration
+> AI‑assisted Support. A shorter single‑question example: [**"Which motor can replace the EOL one?"**](ai-support-example-pro-motor.md).
+
 ## How to ask a good question
 
 - Say whether it's about the **iOS app, the Pro device, or the Switch device**.
