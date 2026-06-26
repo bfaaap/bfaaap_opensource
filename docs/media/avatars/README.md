@@ -1,7 +1,7 @@
 # Member avatars (for AI‑assisted Support threads)
 
-Round avatar icons of the bFaaaP team — cropped from each member's illustration
-(Saki Shiokawa style) — plus a friendly **AI‑assistant** avatar. Use them in
+Round avatar icons of the bFaaaP team — cropped from each member's **original hand‑drawn
+illustration by Saki Shiokawa (塩川紗季)** — plus a friendly **AI‑assistant** avatar. Use them in
 Discussions‑style review threads (e.g. [`../../ai-support-example-pro-motor.md`](../../ai-support-example-pro-motor.md))
 so a member's comment carries their face. They are ready for **any future Q&A / opinion** thread.
 

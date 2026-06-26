@@ -167,5 +167,6 @@ input can become part of this thread, and part of the docs.
 
 ---
 
-*Avatars are the project's member illustrations (Saki Shiokawa style); the AI avatar is
-AI‑generated (Gemini, same style). © Shishido & Associates. See [media credits](media/CREDITS.md).*
+*Member avatars are original hand‑drawn illustrations by **Saki Shiokawa (塩川紗季)** (© Saki Shiokawa /
+bFaaaP); only the AI avatar is AI‑generated (Gemini, in her style) © Shishido & Associates. See
+[media credits](media/CREDITS.md).*

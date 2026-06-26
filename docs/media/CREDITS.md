@@ -5,8 +5,10 @@ documentation media is released under **CC‑BY‑4.0** (see [`../../LICENSE`](.
 
 ## Illustrations (`illustrations/`)
 
-Warm hand‑drawn **Saki Shiokawa (塩川紗季) style**, AI‑assisted (Gemini), created for the
-bFaaaP project. **© Shishido & Associates.**
+Scene/hero illustrations **AI‑generated (Gemini) in Saki Shiokawa (塩川紗季)'s warm hand‑drawn
+*style***, created for the bFaaaP project. **© Shishido & Associates.** *(These are AI art in her
+style — distinct from the member portraits/avatars, which are her **original** hand‑drawn works; see
+below and `../members/`.)*
 
 | File | Use |
 |------|-----|
@@ -26,8 +28,9 @@ bFaaaP project. **© Shishido & Associates.**
 
 ### Member avatars (`avatars/`)
 
-Round avatar icons of the team — cropped from the member illustrations (Saki Shiokawa style) —
-plus a friendly **AI‑assistant** avatar (`ai.png`, AI‑generated with Gemini in the same style).
+Round avatar icons of the team — cropped from the **original hand‑drawn member illustrations by
+Saki Shiokawa (塩川紗季)** — plus a friendly **AI‑assistant** avatar (`ai.png`, AI‑generated with
+Gemini in her style).
 Used in [AI‑assisted Support](../ai-support.md) Discussions‑style threads. Full list, usage and
 the **display‑name‑only** rule for *kana* / *Midori*: [`avatars/README.md`](avatars/README.md).
 **© Saki Shiokawa / bFaaaP** (member art) · **© Shishido & Associates** (AI avatar).

@@ -366,6 +366,7 @@ your question or idea can become the next act.
 
 ---
 
-*Avatars = the project's member illustrations (Saki Shiokawa style); the AI avatar + scene art are
-AI‑generated (Gemini, same style). © Shishido & Associates. See [media credits](media/CREDITS.md).
+*Member avatars = original hand‑drawn illustrations by **Saki Shiokawa (塩川紗季)** (© Saki Shiokawa /
+bFaaaP); only the AI avatar + scene art are AI‑generated (Gemini, in her style) © Shishido &
+Associates. See [media credits](media/CREDITS.md).
 A condensed version of this thread also lives in [the motor‑choice example](ai-support-example-pro-motor.md).*
