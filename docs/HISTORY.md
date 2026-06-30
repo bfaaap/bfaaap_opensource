@@ -32,8 +32,8 @@ M5Stack / ESP32 era; wooden enclosure for bFaaaP4):
 - an **actuator** placed in front of the pedal.
 
 A **PCT international patent** was filed in 2018; the method was later granted in
-Japan as **特許第6726319号 / 第7004771号** (the head‑angle **threshold** + press
-**speed** scheme).
+Japan as **特許第6726319号 / 第7004771号** (the head‑angle **offset + multiplier** scheme,
+which together set the **response speed**).
 
 Public debut: ~2019, at a piano recital of Kyoko Yamaguchi's class "Fleur"
 (MUSICASA, Yoyogi‑Uehara).

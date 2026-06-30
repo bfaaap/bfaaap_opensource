@@ -39,6 +39,8 @@ Wenn deine Frage eintrifft, sortieren wir sie in eine von zwei Spuren:
 
 So oder so hilft deine Frage — Antworten der Spur ② werden zu neuer Dokumentation.
 
+> 🎭 **Live ansehen:** [**bFaaaP — AI & Team, Live**](ai-team-live.md) — ein Blick hinter die Kulissen, wie die KI und die Macher bFaaaP **gemeinsam** bauen (Abbildungen, Illustrationen und die Firmware, die die KI schrieb und das Team live prüfte). Der Spaß — und das *Warum* — der teambasierten KI-gestützten Unterstützung. Ein kürzeres Beispiel mit nur einer Frage: [**„Welcher Motor kann den EOL-Motor ersetzen?“**](ai-support-example-pro-motor.md).
+
 ## So stellst du eine gute Frage
 - Sag, ob es um die **iOS‑App, das Pro‑Gerät oder das Switch‑Gerät** geht.
 - Nenne, **was du versucht hast**, deine Teile/Boards und jede **Fehlermeldung oder Foto**.

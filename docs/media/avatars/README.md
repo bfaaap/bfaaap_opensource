@@ -8,7 +8,7 @@ so a member's comment carries their face. They are ready for **any future Q&A / 
 **Usage (GitHub‑flavored Markdown):**
 
 ```html
-<img src="media/avatars/narusawa.png" width="64" alt="Hiroyuki Narusawa avatar">
+<img src="narusawa.png" width="64" alt="Hiroyuki Narusawa avatar">
 ```
 
 | File | Member (display name) | Role |

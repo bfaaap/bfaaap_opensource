@@ -246,8 +246,8 @@ actuator's control signal" etc., and by **deleting** the unclear claims 35–39.
    display at all**, and a **pianist cannot perform while wearing a vision‑blocking
    HMD**. Pulling one feature out of an indicator‑dependent device and bolting it
    onto a display‑less device is not something a skilled person would naturally do.
-   *(This is, in HCI terms, exactly bFaaaP's contribution: eyes‑free, display‑free
-   head control fit for live performance.)*
+   *(This is, in HCI terms, exactly bFaaaP's contribution: head control that needs
+   no worn display or on‑screen target during performance.)*
 2. **The "multiplier" numbers are nowhere in the art.** Neither ref 1 nor ref 2
    discloses the **10–50 multiplier** (nor the 2–10° span). They were obtained
    empirically from the APEE human trial, so they cannot be an obvious design choice.
@@ -465,8 +465,8 @@ these points to re‑frame the manuscripts:
 
 4. **An HCI insight hides in the "teaching‑away" argument.** The patent was won
    partly by arguing that an HMD needs a **visual indicator**, which a performing
-   pianist cannot use — so bFaaaP's value is **eyes‑free, display‑free head control
-   fit for live performance**. → State this as an explicit interaction‑design
+   pianist cannot use — so bFaaaP's value is **head control that needs no worn display
+   or on‑screen target during live performance**. → State this as an explicit interaction‑design
    contribution.
 
 5. **Generality beyond the pedal.** The "a patentable part is independently

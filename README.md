@@ -78,10 +78,10 @@ Q&A (it's not instant; real people check each answer).
 ### Bill of materials (overview, Pro line)
 - iPhone / iPad with **TrueDepth** front camera (head tracking)
 - **Raspberry Pi Pico** (main) + **nRF52840** BLE board (bridge)
-- **IQ‑FORTIQ‑M42BLS‑100** motor *(reference v039B; EOL → closed‑loop‑stepper successor with a
-  DRV8825‑compatible interface)*, belt‑coupled (**GT-2‑262 belt → T60/T60 pulleys, 1:1**) to a
+- **IQ‑FORTIQ‑M42BLS‑100** motor *(reference v039B; EOL → closed‑loop **NEMA17‑class** successor
+  under evaluation)*, belt‑coupled (**GT-2‑262 belt → T60/T60 pulleys, 1:1**) to a
   **vertical T10 lead‑screw** whose carriage drives a **push‑rod straight down** on the sustain
-  pedal — all on a **2040 / 2080 aluminium‑extrusion** frame
+  pedal — all on a **2040 / 2080 / 4040 aluminium‑extrusion** frame
 - **HX711** air‑pressure sensor, **2SK4017** MOSFET (pump), travel‑limit slider, **24 V PSU**
   *(self‑calibration uses motor **power**, not current — so supply voltage doesn't matter)*
 - 3D‑printed parts (PLA+) + **airback** anchoring kit
@@ -98,7 +98,7 @@ performance video** — in **[The bFaaaP story](docs/story.md)**.
 
 ![Platanus with bFaaaP — concert](docs/media/poster_concert_pro_2025.jpg)
 
-- 📜 [History](docs/HISTORY.md) · 👥 [Members](docs/members/) · 🎥 [All videos](docs/videos/)
+- 📜 [History](docs/HISTORY.md) · 👥 [Members](docs/members/) · 💬 [Voices](docs/voices.md) · 🎥 [All videos](docs/videos/)
 - ▶ **Best single demo** (grand piano, *with a setup walkthrough at 25:01*): <https://www.youtube.com/watch?v=V3cXeNW9jXY>
 
 ## 💛 Support

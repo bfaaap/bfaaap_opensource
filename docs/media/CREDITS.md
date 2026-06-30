@@ -20,10 +20,16 @@ below and `../members/`.)*
 | `pro-play-hero.png` | Pro build hero — playing a grand piano foot‑free (build/pro) |
 | `switch-play-hero.png` | Switch build hero — playing a digital keyboard foot‑free (build/switch) |
 | `ai-team-hero.png` · `ai-team-redraw.png` · `ai-team-motor.png` · `ai-team-firmware.png` | Scenes for [AI & Team Live](../ai-team-live.md) (team + AI; sketch→redraw; choosing the motor; firmware compiles) |
+| `ai-team-skeske-mini.png` | The "ske‑ske" (see‑through) miniature Pro — Taguchi's exhibition/PoC concept ([AI & Team Live](../ai-team-live.md) Act 5) |
+| `ai-team-mentor.png` | A master engineer mentoring two apprentices at a workbench — the 師弟 (shitei) spirit ([AI & Team Live](../ai-team-live.md); **original scene, no film imagery**) |
 | `intl-support.png` | Support / community |
 | `intl-build-community.png` | Build / community |
 | `control-law-key.png` | The control law as the "key": a head tilt unlocking the player's own intended, natural pedalling (how-it-works) |
 | `apee-children.png` | An APEE session: children & a wheelchair user taking the friendly piano test (apee-study) |
+| `studios-banner-fleur-pastel.png` | Combined welcome banner (rectangular) — the two Tokyo bFaaaP studios (Yamaguchi's Fleur & Nagasawa's PASTEL); illustration only, names/links added as HTML. *Planned for bfaaap.com top page.* |
+| `studio-banner-fleur.png` | **Fleur** studio banner — Kyoko Yamaguchi teaching a young boy with bFaaaP (multimodal Gemini, her member illustration as likeness reference; rectangular). *Confirm with her before public release.* |
+| `studio-banner-pastel.png` | **PASTEL** studio banner — Keiko Nagasawa teaching a young girl with bFaaaP (multimodal Gemini, her portrait as likeness reference; rectangular). *Confirmed by her 2026‑06‑30.* |
+| `../members/nagasawa-keiko.png` | Member portrait of **Keiko Nagasawa** — AI‑generated (Gemini) *in* Saki Shiokawa's style from her photo (**not** an original Shiokawa work); consented member added 2026‑06‑30, *portrait confirmed by her 2026‑06‑30* |
 | `../history/bfaaap-1-original/bfaaap1-pianist-2018.png` | bFaaaP 1 (2018): a pianist wearing the glasses‑mounted sensor (history) |
 
 ### Member avatars (`avatars/`)
@@ -43,6 +49,9 @@ Generated with matplotlib (data/process figures). **CC‑BY‑4.0.**
 |------|-----|
 | `ai-support-timeline.png` | How AI‑assisted Support works (timeline) |
 | `ai-team-flow.png` | The AI × team collaboration loop + the story timeline ([AI & Team Live](../ai-team-live.md)) |
+| `future-horizon.png` | "To be continued" — Narusawa's three elements branching into next‑gen ideas + the ske‑ske mini‑Pro ([AI & Team Live](../ai-team-live.md) Act 6) |
+| `shitei-mentor.png` | The 師弟 (shitei) master‑apprentice way — four mentor traits mapped to the team ([AI & Team Live](../ai-team-live.md); culture bridge for non‑Japanese readers) |
+| `ai-future-concept.png` | The **AI's own** speculative next‑gen sketch — phone‑free IMU sensing, on‑device model, modular actuator interface ([AI & Team Live](../ai-team-live.md); *AI speculation, makers decide*) |
 | `bom-evolution.png` | How each unknown BOM/circuit item was pinned down via Q&A (unknown → confirmed) |
 | `illustrations/airback-anchoring.png` | The Pro **"airback"** reaction‑force anchoring — mechanism schematic (matplotlib, hand‑drawn by the maintainer, **not** Gemini) |
 | `diagrams/fig-control-law.png` | Paper **Figure 3** — head‑angle control law (matplotlib; rendered from `bfaaap_arxiv_latex/figures/fig_control.pdf`) |
@@ -65,7 +74,9 @@ Generated with matplotlib (data/process figures). **CC‑BY‑4.0.**
 ## Photos & posters (`./`, member portraits, device photos)
 
 - `poster_concert_*.jpg`, `bfaaap_promotion.png` — bFaaaP event posters/promotion. **© bFaaaP team / Platanus.**
-- `../members/*.jpg|png` — member caricatures by **Saki Shiokawa (塩川紗季)**.
+- `../members/*.jpg|png` — member caricatures by **Saki Shiokawa (塩川紗季)**. *Exception:*
+  `../members/nagasawa-keiko.png` is **AI‑generated (Gemini) in her style** © Shishido & Associates (a
+  newer member with no original Shiokawa portrait), noted on the members page.
 - `../../device-pro-acoustic/hardware/photos/*.jpg` — build photos. **© bFaaaP team** (Taguchi).
 
 > Generation note: AI figures are produced locally with the private tooling in

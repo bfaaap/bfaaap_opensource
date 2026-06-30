@@ -1,7 +1,6 @@
 # References archive — saved copies & stable links
 
-> 🌐 **English** (this is a language-neutral bibliographic registry) · linked from
-> [SOURCE-MAP](../SOURCE-MAP.md) · [日本語](../../i18n/ja/docs/SOURCE-MAP.md) · [Deutsch](../../i18n/de/docs/SOURCE-MAP.md)
+> 🌐 **English** · [日本語](../../i18n/ja/docs/references/README.md) · [Deutsch](../../i18n/de/docs/references/README.md)  ·  *language-neutral bibliographic registry; also linked from [SOURCE-MAP](../SOURCE-MAP.md).*
 
 Local copies of the works cited in the [paper](../../bfaaap_arxiv_latex/README.md), preserved here
 against link rot, plus stable links and **access dates** for everything else.

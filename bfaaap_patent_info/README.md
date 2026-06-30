@@ -85,7 +85,7 @@ PCT/JP2018/041771, ISA = JPO, mailed **2019‑01‑29**. Opinion: claims **1–3
 |-----|------|----------|--------|
 | D1 | Y | NPL *Head‑Activated Piano Pedal*, CanAssist (U. Victoria), online 2018‑04‑02 | 1–39 |
 | D2 | Y | JP 2017‑37567 A (COLOPL) | 1–39 |
-| D3 | Y | JP 2014‑95953 A (Tokyo Tech) · WO 2014/073121 A1 | 1–39 |
+| D3 | Y | JP 2014‑95953 A (Tokyo Institute of Technology) · WO 2014/073121 A1 | 1–39 |
 | D4 | Y | US 2018/0064371 A1 (ALPS Electric) · WO 2016/194581, EP 3305193, CN 107708552 | 2–3, 8–11, 14–15, 18–19, 22–23, 26–27, 30–33, 36–39 |
 | D5 | Y | JP 2006‑154504 A (Yamaha) · US 2006/0112809 A1 | 20–27 |
 | — | A | US 4736664 A (Hinsley & Norwood, 1988) — background | 1–39 |

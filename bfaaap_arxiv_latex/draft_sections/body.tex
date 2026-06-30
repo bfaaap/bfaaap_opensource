@@ -159,12 +159,12 @@ $\theta_{\mathrm{off}}$ a user-calibrated offset. The transmitted pedal value is
 v = \mathrm{clamp}\big(\,(\theta-\theta_{\mathrm{off}})\cdot m,\;0,\;99\,\big),
 \label{eq:law}
 \end{equation}
-where $m$ is a user-selected multiplier. The validated parameter ranges are an
-offset upper limit of $3$--$10^\circ$ and a multiplier of $10$--$50$, chosen so
+where $m$ is a user-selected multiplier. The validated parameter ranges are a
+user offset of $3$--$10^\circ$ and a multiplier of $10$--$50$, chosen so
 that a further $2$--$10^\circ$ of tilt reaches full pedal action
 (Figure~\ref{fig:control}a). Engage/release events use \emph{hysteresis}: engage
-when $\theta-\theta_{\mathrm{off}}\ge\tau$ while released, release when
-$\theta-\theta_{\mathrm{off}}<\tau-\delta$ while engaged, with a small dead-band
+when $\theta\ge\theta_{\mathrm{off}}$ while released, release when
+$\theta<\theta_{\mathrm{off}}-\delta$ while engaged, with a small dead-band
 $\delta$ (Figure~\ref{fig:control}b). The player presets just two quantities to
 taste: the \emph{offset} (\emph{where} the response begins) and the
 \emph{multiplier} (\emph{how much} pedal value each degree of tilt produces). These
@@ -304,9 +304,9 @@ $5$--$10^\circ$ preferred) and multipliers $8$--$50$ ($20$--$40$ preferred).}
 \toprule
 Class & $n$ & Participants & Offset (deg) & Multiplier \\
 \midrule
-I (control) & 7 & adults able to use their own feet (incl.\ one elderly) & 5--19 & 15--40 \\
+I (control) & 7 & adults able to use their own feet (incl.\ one elderly) & 5--19 & 10--40 \\
 II & 5 & children (ages 7--11) & 5 & 20--30 \\
-III & 3 & adults with disabilities: leg disability ($\times2$); leg disability + tracheostomy ($\times1$) & 3--10 & 30--50 \\
+III & 3 & adults with disabilities: leg disability ($\times2$); leg disability + tracheostomy ($\times1$) & 3--10 & 8--50 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -646,16 +646,38 @@ other expressive controls, other instruments, or assistive devices beyond music.
 We therefore see bFaaaP not only as a pedal aid but as a platform for inclusive,
 hands-free control of a wide range of products and services.
 
+\subsection{Future perspectives}
+\label{sec:future}
+The co-author who designed and built the pedal device (H.N.) frames the open-source
+release as a deliberate \emph{stepping stone}: the project is not finished, and
+opening it invites a wider community to improve it, lower its cost, and find
+approaches the original team would not. A useful way to organize that work is to
+decompose the foot-free assistive pedal into three largely independent problems:
+(i)~how to \emph{sense} a non-foot body movement that carries the player's intention;
+(ii)~how to \emph{transmit} that signal to the actuator quickly and reliably; and
+(iii)~how to \emph{actuate} the pedal quickly and quietly. Each axis admits
+substitution without disturbing the others---which is exactly what the
+controller/actuator split already demonstrates (Section~\ref{sec:generality}).
+Concrete directions follow. On sensing, a dedicated low-cost sensor in place of a
+smartphone could reduce total cost and broaden reach, and supporting Android
+alongside iOS would widen access. On transmission, the rate-decoupled BLE channel
+(Section~\ref{sec:decoupling}) is already device-agnostic. On actuation, the drive
+need not remain a stepper and lead screw: the same control law could meter a
+closed-loop servo-stepper today and, in principle, softer or more compact actuators
+such as artificial-muscle or piezoelectric drives, extending the method beyond the
+piano. We present these as directions rather than results; subsequent iterations
+will be refined openly with the team and the broader community of contributors.
+
 \subsection{Limitations and future work}
 bFaaaP depends on a clear view of the player's face and on per-instrument
 calibration, and the present quantitative evidence is the APEE re-analysis plus
 field deployments rather than a controlled, pre-registered user study with latency
 and usability instruments; such a study (including more participants with
-disabilities) is planned. The reference Pro design published here uses an IQ
-smart-servo motor; because that motor is now end of life, a closed-loop stepping
-motor (with a DRV8825-compatible interface) is being developed as its successor,
-but that firmware is still early and is not yet the reference, as the open
-hardware documentation tracks. The Switch line invites its own formal evaluation;
+disabilities) is planned. The reference Pro design published here uses an IQ/Fortiq M42BLS
+smart-servo motor; because that motor is now end of life, a closed-loop NEMA17-class
+stepping motor with load feedback is under evaluation as its successor with the
+device co-author, but that firmware is still early and is not yet the reference, as
+the open hardware documentation tracks. The Switch line invites its own formal evaluation;
 and while a single-sheet KiCad schematic of the IQ reference generation is already
 available in the repository, a stepper-version schematic and a build-clean
 stepper-firmware reference are still being finalized with the device co-author.

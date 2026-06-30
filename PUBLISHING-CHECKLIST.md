@@ -110,9 +110,8 @@ before pushing to a public GitHub repository.
 
 ## 7. Final
 
-- [x] **Git history purge — DONE (2026-06-24).** The peer-review files
-      (`bfaaap_arxiv_latex/main_taccess.tex|.pdf`, `JOURNAL-TARGETS.md`, naming 12
-      suggested reviewers/editors) were stripped from **all** history with
+- [x] **Git history purge — DONE (2026-06-24).** The private peer-review / TACCESS files (an arXiv-version split kept
+      separate) were stripped from **all** history with
       `git-filter-repo`, `main` was **force-pushed**, and the obsolete
       `feature/docs-overhaul` + `feature/i18n-reference-docs` remote branches (which
       still carried the old history) were **deleted**. Verified: gone from

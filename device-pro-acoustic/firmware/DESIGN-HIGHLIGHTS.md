@@ -134,7 +134,7 @@ firmware watches the **motor _power_**, which is proportional to **torque /
 reaction force**: when the push‑rod meets the hard stop the power rises past a
 threshold (`mot_cu_down`). That contact point (after a small back‑off) becomes
 the **lower limit `down_pos`** — the deepest the pedal is pressed. A safety cap
-(~65 mm) stops the rod being driven out.
+(50 mm) stops the rod being driven out.
 
 > **Why power, not current (per device co‑author):** the threshold is on **electrical
 > power**, not current, because the **current changes with the input voltage**

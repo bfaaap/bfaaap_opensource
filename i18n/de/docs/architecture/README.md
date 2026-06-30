@@ -6,8 +6,10 @@
 
 1. **Kopf‑Tracking (iOS).** Die Controller‑App liest mit ARKit `ARFaceTrackingConfiguration`
    (TrueDepth‑Kamera) den Nick‑Winkel (Pitch) des Kopfes.
-2. **Mapping.** Der Winkel wird mit einem Nutzer‑„Faktor“ (Schieber, 0–20) multipliziert und auf
-   `0–99` begrenzt.
+2. **Mapping.** Vom Kopfwinkel wird der **Offset** (Totzone) des Nutzers abgezogen, dann mit einem
+   Nutzer‑**„Faktor“** (Schieber, 0–20) multipliziert und auf `0–99` begrenzt. Offset und Faktor legen
+   zusammen eine sekundäre **Reaktionsgeschwindigkeit** fest (wie schnell der Aktuator dem Kopf jenseits
+   der Totzone folgt) — der patentierte „Schlüssel“.
 3. **Übertragung (BLE).** Der Wert wird als ASCII‑String `i00`–`i99` über einen **Nordic UART
    Service (NUS)** gesendet. Eingriff/Lösen‑Übergänge senden zusätzlich Marker‑Bytes `N` (an) und `F` (aus).
 4. **Betätigung (Gerät).** Die Pico‑Firmware parst den Wert und weist den **IQ‑/Fortiq‑Motor** an,

@@ -70,10 +70,10 @@ value = clamp( (−headAngle − offset) × multiplier , 0 … 99 )
 - `multiplier` (slider, 0–20) tunes sensitivity for each user / mounting.
 - Clamping to `0–99` keeps the compact 2‑digit `iNN` wire format.
 
-> **Patented method.** Generating the pedal signal from these **two parameters —
-> the head‑angle threshold and the press speed/depth** — is the project's
-> patented technique (JP **特許第6726319号 / 第7004771号**). If you reuse it,
-> see the licensing note in the publishing checklist.
+> **Patented method.** Generating the pedal signal from these **two presets —
+> the angular offset (dead‑zone) and the multiplier**, which together fix a secondary
+> **response speed** — is the project's patented technique (JP **特許第6726319号 / 第7004771号**).
+> If you reuse it, see the licensing note in the publishing checklist.
 
 ## 4. Fire‑and‑forget BLE writes (`.withoutResponse`)
 

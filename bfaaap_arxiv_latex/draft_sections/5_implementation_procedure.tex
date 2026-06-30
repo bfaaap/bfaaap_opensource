@@ -69,7 +69,7 @@ ready.
 \label{sec:impl-preset}
 Before playing, the player performs a one-time \emph{individualized pre-setting}
 step in the app: they choose the threshold start-point (offset) and the multiplier
-to match their own comfortable range and speed of head motion, and the app stores
+to match their own comfortable range and pace of head motion, and the app stores
 this preset. This step is what turns the control law of
 Section~\ref{sec:control-law} into \emph{individualized control}---the same device
 serves an able-footed adult, a child, and a player with restricted head motion,
@@ -82,27 +82,32 @@ preset as a required deployment step for each new player.
 
 \subsubsection{Mechanical assembly and 3D-printed parts}
 \label{sec:impl-pro-mech}
-The chassis is an aluminum-extrusion frame with 3D-printed housings (the
-reference parts were printed on a 305\,mm-class printer in PLA+); the largest part
-needs a bed of about $\ge$300\,mm and $\sim$200\,mm of height. The drivetrain is
+The chassis is a \emph{vertical} aluminium-extrusion frame---a 2040 post on a 2080
+base, with 4040 stock---carrying 3D-printed housings (the reference parts were
+printed on a 305\,mm-class printer in PLA+); the largest part needs a bed of about
+$\ge$300\,mm and $\sim$200\,mm of height. The drivetrain is
 motor~$\rightarrow$ timing belt $\rightarrow$ lead screw $\rightarrow$ push-rod
-(Section~\ref{sec:pro-chain}). The CAD, print files, and the bill of materials
-are in \texttt{device-pro-acoustic/hardware/}.
+(Section~\ref{sec:pro-chain}): a GT-2 ($262$\,mm) timing belt and $T60/T60$ pulleys
+(a $1{:}1$ ratio) turn a vertical $T10$ lead screw ($16$\,mm/rev) whose carriage
+drives the push-rod straight down onto the sustain pedal. The CAD, print files, and
+the full bill of materials are in \texttt{device-pro-acoustic/hardware/}.
 
 \subsubsection{Electronics, motor drive, and power}
 \label{sec:impl-pro-elec}
-Two boards are used: an nRF52840-class BLE board and an RP2040 main board joined
-by UART. The \emph{reference} design published here uses an \emph{IQ smart-servo}
-motor driven over a serial interface; because that motor is now end of life, the
-\emph{next} version will use a closed-loop stepping motor (which accepts a
-DRV8825-compatible STEP/DIR interface; the specific motor model is not yet
-decided), but that firmware is still in development and is not the reference here
-(the hardware-availability note documents the planned substitution). Pedal
-reaction is sensed from \emph{motor power} rather than current, because power is
-robust to supply-voltage variation (on the IQ version the power is read by command
-from the motor); a commercial DC supply sized for the motor is recommended. A \emph{single-sheet KiCad
+Two boards are used: an nRF52840-class BLE board (an AE-NRF52840) and an RP2040
+main board joined by UART. The \emph{reference} design published here uses an
+\emph{IQ/Fortiq M42BLS} smart-servo motor driven over a serial interface; because
+that motor is now end of life, the \emph{next} version will use a closed-loop
+\emph{NEMA17}-class stepping motor---an integrated closed-loop servo-stepper that
+reports load, so the force feedback the IQ servo provided is preserved (the
+specific model is under evaluation with the device co-author)---but that firmware
+is still in development and is not the reference here (the hardware-availability
+note documents the planned substitution). Pedal reaction is sensed from
+\emph{motor power} rather than current, because power is robust to supply-voltage
+variation (on the IQ version the power is read by command from the motor); a
+commercial DC supply sized for the motor is recommended. A \emph{single-sheet KiCad
 schematic} of the reference (IQ) generation --- giving the full board-to-board
-wiring and the Pico pin map (BLE UART on GP0/GP1, the HX711 on GP2/GP3, the
+wiring and the Pico pin map (BLE UART on GP0/GP1, the HX711 airback-pressure sensor on GP2/GP3, the
 IQ-motor serial on GP4/GP5, the air-pump MOSFET on GP12, and the slider
 potentiometer on ADC0/GP26) and two power rails (+5\,V logic, +24\,V motor) ---
 is included in the repository~\cite{repo}; a stepper-version schematic and a
@@ -110,13 +115,15 @@ build-clean stepper firmware are still being finalized with the device co-author
 
 \subsubsection{Airback (reaction anchoring) and hand controller}
 \label{sec:impl-pro-air}
-Wire the air pump through a power MOSFET to a controller GPIO, plumb it to an air
-bag, and connect a small hand controller (an upper-limit \emph{slide
-potentiometer} read on ADC0/GP26, plus a pump on/off switch). At power-up the
-firmware inflates the airback until the
-pressure threshold anchors the device, then self-calibrates the lower travel end
-from the motor-power limit (a DIP switch sets the pressing force, $\sim$20--35\,W,
-which is piano-dependent; Section~\ref{sec:airback}).
+The airback is a commercial air-wedge cushion (e.g.\ a WINBAG). Wire its electric
+air pump through a power MOSFET (GP12) to the controller, plumb it to the cushion
+placed under a neighbouring pedal, and connect a small hand controller (an
+upper-limit \emph{slide potentiometer} read on ADC0/GP26, plus a pump on/off
+switch); the built device drives the pump electrically, with the cushion's manual
+hand-bulb as a no-electronics alternative. At power-up the firmware inflates the
+airback until the pressure threshold anchors the device, then self-calibrates the
+lower travel end from the motor-power limit (a DIP switch sets the pressing force,
+$\sim$20--35\,W, which is piano-dependent; Section~\ref{sec:airback}).
 
 \subsubsection{Firmware flashing and device naming}
 \label{sec:impl-pro-fw}
@@ -140,10 +147,11 @@ what makes concert use --- not only home use --- practical.
 
 \subsubsection{Electronics and sustain-jack interface}
 \label{sec:impl-switch-elec}
-The Switch needs only the nRF52840-class board plus a relay or optocoupler from a
+The Switch needs only an nRF52840-class board (an Adafruit ItsyBitsy nRF52840) and
+a logic-level N-channel MOSFET as a low-side switch (e.g.\ a ROHM RU1J002YN) from a
 GPIO pin to the instrument's sustain jack (a 6.3\,mm plug); there is no motor,
-drivetrain, or airback. An RGB LED provides the idle/armed/engaged color
-feedback.
+drivetrain, or airback. It runs from $2\times$AA cells and starts on reset, and an
+RGB LED provides the idle/armed/engaged color feedback.
 
 \subsubsection{Setup}
 \label{sec:impl-switch-setup}

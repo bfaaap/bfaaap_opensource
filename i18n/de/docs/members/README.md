@@ -2,9 +2,10 @@
 
 > 🌐 [English](../../../../docs/members/README.md) · [日本語](../../../ja/docs/members/README.md) · **Deutsch**
 
-Die Menschen hinter bFaaaP (der **Platanus**‑Gruppe). Die Porträts sind die projekteigenen,
-handgezeichneten Karikaturen von **Saki Shiokawa (塩川紗季)**. *(Persönliche Kontaktdaten von den
-Quellseiten sind hier bewusst weggelassen.)*
+Die Menschen hinter bFaaaP (der **Platanus**‑Gruppe). Die meisten Porträts sind die projekteigenen,
+handgezeichneten Karikaturen von **Saki Shiokawa (塩川紗季)** (von <https://bfaaap.com/メンバー紹介/>);
+einige neuere Mitglieder haben ein KI‑Porträt *in ihrem Stil* (jeweils einzeln gekennzeichnet).
+*(Persönliche Kontaktdaten von den Quellseiten sind hier bewusst weggelassen.)*
 
 ---
 
@@ -49,6 +50,19 @@ Ausdruckskraft des Pedals genießen können.
 
 ---
 
+### 永澤 恵子 — Keiko Nagasawa — *Klavier & Studio (PASTEL)*
+
+![Keiko Nagasawa](../../../../docs/members/nagasawa-keiko.png)
+<sub>Porträt: KI‑generiert (Gemini) *im Stil von* Saki Shiokawa © Shishido &amp; Associates.</sub>
+
+Eine **Klavierlehrerin**, die das Tokioter Studio **PASTEL** leitet. Sie begrüßt bFaaaP, weil es die
+körperliche Barriere des Pedals beseitigt, sodass jede:r Spielende *„ein wahrhaft eigenes Spiel"*
+gestalten kann.
+*(In Tokio werden bFaaaP‑Unterricht und ‑Vorspiele in zwei Studios angeboten — Kyoko Yamaguchis*
+*[Fleur](https://www.fleur-pianok.com/講師紹介profile/) und ihrem eigenen [PASTEL](https://www.pastelpiano.org).)*
+
+---
+
 ### 徳重 大輔 — Daisuke Tokushige — *Geistiges Eigentum*
 
 ![Daisuke Tokushige](../../../../docs/members/tokushige-daisuke.jpg)
@@ -75,7 +89,7 @@ Verwirklichung dieses Ideals.
 
 Ein Komponist aus dem ehemaligen Jugoslawien: Akkordeon & Klavier ab dem 8. Lebensjahr, Violine und
 Komposition in Istanbul (M.A. Musikwissenschaft), zahlreiche internationale Auszeichnungen. 2015 nach
-Japan, studierte Computermusik am Kunitachi College of Music (Doktorandenkurs) und ging 2019 zur
+Japan, promovierte in Computermusik am Kunitachi College of Music und ging 2019 zur
 Sounddatenentwicklung bei **KORG**. Wirkte von 2019 bis 2023 ehrenamtlich am
 bFaaaP‑Projekt mit.
 
@@ -122,6 +136,6 @@ Klavier lernen.
 
 ---
 
-> Illustrationen von **Saki Shiokawa (塩川紗季)**. Siehe auch die [Projektgeschichte](../HISTORY.md).
+> Illustrationen von **Saki Shiokawa (塩川紗季)** (neuere KI‑Porträts *in ihrem Stil* sind je Bild gekennzeichnet). Siehe auch die [Projektgeschichte](../HISTORY.md).
 > bFaaaP ist eine eingetragene Marke (**bFaaaP®**); der brillengestützte Bewegungssensor ist ein
 > eingetragenes Design.

@@ -30,8 +30,8 @@ Repository enthält alles, um das Gerät zu bauen und den Controller selbst zu b
 
 ![Was ist bFaaaP — eine spielende Person mit Kopfneigungs‑Sensor und Smart‑Pedal](../../docs/media/illustrations/intl-what-bfaaap.png)
 
-Eine kleine Kopfbewegung wird zum Pedaldruck. Du legst deine eigene **Schwelle** (wie weit du
-neigst) und **Geschwindigkeit** fest — also kein bloßes Ein/Aus, sondern auf dich abgestimmt.
+Eine kleine Kopfbewegung wird zum Pedaldruck. Du legst deinen eigenen **Offset** (wie weit du
+neigst) und einen **Multiplikator** fest — also kein bloßes Ein/Aus, sondern auf dich abgestimmt.
 Die einfache Erklärung: [Funktionsweise](docs/how-it-works.md).
 
 ## Zwei Hardware‑Linien, eine App
@@ -78,8 +78,7 @@ Maintainern geprüftes Q&A (keine Sofortantwort; echte Menschen prüfen jede Ant
 ### Stückliste (Überblick, Pro‑Linie)
 - iPhone / iPad mit **TrueDepth**‑Frontkamera (Kopf‑Tracking)
 - **Raspberry Pi Pico** (Hauptplatine) + **nRF52840** BLE‑Board (Brücke)
-- **IQ‑FORTIQ‑M42BLS‑100** Motor *(Referenz v039B; EOL → Nachfolger: Closed‑Loop‑Schrittmotor mit
-  DRV8825‑kompatibler Schnittstelle)*, treibt **GT-2‑Riemen → T10‑Gewindespindel → Druckstange** auf
+- **IQ‑FORTIQ‑M42BLS‑100** Motor *(Referenz v039B; EOL → Nachfolger: **Closed‑Loop‑Schrittmotor der NEMA17‑Klasse**, in Evaluierung)*, treibt **GT-2‑Riemen → T10‑Gewindespindel → Druckstange** auf
   einem Aluprofil‑Rahmen
 - **HX711** Luftdrucksensor, **2SK4017** MOSFET (Pumpe), Weganschlag‑Schieber, **24‑V‑Netzteil**
   *(die Selbstkalibrierung nutzt die Motor‑**Leistung**, nicht den Strom — die Versorgungsspannung spielt also keine Rolle)*
@@ -97,7 +96,7 @@ einem Team aus Ingenieuren und Musikern. Den ganzen Weg — mit Vorstellung der 
 
 ![Platanus with bFaaaP — Konzert](../../docs/media/poster_concert_pro_2025.jpg)
 
-- 📜 [Geschichte](../../docs/HISTORY.md) · 👥 [Mitglieder](../../docs/members/) · 🎥 [Alle Videos](../../docs/videos/)
+- 📜 [Geschichte](../../docs/HISTORY.md) · 👥 [Mitglieder](../../docs/members/) · 💬 [Voices](../../docs/voices.md) · 🎥 [Alle Videos](../../docs/videos/)
 - ▶ **Beste Einzel‑Demo** (Flügel, *mit Einrichtungs‑Walkthrough ab 25:01*): <https://www.youtube.com/watch?v=V3cXeNW9jXY>
 
 ## 💛 Unterstützen
@@ -137,9 +136,7 @@ Er rahmt bFaaaP als inklusives Design / Mensch‑Maschine‑Interaktion, dessen 
 
 ## Patente, Marke & Design
 
-Das Steuerungsverfahren — Erzeugung des Pedalsignals aus **zwei Parametern: einer Kopfwinkel‑*Schwelle*
-(ein Offset‑Bereich, in dem der Aktuator nicht angetrieben wird) und der *Druckgeschwindigkeit* /
-Nutzerpräferenz** — ist patentiert. **Zwei Patente sind in Japan in Kraft**, mit einer englischen
+Das Steuerungsverfahren — ein quantitatives, nutzerabstimmbares Steuergesetz, bei dem die spielende Person eine winkelige **Totzone (Offset)** (einen Bereich, in dem der Aktuator nicht angetrieben wird) und einen **Multiplikator** vorgibt, die zusammen eine sekundäre, zeitliche **Reaktionsgeschwindigkeit** festlegen (wie schnell der Aktuator dem Kopf jenseits der Totzone folgt) — ist patentiert. **Zwei Patente sind in Japan in Kraft**, mit einer englischen
 **PCT**‑Anmeldung als Prioritätsgrundlage:
 
 | Art | Nummer | Titel | Link |

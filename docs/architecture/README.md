@@ -6,8 +6,10 @@
 
 1. **Head tracking (iOS).** The controller app uses ARKit `ARFaceTrackingConfiguration`
    (TrueDepth camera) to read the user's head pitch angle.
-2. **Mapping.** The angle is multiplied by a user "multiplier" (slider, 0–20) and
-   clamped to `0–99`.
+2. **Mapping.** The head angle, minus the user's **offset** (dead‑zone), is multiplied by a user
+   **"multiplier"** (slider, 0–20) and clamped to `0–99`. The offset and multiplier together fix a
+   secondary **response speed** (how fast the actuator follows the head past the dead‑zone) — the
+   patented "key."
 3. **Transmission (BLE).** The value is sent as an ASCII string `i00`–`i99` over a
    **Nordic UART Service (NUS)**. Engage/release transitions also send marker
    bytes `N` (on) and `F` (off).

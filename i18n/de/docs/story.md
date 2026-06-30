@@ -37,7 +37,7 @@ M5Stack · ESP32 — bFaaaP4 trug sogar ein handgemachtes Holzgehäuse):
   Vor/Zurück‑Neigung des Kopfes liest, und
 - ein **Aktuator** vor dem Pedal.
 
-Die Kernidee — eine Kopfwinkel‑**Schwelle** plus eine Druck‑**Geschwindigkeit** — wurde 2018 als
+Die Kernidee — ein Kopfwinkel‑**Offset (Totzone)** und ein **Multiplikator**, die zusammen eine sekundäre **Reaktionsgeschwindigkeit** festlegen — wurde 2018 als
 **internationales PCT‑Patent** angemeldet und später in Japan erteilt (**特許第6726319号 / 第7004771号**).
 Das öffentliche Debüt war um **2019** bei einem Vorspiel der Klavierklasse „Fleur“ von Kyoko Yamaguchi
 (MUSICASA, Yoyogi‑Uehara).
@@ -72,7 +72,7 @@ projekteigenen Karikaturen von **Saki Shiokawa**.*
 | ![Kyoko Yamaguchi](../../../docs/members/yamaguchi-kyoko.jpg) | **山口 恭子 / Kyoko Yamaguchi** | **Klavier & Pädagogik.** ~15 Jahre Unterricht; setzt sich für eine neue Pedaltechnik im IT‑Zeitalter ein. |
 | ![Daisuke Tokushige](../../../docs/members/tokushige-daisuke.jpg) | **徳重 大輔 / Daisuke Tokushige** | **Geistiges Eigentum.** Patentingenieur, der die Patente von bFaaaP betreut. |
 | ![kana](../../../docs/members/kana.png) | **kana** | **Klavierstimmerin.** Sieht Pedal‑ und Fingertechnik als eine Phrase — und bFaaaP als dieses Ideal verwirklicht. |
-| ![Fehmiju Fati](../../../docs/members/member2020.png) | **Fehmiju Fati** | **Komposition / Computermusik.** Internationale Auszeichnungen; studierte Computermusik in Japan; ging zur Sounddatenentwicklung bei KORG; wirkte 2019–2023 ehrenamtlich an bFaaaP mit. |
+| ![Fehmiju Fati](../../../docs/members/member2020.png) | **Fehmiju Fati** | **Komposition / Computermusik.** Internationale Auszeichnungen; promovierte in Computermusik in Japan; ging zur Sounddatenentwicklung bei KORG; wirkte 2019–2023 ehrenamtlich an bFaaaP mit. |
 | ![Midori](../../../docs/members/midori.png) | **Midori** | **Musik & Gesundheitswesen.** *„bFaaaP schaltet vielleicht auch das Herz ein.“* |
 | ![Hiroyoshi Kawaguchi](../../../docs/members/kawaguchi.jpg) | **川口 洋慶 / Hiroyoshi Kawaguchi** | **Keyboards & Engineering.** Institute of Science Tokyo (System & Control); Programmierung + Deep Learning; Klavier seit dem 3. Lebensjahr. |
 | ![Haruto Tanaka](../../../docs/members/tanaka.jpg) | **田中 遥斗 / Haruto Tanaka** | **Elektrotechnik.** Institute of Science Tokyo; möchte den Switch über das Klavier hinaus erweitern. |
@@ -98,7 +98,7 @@ Kategorie (neueste zuerst).
 - **▶ [Suzukake Science Day 2024](https://www.youtube.com/watch?v=B820ctNblJE)** · 35:02
 - **▶ [Kodai‑Festival 2023 — bFaaaP Pro](https://www.youtube.com/watch?v=9Sc8G1ESa-g)** · 02:40
 - **▶ [bFaaaP Pro @ MUSICASA, 23.07.2023](https://www.youtube.com/watch?v=S45xN5yFaRo)** · 03:45
-- **▶ [Natsu‑no‑Kyoen 2022 — gemeinsames Konzert von sieben Universitäten](https://youtu.be/uXMLea6_eKM)** (Toyosu Civic Center Hall, 05.09.2022) — ein **Platanus**‑Mitglied (Tokyo Tech) spielte *Blumenlied* (花の歌) mit **bFaaaP**, aufgebaut neben den anderen Mitwirkenden bei einem **formellen Hochschulkonzert** ([Eventseite](https://natsunokyoen2022.github.io/)).
+- **▶ [Natsu‑no‑Kyoen 2022 — gemeinsames Konzert von sieben Universitäten](https://youtu.be/uXMLea6_eKM)** (Toyosu Civic Center Hall, 05.09.2022) — ein **Platanus**‑Mitglied (Tokyo Tech, jetzt **Institute of Science Tokyo**) spielte *Blumenlied* (花の歌) mit **bFaaaP**, aufgebaut neben den anderen Mitwirkenden bei einem **formellen Hochschulkonzert** ([Eventseite](https://natsunokyoen2022.github.io/)).
 - **▶ [Klaviervorspiel 02.04.2022 (Pro)](https://www.youtube.com/watch?v=O8X2gEqEU6k)** · 06:55
 - **▶ [bFaaaP Performance, MusicFair 2020](https://www.youtube.com/watch?v=6_y9MI1IdTQ)** · 16:06
 - **▶ [New bFaaaP6, MusicFair 2020](https://www.youtube.com/watch?v=j1ZIJ53j7NE)** · 06:39

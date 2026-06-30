@@ -93,7 +93,7 @@ authors (outside this public repo). This folder holds the **arXiv preprint** onl
   **APEE results**).
 - [x] **Full revision (logic‑level rewrite):** reframed as inclusive design / HMI;
   Results restructured (inclusive design → control law → APEE clinical validation
-  → inclusive impact → eyes‑free performance → system realization); Discussion
+  → inclusive impact → face‑free performance → system realization); Discussion
   expanded (incl.\ comparison table + controller generality); Implementation
   Procedure added; declarations (COI / patent availability / data & code).
 - [x] **APEE clinical data** (patent Tables) added as primary data: participants,

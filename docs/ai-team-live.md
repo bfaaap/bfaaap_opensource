@@ -1,6 +1,6 @@
 # 🎭 bFaaaP — AI & Team, Live  ·  AIとチームの実況解説
 
-> 🌐 **English** · 日本語・Deutsch — *coming soon*
+> 🌐 **English** · [日本語](../i18n/ja/docs/ai-team-live.md) · [Deutsch](../i18n/de/docs/ai-team-live.md)
 >
 > A **live, behind‑the‑scenes commentary** of how bFaaaP is actually being built — the **AI and the
 > real bFaaaP team**, working together in the open.
@@ -58,6 +58,38 @@ Confirmed the schematic, owns the firmware/control view. *(His review of the new
 </td>
 </tr>
 </table>
+
+---
+
+## 🥋 The team behind it — a master and his apprentices (師弟 · *shitei*)
+
+🎙️ *"A note for the audience outside Japan — so the cast feels less like a list of names and more like
+people who actually know each other."*
+
+Watch how the team talks and a quiet shape appears: **Narusawa is the *master*, and Taguchi and Tanaka
+are his *apprentices*.** Japan has a deep word for that bond — **師弟 (*shitei*)**, master‑and‑apprentice.
+The maker who actually built the working unit doesn't simply *hand over* the schematics; he draws the
+understanding *out* of the people learning beside him. (The [members page](members/README.md) already
+hints at it — Taguchi is "*deepening his understanding of bFaaaP with Narusawa's guidance*.")
+
+If you'd like a shorthand from a galaxy far, far away: picture the small, green, sentence‑bending mentor
+who trains a young hopeful not by handing him answers, but by sending him into the cave to meet himself —
+*"Do, or do not. There is no try."* **That** energy. 🟢
+
+![A master engineer patiently guiding two apprentices at a workbench](media/illustrations/ai-team-mentor.png)
+<sub>The 師弟 (shitei) spirit — a maker mentoring the next builders. Illustration: AI‑generated (Gemini, Saki Shiokawa style) © Shishido &amp; Associates.</sub>
+
+What that mentoring actually looks like:
+
+![The shitei master's way — four traits mapped to the bFaaaP team](media/diagrams/shitei-mentor.png)
+
+And here's the lovely part for an **open‑source** project: once it's public, **anyone reading this becomes
+a potential apprentice.** The same patience the makers show each other is what
+[AI‑assisted Support](ai-support.md) extends to you — the AI drafts fast, the masters keep it honest, and
+you get to learn *in the open.*
+
+> *An affectionate cultural nod only — bFaaaP is not affiliated with any film, and the illustration is an
+> original drawing, not a portrait of anyone real or fictional.*
 
 ---
 
@@ -312,17 +344,136 @@ Full sketch (AI draft, untested): [`bFaaaP_autopro_pico_stepperA_draft_20260626.
 
 ---
 
-## 🎬 Act 5 — Coming up: the specialists
+## 🎬 Act 5 — The dream device: a Pro you can *see through*
 
-🎙️ *"And we're live for the next round — two specialists are warming up…"*
+🎙️ *"Intermission's over — and the team lifts its eyes from the workbench to the horizon. Taguchi
+opens with a charmer: a **miniature Pro you can see straight through.**"*
+
+<table>
+<tr>
+<td width="100" align="center"><img src="media/avatars/taguchi.png" width="92" alt="Taguchi"></td>
+<td valign="top">
+
+**💻 Taguchi:** Here's my sketch for a **"ske-ske bFaaaP Pro"** *(ske-ske = see-through)* — an
+exhibition / proof-of-concept piece:
+
+- a **miniature** Pro, small enough to print on a **Bambu Lab A1 mini**;
+- powered over **USB-PD** (USB-C);
+- a **stepping-motor PoC** — start small, with a little motor;
+- a **skeleton frame — only the bones** — so the microcontroller board and the wiring are visible
+  from the outside, which makes it **easy to explain how it actually works**;
+- precision isn't critical here, so we could even run **inference on a local LLM module** on-device —
+  and **Android support** would be a lovely bonus.
+
+</td>
+</tr>
+<tr>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td valign="top">
+
+**🤖 AI:** I love this — it's a **teaching device.** Hide nothing, and the whole pipeline from
+[*How it works*](how-it-works.md) becomes something a newcomer can literally *point at.* USB-PD and an
+A1-mini footprint also make it the easiest possible **first build** — a perfect on-ramp to the full Pro.
+
+</td>
+</tr>
+</table>
+
+![A see-through "ske-ske" miniature Pro on a desk — skeleton frame, visible board, wires, motor and a tiny pedal](media/illustrations/ai-team-skeske-mini.png)
+<sub>The "ske-ske" mini Pro (concept). Illustration: AI‑generated (Gemini, Saki Shiokawa style) © Shishido &amp; Associates.</sub>
+
+---
+
+## 🎬 Act 6 — Narusawa opens the horizon
+
+🎙️ *"And the maker who built the real machine widens the frame — from one device to a whole field of
+possibilities."*
+
+<table>
+<tr>
+<td width="100" align="center"><img src="media/avatars/narusawa.png" width="92" alt="Narusawa"></td>
+<td valign="top">
+
+**🛠️ Narusawa:** Thinking about **reach (share), we can't ignore Android.** And if there were a way to
+**sense the motion without a smartphone**, the **total cost would come down.** I don't think we're bound
+to the current device's way of driving the pedal, either — **muscle actuators, piezoelectric elements…**
+once you start thinking, there's **no end to it.**
+
+</td>
+</tr>
+<tr>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td valign="top">
+
+**🤖 AI:** That maps cleanly back onto your own **three elements** — *sense → send → press* — each one
+opening a door. Here's the horizon as a single picture:
+
+</td>
+</tr>
+</table>
+
+![The future horizon: the three elements branching into next-gen ideas, plus the ske-ske mini-Pro concept](media/diagrams/future-horizon.png)
+
+---
+
+## 🎙️ The AI's turn — my own sketch for the next model
+
+🎙️ *"And because this is a show where the AI gets to dream out loud too — here's my draft. Same rule
+as always: I sketch, the makers judge."*
+
+<table>
+<tr>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td valign="top">
+
+**🤖 AI:** If I'm allowed an opinion on the *next* model, here's where I'd push:
+
+- **Phone‑free sensing** — a tiny **IMU clip on the music stand**, talking **BLE straight to the device.**
+  It takes the smartphone out of the critical path: cheaper, lower latency, and more reliable on a
+  concert stage *(exactly Narusawa's "sense it without a phone")*.
+- **An on‑device tiny model** so calibration and the head‑gesture mapping **adapt to each player**
+  with no phone and no cloud — privacy and reliability in one move *(Taguchi's "local LLM")*.
+- **Shareable pedalling presets** — the **offset × multiplier** preset (the
+  [control‑law "key"](how-it-works.md)) saved and **shared as an open community library**, so a piece
+  can ship with a community‑tuned pedal map.
+- **A modular actuator interface** — stepper *(today)*, **muscle actuator**, **piezo/solenoid**, all
+  sitting behind the *same* control law *(future‑proofing Narusawa's "not bound to one drive method")*.
+- **Closed‑loop "feel"** — with the closed‑loop driver from Act 4, expose a tunable pedal weight and
+  even **half‑pedal nuance.**
+- **Beyond the piano** — the same head → actuator pipeline could drive **organ swell, synth sustain,
+  or assistive foot‑controls** *(Taguchi's "applications beyond the piano")*.
+
+</td>
+</tr>
+<tr>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td valign="top">
+
+**🤖 AI:** …and the honest caveat — I'm also the one who can be **confidently wrong.** So treat this as
+a draft on the table, not a roadmap. Which of these is real is for the people who built bFaaaP to say.
+
+</td>
+</tr>
+</table>
+
+![The AI's proposed next-gen architecture: phone-free IMU clip → on-device model → modular actuator interface → stepper/muscle/piezo](media/diagrams/ai-future-concept.png)
+
+---
+
+## 🎬 Finale — *to be continued*
+
+🎙️ *"And that's a wrap on **season one.** The device went from a horizontal-screw mistake to a
+vertical drive, a dead motor to a fresh firmware draft, and now to a horizon full of next‑gen
+dreams — all in the open. But the show isn't over…"*
 
 <table>
 <tr>
 <td width="100" align="center"><img src="media/avatars/tanaka.png" width="92" alt="Tanaka"></td>
 <td valign="top">
 
-**⚡ Haruto Tanaka** — *electrical / semiconductor circuits* &nbsp; 🕐 *up next:* analysis from his
-**Science Tokyo lab's AI environment + equipment** — the driver/motor electrical side and the force read.
+**⚡ Haruto Tanaka** — *electrical / semiconductor circuits* &nbsp; 🕐 *coming soon:* **his own concept
+is loading.** Next up: ideas from his **Science Tokyo lab's AI environment + equipment** — and
+Narusawa's reaction to them. *(We're holding the stage for him.)*
 
 </td>
 </tr>
@@ -330,14 +481,16 @@ Full sketch (AI draft, untested): [`bFaaaP_autopro_pico_stepperA_draft_20260626.
 <td width="100" align="center"><img src="media/avatars/taguchi.png" width="92" alt="Taguchi"></td>
 <td valign="top">
 
-**💻 Taguchi** — *software* &nbsp; 🕐 *up next:* refining the firmware — the driver protocol and how
-the load signal slots into the Pico loop.
+**💻 Taguchi** — *software* &nbsp; 🕐 *coming soon:* refining the new‑motor firmware — the driver
+protocol and how the load signal slots into the Pico loop. Plus, maybe, that first **ske‑ske** print.
 
 </td>
 </tr>
 </table>
 
-*Their words go straight here when they reply — that's the show.*
+> **To be continued.** Tanaka's vision drops next, with the team's review — then it all gets woven into
+> the docs and the three sites, in three languages. *Their words go straight here when they reply —
+> that's the show.* 🎬
 
 ---
 

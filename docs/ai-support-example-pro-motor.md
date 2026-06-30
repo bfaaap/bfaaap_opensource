@@ -1,6 +1,6 @@
 # 🧵 A live example: "Which motor can replace the EOL one?"
 
-> 🌐 **English** · 日本語・Deutsch — *coming soon*
+> 🌐 **English** · [日本語](../i18n/ja/docs/ai-support-example-pro-motor.md) · [Deutsch](../i18n/de/docs/ai-support-example-pro-motor.md)
 >
 > Part of [AI‑assisted Support](ai-support.md). This page shows **how it actually feels**:
 > the **AI proposes an idea from the open data, and the real bFaaaP team reviews and

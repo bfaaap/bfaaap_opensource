@@ -2,10 +2,12 @@
 
 > 🌐 **English** · [日本語](../../i18n/ja/docs/members/README.md) · [Deutsch](../../i18n/de/docs/members/README.md)
 
-The people behind bFaaaP (the **Platanus** group). Portraits are the project's own
-hand‑drawn caricatures from <https://bfaaap.com/メンバー紹介/>, illustrated by
-**Saki Shiokawa (塩川紗季)**. *(Personal contact details from the source pages are
-intentionally omitted here.)*
+The people behind bFaaaP (the **Platanus** group). Most portraits are the project's own
+hand‑drawn caricatures by **Saki Shiokawa (塩川紗季)** (from <https://bfaaap.com/メンバー紹介/>);
+a few newer members have an AI portrait *in her style* (noted individually). *(Personal contact
+details from the source pages are intentionally omitted here.)*
+
+> 💬 **In their own words:** see [**Voices — messages from the team**](../voices.md).
 
 ---
 
@@ -52,6 +54,18 @@ technique so more people can enjoy the expressive power of the pedal.
 
 ---
 
+### 永澤 恵子 — Keiko Nagasawa — *piano & studio (PASTEL)*
+
+![Keiko Nagasawa](nagasawa-keiko.png)
+<sub>Portrait: AI‑generated (Gemini) in Saki Shiokawa's style © Shishido &amp; Associates.</sub>
+
+A **piano instructor** who runs the Tokyo studio **PASTEL**. She welcomes bFaaaP for removing the
+physical barrier of the pedal, so every player can shape *"a performance that is truly their own."*
+*(In Tokyo, bFaaaP lessons & recitals are offered at two studios — Kyoko Yamaguchi's
+[Fleur](https://www.fleur-pianok.com/講師紹介profile/) and her own [PASTEL](https://www.pastelpiano.org).)*
+
+---
+
 ### 徳重 大輔 — Daisuke Tokushige — *intellectual property*
 
 ![Daisuke Tokushige](tokushige-daisuke.jpg)
@@ -78,8 +92,8 @@ embodiment of that ideal.
 
 A composer from the former Yugoslavia: accordion & piano from age 8, violin and
 composition at Istanbul (MA in musicology), many international awards. Came to
-Japan in 2015, studied computer music at Kunitachi College of Music (doctoral
-course), and joined **KORG**'s sound‑data development in 2019. Volunteered with
+Japan in 2015, earned a Ph.D. in computer music at Kunitachi College of Music, and
+joined **KORG**'s sound‑data development in 2019. Volunteered with
 the bFaaaP project from 2019 to 2023.
 
 ---
@@ -98,7 +112,7 @@ to expressive sustained sound through bFaaaP — *"bFaaaP may switch on the hear
 
 ![Hiroyoshi Kawaguchi](kawaguchi.jpg)
 
-A student from Nagasaki at **Tokyo Tech (System & Control)**, active in the
+A student from Nagasaki at **Institute of Science Tokyo (System & Control)**, active in the
 Platanus piano circle and a band keyboardist (prog/metal). Skills include
 **programming** (Python, MATLAB, C, JavaScript, HTML/CSS) and deep‑learning /
 sensing research; piano since age 3. He helps with **keyboard applications** and
@@ -110,7 +124,7 @@ development.
 
 ![Haruto Tanaka](tanaka.jpg)
 
-At **Tokyo Tech (Electrical & Electronic)**, a guitarist in the Tokyo Tech
+At **Institute of Science Tokyo (Electrical & Electronic)**, a guitarist in the
 Platanus club. He provides **technical support** and wants to extend bFaaaP Switch
 to instruments beyond the piano.
 
@@ -126,6 +140,6 @@ and would love to learn the piano himself.
 
 ---
 
-> Illustrations by **Saki Shiokawa (塩川紗季)**. See also the
-> [project history](../HISTORY.md). bFaaaP is a registered trademark (**bFaaaP®**);
+> Illustrations by **Saki Shiokawa (塩川紗季)** (newer AI portraits *in her style* are noted per
+> image). See also the [project history](../HISTORY.md). bFaaaP is a registered trademark (**bFaaaP®**);
 > the glasses‑mounted motion sensor is a registered design.

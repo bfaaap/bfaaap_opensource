@@ -41,8 +41,7 @@ Verdrahte den MOSFET über die **Sustain‑Pedalbuchse** des Instruments (TS Spi
 (`n` / `f`) an.
 
 ## Schritt 4 — Koppeln & nutzen
-Baue/installiere die [iOS‑App](ios.md), verbinde dich per Bluetooth, stelle deine **Schwelle** und
-**Geschwindigkeit** ein und spiele. Siehe das [Switch‑Handbuch](../../../../docs/user-manual/).
+Baue/installiere die [iOS‑App](ios.md), verbinde dich per Bluetooth, stelle deinen **Offset (Schwelle)** und **Multiplikator** ein und spiele (die beiden legen die Reaktionsgeschwindigkeit fest). Siehe das [Switch‑Handbuch](../../../../docs/user-manual/).
 
 ---
 → [Build‑Hub](README.md) · [Pro bauen](pro.md) · [iOS bauen](ios.md)

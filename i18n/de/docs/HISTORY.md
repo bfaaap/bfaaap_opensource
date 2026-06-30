@@ -28,8 +28,8 @@ M5Stack / ESP32; Holzgehäuse bei bFaaaP4):
 - ein **Kopf‑Bewegungssensor** — eine 9‑Achsen‑IMU an einem **Brillengestell**, die die Vor/Zurück‑Bewegung des Kopfes liest, und
 - ein **Aktuator** vor dem Pedal.
 
-2018 wurde ein **internationales PCT‑Patent** angemeldet; das Verfahren (Kopfwinkel‑**Schwelle** +
-Druck‑**Geschwindigkeit**) wurde später in Japan als **特許第6726319号 / 第7004771号** erteilt.
+2018 wurde ein **internationales PCT‑Patent** angemeldet; das Verfahren (Kopfwinkel‑**Offset +
+Multiplikator**, die zusammen die **Reaktionsgeschwindigkeit** festlegen) wurde später in Japan als **特許第6726319号 / 第7004771号** erteilt.
 
 Öffentliches Debüt: ~2019 bei einem Klaviervorspiel der Klasse „Fleur“ von Kyoko Yamaguchi
 (MUSICASA, Yoyogi‑Uehara).

@@ -33,9 +33,9 @@ line operates the same from the app's side.)
 2. **Mount the iPhone/iPad** on the music desk (or a stand) **facing the player's
    face**, so the front TrueDepth camera can track the head. (In the reference
    videos a phone is propped on the piano's music desk at the player's eye level.)
-2. Use the hand controller **slider** to set the **top position / travel limit**
+3. Use the hand controller **slider** to set the **top position / travel limit**
    of the driving part so the pedal is pressed the right amount.
-3. **Power on** the device. It advertises over BLE as `bFaaaPSwitch_1`
+4. **Power on** the device. It advertises over BLE as `bFaaaPSwitch_1`
    (or `_2`…`_4` if you set another channel).
 
 ## In the app
