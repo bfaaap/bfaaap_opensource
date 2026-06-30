@@ -87,8 +87,26 @@
 
 ## C. Payments / external services
 
-- [ ] **Stripe** (Shishido & Associates) — under review; once approved add the live
-      Payment Link (card / Apple Pay / Google Pay) to `SUPPORT.md` (en/ja/de).
+- [x] **PayPal — LIVE.** `SUPPORT.md` (en/ja/de) already carries the production PayPal.me
+      one-time links (`paypal.me/ShishidoAssociates1`); monthly subscription (¥500/1,000/3,000)
+      lives on the bFaaaP website (needs JS, can't render in GitHub Markdown). Public values
+      (PayPal.me URL, Plan IDs `P-…`) = `saaipf_business/paypal_manage/credentials/bfaaap_support.md`.
+- [ ] **Stripe — NOT live for bFaaaP (planning-stage).** `stripe_manage/credentials/README.md`:
+      Stripe-for-bFaaaP is still planning; **no Payment Link created**, and live Stripe billing is
+      **gated to saaipf.com go-live (publication order ③, after bfaaap public)**. Keep `SUPPORT.md`
+      at "Stripe — coming soon" until then (adding a live link now = publication-order violation).
+- [x] **Publish-time payment smoke-test** added to `PUBLISHING-CHECKLIST.md §7` (small real payment
+      via PayPal after going public; same for Stripe when added).
+- [x] **Language policy for payment/support pages** (user 2026-07-01, revised). GitHub German
+      SUPPORT page **stays German** (confirmed).
+      - **Support/payment PAGE display = each in its OWN language** (bfaaap.com & GitHub: ja=日本語 /
+        en=English / de=Deutsch).
+      - **Checkout after a PayPal/Stripe button auto-localizes** to the buyer's browser locale, so
+        **no separate links per language are needed** — one link/button per amount serves all
+        languages. Separate links only per **currency** (JPY vs USD; already exists).
+      - **Wording WE control** (custom button labels / Stripe Payment-Link product name+description /
+        custom checkout text): **simple → each language; complex → JA site Japanese, others English.**
+      - Same policy recorded in both site CLAUDE.md files (bfaaap.com / saaipf.com).
 
 ## D. Pre-public gate (from PUBLISHING-CHECKLIST §7 / CLAUDE.md §13)
 

@@ -122,3 +122,15 @@ before pushing to a public GitHub repository.
       it holds the AI-support Discussions).
 - [ ] Working tree is on the existing private remote; review `git status` against
       `.gitignore`, then change repository visibility to **public** (final step).
+- [ ] **Payment smoke-test — AFTER going public.** Once the repo is public, run a small **real**
+      payment through each LIVE method to verify the end-to-end flow, confirm it lands in the
+      account, then refund/cancel:
+      - **PayPal (LIVE now):** send e.g. **¥1,000** via the PayPal.me link in `SUPPORT.md`
+        (`paypal.me/ShishidoAssociates1`); confirm receipt in the **Shishido & Associates** PayPal
+        account and that **card / Apple Pay** appear on PayPal's checkout. Optionally start a **¥500
+        monthly** plan on the bFaaaP website and cancel it immediately. Public values (PayPal.me URL,
+        Plan IDs `P-…`) live in `saaipf_business/paypal_manage/credentials/bfaaap_support.md`.
+      - **Stripe (NOT live yet):** Stripe for bFaaaP support is **planning-stage** and gated to
+        **saaipf.com go-live (publication order ③, after bfaaap is public)** — keep `SUPPORT.md` at
+        "Stripe — coming soon" until then. When its **Payment Link** is added, repeat this small-
+        amount test (card + Apple Pay / Google Pay) and refund. See `saaipf_business/stripe_manage/`.
