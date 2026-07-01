@@ -47,8 +47,12 @@
       offset/multiplier ranges are shown, use the corrected values (mult: I 10–40, II 20–30, III 8–50;
       offset I 5–19°/II 5°/III 3–10°; span offset 3–19°/mult 8–50), not the old I 15–40 / III 30–50.
       (2026-07-01 grep: not currently on either site; instruction recorded in both sites' CLAUDE.md.)
-- [ ] **Non-member name "Yoshida"** appears in Shishido's origin story draft — confirm
-      consent (or anonymize) before that text is published.
+- [x] **Non-member name "Yoshida"** appears in Shishido's origin story draft — **RESOLVED
+      2026-07-01: consent obtained** (LINE, `member_consent_info/吉田さん_consent.png`; "全然問題ない
+      ですし、入れていただき光栄です"). Surname-only **"Yoshida"** restored in
+      `docs/voices/shishido.md` (EN/JA/DE) and bfaaap.com `voices.ts` (en/ja/de): "the then-president"
+      → "the then-president Mr. Yoshida" etc. saaipf.com has no origin-story president passage (no
+      change). Logged in `member_consent_info/CONSENT_LOG.md`.
 
 ## B2. Papers (arXiv + TACCESS) — RESOLVED (flow review, 2026-07-01)
 

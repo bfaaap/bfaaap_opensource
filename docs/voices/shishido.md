@@ -17,7 +17,7 @@
 >
 > bFaaaPのおかげで私は、毎日の練習の中でピアノの音が伸びるという「小さな幸せ」を手にしました。「大きな幸せ」は来ないので「小さな幸せ」が大切とずっと思っています。そんな中、高校の同窓会をするが行方不明者の捜索担当のMidoriさんが私を発見してくれて、Midoriさんもピアノが好きで、bFaaaPは足に障害がある方や子供たちの他にも、足の制御ができない多くの高齢者にも役立つよと教えてくれました。そこでもっとピアノ関係者にbFaaaPを知ってもらおうと、Kanaさんの紹介で近所にある楽器メーカーKORGに、Kanaさんと大滝さんと成澤さんと私でbFaaaPのデモをさせてもらいに行きました。そこでbFaaaPの実機を見てもらったのですが、初めてのトライで私よりも遥かに上手にbFaaaPを使い演奏してくれたFatiさんに出会いました。bFaaaPの凄さを実証してもらうにはFatiさんの力が必要と思いお願いしてメンバーになってもらいました。
 >
-> bFaaaPのiOSコントローラを開発するためにプログラミングスクールに通いましたが、プログラミングが面白くなり当時のメンターに紹介いただいて現在の東京科学大学の大学院に通うことになりました。日本では昔の学生によくあることですが（現代の日本の学生はよく勉強して授業にもよく出てきます）、私は学業よりサークル活動が面白くて、ピアノサークル(University Piano Society)の「プラタナス(Platanus)」に入りたいとサークルの門を叩き、当時の部長と川口さんがこんな「初心者のおっさん」でも入れてくれるとおっしゃって、またダメダメ学生デビューとなりました。そして同期(年齢は30歳以上離れてますが)の田中さんや他のプラタナスメンバーとも知り合い一緒にコンサートや発表会をエンジョイできました。川口さんも田中さんも情報工学や電気電子に詳しいので是非助けて欲しいとお願いしbFaaaPメンバーになってもらいました。何せ当時のbFaaaP装置開発メンバーは私を含めて皆高齢なので若い頭脳が必要でした。同時に大滝さんが主催する「もくもく会(Computer-related Self-learning Gathering)」に参加していた田口さんは元々ソフトウェアが専門ですが、これからの時代ソフトウェアだけではダメでハードウェアが分かる必要があり、bFaaaPは格好の「教材(learning target materials)」とのことで一緒に活動することになりました。
+> bFaaaPのiOSコントローラを開発するためにプログラミングスクールに通いましたが、プログラミングが面白くなり当時のメンターに紹介いただいて現在の東京科学大学の大学院に通うことになりました。日本では昔の学生によくあることですが（現代の日本の学生はよく勉強して授業にもよく出てきます）、私は学業よりサークル活動が面白くて、ピアノサークル(University Piano Society)の「プラタナス(Platanus)」に入りたいとサークルの門を叩き、当時部長の吉田(Yoshida)さんと川口さんがこんな「初心者のおっさん」でも入れてくれるとおっしゃって、またダメダメ学生デビューとなりました。そして同期(年齢は30歳以上離れてますが)の田中さんや他のプラタナスメンバーとも知り合い一緒にコンサートや発表会をエンジョイできました。川口さんも田中さんも情報工学や電気電子に詳しいので是非助けて欲しいとお願いしbFaaaPメンバーになってもらいました。何せ当時のbFaaaP装置開発メンバーは私を含めて皆高齢なので若い頭脳が必要でした。同時に大滝さんが主催する「もくもく会(Computer-related Self-learning Gathering)」に参加していた田口さんは元々ソフトウェアが専門ですが、これからの時代ソフトウェアだけではダメでハードウェアが分かる必要があり、bFaaaPは格好の「教材(learning target materials)」とのことで一緒に活動することになりました。
 >
 > 2025年5月のすずかけサイエンスデー(Suzukake Science Day at Institute of Science Tokyo)の「Platanus with bFaaaP」コンサートでは、bFaaaPのメンバーが装置システムの説明や設置法やピアノへの思いを伝えるとともにプラタナスのメンバーの素晴らしいbFaaaP Proを使ったグランドピアノの実演がご覧いただけます。現在では東京都内の２つのピアノ教室：山口恭子先生の「Fleur」と永澤恵子先生の「PASTEL」でのレッスンや発表会でbFaaaPを使ってピアノを楽しむことができるようになりました。その後、私から「ネコのはるちゃん」も天国へと旅立ちました。しかし、このようにピアノの音が伸びるという「小さな幸せ」が、メンバーと共に「誰もがインクルーシブに音楽をより楽しめる世界になると良いな」という夢を実現するための活動になったという、来ることはないと思っていた「大きな幸せ」になりました。要するに「幸せ」は半径２メートル内の友達の友達の輪の中に隠れていたのです。
 
@@ -64,7 +64,7 @@
 > is now the Institute of Science Tokyo. As was common for older students in Japan in the past
 > (today's Japanese students study hard and attend class diligently), I found club activities more
 > interesting than my studies, and knocked on the door of the university piano society "Platanus"
-> hoping to join; the then-president and Mr. Kawaguchi said even a "beginner old guy"
+> hoping to join; the then-president Mr. Yoshida and Mr. Kawaguchi said even a "beginner old guy"
 > like me could join — and so I made another hopeless-student debut. I came to know Mr. Tanaka — a
 > peer, though our ages differ by more than 30 years — and other Platanus members, and we enjoyed
 > concerts and recitals together. Since Mr. Kawaguchi and Mr. Tanaka are well-versed in information
@@ -132,7 +132,7 @@
 > bei älteren Studierenden häufig war (die heutigen japanischen Studierenden lernen fleißig und besuchen
 > brav die Vorlesungen), fand ich die Clubaktivitäten interessanter als mein Studium und klopfte an die
 > Tür des Universitäts-Klavierkreises „Platanus“ in der Hoffnung beizutreten; der damalige Vorsitzende
-> und Herr Kawaguchi sagten, selbst ein „Anfänger-Opa“ wie ich dürfe beitreten — und so gab ich erneut
+> Herr Yoshida und Herr Kawaguchi sagten, selbst ein „Anfänger-Opa“ wie ich dürfe beitreten — und so gab ich erneut
 > ein hoffnungsloses Studentendebüt. Ich lernte Herrn Tanaka — einen Jahrgangskollegen, obwohl uns mehr
 > als 30 Jahre trennen — und andere Platanus-Mitglieder kennen, und wir genossen gemeinsam Konzerte und
 > Vorspiele. Da Herr Kawaguchi und Herr Tanaka sich gut mit Informationstechnik und
