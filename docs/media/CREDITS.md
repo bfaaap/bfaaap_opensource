@@ -5,8 +5,7 @@ documentation media is released under **CC‑BY‑4.0** (see [`../../LICENSE`](.
 
 ## Illustrations (`illustrations/`)
 
-Scene/hero illustrations **AI‑generated (Gemini) in Saki Shiokawa (塩川紗季)'s warm hand‑drawn
-*style***, created for the bFaaaP project. **© Shishido & Associates.** *(These are AI art in her
+Scene/hero illustrations **illustrated by Harmonia (the project's AI artist), in Saki Shiokawa (塩川紗季)'s warm hand‑drawn *style***, created for the bFaaaP project. **© Shishido & Associates.** *(These are AI art in her
 style — distinct from the member portraits/avatars, which are her **original** hand‑drawn works; see
 below and `../members/`.)*
 
@@ -27,16 +26,16 @@ below and `../members/`.)*
 | `control-law-key.png` | The control law as the "key": a head tilt unlocking the player's own intended, natural pedalling (how-it-works) |
 | `apee-children.png` | An APEE session: children & a wheelchair user taking the friendly piano test (apee-study) |
 | `studios-banner-fleur-pastel.png` | Combined welcome banner (rectangular) — the two Tokyo bFaaaP studios (Yamaguchi's Fleur & Nagasawa's PASTEL); illustration only, names/links added as HTML. *Planned for bfaaap.com top page.* |
-| `studio-banner-fleur.png` | **Fleur** studio banner — Kyoko Yamaguchi teaching a young boy with bFaaaP (multimodal Gemini, her member illustration as likeness reference; rectangular). *Confirm with her before public release.* |
-| `studio-banner-pastel.png` | **PASTEL** studio banner — Keiko Nagasawa teaching a young girl with bFaaaP (multimodal Gemini, her portrait as likeness reference; rectangular). *Confirmed by her 2026‑06‑30.* |
-| `../members/nagasawa-keiko.png` | Member portrait of **Keiko Nagasawa** — AI‑generated (Gemini) *in* Saki Shiokawa's style from her photo (**not** an original Shiokawa work); consented member added 2026‑06‑30, *portrait confirmed by her 2026‑06‑30* |
+| `studio-banner-fleur.png` | **Fleur** studio banner — Kyoko Yamaguchi teaching a young boy with bFaaaP (a multimodal AI tool, her member illustration as likeness reference; rectangular). *Confirm with her before public release.* |
+| `studio-banner-pastel.png` | **PASTEL** studio banner — Keiko Nagasawa teaching a young girl with bFaaaP (a multimodal AI tool, her portrait as likeness reference; rectangular). *Confirmed by her 2026‑06‑30.* |
+| `../members/nagasawa-keiko.png` | Member portrait of **Keiko Nagasawa** — AI‑generated *in* Saki Shiokawa's style from her photo (**not** an original Shiokawa work); consented member added 2026‑06‑30, *portrait confirmed by her 2026‑06‑30* |
 | `../history/bfaaap-1-original/bfaaap1-pianist-2018.png` | bFaaaP 1 (2018): a pianist wearing the glasses‑mounted sensor (history) |
 
 ### Member avatars (`avatars/`)
 
 Round avatar icons of the team — cropped from the **original hand‑drawn member illustrations by
-Saki Shiokawa (塩川紗季)** — plus a friendly **AI‑assistant** avatar (`ai.png`, AI‑generated with
-Gemini in her style).
+Saki Shiokawa (塩川紗季)** — plus **two AI avatars** (`ai.png`, the project's AI assistant, and
+`ai-2.png`, the *other* AI a maker consulted), both illustrated by Harmonia in her style.
 Used in [AI‑assisted Support](../ai-support.md) Discussions‑style threads. Full list, usage and
 the **display‑name‑only** rule for *kana* / *Midori*: [`avatars/README.md`](avatars/README.md).
 **© Saki Shiokawa / bFaaaP** (member art) · **© Shishido & Associates** (AI avatar).
@@ -53,7 +52,7 @@ Generated with matplotlib (data/process figures). **CC‑BY‑4.0.**
 | `shitei-mentor.png` | The 師弟 (shitei) master‑apprentice way — four mentor traits mapped to the team ([AI & Team Live](../ai-team-live.md); culture bridge for non‑Japanese readers) |
 | `ai-future-concept.png` | The **AI's own** speculative next‑gen sketch — phone‑free IMU sensing, on‑device model, modular actuator interface ([AI & Team Live](../ai-team-live.md); *AI speculation, makers decide*) |
 | `bom-evolution.png` | How each unknown BOM/circuit item was pinned down via Q&A (unknown → confirmed) |
-| `illustrations/airback-anchoring.png` | The Pro **"airback"** reaction‑force anchoring — mechanism schematic (matplotlib, hand‑drawn by the maintainer, **not** Gemini) |
+| `illustrations/airback-anchoring.png` | The Pro **"airback"** reaction‑force anchoring — mechanism schematic (matplotlib, hand‑drawn by the maintainer, **not** AI‑generated) |
 | `diagrams/fig-control-law.png` | Paper **Figure 3** — head‑angle control law (matplotlib; rendered from `bfaaap_arxiv_latex/figures/fig_control.pdf`) |
 | `diagrams/fig-control-vs-priorart.png` | Paper **Figure 4** — quantitative, user‑tunable mapping vs. binary prior art (matplotlib; from `fig_control_vs_priorart.pdf`) |
 | `diagrams/fig-apee-pipeline.png` | APEE method end‑to‑end — score/patterns → record → TVA → normalize → result (paper figure) |
@@ -75,7 +74,7 @@ Generated with matplotlib (data/process figures). **CC‑BY‑4.0.**
 
 - `poster_concert_*.jpg`, `bfaaap_promotion.png` — bFaaaP event posters/promotion. **© bFaaaP team / Platanus.**
 - `../members/*.jpg|png` — member caricatures by **Saki Shiokawa (塩川紗季)**. *Exception:*
-  `../members/nagasawa-keiko.png` is **AI‑generated (Gemini) in her style** © Shishido & Associates (a
+  `../members/nagasawa-keiko.png` is **illustrated by Harmonia in her style** © Shishido & Associates (a
   newer member with no original Shiokawa portrait), noted on the members page.
 - `../../device-pro-acoustic/hardware/photos/*.jpg` — build photos. **© bFaaaP team** (Taguchi).
 

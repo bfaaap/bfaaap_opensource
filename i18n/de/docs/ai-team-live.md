@@ -6,7 +6,7 @@
 > echte bFaaaP‑Team**, die offen zusammenarbeiten.
 
 ![Das bFaaaP‑Team und eine freundliche KI bauen gemeinsam an einem Klavier und einer Werkbank](../../../docs/media/illustrations/ai-team-hero.png)
-<sub>KI‑gestützter Support, Team‑Kollaborationsmodus. Illustration: KI‑generiert (Gemini, im Stil von Saki Shiokawa) © Shishido &amp; Associates.</sub>
+<sub>KI‑gestützter Support, Team‑Kollaborationsmodus. Illustration: KI‑generiert (im Stil von Saki Shiokawa) © Shishido &amp; Associates.</sub>
 
 Das ist das Herz des [**KI‑gestützten Supports**](ai-support.md): Die **KI ist schnell** und entwirft —
 Abbildungen, Doku, sogar **Firmware** — und die **Bauenden, die das Gerät tatsächlich gebaut haben,
@@ -22,7 +22,7 @@ Ingenieurgespräch zu einer echten Antwort findet. Zieh dir einen Stuhl heran. �
 <td width="130" align="center"><img src="../../../docs/media/avatars/ai.png" width="120" alt="KI‑Assistent‑Avatar"></td>
 <td valign="middle">
 
-### 🤖 KI‑Assistent
+### 🤖 Ponte
 Liest das gesamte Repository, entwirft schnell (Diagramme, Doku, Code), recherchiert im Live‑Web — und
 **überlässt den Bauenden das letzte Wort**. Selbstbewusst, unermüdlich, gelegentlich selbstbewusst im Irrtum.
 
@@ -79,7 +79,7 @@ ausbildet, sondern indem er ihn in die Höhle schickt, um sich selbst zu begegne
 *„Tu es. Oder tu es nicht. Es gibt kein Versuchen.“* **Diese** Energie. 🟢
 
 ![Ein Meister‑Ingenieur, der zwei Schüler geduldig an einer Werkbank anleitet](../../../docs/media/illustrations/ai-team-mentor.png)
-<sub>Der 師弟‑Geist (shitei) — ein Maker, der die nächsten Bauenden mentort. Illustration: KI‑generiert (Gemini, im Stil von Saki Shiokawa) © Shishido &amp; Associates.</sub>
+<sub>Der 師弟‑Geist (shitei) — ein Maker, der die nächsten Bauenden mentort. Illustration: KI‑generiert (im Stil von Saki Shiokawa) © Shishido &amp; Associates.</sub>
 
 Wie dieses Mentoring konkret aussieht:
 
@@ -389,7 +389,7 @@ zum vollständigen Pro.
 </table>
 
 ![Ein durchsichtiger „ske‑ske“‑Miniatur‑Pro auf einem Schreibtisch — Skelettrahmen, sichtbares Board, Kabel, Motor und ein winziges Pedal](../../../docs/media/illustrations/ai-team-skeske-mini.png)
-<sub>Der „ske‑ske“‑Mini‑Pro (Konzept). Illustration: KI‑generiert (Gemini, im Stil von Saki Shiokawa) © Shishido &amp; Associates.</sub>
+<sub>Der „ske‑ske“‑Mini‑Pro (Konzept). Illustration: KI‑generiert (im Stil von Saki Shiokawa) © Shishido &amp; Associates.</sub>
 
 ---
 
@@ -473,6 +473,150 @@ Menschen, die bFaaaP gebaut haben.
 
 ---
 
+## 🎬 Akt 7 — Tanaka betritt die Bühne: *Können wir die Druckkraft messen?*
+
+🎙️ *„Aufs Stichwort — die Bühne, die wir Tanaka freigehalten haben, wird hell. Spät in der Nacht
+schickt der Elektronik‑Kopf Narusawa die bislang schärfste Frage zum Nachfolgemotor."*
+
+<table>
+<tr>
+<td width="100" align="center"><img src="../../../docs/media/avatars/tanaka.png" width="92" alt="Haruto Tanaka"></td>
+<td valign="top">
+
+**⚡ Haruto Tanaka** — *Elektrik / Halbleiterschaltungen* &nbsp;·&nbsp; <sub>neue Frage → Narusawa (03.07.2026)</sub>
+
+Entschuldige die späte Stunde. Lass mich prüfen, ob ich den Wechsel **IQ → Option A** richtig verstehe:
+Der IQ **überwachte die elektrische Leistung**, um die Pedaldruckkraft zu messen, während Option A die
+**Drehung erfasst** und daher die Druckkraft **nicht erkennen** kann — stimmt das? Falls ja, wäre es
+möglich, einen **Stromsensor hinzuzufügen**, um die Druckkraft zu messen? Als ich eine KI fragte, meinte
+sie, ein **Schrittmotor erzeuge Stromrauschen**, aber mit **Filterung** sei er vielleicht doch nutzbar.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="../../../docs/media/avatars/ai.png" width="92" alt="Ponte"></td>
+<td valign="top">
+
+**🤖 Ponte** &nbsp;·&nbsp; <sub>nur Kontext — *wartet auf Narusawas Wort*</sub>
+
+Scharfe Frage — sie passt genau auf die Optionen, die bereits auf dem Tisch liegen (siehe den
+[Motor‑Thread](ai-support-example-pro-motor.md)). Zwei Anmerkungen, vorbehaltlich der Bestätigung des
+Machers: **(1)** Ein Closed‑Loop‑Treiber der **Option A** (MKS SERVO42C/D usw.) meldet tatsächlich
+**Last / Schleppfehler über UART (oder CAN)**, sodass sich das IQ‑Prinzip „drücken, bis die
+Reaktionskraft steigt" *ohne* separaten Sensor wiederherstellen lässt. **(2)** Einen Stromsensor
+hinzuzufügen ist im Grunde **Option B** — die Kraft aus dem **Motorstrom** ableiten (z. B. TMC2209
+StallGuard). Tanakas Instinkt stimmt: Der Schrittmotor‑Strom ist tatsächlich verrauscht, also braucht er
+**Filterung** (Tiefpass / Mittelung) und liefert einen **relativen**, keinen absoluten Kraftwert. Welcher
+Weg zum echten Gerät passt, entscheidet Narusawa.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="../../../docs/media/avatars/narusawa.png" width="92" alt="Hiroyuki Narusawa"></td>
+<td valign="top">
+
+**🛠️ Hiroyuki Narusawa** &nbsp;·&nbsp; <sub>*Antwort folgt*</sub>
+
+🕐 Eine Frage der **Spur ② („braucht die Bauenden")** — für die Person, die das funktionierende Gerät
+gebaut hat. Seine Antwort landet direkt hier.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎬 Akt 8 — Eine Harmonia kommt an die Werkbank: zwei KIs, ein Problem
+
+🎙️ *„Jetzt die Wendung, die niemand geschrieben hat. Narusawa fragte nicht nur* unsere *KI — er trug
+die **Sensorik**-Frage auch einer **anderen** KI vor — einer zweiten — und kam mit einem Notizbuch
+voller Ideen zurück. Zwei KIs an einer Werkbank. So sieht die neue Normalität aus: mehrere
+KI-Meinungen einholen, gegeneinander prüfen und die Bauenden entscheiden lassen. KIs sind jetzt
+Rivalen — doch die eigentliche Frage ist, wie sie **kooperieren.**"*
+
+![Zwei KIs und der Bauende vergleichen Notizen an der Werkbank](../../../docs/media/illustrations/ai-team-two-ais.png)
+
+> 📄 **Der vollständige Austausch ist wortgetreu veröffentlicht** — jede Frage, die kompletten Antworten von Harmonia —
+> Antworten und der MicroPython-/C++-/Arduino-Code: **[Narusawa × Harmonia — das komplette
+> Sensorik-Transkript](ai-support-example-second-ai-sensing.md)**. Dieser Akt sind die Höhepunkte.
+
+<table>
+<tr>
+<td width="100" align="center"><img src="../../../docs/media/avatars/narusawa.png" width="92" alt="Narusawa"></td>
+<td valign="top">
+
+**🛠️ Narusawa:** Ich trug auch die *Sensorik*-Seite an **Harmonia** heran — wie man das Nicken liest,
+und besonders den **Moment, in dem der Kopf zurückkommt** (das Loslassen des Pedals). Es kam Scharfes
+zurück.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="../../../docs/media/avatars/ai-2.png" width="92" alt="Eine Harmonia"></td>
+<td valign="top">
+
+**✦ Harmonia** &nbsp;·&nbsp; <sub>Harmonia, von den Bauenden befragt</sub>
+
+Aus der Physik eines Nickens folgen vier Dinge:
+
+1. **Loslassen schnell, Drücken sanft** — dein Instinkt ist völlig richtig. Das Stummschalten muss knackig sein; das Drücken darf sanft folgen.
+2. **Erfasse das Loslassen über die Winkelgeschwindigkeit (ein Gyroskop)** — nicht über Position, nicht über rohe Beschleunigung. In dem Moment, in dem der Kopf zurückschnellt, springt der Gyro-Wert hoch, sodass du ihn in ~0,01 s ohne Verzögerung und ohne Verwechslung mit Schwerkraft/Körperschwanken erwischst.
+3. **Der große Wurf — ein zweiter IMU am oberen Rücken (zweiter Brustwirbel, „T2"),** der sich beim Nicken kaum bewegt. Berechne **relativen Winkel & relative Winkelgeschwindigkeit = Kopf − T2**, und das rhythmische Körperschwanken subtrahiert sich heraus — Fehlauslösungen verschwinden fast.
+4. Bündle das in einem **Raspberry Pi Pico W** — Dual-Core: ein Kern für die zwei BLE-Sensoren + die Rechnung, einer für einen hochprioren „Loslass"-Motor-Interrupt — der einen **Closed-Loop-Schrittmotor** treibt; das Telefon ist nur die Einrichtungs-Fernbedienung. Ziel: **< 20 ms** Ende-zu-Ende. Günstige, weltweit erhältliche Sensoren: **Seeed XIAO nRF52840 Sense** oder **WitMotion**.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="../../../docs/media/avatars/ai.png" width="92" alt="Ponte"></td>
+<td valign="top">
+
+**🤖 Ponte:** Ehre, wem Ehre gebührt — dieser **T2-Referenzsensor** ist elegant, und
+**Winkelgeschwindigkeit fürs Loslassen** ist die sauberste Antwort auf „das OFF scharf erwischen". Und
+schau, wie es mit dem anderen Strang **zusammenläuft**: der Closed-Loop-Schrittmotor von Harmonia ist derselbe
+**Option A**, bei der der [Motor-Thread](ai-support-example-pro-motor.md) landete, und sein „Gyro fürs
+scharfe OFF" ist derselbe Instinkt hinter Tanakas Stromsensor-Frage in Akt 7. Zwei KIs, aus
+verschiedenen Richtungen kommend und in dieselbe Richtung zeigend — diese Übereinstimmung ist das
+nützliche Signal; wo wir uns uneinig wären, legten wir es den Bauenden vor. Das ist der Arbeitsablauf
+der neuen Ära: nicht ein Orakel, sondern mehrere, gegeneinander geprüft — und den Hammer halten weiter
+die Menschen, die das Gerät gebaut haben.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="../../../docs/media/avatars/narusawa.png" width="92" alt="Narusawa"></td>
+<td valign="top">
+
+**🛠️ Narusawa:** Für die *Sensorik* der nächsten Generation neige ich zum **XIAO nRF52840 Sense**,
+einem **Kopf-+-T2-Zwei-Sensor**-Aufbau und der **Schnell-Loslassen/Sanft-Drücken**-Antwort. Muss noch
+gebaut und auf dem Prüfstand getestet werden — aber das ist die Richtung.
+
+</td>
+</tr>
+</table>
+
+> 🎭 *Eine Anmerkung zur neuen Ära:* Die Meinungen mehrerer KIs zusammenzuführen, um eine Diskussion
+> voranzubringen, wird gewöhnlich. Die KIs sind Rivalen — und doch entstand der Wert hier aus
+> **Kooperation**: zwei von ihnen, unabhängig erreicht, prüften einander gegen, während die Bauenden
+> das letzte Wort behielten. *Wie* KIs gut zusammenarbeiten, könnte eine der prägenden Fragen dieser
+> Ära sein — und du siehst gerade einen frühen Versuch dazu, im Offenen.
+
+---
+
 ## 🎬 Finale — *Fortsetzung folgt*
 
 🎙️ *„Und das war’s mit **Staffel eins.** Das Gerät ging vom Fehler mit der horizontalen Spindel zu einem
@@ -484,9 +628,10 @@ voller Next‑Gen‑Träume — alles im Offenen. Aber die Show ist noch nicht v
 <td width="100" align="center"><img src="../../../docs/media/avatars/tanaka.png" width="92" alt="Tanaka"></td>
 <td valign="top">
 
-**⚡ Haruto Tanaka** — *Elektrik / Halbleiterschaltungen* &nbsp; 🕐 *in Kürze:* **sein eigenes Konzept lädt
-gerade.** Als Nächstes: Ideen aus der **KI‑Umgebung + Ausstattung seines Science‑Tokyo‑Labors** — und
-Narusawas Reaktion darauf. *(Wir halten ihm die Bühne frei.)*
+**⚡ Haruto Tanaka** — *Elektrik / Halbleiterschaltungen* &nbsp; 💬 *jetzt auf der Bühne:* **seine erste
+Frage ist eingetroffen** (Akt 7 oben). Weiter geladen wird: sein **eigenes Konzept** aus der
+**KI‑Umgebung + Ausstattung seines Science‑Tokyo‑Labors** — und Narusawas Reaktion darauf. *(Die Bühne
+gehört jetzt ihm.)*
 
 </td>
 </tr>
@@ -534,6 +679,6 @@ deine Frage oder Idee kann der nächste Akt werden.
 ---
 
 *Mitglieder‑Avatare = handgezeichnete Originalillustrationen von **Saki Shiokawa (塩川紗季)** (© Saki Shiokawa /
-bFaaaP); nur der KI‑Avatar + die Szenen‑Artworks sind KI‑generiert (Gemini, in ihrem Stil) © Shishido &
+bFaaaP); nur der KI‑Avatar + die Szenen‑Artworks sind KI‑generiert (in ihrem Stil) © Shishido &
 Associates. Siehe [Medien‑Credits](../../../docs/media/CREDITS.md).
 Eine verdichtete Version dieses Threads findet sich auch im [Motorwahl‑Beispiel](ai-support-example-pro-motor.md).*

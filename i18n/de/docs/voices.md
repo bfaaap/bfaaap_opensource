@@ -203,6 +203,24 @@ aufrichtig, dass es so vielen Menschen wie möglich bekannt wird.
 
 ---
 
+### 🎶 kyoko — *Musikliebhaberin · Amateur-Chorsängerin*
+
+<sub>📖 **[Vollständige Botschaft lesen](../../../docs/voices/kyoko.md)** — Original (Japanisch) + englische & deutsche Übersetzung</sub>
+
+<img src="../../../docs/members/kyoko.png" alt="kyoko" width="150" align="left">
+
+Als Amateur-Chorsängerin, die sich an der Musik erfreut, erfuhr ich durch eine glückliche Fügung von bFaaaP — und war ebenso beeindruckt von dieser wunderbaren Technik wie beschämt, die Menschen, die beim Bedienen des Pedals Hilfe brauchen, bis dahin kaum wahrgenommen zu haben. Den Nervenkitzel meines ersten Pedaltritts als Kind erinnere ich noch: **Der Wunsch, sich auszudrücken, darf niemals aus körperlichen Gründen versperrt werden.**
+
+Diese Open-Source-Initiative hat mich tief bewegt. Ich hoffe, dass bFaaaP zu etwas wird, *„das Menschen, die es brauchen, selbstverständlich nutzen können — so wie jemand mit schwacher Sehkraft eine Brille trägt“*, damit die Welt der Musik **reicher und sanfter** wird.
+
+<br clear="left">
+
+— **kyoko** · hilft bei der **Tokyo Women's Choral Society** *(einem Chor, den das Projekt gern unterstützt)*
+
+<img src="../../../docs/media/tokyo-womens-choral-society.png" width="150" alt="Tokyo Women's Choral Society">
+
+---
+
 > *Die Porträts sind **Saki Shiokawas** handgezeichnete Originalwerke — mit Ausnahme des Porträts von
 > Keiko Nagasawa, das mit ihrer Zustimmung **KI-generiert** im Stil von Saki Shiokawa ist (© Shishido &
 > Associates). Die Botschaften werden mit Zustimmung der jeweiligen Person veröffentlicht; maßgeblich ist

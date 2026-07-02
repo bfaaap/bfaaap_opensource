@@ -9,7 +9,7 @@ disabilities.
 
 ![Children and a player in a wheelchair taking part in the friendly APEE piano test, with a smartphone on the music stand and the pedal device on the floor](media/illustrations/apee-children.png)
 
-*An APEE session (illustration). AI‑generated (Gemini, Saki Shiokawa style) © Shishido & Associates.*
+*An APEE session (illustration). AI illustration by Harmonia in Saki Shiokawa style © Shishido & Associates.*
 
 ## How we measured it
 Each participant played the same short motif **three ways** — with **no pedal** (pattern 0), with

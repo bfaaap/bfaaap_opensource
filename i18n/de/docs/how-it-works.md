@@ -61,7 +61,7 @@ die Patente auf *dieses spezifische, abstimmbare Gesetz* erteilt, nicht auf die 
 voreingestellte Schwelle (Offset) und den Faktor — setzt dein **eigenes, beabsichtigtes und
 natürliches** Pedalspiel frei statt eines groben An/Aus, und genau dieses spezifische, abstimmbare
 Gesetz (nicht die bloße Kopf→Pedal‑Idee) war Voraussetzung für die Patenterteilung. Illustration:
-KI‑generiert (Gemini, Stil von Saki Shiokawa) © Shishido & Associates.*
+KI‑generiert (Stil von Saki Shiokawa) © Shishido & Associates.*
 
 #### Das Regelgesetz, genau (Abbildungen 3 & 4 aus dem Paper)
 Diese zwei Abbildungen (aus dem [Paper](../../../bfaaap_arxiv_latex/README.md)) machen das Regelgesetz

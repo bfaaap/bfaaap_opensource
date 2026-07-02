@@ -61,7 +61,7 @@ offset upper limit of 3–10°, a multiplier of 10–50, and full pedal action w
 *The control law is the **key**: a small head tilt — shaped by the offset and multiplier you preset
 — unlocks your **own intended, natural** pedalling rather than a crude on/off, and this specific,
 tunable law (not the bare head→pedal idea) is what the patents were granted on. Illustration:
-AI‑generated (Gemini, Saki Shiokawa style) © Shishido & Associates.*
+AI illustration by Harmonia in Saki Shiokawa style © Shishido & Associates.*
 
 #### The control law, precisely (paper Figures 3 & 4)
 These two figures from the [paper](../bfaaap_arxiv_latex/README.md) make the control law exact.

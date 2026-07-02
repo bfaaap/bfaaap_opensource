@@ -9,7 +9,7 @@ bFaaaP 1 は、**発明そのものと、優れた非破壊デバイス設計の
 
 ![2018年、メガネのフレームに小さな頭部角度センサーを付けた奏者がグランドピアノを弾き、ペダルのそばに小さな装置がある温かいイラスト](../../../../../docs/history/bfaaap-1-original/bfaaap1-pianist-2018.png)
 
-*最初の bFaaaP（2018年）：メガネに付けたセンサーと、床のペダル装置。イラスト：AI生成（Gemini・塩川紗季風）© 宍戸＆アソシエーツ。*
+*最初の bFaaaP（2018年）：メガネに付けたセンサーと、床のペダル装置。イラスト：AIイラスト：Harmonia による塩川紗季風 © 宍戸＆アソシエーツ。*
 
 ## 発明は既にここに在った
 2018年のハードウェアを取り除くと、**核は今日とまったく同じ**です。**定量的でユーザー調整可能な制御則**
@@ -92,7 +92,7 @@ BLE と **MPU‑9250** IMU を初期化し、加速度/ジャイロ/地磁気を
 M5Stack センサーと**匿名化**APEE図を収録）と論文の Appendix A をご覧ください。
 
 ## ファイル
-- イラスト：`bfaaap1-pianist-2018.png`（Gemini）、`the-invention-from-the-start.png`（matplotlib）。
+- イラスト：`bfaaap1-pianist-2018.png`（AI生成）、`the-invention-from-the-start.png`（matplotlib）。
 - オリジナル図（PNG）：`fig1-overview-glasses-sensor.png`、`fig2-system-block-diagram.png`、`fig3-detector-side-flow.png`、`fig5-actuator-mov-function.png`、および 4枚の `handdrawn-*.png`。
 - 保存用ソースPDF：`source-handdrawn-embodiment-2018.pdf`、`source-configuration-diagram-2018.pdf`。
 

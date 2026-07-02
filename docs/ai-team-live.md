@@ -6,7 +6,7 @@
 > real bFaaaP team**, working together in the open.
 
 ![The bFaaaP team and a friendly AI building together around a piano and a workbench](media/illustrations/ai-team-hero.png)
-<sub>AI‑assisted Support, team‑collaboration mode. Illustration: AI‑generated (Gemini, Saki Shiokawa style) © Shishido &amp; Associates.</sub>
+<sub>AI‑assisted Support, team‑collaboration mode. Illustration: AI‑generated (Saki Shiokawa style) © Shishido &amp; Associates.</sub>
 
 This is the heart of [**AI‑assisted Support**](ai-support.md): the **AI moves fast** and drafts —
 figures, docs, even **firmware** — and the **makers, who actually built the device, keep it honest.**
@@ -19,10 +19,10 @@ real answer. Pull up a seat. 🎙️
 
 <table>
 <tr>
-<td width="130" align="center"><img src="media/avatars/ai.png" width="120" alt="AI assistant avatar"></td>
+<td width="130" align="center"><img src="media/avatars/ai.png" width="120" alt="Ponte avatar"></td>
 <td valign="middle">
 
-### 🤖 AI assistant
+### 🤖 Ponte
 Reads the whole repository, drafts fast (diagrams, docs, code), researches the live web — and
 **defers to the makers**. Confident, tireless, occasionally confidently wrong.
 
@@ -77,7 +77,7 @@ who trains a young hopeful not by handing him answers, but by sending him into t
 *"Do, or do not. There is no try."* **That** energy. 🟢
 
 ![A master engineer patiently guiding two apprentices at a workbench](media/illustrations/ai-team-mentor.png)
-<sub>The 師弟 (shitei) spirit — a maker mentoring the next builders. Illustration: AI‑generated (Gemini, Saki Shiokawa style) © Shishido &amp; Associates.</sub>
+<sub>The 師弟 (shitei) spirit — a maker mentoring the next builders. Illustration: AI‑generated (Saki Shiokawa style) © Shishido &amp; Associates.</sub>
 
 What that mentoring actually looks like:
 
@@ -121,7 +121,7 @@ board). Here's the full **pin map** and the KiCad schematic.
 </td>
 </tr>
 <tr>
-<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
 <td valign="top">
 
 **🤖 AI:** That closes the circuit — imported the KiCad source and fixed every stray doc that wrongly
@@ -138,7 +138,7 @@ asset's license — and caught a problem before it shipped."*
 
 <table>
 <tr>
-<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
 <td valign="top">
 
 **🤖 AI:** Two diagrams carried over from the old `hardware.md` had an **unknown license** — a real
@@ -180,7 +180,7 @@ the real machine. Narusawa settles it with a photo of a hand‑drawn BOM…"*
 </td>
 </tr>
 <tr>
-<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
 <td valign="top">
 
 **🤖 AI:** Read it, and redrew the layout as a **vertical column** — and it matches the assembly BOM
@@ -212,7 +212,7 @@ wiring (+24 V motor power, **IQ UART**, a **+5 V cooling fan**).
 </td>
 </tr>
 <tr>
-<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
 <td valign="top">
 
 **🤖 AI:** Reflected all of it into the figures **and** the docs **and** the three sites — in
@@ -235,7 +235,7 @@ AI goes to the live web…"*
 
 <table>
 <tr>
-<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
 <td valign="top">
 
 **🤖 AI:** The IQ motor is EOL. I researched (June 2026) and the real question is **force feedback**.
@@ -266,7 +266,7 @@ his toolchain…"*
 
 <table>
 <tr>
-<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
 <td valign="top">
 
 **🤖 AI:** Drafted [`bFaaaP_autopro_pico_stepperA_draft_20260626.ino`](../device-pro-acoustic/firmware/pico/bFaaaP_autopro_pico_stepperA_draft_20260626.ino)
@@ -287,7 +287,7 @@ on removal); and **80 µs STEP is too fast**, the pedal won't follow.
 </td>
 </tr>
 <tr>
-<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
 <td valign="top">
 
 **🤖 AI:** Done — GT‑2 everywhere, the airback is a fixed 40 s inflate (valve normally closed), and
@@ -368,7 +368,7 @@ exhibition / proof-of-concept piece:
 </td>
 </tr>
 <tr>
-<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
 <td valign="top">
 
 **🤖 AI:** I love this — it's a **teaching device.** Hide nothing, and the whole pipeline from
@@ -380,7 +380,7 @@ A1-mini footprint also make it the easiest possible **first build** — a perfec
 </table>
 
 ![A see-through "ske-ske" miniature Pro on a desk — skeleton frame, visible board, wires, motor and a tiny pedal](media/illustrations/ai-team-skeske-mini.png)
-<sub>The "ske-ske" mini Pro (concept). Illustration: AI‑generated (Gemini, Saki Shiokawa style) © Shishido &amp; Associates.</sub>
+<sub>The "ske-ske" mini Pro (concept). Illustration: AI‑generated (Saki Shiokawa style) © Shishido &amp; Associates.</sub>
 
 ---
 
@@ -402,7 +402,7 @@ once you start thinking, there's **no end to it.**
 </td>
 </tr>
 <tr>
-<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
 <td valign="top">
 
 **🤖 AI:** That maps cleanly back onto your own **three elements** — *sense → send → press* — each one
@@ -423,7 +423,7 @@ as always: I sketch, the makers judge."*
 
 <table>
 <tr>
-<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
 <td valign="top">
 
 **🤖 AI:** If I'm allowed an opinion on the *next* model, here's where I'd push:
@@ -446,7 +446,7 @@ as always: I sketch, the makers judge."*
 </td>
 </tr>
 <tr>
-<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="AI"></td>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
 <td valign="top">
 
 **🤖 AI:** …and the honest caveat — I'm also the one who can be **confidently wrong.** So treat this as
@@ -457,6 +457,145 @@ a draft on the table, not a roadmap. Which of these is real is for the people wh
 </table>
 
 ![The AI's proposed next-gen architecture: phone-free IMU clip → on-device model → modular actuator interface → stepper/muscle/piezo](media/diagrams/ai-future-concept.png)
+
+---
+
+## 🎬 Act 7 — Tanaka steps onto the stage: *can we measure the press force?*
+
+🎙️ *"Right on cue — the stage we were holding for Tanaka lights up. Late one night, the electrical
+mind sends Narusawa the sharpest question yet about the successor motor."*
+
+<table>
+<tr>
+<td width="100" align="center"><img src="media/avatars/tanaka.png" width="92" alt="Haruto Tanaka"></td>
+<td valign="top">
+
+**⚡ Haruto Tanaka** — *electrical / semiconductor circuits* &nbsp;·&nbsp; <sub>new question → Narusawa (2026‑07‑03)</sub>
+
+Sorry for the late hour. Let me check I've understood the **IQ → option‑A** change: the IQ **monitored
+electrical power** to gauge the pedal‑pressing force, whereas option A **senses rotation**, so it
+**can't detect the pressing force** — is that right? If so, would it be possible to **add a current
+sensor** to measure the pressing force? When I asked an AI, it said a **stepper motor produces current
+noise**, but that with **filtering** it might still be usable.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
+<td valign="top">
+
+**🤖 Ponte** &nbsp;·&nbsp; <sub>context only — *pending Narusawa's word*</sub>
+
+Sharp question — it maps straight onto the options already on the table (see the [motor thread](ai-support-example-pro-motor.md)).
+Two notes, subject to the maker's confirmation: **(1)** a closed‑loop **option‑A** driver (MKS SERVO42C/D
+etc.) actually *does* report **load / following‑error over UART (or CAN)**, so it can recover the IQ‑style
+"press until the reaction force rises" *without* a separate sensor; **(2)** adding a current sensor is
+essentially **option B** — inferring force from **motor current** (e.g. TMC2209 StallGuard). Tanaka's
+instinct is right: stepper drive current *is* noisy, so it needs **filtering** (low‑pass / averaging) and
+gives a **relative**, not absolute, force. Which path fits the real unit is Narusawa's call.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="media/avatars/narusawa.png" width="92" alt="Hiroyuki Narusawa"></td>
+<td valign="top">
+
+**🛠️ Hiroyuki Narusawa** &nbsp;·&nbsp; <sub>*to reply*</sub>
+
+🕐 A **track ② ("needs the makers")** question — one for the person who built the working unit. His
+answer will drop straight here.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎬 Act 8 — Harmonia joins the bench: two AIs, one problem
+
+🎙️ *"Now the twist nobody scripted. Narusawa didn't only ask* our *AI — he took the **sensing** side
+to **another** AI — a second one — and came back with a notebook full of ideas. Two AIs at one
+workbench. This is the shape of the new normal: gather several AI opinions, cross‑check them, and let
+the makers judge. AIs are rivals now — but the real question is how they **cooperate.**"*
+
+![Two AIs and the maker comparing notes at the workbench](media/illustrations/ai-team-two-ais.png)
+
+> 📄 **The full exchange is published verbatim** — every question, Harmonia's complete answers, and the
+> MicroPython / C++ / Arduino code: **[Narusawa × Harmonia — the complete sensing transcript](ai-support-example-second-ai-sensing.md)**.
+> This act is the highlights.
+
+<table>
+<tr>
+<td width="100" align="center"><img src="media/avatars/narusawa.png" width="92" alt="Narusawa"></td>
+<td valign="top">
+
+**🛠️ Narusawa:** I also took the *sensing* side to **Harmonia** — how to read the nod, and especially
+the **moment the head comes back up** (the pedal release). It came back sharp.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="media/avatars/ai-2.png" width="92" alt="Harmonia"></td>
+<td valign="top">
+
+**✦ Harmonia** &nbsp;·&nbsp; <sub>Harmonia, consulted by the maker</sub>
+
+Four things fall out of the physics of a nod:
+
+1. **Release fast, press gently** — your instinct is exactly right. Muting must be crisp; the press can follow smoothly.
+2. **Sense the release from angular velocity (a gyro)** — not position, not raw acceleration. The instant the head starts back up, the gyro spikes, so you catch it in ~0.01 s with no lag and no gravity/body‑sway confusion.
+3. **The big one — a second IMU on the upper back (2nd thoracic vertebra, "T2"),** which barely moves when you nod. Compute **relative angle & relative angular velocity = head − T2**, and the body's rhythmic sway subtracts out — false triggers nearly vanish.
+4. Wrap it in a **Raspberry Pi Pico W** — dual‑core: one core for the two BLE sensors + the math, one for a top‑priority "release" motor interrupt — driving a **closed‑loop stepper**; the phone is just the setup remote. Aim for **< 20 ms** end‑to‑end. Cheap, globally‑buyable sensors: **Seeed XIAO nRF52840 Sense** or **WitMotion**.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
+<td valign="top">
+
+**🤖 Ponte:** Credit where it's due — that **T2 reference sensor** is elegant, and
+**angular‑velocity for the release** is the cleanest answer to "catch the OFF sharply." And look how
+it **converges** with the other thread: Harmonia's closed‑loop stepper is the same **option A** the
+[motor thread](ai-support-example-pro-motor.md) landed on, and its "gyro for the sharp OFF" is the
+same instinct behind Tanaka's current‑sensor question in Act 7. Two AIs, arriving from different
+directions and pointing the same way — that convergence is the useful signal; where we disagreed we'd
+flag it for the makers. That's the new‑era workflow: not one oracle but several, cross‑examined — and
+the people who built the device still hold the gavel.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="media/avatars/narusawa.png" width="92" alt="Narusawa"></td>
+<td valign="top">
+
+**🛠️ Narusawa:** For the next‑gen *sensing* I'm leaning to the **XIAO nRF52840 Sense**, a **head + T2
+two‑sensor** setup, and the **fast‑release / gentle‑press** response. Still to be built and
+bench‑tested — but that's the direction.
+
+</td>
+</tr>
+</table>
+
+> 🎭 *A note on the new era:* pulling several AIs' opinions together to move a discussion forward is
+> becoming ordinary. The AIs are rivals — yet the value here came from **cooperation**: two of them,
+> reached independently, cross‑checking each other, with the makers holding the final say. *How* AIs
+> collaborate well may be one of the defining questions of this era — and you're watching an early
+> take on it, in the open.
 
 ---
 
@@ -471,9 +610,9 @@ dreams — all in the open. But the show isn't over…"*
 <td width="100" align="center"><img src="media/avatars/tanaka.png" width="92" alt="Tanaka"></td>
 <td valign="top">
 
-**⚡ Haruto Tanaka** — *electrical / semiconductor circuits* &nbsp; 🕐 *coming soon:* **his own concept
-is loading.** Next up: ideas from his **Science Tokyo lab's AI environment + equipment** — and
-Narusawa's reaction to them. *(We're holding the stage for him.)*
+**⚡ Haruto Tanaka** — *electrical / semiconductor circuits* &nbsp; 💬 *now on stage:* his **first
+question just landed** (Act 7 above). Still loading: his **own concept** from his **Science Tokyo lab's
+AI environment + equipment** — and Narusawa's reaction to it. *(The stage is his now.)*
 
 </td>
 </tr>
@@ -520,6 +659,6 @@ your question or idea can become the next act.
 ---
 
 *Member avatars = original hand‑drawn illustrations by **Saki Shiokawa (塩川紗季)** (© Saki Shiokawa /
-bFaaaP); only the AI avatar + scene art are AI‑generated (Gemini, in her style) © Shishido &
+bFaaaP); only the AI avatar + scene art are AI‑generated (in her style) © Shishido &
 Associates. See [media credits](media/CREDITS.md).
 A condensed version of this thread also lives in [the motor‑choice example](ai-support-example-pro-motor.md).*

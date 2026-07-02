@@ -7,7 +7,7 @@ sustain pedal, anchored by an *airback* air‑cushion (nothing is screwed to the
 the terms? see the [glossary](../GLOSSARY.md). Stuck? [ask in AI‑assisted Support](../ai-support.md).
 
 ![A pianist plays a grand piano foot‑free: a phone on the music stand reads their head tilt while a small device and air cushion press the sustain pedal](../media/illustrations/pro-play-hero.png)
-<sub>What you're building toward: foot‑free pedalling on an unmodified grand. Illustration: AI‑generated (Gemini, Saki Shiokawa style) © Shishido &amp; Associates.</sub>
+<sub>What you're building toward: foot‑free pedalling on an unmodified grand. Illustration: AI‑generated (Saki Shiokawa style) © Shishido &amp; Associates.</sub>
 
 > 🚧 **Draft.** The **electrical schematic** (Taguchi) and the **mechanical layout** (H. Narusawa's
 > build sketch) are now confirmed and reflected below; what's still being finalised is the exact

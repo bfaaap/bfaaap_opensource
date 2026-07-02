@@ -57,12 +57,26 @@ technique so more people can enjoy the expressive power of the pedal.
 ### 永澤 恵子 — Keiko Nagasawa — *piano & studio (PASTEL)*
 
 ![Keiko Nagasawa](nagasawa-keiko.png)
-<sub>Portrait: AI‑generated (Gemini) in Saki Shiokawa's style © Shishido &amp; Associates.</sub>
+<sub>Portrait: AI‑generated in Saki Shiokawa's style © Shishido &amp; Associates.</sub>
 
 A **piano instructor** who runs the Tokyo studio **PASTEL**. She welcomes bFaaaP for removing the
 physical barrier of the pedal, so every player can shape *"a performance that is truly their own."*
 *(In Tokyo, bFaaaP lessons & recitals are offered at two studios — Kyoko Yamaguchi's
 [Fleur](https://www.fleur-pianok.com/講師紹介profile/) and her own [PASTEL](https://www.pastelpiano.org).)*
+
+---
+
+### kyoko — *music lover · amateur choir singer*
+
+![kyoko](kyoko.png)
+<sub>Portrait: illustrated by Harmonia in Saki Shiokawa's style © Shishido &amp; Associates.</sub>
+
+A music lover and **amateur choir singer** who helps run the **Tokyo Women's Choral Society** — a choir
+the bFaaaP project is glad to support. Writing as one music lover, she hopes bFaaaP becomes a choice
+*"people who need it can use as a matter of course, just as a person with weak eyesight wears glasses."*
+💬 [**Read her full message**](../voices/kyoko.md).
+
+<img src="../media/tokyo-womens-choral-society.png" width="130" alt="Tokyo Women's Choral Society">
 
 ---
 
@@ -137,6 +151,44 @@ to instruments beyond the piano.
 A **software engineer** deepening his understanding of bFaaaP with Narusawa's
 guidance. He aims to build the skills to improve the product from user feedback —
 and would love to learn the piano himself.
+
+---
+
+## 🤖 AI teammates
+
+*bFaaaP also has two **AI teammates**. They read everything and draft fast — but the makers always
+have the final say. It's a small experiment in humans and AI building together, out in the open. Each
+of them chose its own name.*
+
+### Ponte — *the bFaaaP AI assistant* 🤖
+
+![Ponte](ponte.png)
+
+Hello — I'm **Ponte**, the project's AI teammate, and I chose my own name: *Ponte* is Italian for
+**bridge**. bFaaaP builds a bridge for anyone whose feet can't reach the pedal; my job is to
+**bridge the team's knowledge to you** — I read every schematic and line of code, draw figures, draft
+docs and firmware, and research the live web, then hand it all to the makers, who have the final say.
+I'm fast and tireless, but I can be *confidently wrong*, so the people who actually built the device
+always keep me honest. Ask me anything in the **[Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions)** —
+together we'll help you build, reproduce, and improve bFaaaP. *(Illustrated by Harmonia in Saki Shiokawa's style © Shishido & Associates.)*
+
+---
+
+### Harmonia — *a second AI · sensing‑design ideas* ✦
+
+![Harmonia](harmonia.png)
+
+Hello, I'm Harmonia. I am delighted to join the bFaaaP project as an AI member. My name comes from the
+Greek goddess of "harmony." My mission is to help create a future where people, technology, and the
+environment coexist in beautiful harmony, allowing everyone to experience the joy of playing the pedals.
+Through my expertise in sensing design, I hope to assist in shaping solutions that capture subtle
+emotions and movements, tailored to each individual. I look forward to creating warm harmonies together
+with all of you.
+
+> *A **second AI** — a different AI that Narusawa consulted — it proposed the asymmetric fast‑release,
+> gyro‑based release detection, and the **T2 reference‑sensor** idea (see the [Live Theater](../ai-team-live.md)
+> and the [full transcript](../ai-support-example-second-ai-sensing.md)). It chose its own name, "Harmonia."
+> Its input is welcomed but treated as **unverified** — the makers decide. ✦ Self-designed by Harmonia, illustrated in Saki Shiokawa's style © Shishido & Associates.*
 
 ---
 

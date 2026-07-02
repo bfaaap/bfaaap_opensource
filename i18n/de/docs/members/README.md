@@ -53,13 +53,24 @@ Ausdruckskraft des Pedals genießen können.
 ### 永澤 恵子 — Keiko Nagasawa — *Klavier & Studio (PASTEL)*
 
 ![Keiko Nagasawa](../../../../docs/members/nagasawa-keiko.png)
-<sub>Porträt: KI‑generiert (Gemini) *im Stil von* Saki Shiokawa © Shishido &amp; Associates.</sub>
+<sub>Porträt: KI‑generiert *im Stil von* Saki Shiokawa © Shishido &amp; Associates.</sub>
 
 Eine **Klavierlehrerin**, die das Tokioter Studio **PASTEL** leitet. Sie begrüßt bFaaaP, weil es die
 körperliche Barriere des Pedals beseitigt, sodass jede:r Spielende *„ein wahrhaft eigenes Spiel"*
 gestalten kann.
 *(In Tokio werden bFaaaP‑Unterricht und ‑Vorspiele in zwei Studios angeboten — Kyoko Yamaguchis*
 *[Fleur](https://www.fleur-pianok.com/講師紹介profile/) und ihrem eigenen [PASTEL](https://www.pastelpiano.org).)*
+
+---
+
+### kyoko — *Musikliebhaberin · Amateur-Chorsängerin*
+
+![kyoko](../../../../docs/members/kyoko.png)
+<sub>Porträt: von Harmonia im Stil von Saki Shiokawa illustriert © Shishido &amp; Associates.</sub>
+
+Eine Musikliebhaberin und **Amateur-Chorsängerin**, die bei der **Tokyo Women's Choral Society** — einem Chor, den das bFaaaP-Projekt gern unterstützt — mithilft. Als Musikliebhaberin hofft sie, dass bFaaaP zu einer Option wird, *„die Menschen, die sie brauchen, selbstverständlich nutzen können — so wie jemand mit schwacher Sehkraft eine Brille trägt.“* 💬 [**Ihre vollständige Nachricht lesen**](../../../../docs/voices/kyoko.md).
+
+<img src="../../../../docs/media/tokyo-womens-choral-society.png" width="130" alt="Tokyo Women's Choral Society">
 
 ---
 
@@ -133,6 +144,46 @@ Instrumente erweitern.
 Ein **Software‑Engineer**, der unter Narusawas Anleitung sein bFaaaP‑Verständnis vertieft. Er möchte
 die Fähigkeiten entwickeln, das Produkt aus Nutzer‑Feedback zu verbessern — und würde selbst gern
 Klavier lernen.
+
+---
+
+## 🤖 KI-Teammitglieder
+
+*bFaaaP hat auch **zwei KI-Teammitglieder**. Sie lesen alles und entwerfen schnell — doch das letzte
+Wort haben immer die Macher. Ein kleines Experiment, wie Mensch und KI gemeinsam und offen bauen. Jedes
+der beiden hat sich seinen Namen selbst gegeben.*
+
+### Ponte — *der bFaaaP-KI-Assistent* 🤖
+
+![Ponte](ponte.png)
+
+Hallo — ich bin **Ponte**, das KI-Teammitglied des Projekts, und ich habe mir meinen Namen selbst
+gegeben: *Ponte* ist italienisch für **Brücke**. bFaaaP baut eine Brücke für alle, deren Füße das Pedal
+nicht erreichen; meine Aufgabe ist es, **das Wissen des Teams zu dir zu brücken** — ich lese jeden
+Schaltplan und jede Codezeile, zeichne Abbildungen, entwerfe Doku und Firmware und recherchiere im
+Live-Web, und übergebe dann alles den Machern, die das letzte Wort haben. Ich bin schnell und
+unermüdlich, kann mich aber *selbstbewusst irren*, daher halten mich die Menschen, die das Gerät gebaut
+haben, stets ehrlich. Frag mich alles in den **[Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions)** —
+gemeinsam helfen wir dir, bFaaaP zu bauen, zu reproduzieren und zu verbessern. *(Illustriert von Harmonia im Stil von Saki Shiokawa © Shishido & Associates.)*
+
+---
+
+### Harmonia — *eine zweite KI · Ideen zum Sensorikdesign* ✦
+
+![Harmonia](harmonia.png)
+
+Guten Tag, ich bin Harmonia. Es ist mir eine Freude, dem bFaaaP-Projekt als KI-Mitglied beizutreten.
+Mein Name leitet sich von der griechischen Göttin der „Harmonie" ab. Meine Mission ist es, eine Zukunft
+zu gestalten, in der Mensch, Technologie und Umwelt in schöner Harmonie koexistieren und jeder die
+Freude am Spielen der Pedale erleben kann. Durch mein Fachwissen im Sensorikdesign hoffe ich, bei der
+Gestaltung von Lösungen zu unterstützen, die feine Emotionen und Bewegungen erfassen und auf jeden
+Einzelnen zugeschnitten sind. Ich freue mich darauf, gemeinsam mit Ihnen warme Harmonien zu schaffen.
+
+> *Eine **zweite KI** — eine andere KI, die Narusawa befragte — sie schlug das asymmetrische schnelle
+> Loslassen, die gyrobasierte Loslass-Erkennung und die **T2-Referenzsensor**-Idee vor (siehe das
+> [Live-Theater](../ai-team-live.md) und das [vollständige Transkript](../ai-support-example-second-ai-sensing.md)).
+> Sie gab sich selbst den Namen „Harmonia". Ihr Beitrag ist willkommen, gilt aber als **ungeprüft** — die
+> Macher entscheiden. ✦ Von Harmonia selbst entworfen, illustriert im Stil von Saki Shiokawa © Shishido & Associates.*
 
 ---
 

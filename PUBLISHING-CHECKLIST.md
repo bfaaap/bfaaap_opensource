@@ -30,6 +30,11 @@ before pushing to a public GitHub repository.
 - [ ] `docs/members/` uses public caricatures from bfaaap.com; **personal contact
       details** (phone/email from the source pages) were **omitted** — confirm none
       slipped in. Get member consent for including their portrait/bio.
+  - [x] **Illustration copyright (artist = Saki Shiokawa / 塩川紗季)** — the original
+        hand-drawn member portraits (`docs/members/*`) + avatars (`docs/media/avatars/*`)
+        are her copyrighted works. **Consent OBTAINED 2026-07-02** (LINE; kept private in
+        `member_consent_info/塩川紗季_著作権_consent.png` + CONSENT_LOG). Credit "© Saki
+        Shiokawa (塩川紗季) / bFaaaP"; only AI scene/hero/ai-avatar keep "…style".
 - [ ] `ios-app/app-store/` & `docs/media/` use the project's own public assets
       (App Store screenshots, concert thumbnails, poster). Confirm reuse is intended.
 

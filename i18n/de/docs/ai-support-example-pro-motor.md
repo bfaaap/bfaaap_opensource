@@ -11,10 +11,10 @@ Der ursprüngliche Antriebsmotor des Pro (**IQ Fortiq M42BLS**) ist **abgekündi
 
 <table>
 <tr>
-<td width="120" valign="top"><img src="../../../docs/media/avatars/ai.png" width="104" alt="Avatar des KI‑Assistenten"></td>
+<td width="120" valign="top"><img src="../../../docs/media/avatars/ai.png" width="104" alt="Avatar von Ponte"></td>
 <td valign="top">
 
-**🤖 KI‑Assistent** &nbsp;·&nbsp; <sub>Entwurfsidee aus aktuellen Webdaten (Juni 2026) — *ungeprüft*</sub>
+**🤖 Ponte** &nbsp;·&nbsp; <sub>Entwurfsidee aus aktuellen Webdaten (Juni 2026) — *ungeprüft*</sub>
 
 Hier ein **Ausgangspunkt**, kein Urteil. Das Schwierige ist nicht der Motorkörper (ein gleich großer **NEMA17 / „17er"‑Stepper, STEP/DIR** verwendet den vorhandenen Rahmen, den Riemen und die T10‑Spindel weiter) — es ist die **Kraftrückmeldung**. Der alte IQ‑Servo las seine **Motorleistung** aus, um „zu drücken, bis die Reaktionskraft ansteigt". Ein einfacher Stepper kann das nicht, also müssen wir das *wiederherstellen*. Drei Wege, die ich gefunden habe:
 
@@ -59,7 +59,7 @@ Hier ein **Ausgangspunkt**, kein Urteil. Das Schwierige ist nicht der Motorkörp
 
 **⚡ Haruto Tanaka** &nbsp;·&nbsp; <sub>Elektrotechnik</sub>
 
-🕐 *Prüft.* Wurde gebeten, die **elektrische Seite** zu prüfen: ein geeignetes NEMA17‑Drehmoment/‑Modell, die Treiberwahl und ob die 24‑V‑/Stromwerte und die Kraftabschätzung standhalten. Seine Antwort erscheint hier.
+🕐 *Prüft.* Wurde gebeten, die **elektrische Seite** zu prüfen: ein geeignetes NEMA17‑Drehmoment/‑Modell, die Treiberwahl und ob die 24‑V‑/Stromwerte und die Kraftabschätzung standhalten. **Seine erste Frage — wie sich die Pedaldruckkraft zurückgewinnen lässt — ist gerade eingetroffen; siehe den jüngsten Austausch unten.**
 
 </td>
 </tr>
@@ -80,10 +80,10 @@ Hier ein **Ausgangspunkt**, kein Urteil. Das Schwierige ist nicht der Motorkörp
 
 <table>
 <tr>
-<td width="120" valign="top"><img src="../../../docs/media/avatars/ai.png" width="104" alt="Avatar des KI‑Assistenten"></td>
+<td width="120" valign="top"><img src="../../../docs/media/avatars/ai.png" width="104" alt="Avatar von Ponte"></td>
 <td valign="top">
 
-**🤖 KI‑Assistent** &nbsp;·&nbsp; <sub>Folge‑Antwort</sub>
+**🤖 Ponte** &nbsp;·&nbsp; <sub>Folge‑Antwort</sub>
 
 Danke, Narusawa — damit landen wir bei **Option A**, die dem ursprünglichen IQ‑Verhalten am nächsten kommt. Beide Varianten melden **Last/Schleppfehler über UART (oder CAN)**, sodass die Firmware die IQ‑artige Kalibrierung „drücken, bis die Reaktionskraft ansteigt" wiederherstellen kann.
 
@@ -112,12 +112,67 @@ Danke, Narusawa — damit landen wir bei **Option A**, die dem ursprünglichen I
 
 <table>
 <tr>
-<td width="120" valign="top"><img src="../../../docs/media/avatars/ai.png" width="104" alt="Avatar des KI‑Assistenten"></td>
+<td width="120" valign="top"><img src="../../../docs/media/avatars/ai.png" width="104" alt="Avatar von Ponte"></td>
 <td valign="top">
 
-**🤖 KI‑Assistent** &nbsp;·&nbsp; <sub>Folge‑Antwort</sub>
+**🤖 Ponte** &nbsp;·&nbsp; <sub>Folge‑Antwort</sub>
 
 Erledigt: HX711 entfernt, den Airback auf ein **festes 40‑s**‑Aufpumpen mit dem Hinweis zum **stromlos geschlossenen Ventil** umgestellt und **STEP_PULSE_US 80 → 350 µs** verlangsamt (auf dem Prüfstand abstimmbar). Weiter an **Tanaka & Taguchi**, um das Treiberprotokoll zu verfeinern und die Raten abzustimmen. *(Genau dafür ist der KI‑gestützte Support da — die KI ist schnell, die Bauenden halten sie ehrlich.)*
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🆕 Neu: Tanakas Frage — *Können wir die Druckkraft messen?* (03.07.2026)
+
+<table>
+<tr>
+<td width="120" valign="top"><img src="../../../docs/media/avatars/tanaka.png" width="104" alt="Avatar von Haruto Tanaka"></td>
+<td valign="top">
+
+**⚡ Haruto Tanaka** &nbsp;·&nbsp; <sub>Elektrotechnik — *neue Frage → Narusawa*</sub>
+
+💬 Entschuldige die späte Stunde. Lass mich prüfen, ob ich den Wechsel **IQ → Option A** richtig
+verstehe: Der IQ **überwachte die elektrische Leistung**, um die Pedaldruckkraft zu messen, während
+Option A die **Drehung erfasst** und daher die Druckkraft **nicht erkennen** kann — stimmt das? Falls
+ja, wäre es möglich, einen **Stromsensor hinzuzufügen**, um die Druckkraft zu messen? Als ich eine KI
+fragte, meinte sie, ein **Schrittmotor erzeuge Stromrauschen**, aber mit **Filterung** sei er vielleicht
+doch nutzbar.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="120" valign="top"><img src="../../../docs/media/avatars/ai.png" width="104" alt="Avatar von Ponte"></td>
+<td valign="top">
+
+**🤖 Ponte** &nbsp;·&nbsp; <sub>Kontext — *wartet auf Narusawas Wort*</sub>
+
+Das passt genau auf die drei Optionen oben. Vorbehaltlich der Bestätigung des Machers: Der
+Closed‑Loop‑Treiber der **Option A** meldet bereits **Last / Schleppfehler über UART (oder CAN)**,
+sodass sich das IQ‑Prinzip „drücken, bis die Reaktionskraft steigt" *ohne* separaten Sensor
+wiederherstellen lässt. Einen **Stromsensor** hinzuzufügen ist im Grunde **Option B** (Motorstrom /
+StallGuard) — und Tanaka hat recht: Der Schrittmotor‑Strom ist verrauscht, braucht also **Filterung**
+(Tiefpass / Mittelung) und liefert einen **relativen**, keinen absoluten Kraftwert. Das entscheidet
+Narusawa.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="120" valign="top"><img src="../../../docs/media/avatars/narusawa.png" width="104" alt="Avatar von Hiroyuki Narusawa"></td>
+<td valign="top">
+
+**🛠️ Hiroyuki Narusawa** &nbsp;·&nbsp; <sub>*Antwort folgt*</sub>
+
+🕐 Weiter an Narusawa — er hat das funktionierende Gerät gebaut, also ist diese Frage der Spur ②
+seine. Seine Antwort landet direkt hier.
 
 </td>
 </tr>
@@ -136,5 +191,5 @@ Beitrag kann Teil dieses Threads und Teil der Doku werden.
 ---
 
 *Die Mitglieder‑Avatare sind handgezeichnete Originalillustrationen von **Saki Shiokawa (塩川紗季)** (© Saki Shiokawa /
-bFaaaP); nur der KI‑Avatar ist KI‑generiert (Gemini, in ihrem Stil) © Shishido & Associates. Siehe
+bFaaaP); nur der KI‑Avatar ist KI‑generiert (in ihrem Stil) © Shishido & Associates. Siehe
 [Medien‑Credits](../../../docs/media/CREDITS.md).*

@@ -194,6 +194,29 @@ it comes to the attention of as many people as possible.
 
 ---
 
+### 🎶 kyoko — *music lover · amateur choir singer*
+
+<sub>📖 **[Read the full message](voices/kyoko.md)** — original Japanese + English & German</sub>
+
+<img src="members/kyoko.png" alt="kyoko" width="150" align="left">
+
+Enjoying music as an **amateur choir singer**, I came to know bFaaaP through a fortunate connection —
+and was struck both by this wonderful technology and by how little I'd noticed those who need help
+operating the pedal. I still remember the thrill of my first pedal as a child: **the wish to express
+oneself must never be blocked for physical reasons.**
+
+I was deeply moved by this open‑source initiative. I hope bFaaaP becomes something *"people who need it
+can use as a matter of course — just as a person with weak eyesight wears glasses,"* so the world of
+music grows **richer and gentler.**
+
+<br clear="left">
+
+— **kyoko** · helps run the **Tokyo Women's Choral Society** *(a choir the project is glad to support)*
+
+<img src="media/tokyo-womens-choral-society.png" width="150" alt="Tokyo Women's Choral Society">
+
+---
+
 > *Portraits are **Saki Shiokawa (塩川紗季)**’s original hand‑drawn caricatures — except Keiko
 > Nagasawa’s, which is AI‑generated **in her style** (© Shishido & Associates), noted with consent.
 > Messages are published with each member’s consent; English is a translation of their original

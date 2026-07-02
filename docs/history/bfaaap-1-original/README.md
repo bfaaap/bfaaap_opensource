@@ -10,7 +10,7 @@ foundations of a good, non‑destructive device, began.
 
 ![A warm storybook illustration of a pianist in 2018 wearing glasses with a small head-angle sensor clipped to the frame, playing a grand piano with a small device by the pedals](bfaaap1-pianist-2018.png)
 
-*The first bFaaaP, 2018: a sensor on a pair of glasses, and a pedal device on the floor. Illustration: AI‑generated (Gemini, Saki Shiokawa style) © Shishido & Associates.*
+*The first bFaaaP, 2018: a sensor on a pair of glasses, and a pedal device on the floor. Illustration: AI illustration by Harmonia in Saki Shiokawa style © Shishido & Associates.*
 
 ## The invention was already here
 Strip away the 2018 hardware and the **core is identical to today's**: a **quantitative,
@@ -106,7 +106,7 @@ These are **technical drawings only** — no people, names, or personal data. Th
 M5Stack sensor and the **anonymised** APEE figures) and the paper's Appendix A.
 
 ## Files
-- Illustrations: `bfaaap1-pianist-2018.png` (Gemini), `the-invention-from-the-start.png` (matplotlib).
+- Illustrations: `bfaaap1-pianist-2018.png` (AI‑generated), `the-invention-from-the-start.png` (matplotlib).
 - Original figures (PNG): `fig1-overview-glasses-sensor.png`, `fig2-system-block-diagram.png`,
   `fig3-detector-side-flow.png`, `fig5-actuator-mov-function.png`, and the four `handdrawn-*.png`.
 - Archival source PDFs: `source-handdrawn-embodiment-2018.pdf`, `source-configuration-diagram-2018.pdf`.

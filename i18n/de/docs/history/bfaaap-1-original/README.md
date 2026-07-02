@@ -10,7 +10,7 @@ eines guten, zerstörungsfreien Geräts.
 
 ![Eine warme Bilderbuch-Illustration: ein Pianist von 2018 mit einer Brille, an deren Rahmen ein kleiner Kopfwinkel-Sensor sitzt, spielt einen Flügel; neben den Pedalen steht ein kleines Gerät](../../../../../docs/history/bfaaap-1-original/bfaaap1-pianist-2018.png)
 
-*Das erste bFaaaP, 2018: ein Sensor an einer Brille und ein Pedalgerät am Boden. Illustration: KI‑generiert (Gemini, Stil von Saki Shiokawa) © Shishido & Associates.*
+*Das erste bFaaaP, 2018: ein Sensor an einer Brille und ein Pedalgerät am Boden. Illustration: KI‑generiert (Stil von Saki Shiokawa) © Shishido & Associates.*
 
 ## Die Erfindung war schon da
 Nimmt man die Hardware von 2018 weg, ist der **Kern identisch mit heute**: ein **quantitatives,
@@ -108,7 +108,7 @@ Dies sind **nur technische Zeichnungen** — keine Personen, Namen oder personen
 und den **anonymisierten** APEE‑Abbildungen) und Anhang A des Papers.
 
 ## Dateien
-- Illustrationen: `bfaaap1-pianist-2018.png` (Gemini), `the-invention-from-the-start.png` (matplotlib).
+- Illustrationen: `bfaaap1-pianist-2018.png` (AI‑generated), `the-invention-from-the-start.png` (matplotlib).
 - Originalabbildungen (PNG): `fig1-overview-glasses-sensor.png`, `fig2-system-block-diagram.png`,
   `fig3-detector-side-flow.png`, `fig5-actuator-mov-function.png` und die vier `handdrawn-*.png`.
 - Archiv‑Quell‑PDFs: `source-handdrawn-embodiment-2018.pdf`, `source-configuration-diagram-2018.pdf`.

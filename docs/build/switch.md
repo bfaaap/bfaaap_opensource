@@ -7,7 +7,7 @@ motor, it switches the sustain **electronically** through the instrument's **sus
 no motor, no airback. It uses the **same iOS app** and BLE board as the Pro.
 
 ![A player at a digital keyboard plays foot‑free: a phone on a stand reads their head tilt while a tiny box on the keyboard's pedal jack switches the sustain](../media/illustrations/switch-play-hero.png)
-<sub>What you're building toward: foot‑free sustain on a digital piano, from a matchbox‑sized device. Illustration: AI‑generated (Gemini, Saki Shiokawa style) © Shishido &amp; Associates.</sub>
+<sub>What you're building toward: foot‑free sustain on a digital piano, from a matchbox‑sized device. Illustration: AI‑generated (Saki Shiokawa style) © Shishido &amp; Associates.</sub>
 
 > ✅ **Hardware confirmed.** The Switch electronics are now fully confirmed by the maker (H. Narusawa):
 > board = **ItsyBitsy nRF52840**; a **ROHM `RU1J002YN`** logic‑level N‑MOSFET on **`GP13`** switches the

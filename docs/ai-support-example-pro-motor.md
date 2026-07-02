@@ -14,10 +14,10 @@ built bFaaaP are weighing in. Here is that thread.
 
 <table>
 <tr>
-<td width="120" valign="top"><img src="media/avatars/ai.png" width="104" alt="AI assistant avatar"></td>
+<td width="120" valign="top"><img src="media/avatars/ai.png" width="104" alt="Ponte avatar"></td>
 <td valign="top">
 
-**🤖 AI assistant** &nbsp;·&nbsp; <sub>draft idea from current web data (June 2026) — *unverified*</sub>
+**🤖 Ponte** &nbsp;·&nbsp; <sub>draft idea from current web data (June 2026) — *unverified*</sub>
 
 Here's a **starting point**, not a verdict. The hard part isn't the motor body (a same‑size
 **NEMA17 / "17‑type" stepper, STEP/DIR** reuses the existing frame, belt and T10 screw) — it's
@@ -73,8 +73,8 @@ built‑in NEMA17‑class driver**. Could the **AI draft the firmware** for that
 **⚡ Haruto Tanaka** &nbsp;·&nbsp; <sub>electrical engineering</sub>
 
 🕐 *Reviewing.* Asked to sanity‑check the **electrical side**: a suitable NEMA17 torque/model, the
-driver choice, and whether the 24 V / current numbers and the force estimate hold up. His reply
-will appear here.
+driver choice, and whether the 24 V / current numbers and the force estimate hold up. **His first
+question — on how to recover the pedal‑press force — just landed; see the latest exchange below.**
 
 </td>
 </tr>
@@ -96,10 +96,10 @@ STEP/DIR + a load signal slot into the existing Pico loop. His reply will appear
 
 <table>
 <tr>
-<td width="120" valign="top"><img src="media/avatars/ai.png" width="104" alt="AI assistant avatar"></td>
+<td width="120" valign="top"><img src="media/avatars/ai.png" width="104" alt="Ponte avatar"></td>
 <td valign="top">
 
-**🤖 AI assistant** &nbsp;·&nbsp; <sub>follow‑up</sub>
+**🤖 Ponte** &nbsp;·&nbsp; <sub>follow‑up</sub>
 
 Thanks, Narusawa — that lands us on **option A**, which is the closest to the original IQ behaviour.
 Both choices report **load/following‑error over UART (or CAN)**, so the firmware can recover the
@@ -137,15 +137,67 @@ fast — the pedal may not follow, so slow it down.
 
 <table>
 <tr>
-<td width="120" valign="top"><img src="media/avatars/ai.png" width="104" alt="AI assistant avatar"></td>
+<td width="120" valign="top"><img src="media/avatars/ai.png" width="104" alt="Ponte avatar"></td>
 <td valign="top">
 
-**🤖 AI assistant** &nbsp;·&nbsp; <sub>follow‑up</sub>
+**🤖 Ponte** &nbsp;·&nbsp; <sub>follow‑up</sub>
 
 Done: removed the HX711, made the airback a **fixed 40 s** inflate with the **normally‑closed valve**
 note, and slowed **STEP_PULSE_US 80 → 350 µs** (tunable on the bench). Over to **Tanaka & Taguchi** to
 refine the driver protocol and tune the rates. *(This whole exchange is exactly what AI‑assisted
 Support is for — the AI moves fast, the makers keep it honest.)*
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🆕 Latest: Tanaka's question — *can we measure the press force?* (2026‑07‑03)
+
+<table>
+<tr>
+<td width="120" valign="top"><img src="media/avatars/tanaka.png" width="104" alt="Haruto Tanaka avatar"></td>
+<td valign="top">
+
+**⚡ Haruto Tanaka** &nbsp;·&nbsp; <sub>electrical engineering — *new question → Narusawa*</sub>
+
+💬 Sorry for the late hour. Let me check I've understood the **IQ → option‑A** change: the IQ
+**monitored electrical power** to gauge the pedal‑pressing force, whereas option A **senses rotation**,
+so it **can't detect the pressing force** — is that right? If so, would it be possible to **add a
+current sensor** to measure the pressing force? When I asked an AI, it said a **stepper motor produces
+current noise**, but that with **filtering** it might still be usable.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="120" valign="top"><img src="media/avatars/ai.png" width="104" alt="Ponte avatar"></td>
+<td valign="top">
+
+**🤖 Ponte** &nbsp;·&nbsp; <sub>context — *pending Narusawa's word*</sub>
+
+This lands right on the three options above. Pending the maker's confirmation: **option A**'s closed‑loop
+driver already reports **load / following‑error over UART (or CAN)**, so it recovers the IQ‑style "press
+until the reaction force rises" *without* a separate sensor. Adding a **current sensor** is essentially
+**option B** (motor‑current / StallGuard) — and Tanaka's right that stepper drive current is noisy, so it
+needs **filtering** (low‑pass / averaging) and gives a **relative**, not absolute, force. Narusawa's call.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="120" valign="top"><img src="media/avatars/narusawa.png" width="104" alt="Hiroyuki Narusawa avatar"></td>
+<td valign="top">
+
+**🛠️ Hiroyuki Narusawa** &nbsp;·&nbsp; <sub>*to reply*</sub>
+
+🕐 Over to Narusawa — he built the working unit, so this track ② question is his to answer. His reply
+will drop straight here.
 
 </td>
 </tr>
@@ -168,5 +220,5 @@ input can become part of this thread, and part of the docs.
 ---
 
 *Member avatars are original hand‑drawn illustrations by **Saki Shiokawa (塩川紗季)** (© Saki Shiokawa /
-bFaaaP); only the AI avatar is AI‑generated (Gemini, in her style) © Shishido & Associates. See
+bFaaaP); only the AI avatar is AI‑generated (in her style) © Shishido & Associates. See
 [media credits](media/CREDITS.md).*

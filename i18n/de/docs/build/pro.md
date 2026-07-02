@@ -8,7 +8,7 @@ Begriffe unklar? Siehe das [Glossar](../GLOSSARY.md). Hängengeblieben? Frag im
 [KI‑gestützten Support](../ai-support.md).
 
 ![Eine Pianistin spielt einen Flügel fußfrei: ein Smartphone am Notenständer liest die Kopfneigung, während ein kleines Gerät und ein Luftkissen das Haltepedal drücken](../../../../docs/media/illustrations/pro-play-hero.png)
-<sub>Das Ziel: fußfreies Pedalisieren an einem unveränderten Flügel. Illustration: KI‑generiert (Gemini, Stil Saki Shiokawa) © Shishido &amp; Associates.</sub>
+<sub>Das Ziel: fußfreies Pedalisieren an einem unveränderten Flügel. Illustration: KI‑generiert (Stil Saki Shiokawa) © Shishido &amp; Associates.</sub>
 
 > 🚧 **Entwurf.** Der **Schaltplan** (Taguchi) und das **mechanische Layout** (H. Narusawas Bauskizze)
 > sind nun bestätigt und unten eingearbeitet. Noch offen sind die **baubare Firmware des Schrittmotor‑Nachfolgers**

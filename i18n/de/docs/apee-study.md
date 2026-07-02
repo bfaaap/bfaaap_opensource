@@ -9,7 +9,7 @@ erreichen, und Menschen mit Behinderungen.
 
 ![Kinder und eine Spielerin im Rollstuhl nehmen am freundlichen APEE-Klaviertest teil, mit einem Smartphone auf dem Notenständer und dem Pedalgerät am Boden](../../../docs/media/illustrations/apee-children.png)
 
-*Eine APEE‑Sitzung (Illustration). KI‑generiert (Gemini, Stil von Saki Shiokawa) © Shishido & Associates.*
+*Eine APEE‑Sitzung (Illustration). KI‑generiert (Stil von Saki Shiokawa) © Shishido & Associates.*
 
 ## Wie wir gemessen haben
 Jede Person spielte dasselbe kurze Motiv **auf drei Arten** — **ohne Pedal** (Muster 0), mit
