@@ -21,7 +21,7 @@ den die Patente erteilt wurden (siehe [Funktionsweise](../../how-it-works.md) un
 [Paper](../../../../../bfaaap_arxiv_latex/README.md)). Nur **Sensor** und **Halterung** haben sich
 weiterentwickelt.
 
-![Vergleichsabbildung: ein grünes Band „THE INVENTION — unverändert seit 2018“ (das abstimmbare Regelgesetz) über zwei Karten — bFaaaP 1 (2018: Brillen-MPU-9250-IMU + schalldichte Kammer) und Heute/bFaaaP 4 (Smartphone-ARKit + Airback oder Switch) — mit einem Pfeil, der die technische Entwicklung zeigt](../../../../../docs/history/bfaaap-1-original/the-invention-from-the-start.png)
+![Vergleichsabbildung: ein grünes Band „THE INVENTION — unverändert seit 2018“ (das abstimmbare Regelgesetz) über zwei Karten — bFaaaP 1 (2018: Brillen-MPU-9250-IMU + schalldichte Kammer) und Heute/bFaaaP 6 (Smartphone-ARKit + Airback oder Switch) — mit einem Pfeil, der die technische Entwicklung zeigt](../../../../../docs/history/bfaaap-1-original/the-invention-from-the-start.png)
 
 **Was bFaaaP 1 bereits richtig machte (die Saat):**
 - **Das Regelgesetz als Beitrag** — Offset + Faktor + Begrenzung, nutzervoreingestellt (Abb. 2, Abb. 3).

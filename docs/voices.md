@@ -56,6 +56,28 @@ Put simply, it comes down to **three elements**:
 
 ---
 
+### 📐 Masahiro Ootaki — *design & coordination*
+
+<sub>📖 **[Read the full message](voices/ootaki.md)** — original Japanese + English & German</sub>
+
+<img src="members/ootaki-masahiro.jpg" alt="Masahiro Ootaki" width="150" align="left">
+
+Back in **2008** I was asked to remodel a home to be barrier‑free, and my friendship with Shishido
+continued from there. On **New Year’s Day 2018** he invited me: *“let’s build a pedal system together so a
+wheelchair user can enjoy playing the piano.”*
+
+As an architect I had no engineering background, so I brought in my mentor **Narusawa** — and one first
+followed another: an app‑development primer, patent drawings, a visit to the Patent Office. In my own trade
+I want to pass on to the next generation what I learned from those before me, so I nodded deeply at the idea
+that **the knowledge from bFaaaP should be open to everyone**. *“Products that delight everyone, built by
+everyone”* — I hope this open‑sourcing draws in companions across the world.
+
+<br clear="left">
+
+— **Masahiro Ootaki** · first‑class architect (barrier‑free housing)
+
+---
+
 ### 💻 Taguchi — *software engineering*
 
 <sub>📖 **[Read the full message](voices/taguchi.md)** — original Japanese + English & German</sub>

@@ -20,7 +20,7 @@ the offset and multiplier to taste. That is exactly the “key” the patents we
 [how it works](../../how-it-works.md) and the [paper](../../../bfaaap_arxiv_latex/README.md)). Only the
 **sensor** and the **mount** evolved.
 
-![Comparison figure: a green band labelled "THE INVENTION — unchanged since 2018" (the tunable control law), above two cards — bFaaaP 1 (2018: glasses-clip MPU-9250 IMU + sound-proof chamber) and Today/bFaaaP 4 (smartphone ARKit + airback or Switch) — with an arrow showing the engineering evolved](the-invention-from-the-start.png)
+![Comparison figure: a green band labelled "THE INVENTION — unchanged since 2018" (the tunable control law), above two cards — bFaaaP 1 (2018: glasses-clip MPU-9250 IMU + sound-proof chamber) and Today/bFaaaP 6 (smartphone ARKit + airback or Switch) — with an arrow showing the engineering evolved](the-invention-from-the-start.png)
 
 **What bFaaaP 1 already got right (the seeds):**
 - **The control law as the contribution** — offset + multiplier + clamp, per‑user preset (FIG. 2, FIG. 3).

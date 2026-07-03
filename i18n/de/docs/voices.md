@@ -60,6 +60,29 @@ Einfach gesagt läuft es auf **drei Elemente** hinaus:
 
 ---
 
+### 📐 Masahiro Ootaki — *Entwurf & Koordination*
+
+<sub>📖 **[Vollständige Botschaft lesen](../../../docs/voices/ootaki.md)** — Original (Japanisch) + englische & deutsche Übersetzung</sub>
+
+<img src="../../../docs/members/ootaki-masahiro.jpg" alt="Masahiro Ootaki" width="150" align="left">
+
+**2008** wurde ich gebeten, ein Zuhause barrierefrei umzubauen, und seither hält meine Verbindung zu
+Shishido an. Am **Neujahrstag 2018** lud er mich ein: *„Lass uns gemeinsam ein Pedalsystem entwickeln,
+damit auch ein Rollstuhlnutzer das Klavierspiel genießen kann.“*
+
+Als Architekt hatte ich keine technische Ausbildung, also holte ich meinen Mentor **Narusawa** hinzu — und
+eine erste Erfahrung folgte der nächsten: ein Einführungsbuch zur App-Entwicklung, Patentzeichnungen, ein
+Besuch beim Patentamt. In meinem eigenen Beruf möchte ich an die nachfolgende Generation weitergeben, was
+ich von meinen Vorgängern gelernt habe — daher nickte ich nachdrücklich zu dem Grundsatz, dass **das Wissen
+aus bFaaaP allen offenstehen sollte**. *„Produkte, die allen Freude bereiten, entwickelt von allen“* — ich
+hoffe, diese Open-Source-Veröffentlichung bindet Mitstreiter aus der ganzen Welt ein.
+
+<br clear="left">
+
+— **Masahiro Ootaki** · Architekt (barrierefreies Wohnen)
+
+---
+
 ### 💻 Taguchi — *Software-Engineering*
 
 <sub>📖 **[Vollständige Botschaft lesen](../../../docs/voices/taguchi.md)** — Original (Japanisch) + englische & deutsche Übersetzung</sub>

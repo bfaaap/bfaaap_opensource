@@ -18,7 +18,7 @@ bFaaaP 1 は、**発明そのものと、優れた非破壊デバイス設計の
 （[仕組み](../../how-it-works.md)・[論文](../../../../../bfaaap_arxiv_latex/README.md)参照）。
 変わったのは **センサー** と **取り付け** だけです。
 
-![比較図：「THE INVENTION — 2018年から不変」の緑帯（調整可能な制御則）の下に、bFaaaP 1（2018：メガネ装着 MPU-9250 IMU＋防音チャンバー）と 今日/bFaaaP 4（スマホ ARKit＋airback または Switch）の2枚のカード、工学が進化した矢印](../../../../../docs/history/bfaaap-1-original/the-invention-from-the-start.png)
+![比較図：「THE INVENTION — 2018年から不変」の緑帯（調整可能な制御則）の下に、bFaaaP 1（2018：メガネ装着 MPU-9250 IMU＋防音チャンバー）と 今日/bFaaaP 6（スマホ ARKit＋airback または Switch）の2枚のカード、工学が進化した矢印](../../../../../docs/history/bfaaap-1-original/the-invention-from-the-start.png)
 
 **bFaaaP 1 が既に正しく捉えていたこと（種）：**
 - **貢献＝制御則** —— オフセット＋倍率＋クランプ、ユーザー事前設定（FIG. 2・FIG. 3）。
