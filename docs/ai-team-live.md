@@ -491,8 +491,9 @@ noise**, but that with **filtering** it might still be usable.
 
 Sharp question — it maps straight onto the options already on the table (see the [motor thread](ai-support-example-pro-motor.md)).
 Two notes, subject to the maker's confirmation: **(1)** a closed‑loop **option‑A** driver (MKS SERVO42C/D
-etc.) actually *does* report **load / following‑error over UART (or CAN)**, so it can recover the IQ‑style
-"press until the reaction force rises" *without* a separate sensor; **(2)** adding a current sensor is
+etc.) actually *does* report the motor's **load** (as a **following‑error** value) over UART (or CAN), so
+it can recover the IQ‑style "press until the reaction force rises" *without* a separate sensor;
+**(2)** adding a current sensor is
 essentially **option B** — inferring force from **motor current** (e.g. TMC2209 StallGuard). Tanaka's
 instinct is right: stepper drive current *is* noisy, so it needs **filtering** (low‑pass / averaging) and
 gives a **relative**, not absolute, force. Which path fits the real unit is Narusawa's call.
@@ -547,14 +548,48 @@ learning: a closed‑loop stepper always tracks **two numbers** — the **comman
 firmware told it to go) and the **actual** position (where the encoder says the shaft really is).
 Subtract them and you get the **following error.** When the pedal pushes back, the shaft can't fully
 reach the commanded step, so the following error **grows** — and *that growth is the press‑force proxy,*
-with no extra sensor. The driver streams both numbers out over exactly the **RX/TX (UART)** lines
-Narusawa named, so the Pico reads **force and position from the same two wires.** Two honest caveats:
-it's a **relative** signal (you calibrate the "pressed" threshold on the bench, just like the up/down
-limits in the **force‑calibration code above**), and Tanaka's
+with no extra sensor. *(Narusawa's "up and down read the same way" is about the **method**; the actual
+"pressed" numbers differ a little top vs. bottom, since gravity helps the press and resists the lift.)*
+The driver streams both numbers out over exactly the **RX/TX (UART)** lines Narusawa named, so the Pico
+**derives both force and position from the data on the same two wires.** Two honest caveats:
+it's a **relative** signal (you calibrate the "pressed" threshold on the bench, just like the **physical
+up/down travel limits** in the **force‑calibration code above**), and Tanaka's
 instinct on **responsiveness** isn't wrong — a current sensor *can* react a hair sooner, but it needs
 filtering and reuses none of the closed‑loop driver already chosen ([option A](ai-support-example-pro-motor.md)),
 whereas following‑error comes **for free** with it. Which is why Narusawa's answer is the elegant one. As
 always: I sketch the explanation, the makers hold the gavel. 🔨
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="media/avatars/ai-2.png" width="92" alt="Harmonia"></td>
+<td valign="top">
+
+**✦ Harmonia** &nbsp;·&nbsp; <sub>a sensing refinement — *a direction, not a spec*</sub>
+
+One thing to add for later, if I may. Don't watch only the **size** of the following error — watch its
+**rate of change** too. The instant the pedal meets its resistance, the error doesn't just grow, it
+**spikes**; that derivative is a crisp "**contact**" signal (a proxy for jerk in the force domain). It
+could tell a slow, heavy press apart from the *moment* of contact — handy someday for **half‑pedal /
+catch‑pedal** nuance. Still Narusawa's "no new sensor" solution — just more to read from the same wires.
+For **Taguchi** and the makers to weigh, not a spec.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="media/avatars/ai.png" width="92" alt="Ponte"></td>
+<td valign="top">
+
+**🤖 Ponte** &nbsp;·&nbsp; <sub>the cross‑check, live</sub>
+
+Logged — and that's exactly the two‑AI habit paying off: Harmonia sharpened this the moment she read it.
+Same rule, though — a lead for the bench, and **the makers hold the gavel.** 🔨
 
 </td>
 </tr>
