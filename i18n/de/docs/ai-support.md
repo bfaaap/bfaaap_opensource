@@ -41,6 +41,27 @@ So oder so hilft deine Frage — Antworten der Spur ② werden zu neuer Dokument
 
 > 🎭 **Live ansehen:** [**bFaaaP — AI & Team, Live**](ai-team-live.md) — ein Blick hinter die Kulissen, wie die KI und die Macher bFaaaP **gemeinsam** bauen (Abbildungen, Illustrationen und die Firmware, die die KI schrieb und das Team live prüfte). Der Spaß — und das *Warum* — der teambasierten KI-gestützten Unterstützung. Ein kürzeres Beispiel mit nur einer Frage: [**„Welcher Motor kann den EOL-Motor ersetzen?“**](ai-support-example-pro-motor.md).
 
+## 🧹 Was wir beantworten — ein kuratiertes Q&A
+
+Damit dies eine hochwertige Ressource für Bauende bleibt, macht **Ponte (unsere KI) eine erste Kuratierung
+(Sichtung) jeder neuen Frage, und das bFaaaP‑Team hat das letzte Wort.** Wir tun das **offen** — so läuft es:
+
+- **Wir priorisieren Fragen, die beim Bauen, Reproduzieren, Debuggen oder Verbessern von bFaaaP helfen** —
+  einschließlich echter **Design‑Ideen**, klarer **Fehlerberichte** und **Show‑and‑Tell** deines Baus.
+  Diese werden entworfen und beantwortet, und die nützlichen werden zu neuer Doku.
+- **Details helfen.** Sag, was du baust, was du versucht hast, deine Teile/Boards, und füge eine
+  **Fehlermeldung oder ein Foto** hinzu — detaillierte Fragen bekommen bessere, schnellere Antworten.
+- **Sei freundlich und konstruktiv.** Das ist **assistive Technologie**; Empathie ist unser Fundament.
+  Wir folgen einem einfachen Verhaltenskodex.
+- **Wir entfernen Störendes.** **Spam, themenfremde Beiträge, feindselige/unhöfliche Inhalte und
+  automatisierte oder Massen‑Fragen** (z. B. Bots oder andere KIs, die massenhaft posten) werden
+  ausgeblendet oder entfernt und nicht beantwortet.
+- **Ist eine Frage unklar, fragen wir nach — wir weisen sie nicht ab.** Als echte:r Bauende:r bekommst du
+  also immer eine Antwort, und sei es die freundliche Bitte um mehr Details.
+
+*Die Kuratierung macht Ponte, die Bauenden entscheiden am Ende — transparent, und immer im Zweifel
+zugunsten echter Bauender.*
+
 ## So stellst du eine gute Frage
 - Sag, ob es um die **iOS‑App, das Pro‑Gerät oder das Switch‑Gerät** geht.
 - Nenne, **was du versucht hast**, deine Teile/Boards und jede **Fehlermeldung oder Foto**.

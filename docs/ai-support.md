@@ -44,6 +44,26 @@ Either way your question helps — track ② answers become new documentation.
 > firmware the AI wrote, reviewed live by the team). The fun, and the *why*, of team‑collaboration
 > AI‑assisted Support. A shorter single‑question example: [**"Which motor can replace the EOL one?"**](ai-support-example-pro-motor.md).
 
+## 🧹 What we answer — a curated Q&A
+
+To keep this a high‑signal resource for builders, **Ponte (our AI) does a first‑pass curation of
+every new question, and the bFaaaP team has the final say.** We do this **in the open** — here's the deal:
+
+- **We prioritize questions that help someone build, reproduce, debug, or improve bFaaaP** — including
+  genuine **design ideas**, clear **bug reports**, and **show‑and‑tell** of your build. Those get drafted
+  and answered, and the useful ones become new docs.
+- **Detail helps.** Say what you're building, what you tried, your parts/boards, and add an **error
+  message or photo** — detailed questions get better, faster answers.
+- **Be kind and constructive.** This is **assistive technology**; empathy is our foundation. We follow a
+  simple code of conduct.
+- **We remove noise.** **Spam, off‑topic posts, hostile/uncivil content, and automated or bulk questions**
+  (e.g. bots or other AIs mass‑posting) are hidden or removed and won't be answered.
+- **If a question is unclear, we ask — we don't reject.** So if you're a genuine builder, you'll always
+  get a reply, even if it's a friendly request for more detail.
+
+*Curation is by Ponte with the makers as final deciders — transparent, and always erring toward helping
+a real builder.*
+
 ## How to ask a good question
 
 - Say whether it's about the **iOS app, the Pro device, or the Switch device**.
