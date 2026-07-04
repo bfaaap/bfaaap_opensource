@@ -3,8 +3,8 @@
 > 🌐 **English** · [日本語](../../i18n/ja/docs/build/ios.md) · [Deutsch](../../i18n/de/docs/build/ios.md)
 
 The app is required for **both** devices (Pro and Switch). It reads your head angle with Face‑ID
-face tracking and sends pedal commands over Bluetooth. You can also just **download it** from the
-App Store — building from source is for developers who want to customise or contribute.
+face tracking and sends pedal commands over Bluetooth. You can also just **download it for free** from
+the App Store — building from source is for developers who want to customise or contribute.
 
 > Reference: [`ios-app/BUILD.md`](../../ios-app/BUILD.md) · [`ios-app/CODE-STRUCTURE.md`](../../ios-app/CODE-STRUCTURE.md) · [`ios-app/DESIGN-HIGHLIGHTS.md`](../../ios-app/DESIGN-HIGHLIGHTS.md)
 
@@ -38,7 +38,7 @@ tilt) and **multiplier** (sensitivity); together these two presets give your **r
 how fast the pedal follows your head. See the BLE flow in [`ios-app/BLE-CONNECTION-FLOW.md`](../../ios-app/BLE-CONNECTION-FLOW.md)
 and operation in [`docs/operation/`](../operation/).
 
-> Prefer not to build? Get it on the **App Store**: <https://apps.apple.com/jp/app/bfaaapswitch/id1545866059>
+> Prefer not to build? Get it **free** on the **App Store**: <https://apps.apple.com/jp/app/bfaaapswitch/id1545866059>
 
 ---
 → [Build hub](README.md) · [Pro build](pro.md) · [Switch build](switch.md)

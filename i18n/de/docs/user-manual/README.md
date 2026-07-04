@@ -15,7 +15,7 @@ Das Pedal eines **E‑Pianos / Keyboards** wird gesteuert, indem die **Kopfneigu
 der KI der iOS‑ (oder Android‑)App erfasst wird — getragene („singende“) Töne ohne Einsatz der Füße.
 Das bFaaaP‑Switch‑System benötigt **sowohl** das Switch‑Gerät **als auch** die App. Das Switch‑Gerät
 (**japanische Funkzulassung 技適 R018‑180280**) wird **auf Bestellung gefertigt** — kaufe es zuerst bei
-<https://ui.saaipf.com/app3/>, dann die App.
+<https://ui.saaipf.com/app3/>, dann lade die **kostenlose** App.
 
 ## 2. Das Gerät an das E‑Piano anschließen
 

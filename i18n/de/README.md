@@ -160,5 +160,5 @@ gewährt. Falls das zutrifft, kontaktiere bitte **Tomoyuki Shishido** (ORCID
 ## Mitwirkende
 
 Entwickelt von **Tomoyuki Shishido** und den bFaaaP‑/**Platanus**‑Mitgliedern (u. a. M. Ootaki,
-H. Narusawa — siehe [Mitglieder](../../docs/members/)). Die iOS‑App ist im App Store als
+H. Narusawa — siehe [Mitglieder](../../docs/members/)). Die iOS‑App ist **kostenlos** im App Store als
 **bFaaaPSwitch** erhältlich. Illustrationen von Saki Shiokawa und dem bFaaaP‑Projekt (KI‑gestützt).

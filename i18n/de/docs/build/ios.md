@@ -3,8 +3,8 @@
 > 🌐 [English](../../../../docs/build/ios.md) · [日本語](../../../ja/docs/build/ios.md) · **Deutsch**
 
 Die App wird für **beide Geräte (Pro und Switch)** benötigt. Sie liest den Kopfwinkel per
-Face‑ID‑Gesichts‑Tracking und sendet Pedalbefehle per Bluetooth. Du kannst sie auch einfach aus dem
-App Store **herunterladen** — das Bauen aus dem Quellcode ist für Entwickler, die anpassen oder
+Face‑ID‑Gesichts‑Tracking und sendet Pedalbefehle per Bluetooth. Du kannst sie auch einfach **kostenlos**
+aus dem App Store **herunterladen** — das Bauen aus dem Quellcode ist für Entwickler, die anpassen oder
 beitragen möchten.
 
 > Referenz: [`ios-app/BUILD.md`](../../../../ios-app/BUILD.md) · [`ios-app/CODE-STRUCTURE.md`](../../../../ios-app/CODE-STRUCTURE.md) · [`ios-app/DESIGN-HIGHLIGHTS.md`](../../../../ios-app/DESIGN-HIGHLIGHTS.md)
@@ -41,7 +41,7 @@ weit neigen) und deinen **Faktor** (Empfindlichkeit) ein; beide zusammen ergeben
 [`ios-app/BLE-CONNECTION-FLOW.md`](../../../../ios-app/BLE-CONNECTION-FLOW.md), den Betrieb in
 [`docs/operation/`](../../../../docs/operation/).
 
-> Lieber nicht selbst bauen? Hol sie aus dem **App Store**: <https://apps.apple.com/jp/app/bfaaapswitch/id1545866059>
+> Lieber nicht selbst bauen? Hol sie **kostenlos** aus dem **App Store**: <https://apps.apple.com/jp/app/bfaaapswitch/id1545866059>
 
 ---
 → [Build‑Hub](README.md) · [Pro bauen](pro.md) · [Switch bauen](switch.md)

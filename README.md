@@ -164,5 +164,5 @@ inclusively, bFaaaP patent licensing is, as policy, free.** If that fits your us
 ## Credits
 
 Developed by **Tomoyuki Shishido** and the bFaaaP / **Platanus** members (incl. M. Ootaki,
-H. Narusawa, and others — see [Members](docs/members/)). The iOS app is on the App Store as
+H. Narusawa, and others — see [Members](docs/members/)). The iOS app is **free** on the App Store as
 **bFaaaPSwitch**. Illustrations by **Saki Shiokawa** and the bFaaaP project (AI‑assisted).

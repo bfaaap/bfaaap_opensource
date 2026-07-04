@@ -16,8 +16,8 @@ The pedal of an **electric piano / keyboard** is controlled by detecting the
 player's **head angle** with the iOS (or Android) app's AI — sustained ("singing")
 notes without using the feet. The bFaaaP Switch system needs **both** the Switch
 device and the app. The Switch device (**Japan radio cert. 技適 R018‑180280**) is
-**build‑to‑order** — buy it from <https://ui.saaipf.com/app3/> first, then buy the
-app.
+**build‑to‑order** — buy it from <https://ui.saaipf.com/app3/> first, then download
+the **free** app.
 
 ## 2. Connect the device to the electric piano
 
