@@ -347,7 +347,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = bFaaaPSwitch1/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = bFaaaP_ProSwitch;
+				INFOPLIST_KEY_CFBundleDisplayName = "bFaaaP Pro & Switch";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -374,7 +374,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = bFaaaPSwitch1/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = bFaaaP_ProSwitch;
+				INFOPLIST_KEY_CFBundleDisplayName = "bFaaaP Pro & Switch";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (

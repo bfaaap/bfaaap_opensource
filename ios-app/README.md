@@ -1,4 +1,4 @@
-# iOS controller app (bFaaaPSwitch)
+# iOS controller app (bFaaaP Pro & Switch)
 
 The SwiftUI app that reads the user's head angle (ARKit / TrueDepth) and streams
 it over Bluetooth LE to the pedal device.
@@ -22,7 +22,7 @@ BLE protocol is identical; only the device hardware differs.
 
 | Item | Value |
 |------|-------|
-| Display name | bFaaaP_ProSwitch (App Store: **bFaaaPSwitch**) |
+| Display name | **bFaaaP Pro & Switch** (on‑device + App Store; Xcode target stays `bFaaaPSwitch1`) |
 | Bundle ID (in repo) | `com.example.bfaaap` (placeholder — set your own) |
 | Min iOS | 14.5 |
 | Language / UI | Swift 5, SwiftUI |

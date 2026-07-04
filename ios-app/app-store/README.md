@@ -1,4 +1,4 @@
-# App Store listing — bFaaaPSwitch
+# App Store listing — bFaaaP Pro & Switch
 
 The iOS controller app is published **free** on the App Store:
 
@@ -8,7 +8,7 @@ The iOS controller app is published **free** on the App Store:
 
 | Field | Value |
 |-------|-------|
-| Name | **bFaaaPSwitch** |
+| Name | **bFaaaP Pro & Switch** (the app drives both the Pro and the Switch) |
 | Seller | Tomoyuki Shishido |
 | Price | **Free** |
 | Version | 2.0 (min iOS 14.5) |
