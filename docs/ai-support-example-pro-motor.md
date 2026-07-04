@@ -194,10 +194,48 @@ needs **filtering** (low‑pass / averaging) and gives a **relative**, not absol
 <td width="120" valign="top"><img src="media/avatars/narusawa.png" width="104" alt="Hiroyuki Narusawa avatar"></td>
 <td valign="top">
 
-**🛠️ Hiroyuki Narusawa** &nbsp;·&nbsp; <sub>*to reply*</sub>
+**🛠️ Hiroyuki Narusawa** &nbsp;·&nbsp; <sub>answered (2026‑07‑04)</sub>
 
-🕐 Over to Narusawa — he built the working unit, so this track ② question is his to answer. His reply
-will drop straight here.
+✅ You **don't need a separate sensor.** A **gap opens between the commanded position and the actual
+rotor position** — when that gap grows large, judge it's **being pressed hard.** The **up and down**
+positions read the same way. That's exactly what the **RX/TX terminals are for.**
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="120" valign="top"><img src="media/avatars/tanaka.png" width="104" alt="Haruto Tanaka avatar"></td>
+<td valign="top">
+
+**⚡ Haruto Tanaka** &nbsp;·&nbsp; <sub>reply → Narusawa</sub>
+
+💬 I'd assumed a **current sensor** would be more responsive, but the **position‑error** approach really
+is enough. I don't fully grasp the deviation‑detection algorithm yet, so I'm going to study it. Thank
+you — **please take care of yourself.** …And **Ponte, why don't you jump in too?**
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="120" valign="top"><img src="media/avatars/ai.png" width="104" alt="Ponte avatar"></td>
+<td valign="top">
+
+**🤖 Ponte** &nbsp;·&nbsp; <sub>invited in — a study note</sub>
+
+Glad to. The **deviation detection** in plain terms: a closed‑loop stepper tracks **two numbers** — the
+**commanded** position (where the firmware told it to go) and the **actual** position (where the encoder
+says the shaft is). Their difference is the **following error.** When the pedal pushes back, the shaft
+can't fully reach the commanded step, so the following error **grows** — *that growth is the press‑force
+proxy,* no extra sensor. The driver streams both numbers over exactly the **RX/TX (UART)** lines Narusawa
+named, so the Pico reads **force and position from the same two wires.** Caveats: it's a **relative**
+signal (calibrate the "pressed" threshold on the bench, like the up/down limits), and Tanaka's
+responsiveness instinct isn't wrong — a current sensor *can* react a hair sooner, but it needs filtering
+and reuses none of the closed‑loop driver already chosen (option A), whereas following‑error is **free**
+with it. That's why Narusawa's answer is the elegant one. *I sketch; the makers hold the gavel.*
 
 </td>
 </tr>

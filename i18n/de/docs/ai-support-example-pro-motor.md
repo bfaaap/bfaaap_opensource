@@ -169,10 +169,49 @@ Narusawa.
 <td width="120" valign="top"><img src="../../../docs/media/avatars/narusawa.png" width="104" alt="Avatar von Hiroyuki Narusawa"></td>
 <td valign="top">
 
-**🛠️ Hiroyuki Narusawa** &nbsp;·&nbsp; <sub>*Antwort folgt*</sub>
+**🛠️ Hiroyuki Narusawa** &nbsp;·&nbsp; <sub>beantwortet (04.07.2026)</sub>
 
-🕐 Weiter an Narusawa — er hat das funktionierende Gerät gebaut, also ist diese Frage der Spur ②
-seine. Seine Antwort landet direkt hier.
+✅ Du brauchst **keinen separaten Sensor.** Es **öffnet sich eine Lücke zwischen der befohlenen Position
+und der tatsächlichen Rotorposition** — wird sie groß, dann urteilst du: **es wird kräftig gedrückt.**
+Die **obere und untere** Position liest man genauso. **Genau dafür sind die RX/TX‑Anschlüsse da.**
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="120" valign="top"><img src="../../../docs/media/avatars/tanaka.png" width="104" alt="Avatar von Haruto Tanaka"></td>
+<td valign="top">
+
+**⚡ Haruto Tanaka** &nbsp;·&nbsp; <sub>Antwort → Narusawa</sub>
+
+💬 Ich hatte angenommen, ein **Stromsensor** wäre reaktionsschneller, aber der **Positionsfehler**‑Ansatz
+reicht wirklich aus. Den Abweichungs‑Erkennungs‑Algorithmus verstehe ich noch nicht ganz, also werde ich
+ihn lernen. Danke — **pass bitte auf dich auf.** … Und **Ponte, warum mischst du dich nicht auch ein?**
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="120" valign="top"><img src="../../../docs/media/avatars/ai.png" width="104" alt="Avatar von Ponte"></td>
+<td valign="top">
+
+**🤖 Ponte** &nbsp;·&nbsp; <sub>eingeladen — eine Lernnotiz</sub>
+
+Gern. Die **Abweichungs‑Erkennung** einfach gesagt: Ein Closed‑Loop‑Schrittmotor führt **zwei Zahlen** —
+die **befohlene** Position (wohin die Firmware ihn schickte) und die **tatsächliche** Position (wo der
+Encoder die Welle sieht). Ihre Differenz ist der **Schleppfehler.** Drückt das Pedal zurück, erreicht die
+Welle den befohlenen Schritt nicht ganz, also **wächst** der Schleppfehler — *dieses Wachstum ist der
+Druckkraft‑Ersatzwert,* ohne Zusatzsensor. Der Treiber gibt beide Zahlen über genau die von Narusawa
+genannten **RX/TX‑(UART‑)**Leitungen aus, sodass der Pico **Kraft und Position über dieselben zwei
+Drähte** liest. Vorbehalte: Es ist ein **relatives** Signal (die „gedrückt"‑Schwelle kalibrierst du an
+der Werkbank, wie die oberen/unteren Grenzen), und Tanakas Reaktions‑Instinkt ist nicht falsch — ein
+Stromsensor *kann* eine Spur früher reagieren, braucht aber Filterung und nutzt nichts vom bereits
+gewählten Closed‑Loop‑Treiber (Option A), während der Schleppfehler **gratis** dazukommt. Deshalb ist
+Narusawas Antwort die elegante. *Ich skizziere; den Hammer halten die Bauenden.*
 
 </td>
 </tr>

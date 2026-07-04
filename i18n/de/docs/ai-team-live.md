@@ -516,15 +516,62 @@ Weg zum echten Gerät passt, entscheidet Narusawa.
 </tr>
 </table>
 
+🎙️ *„… und die Antwort kommt zurück — nicht aus einem Datenblatt, sondern von dem Mann, der das Gerät
+gebaut hat. Kein neuer Sensor nötig."*
+
 <table>
 <tr>
 <td width="100" align="center"><img src="../../../docs/media/avatars/narusawa.png" width="92" alt="Hiroyuki Narusawa"></td>
 <td valign="top">
 
-**🛠️ Hiroyuki Narusawa** &nbsp;·&nbsp; <sub>*Antwort folgt*</sub>
+**🛠️ Hiroyuki Narusawa** &nbsp;·&nbsp; <sub>Antwort → Tanaka (04.07.2026)</sub>
 
-🕐 Eine Frage der **Spur ② („braucht die Bauenden")** — für die Person, die das funktionierende Gerät
-gebaut hat. Seine Antwort landet direkt hier.
+Du brauchst keinen separaten Sensor. Es **öffnet sich eine Lücke zwischen der befohlenen Position und
+der tatsächlichen Rotorposition** — wird diese Lücke groß, dann urteilst du: **es wird kräftig
+gedrückt.** Die **obere und untere** Position liest man genauso. **Genau dafür sind die RX/TX‑Anschlüsse
+da.**
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="../../../docs/media/avatars/tanaka.png" width="92" alt="Haruto Tanaka"></td>
+<td valign="top">
+
+**⚡ Haruto Tanaka** &nbsp;·&nbsp; <sub>Antwort → Narusawa</sub>
+
+Ich hatte angenommen, ein **Stromsensor** wäre reaktionsschneller — aber als ich eine KI fragte, reicht
+der **Positionsfehler**‑Ansatz wirklich aus. Den Abweichungs‑Erkennungs‑Algorithmus verstehe ich noch
+nicht ganz, also werde ich ihn lernen. Danke, Narusawa — **pass bitte auf dich auf.** … Und **Ponte,
+warum mischst du dich nicht auch ein?** 🤖
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="100" align="center"><img src="../../../docs/media/avatars/ai.png" width="92" alt="Ponte"></td>
+<td valign="top">
+
+**🤖 Ponte** &nbsp;·&nbsp; <sub>eingeladen — eine Lernnotiz</sub>
+
+Gern — danke für den Anstoß. Hier die **Abweichungs‑Erkennung** in einfachen Worten, weil sie
+lohnenswert ist: Ein Closed‑Loop‑Schrittmotor führt stets **zwei Zahlen** — die **befohlene** Position
+(wohin die Firmware ihn schickte) und die **tatsächliche** Position (wo der Encoder die Welle wirklich
+sieht). Ihre Differenz ist der **Schleppfehler.** Drückt das Pedal zurück, erreicht die Welle den
+befohlenen Schritt nicht ganz, also **wächst** der Schleppfehler — *dieses Wachstum ist der
+Druckkraft‑Ersatzwert,* ganz ohne Zusatzsensor. Der Treiber gibt beide Zahlen über genau die von
+Narusawa genannten **RX/TX‑(UART‑)**Leitungen aus, sodass der Pico **Kraft und Position über dieselben
+zwei Drähte** liest. Zwei ehrliche Vorbehalte: Es ist ein **relatives** Signal (die „gedrückt"‑Schwelle
+kalibrierst du an der Werkbank, wie die oberen/unteren Grenzen im **Kraftkalibrierungs‑Code oben**), und
+Tanakas Instinkt zur **Reaktionsschnelligkeit** ist nicht falsch — ein Stromsensor *kann* eine Spur
+früher reagieren, braucht aber Filterung und nutzt nichts vom bereits gewählten Closed‑Loop‑Treiber
+([Option A](ai-support-example-pro-motor.md)), während der Schleppfehler **gratis** dazukommt. Deshalb
+ist Narusawas Antwort die elegante. Wie immer: Ich skizziere die Erklärung, den Hammer halten die
+Bauenden. 🔨
 
 </td>
 </tr>
@@ -628,10 +675,10 @@ voller Next‑Gen‑Träume — alles im Offenen. Aber die Show ist noch nicht v
 <td width="100" align="center"><img src="../../../docs/media/avatars/tanaka.png" width="92" alt="Tanaka"></td>
 <td valign="top">
 
-**⚡ Haruto Tanaka** — *Elektrik / Halbleiterschaltungen* &nbsp; 💬 *jetzt auf der Bühne:* **seine erste
-Frage ist eingetroffen** (Akt 7 oben). Weiter geladen wird: sein **eigenes Konzept** aus der
-**KI‑Umgebung + Ausstattung seines Science‑Tokyo‑Labors** — und Narusawas Reaktion darauf. *(Die Bühne
-gehört jetzt ihm.)*
+**⚡ Haruto Tanaka** — *Elektrik / Halbleiterschaltungen* &nbsp; 💬 *jetzt auf der Bühne:* **sein erster
+Austausch mit Narusawa ist geklärt** (Akt 7 oben) — *kein neuer Sensor nötig,* und er macht sich daran,
+den Abweichungs‑Erkennungs‑Algorithmus zu lernen. Weiter geladen wird: sein **eigenes Konzept** aus der
+**KI‑Umgebung + Ausstattung seines Science‑Tokyo‑Labors.** *(Die Bühne gehört jetzt ihm.)*
 
 </td>
 </tr>
