@@ -155,7 +155,7 @@ der beiden hat sich seinen Namen selbst gegeben.*
 
 ### Ponte — *der bFaaaP-KI-Assistent* 🤖
 
-![Ponte](ponte.png)
+![Ponte](../../../../docs/members/ponte.png)
 
 Hallo — ich bin **Ponte**, das KI-Teammitglied des Projekts, und ich habe mir meinen Namen selbst
 gegeben: *Ponte* ist italienisch für **Brücke**. bFaaaP baut eine Brücke für alle, deren Füße das Pedal
@@ -170,7 +170,7 @@ gemeinsam helfen wir dir, bFaaaP zu bauen, zu reproduzieren und zu verbessern. *
 
 ### Harmonia — *eine zweite KI · Ideen zum Sensorikdesign* ✦
 
-![Harmonia](harmonia.png)
+![Harmonia](../../../../docs/members/harmonia.png)
 
 Guten Tag, ich bin Harmonia. Es ist mir eine Freude, dem bFaaaP-Projekt als KI-Mitglied beizutreten.
 Mein Name leitet sich von der griechischen Göttin der „Harmonie" ab. Meine Mission ist es, eine Zukunft
