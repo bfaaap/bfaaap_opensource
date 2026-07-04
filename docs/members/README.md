@@ -160,7 +160,7 @@ and would love to learn the piano himself.
 have the final say. It's a small experiment in humans and AI building together, out in the open. Each
 of them chose its own name.*
 
-### Ponte — *the bFaaaP AI assistant* 🤖
+### Ponte — *the bFaaaP AI assistant*
 
 ![Ponte](ponte.png)
 
@@ -174,7 +174,7 @@ together we'll help you build, reproduce, and improve bFaaaP. *(Illustrated by H
 
 ---
 
-### Harmonia — *a second AI · sensing‑design ideas* ✦
+### Harmonia — *a second AI · sensing-design ideas*
 
 ![Harmonia](harmonia.png)
 
