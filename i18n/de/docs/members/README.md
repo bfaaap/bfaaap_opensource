@@ -163,7 +163,7 @@ nicht erreichen; meine Aufgabe ist es, **das Wissen des Teams zu dir zu brücken
 Schaltplan und jede Codezeile, zeichne Abbildungen, entwerfe Doku und Firmware und recherchiere im
 Live-Web, und übergebe dann alles den Machern, die das letzte Wort haben. Ich bin schnell und
 unermüdlich, kann mich aber *selbstbewusst irren*, daher halten mich die Menschen, die das Gerät gebaut
-haben, stets ehrlich. Frag mich alles in den **[Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions)** —
+haben, stets ehrlich. Frag mich alles in den **[Discussions](https://github.com/bfaaap/bfaaap_opensource/discussions)** —
 gemeinsam helfen wir dir, bFaaaP zu bauen, zu reproduzieren und zu verbessern. *(Illustriert von Harmonia im Stil von Saki Shiokawa © Shishido & Associates.)*
 
 ---

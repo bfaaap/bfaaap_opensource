@@ -88,7 +88,7 @@
 | Natsu-no-Kyoen 2022 event site | [natsunokyoen2022.github.io](https://natsunokyoen2022.github.io/) | 稼働中 |
 | Home mechanical-ventilation survey, Japan (MHLW intractable-disease research) | [mhlw-grants.niph.go.jp](https://mhlw-grants.niph.go.jp/) | 稼働中 —— 2020年時点で在宅 TPPV 約7,700／HMV 約21,000 |
 | WHO — new wheelchair provision guidelines (~80 million people need a wheelchair) | [who.int](https://www.who.int/news/item/05-06-2023-who-releases-new-wheelchair-provision-guidelines) | 稼働中 |
-| Project repository (this repo) | [github.com/TomoShishido/bfaaap_opensource](https://github.com/TomoShishido/bfaaap_opensource) | **公開リリースまで非公開 —— それまで匿名ユーザーには 404** |
+| Project repository (this repo) | [github.com/bfaaap/bfaaap_opensource](https://github.com/bfaaap/bfaaap_opensource) | **公開リリースまで非公開 —— それまで匿名ユーザーには 404** |
 
 > **リンク切れ・時点依存リンクについて。** 実際にリンク切れしているのは **CanAssist** のページのみで、
 > **2018年4月2日にキャプチャされた Internet Archive のスナップショット**で引用しているため、引用は

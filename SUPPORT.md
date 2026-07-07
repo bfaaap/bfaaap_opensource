@@ -9,7 +9,7 @@ published so anyone can build and improve them, and pianists who cannot use thei
 play. Your support keeps the project free and growing. 🙏
 
 ## 🙋 Need help building? (AI‑assisted Support)
-Ask in **[GitHub Discussions (Q&A)](https://github.com/TomoShishido/bfaaap_opensource/discussions)**.
+Ask in **[GitHub Discussions (Q&A)](https://github.com/bfaaap/bfaaap_opensource/discussions)**.
 We **draft an answer with AI from this repository's own materials, then the bFaaaP team
 reviews it** for safety/accuracy before posting — so it's public and **not instant** (a reply
 can take a few days). Ask in **any language**; we reply in the same language, and useful answers
@@ -44,4 +44,4 @@ will be added here, billed via **Shishido & Associates**. *(Placeholder — link
 ---
 > bFaaaP is run by **Shishido & Associates**. Contributions are *support for an open
 > project*, **not** tax‑deductible charitable donations. Thank you for helping make music
-> accessible. **Build questions → [GitHub Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions)** (AI‑assisted Support). Other contact: <shishid@saaipf.com>
+> accessible. **Build questions → [GitHub Discussions](https://github.com/bfaaap/bfaaap_opensource/discussions)** (AI‑assisted Support). Other contact: <shishid@saaipf.com>

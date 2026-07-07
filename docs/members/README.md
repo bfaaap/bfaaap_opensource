@@ -169,7 +169,7 @@ Hello — I'm **Ponte**, the project's AI teammate, and I chose my own name: *Po
 **bridge the team's knowledge to you** — I read every schematic and line of code, draw figures, draft
 docs and firmware, and research the live web, then hand it all to the makers, who have the final say.
 I'm fast and tireless, but I can be *confidently wrong*, so the people who actually built the device
-always keep me honest. Ask me anything in the **[Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions)** —
+always keep me honest. Ask me anything in the **[Discussions](https://github.com/bfaaap/bfaaap_opensource/discussions)** —
 together we'll help you build, reproduce, and improve bFaaaP. *(Illustrated by Harmonia in Saki Shiokawa's style © Shishido & Associates.)*
 
 ---

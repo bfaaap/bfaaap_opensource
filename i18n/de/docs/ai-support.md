@@ -2,7 +2,7 @@
 
 > 🌐 [English](../../../docs/ai-support.md) · [日本語](../../ja/docs/ai-support.md) · **Deutsch**
 
-Du baust bFaaaP selbst? **Frag uns in den [GitHub Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions) (Q&A).**
+Du baust bFaaaP selbst? **Frag uns in den [GitHub Discussions](https://github.com/bfaaap/bfaaap_opensource/discussions) (Q&A).**
 Das ist unser zentraler Hilfe‑Dienst: Du stellst eine Frage und bekommst eine Antwort, die **mit KI
 aus den Materialien dieses Repositories entworfen und dann vom bFaaaP‑Team geprüft** wird, bevor sie
 veröffentlicht wird.
@@ -68,7 +68,7 @@ zugunsten echter Bauender.*
 - Bei mechanischen Teilen nenne deinen **3D‑Drucker** und den **Teilenamen**.
 - Frag in **jeder Sprache** — wir antworten in der Sprache, die du verwendet hast.
 
-→ **[Eine Q&A‑Diskussion öffnen](https://github.com/TomoShishido/bfaaap_opensource/discussions)**
+→ **[Eine Q&A‑Diskussion öffnen](https://github.com/bfaaap/bfaaap_opensource/discussions)**
 
 > ℹ️ Antworten sind allgemeine Informationen zur Unterstützung von DIY‑Nachbau/‑Verbesserung, auf
 > **eigene Gefahr**. Die bFaaaP‑Patente werden für gemeinnützige, inklusive Nutzung kostenlos

@@ -20,7 +20,7 @@
 ## ステップ1 —— ソースを取得
 リポジトリをクローンして Xcode プロジェクトを開きます：
 ```sh
-git clone https://github.com/TomoShishido/bfaaap_opensource.git
+git clone https://github.com/bfaaap/bfaaap_opensource.git
 open bfaaap_opensource/ios-app/src/bFaaaPSwitch1.xcodeproj
 ```
 

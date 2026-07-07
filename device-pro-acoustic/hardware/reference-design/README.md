@@ -90,7 +90,7 @@ two USB slots for flashing, four board standoffs and a screw-down lid:
 **Motor-dependent parts (not here):** the **motor mount**, **lead-screw bearing blocks** and
 **push-rod guide** depend on the motor/screw you choose, so they're best finalised once you
 pick the motor (IQ vs stepper). Ask in
-[Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions) and we can draft
+[Discussions](https://github.com/bfaaap/bfaaap_opensource/discussions) and we can draft
 them for your build.
 
 ## Suggested parts — examples only (AI-suggested, not endorsed)

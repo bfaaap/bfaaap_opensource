@@ -755,7 +755,7 @@ gebaut haben**, machen aus einem plausiblen Entwurf etwas, dem du vertrauen kann
 zu tun bedeutet, dass du siehst, *wie* die Antwort zustande kommt, nicht nur die Antwort. Das ist
 **KI‑gestützter Support, Team‑Kollaborationsmodus** — und ehrlich gesagt macht es viel Spaß zuzusehen.
 
-**Mit dabei?** **[An der Diskussion teilnehmen →](https://github.com/TomoShishido/bfaaap_opensource/discussions)** —
+**Mit dabei?** **[An der Diskussion teilnehmen →](https://github.com/bfaaap/bfaaap_opensource/discussions)** —
 deine Frage oder Idee kann der nächste Akt werden.
 
 ---

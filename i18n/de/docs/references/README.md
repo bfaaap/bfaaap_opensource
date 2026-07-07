@@ -89,7 +89,7 @@ unten wurden im **Juni 2026** gegen den Verlag bzw. das Register erneut überpr�
 | Natsu-no-Kyoen 2022 event site | [natsunokyoen2022.github.io](https://natsunokyoen2022.github.io/) | aktiv |
 | Home mechanical-ventilation survey, Japan (MHLW intractable-disease research) | [mhlw-grants.niph.go.jp](https://mhlw-grants.niph.go.jp/) | aktiv — ~7,700 häusliche TPPV / ~21,000 HMV (Stand 2020) |
 | WHO — new wheelchair provision guidelines (~80 million people need a wheelchair) | [who.int](https://www.who.int/news/item/05-06-2023-who-releases-new-wheelchair-provision-guidelines) | aktiv |
-| Project repository (this repo) | [github.com/TomoShishido/bfaaap_opensource](https://github.com/TomoShishido/bfaaap_opensource) | **Privat bis zur Veröffentlichung — bis dahin 404 für anonyme Besucher** |
+| Project repository (this repo) | [github.com/bfaaap/bfaaap_opensource](https://github.com/bfaaap/bfaaap_opensource) | **Privat bis zur Veröffentlichung — bis dahin 404 für anonyme Besucher** |
 
 > **Zu toten / zeitspezifischen Links.** Nur die **CanAssist**-Seite ist tatsächlich verfallen; sie
 > wird über den **am 2. Apr. 2018 erfassten Internet-Archive-Snapshot** zitiert, sodass das Zitat die

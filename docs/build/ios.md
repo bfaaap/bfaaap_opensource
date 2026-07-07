@@ -20,7 +20,7 @@ the App Store — building from source is for developers who want to customise o
 ## Step 1 — Get the source
 Clone the repo and open the Xcode project:
 ```sh
-git clone https://github.com/TomoShishido/bfaaap_opensource.git
+git clone https://github.com/bfaaap/bfaaap_opensource.git
 open bfaaap_opensource/ios-app/src/bFaaaPSwitch1.xcodeproj
 ```
 

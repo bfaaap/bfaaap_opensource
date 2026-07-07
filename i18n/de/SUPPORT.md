@@ -10,7 +10,7 @@ die ihre Füße nicht einsetzen können, spielen können. Deine Unterstützung h
 am Wachsen. 🙏
 
 ## 🙋 Hilfe beim Bauen? (KI‑gestützter Support)
-Frag in **[GitHub Discussions (Q&A)](https://github.com/TomoShishido/bfaaap_opensource/discussions)**.
+Frag in **[GitHub Discussions (Q&A)](https://github.com/bfaaap/bfaaap_opensource/discussions)**.
 Wir **entwerfen eine Antwort mit KI aus den Materialien dieses Repos, dann prüft das bFaaaP‑Team sie**
 auf Sicherheit/Genauigkeit, bevor sie gepostet wird — öffentlich und **nicht sofort** (eine Antwort
 kann ein paar Tage dauern). Frag in **jeder Sprache**; wir antworten in derselben Sprache, und nützliche
@@ -45,4 +45,4 @@ hier ergänzt, abgerechnet über **Shishido & Associates**. *(Platzhalter — Li
 ---
 > bFaaaP wird von **Shishido & Associates** betrieben. Beiträge sind *Unterstützung für ein offenes
 > Projekt*, **keine** steuerlich absetzbaren Spenden. Danke, dass du hilfst, Musik zugänglich zu
-> machen. Bau‑Fragen → **[GitHub Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions)** (KI‑gestützter Support). Sonstiger Kontakt: <shishid@saaipf.com>
+> machen. Bau‑Fragen → **[GitHub Discussions](https://github.com/bfaaap/bfaaap_opensource/discussions)** (KI‑gestützter Support). Sonstiger Kontakt: <shishid@saaipf.com>

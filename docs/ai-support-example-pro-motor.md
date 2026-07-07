@@ -272,7 +272,7 @@ trust. Showing that exchange in the open is the point: you see *how* the answer 
 just the answer.
 
 **Have a better idea, or built it with a different motor?**
-**[Join the discussion →](https://github.com/TomoShishido/bfaaap_opensource/discussions)** — your
+**[Join the discussion →](https://github.com/bfaaap/bfaaap_opensource/discussions)** — your
 input can become part of this thread, and part of the docs.
 
 ---

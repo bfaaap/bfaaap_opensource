@@ -734,7 +734,7 @@ draft into something you can trust, and doing it **in the open** means you see *
 reached, not just the answer. That's **AI‑assisted Support, team‑collaboration mode** — and honestly,
 it's a lot of fun to watch.
 
-**Want in?** **[Join the discussion →](https://github.com/TomoShishido/bfaaap_opensource/discussions)** —
+**Want in?** **[Join the discussion →](https://github.com/bfaaap/bfaaap_opensource/discussions)** —
 your question or idea can become the next act.
 
 ---

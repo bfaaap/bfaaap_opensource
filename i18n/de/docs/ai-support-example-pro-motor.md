@@ -244,7 +244,7 @@ Bauenden zu erwägen.
 Die KI ist schnell und liest alles im Repository, aber sie **kann sich selbstbewusst irren** — und bei einer offenen Frage wie „der beste zu verwendende Motor" gibt es keine einzige Lehrbuchantwort. Das bFaaaP‑Team hat **das Gerät tatsächlich gebaut**, daher macht seine Prüfung aus einem plausiblen KI‑Entwurf etwas, dem man vertrauen kann. Diesen Austausch offen zu zeigen, ist der Punkt: Du siehst, *wie* die Antwort zustande kommt, nicht nur die Antwort.
 
 **Hast du eine bessere Idee oder es mit einem anderen Motor gebaut?**
-**[Mach bei der Diskussion mit →](https://github.com/TomoShishido/bfaaap_opensource/discussions)** — dein
+**[Mach bei der Diskussion mit →](https://github.com/bfaaap/bfaaap_opensource/discussions)** — dein
 Beitrag kann Teil dieses Threads und Teil der Doku werden.
 
 ---

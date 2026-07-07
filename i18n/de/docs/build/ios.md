@@ -21,7 +21,7 @@ beitragen möchten.
 ## Schritt 1 — Quellcode holen
 Klone das Repository und öffne das Xcode‑Projekt:
 ```sh
-git clone https://github.com/TomoShishido/bfaaap_opensource.git
+git clone https://github.com/bfaaap/bfaaap_opensource.git
 open bfaaap_opensource/ios-app/src/bFaaaPSwitch1.xcodeproj
 ```
 
