@@ -144,7 +144,7 @@ And now it's **open source**: the app, the firmware, the 3D‑printable parts, a
 are all published so others can study, build, and improve it.
 
 - 🔧 **Build your own:** [Build it yourself](build/) — iOS app · Pro · Switch
-- 🤖 **Get help building:** [AI‑assisted Support](ai-support.md) — ask in GitHub Discussions
+- 🙋 **Get help building:** [Community Support](ai-support.md) — ask in GitHub Discussions
 - 💛 **Support the project:** [SUPPORT](../SUPPORT.md)
 
 *Illustrations by Saki Shiokawa and by the bFaaaP project (AI‑assisted). See also the

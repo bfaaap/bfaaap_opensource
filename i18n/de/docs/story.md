@@ -140,7 +140,7 @@ Und nun ist es **Open Source**: die App, die Firmware, die 3D‑druckbaren Teile
 veröffentlicht, damit andere lernen, bauen und verbessern können.
 
 - 🔧 **Selber bauen:** [Selbst bauen](build/) — iOS‑App · Pro · Switch
-- 🤖 **Hilfe beim Bauen:** [KI‑gestützter Support](ai-support.md) — frag in den GitHub Discussions
+- 🙋 **Hilfe beim Bauen:** [Community‑Support](ai-support.md) — frag in den GitHub Discussions
 - 💛 **Das Projekt unterstützen:** [SUPPORT](../SUPPORT.md)
 
 *Illustrationen von Saki Shiokawa und dem bFaaaP‑Projekt (KI‑gestützt). Siehe auch die

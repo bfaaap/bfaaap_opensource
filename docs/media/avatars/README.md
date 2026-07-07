@@ -1,4 +1,4 @@
-# Member avatars (for AI‑assisted Support threads)
+# Member avatars (for the AI & Team, Live record)
 
 Round avatar icons of the bFaaaP team — cropped from each member's **original hand‑drawn
 illustration by Saki Shiokawa (塩川紗季)** — plus **two AI avatars** (the project's own AI assistant

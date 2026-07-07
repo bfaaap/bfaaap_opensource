@@ -8,16 +8,16 @@ bFaaaP is an **open‑source, inclusive** project. The devices aren't sold — e
 published so anyone can build and improve them, and pianists who cannot use their feet can
 play. Your support keeps the project free and growing. 🙏
 
-## 🙋 Need help building? (AI‑assisted Support)
+## 🙋 Need help building? (Community Support)
 Ask in **[GitHub Discussions (Q&A)](https://github.com/TomoShishido/bfaaap_opensource/discussions)**.
-We **draft an answer with AI from this repository's own materials, then the bFaaaP team
-reviews it** for safety/accuracy before posting — so it's public and **not instant** (a reply
+The **bFaaaP community and team answer using this repository's own open materials** — answers
+are checked by real people for safety/accuracy, so they're public and **not instant** (a reply
 can take a few days). Ask in **any language**; we reply in the same language, and useful answers
 **improve these docs**. Full flow: [`docs/ai-support.md`](docs/ai-support.md).
 
 ## Where your support goes
 - Developing & maintaining the iOS app, firmware, and hardware designs
-- **AI‑assisted Support** (the AI drafting + maintainer review that answers build questions — see [`docs/ai-support.md`](docs/ai-support.md))
+- **Community Support** (the GitHub Discussions Q&A where the community and team answer build questions — see [`docs/ai-support.md`](docs/ai-support.md))
 - Parts & loaner devices for makers and users who need them
 - Concerts, lessons, and demonstrations for people with disabilities
 
@@ -44,4 +44,4 @@ will be added here, billed via **Shishido & Associates**. *(Placeholder — link
 ---
 > bFaaaP is run by **Shishido & Associates**. Contributions are *support for an open
 > project*, **not** tax‑deductible charitable donations. Thank you for helping make music
-> accessible. **Build questions → [GitHub Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions)** (AI‑assisted Support). Other contact: <shishid@saaipf.com>
+> accessible. **Build questions → [GitHub Discussions](https://github.com/TomoShishido/bfaaap_opensource/discussions)** (Community Support). Other contact: <shishid@saaipf.com>
