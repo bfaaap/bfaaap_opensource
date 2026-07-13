@@ -59,6 +59,25 @@ The original anonymized study figures are archived in
 [`docs/history/pct-original-figures/`](history/pct-original-figures/README.md). For the full method,
 statistics and discussion, see the [paper](../bfaaap_arxiv_latex/README.md).
 
+## Ethics
+
+The APEE involved human participants — adults, children (7–11), and people with disabilities.
+Participation was **voluntary**, and **written informed consent was obtained for every participant**:
+
+- **Adults** gave their own written informed consent.
+- **Children (7–11)** — a parent or guardian confirmed written informed consent (arranged through a
+  piano teacher who helped with the study), and the child signed the consent form themselves.
+- **Participants with disabilities** took part with the written consent of a parent or guardian, who
+  also accompanied them and arranged transport to and from the sessions.
+
+Anyone could pause or stop at any time, and the tasks (playing short piano passages) posed no more
+than minimal risk. The authors are independent practitioners, not affiliated with an institution
+that operates an ethics review board (IRB), so no formal IRB approval number is available. The study
+was nonetheless conducted following the ethical principles of the
+[ACM Policy on Research Involving Human Participants and Subjects](https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects)
+— minimizing harm and protecting participants' privacy and right to self‑determination. All data
+shown here are **anonymized** (participants No. 1–15); no personally identifying information appears.
+
 ---
 
 ← Back to [How it works](how-it-works.md) · [Glossary](GLOSSARY.md) · [Story](story.md)

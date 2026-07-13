@@ -159,10 +159,12 @@ $\theta_{\mathrm{off}}$ a user-calibrated offset. The transmitted pedal value is
 v = \mathrm{clamp}\big(\,(\theta-\theta_{\mathrm{off}})\cdot m,\;0,\;99\,\big),
 \label{eq:law}
 \end{equation}
-where $m$ is a user-selected multiplier. The validated parameter ranges are a
-user offset of $3$--$10^\circ$ and a multiplier of $10$--$50$, chosen so
-that a further $2$--$10^\circ$ of tilt reaches full pedal action
-(Figure~\ref{fig:control}a). Engage/release events use \emph{hysteresis}: engage
+where $m$ is a user-selected multiplier. The \emph{recommended} parameter ranges,
+validated in our study, are a user offset of $3$--$10^\circ$ and a multiplier of
+$10$--$50$, chosen so that a further $2$--$10^\circ$ of tilt reaches full pedal
+action (Figure~\ref{fig:control}a); as Table~\ref{tab:participants} reports,
+participants fine-tuned within a slightly wider observed span (offset
+$3$--$19^\circ$, multiplier $8$--$50$). Engage/release events use \emph{hysteresis}: engage
 when $\theta\ge\theta_{\mathrm{off}}$ while released, release when
 $\theta<\theta_{\mathrm{off}}-\delta$ while engaged, with a small dead-band
 $\delta$ (Figure~\ref{fig:control}b). The player presets just two quantities to

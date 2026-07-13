@@ -146,7 +146,7 @@ library). Imported contributor materials (schematic / CAD / photos) are included
 A LaTeX **arXiv** preprint (`main.tex`) is in [`bfaaap_arxiv_latex/`](bfaaap_arxiv_latex/). It
 frames bFaaaP as inclusive design / human–machine interaction whose inventive core is a
 **quantitative, user‑tunable head‑angle control law**, validated by a **human‑subject clinical
-evaluation (APEE)**. Authors: T. Shishido (corresponding), H. Narusawa. *(A peer‑reviewed ACM
+evaluation (APEE)**. Authors: T. Shishido (corresponding), M. Ootaki, H. Narusawa. *(A peer‑reviewed ACM
 TACCESS version is maintained privately.)*
 
 ## Patents, trademark & design
