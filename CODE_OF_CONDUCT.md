@@ -78,4 +78,8 @@ firm**, and — if a post is merely unclear — to **ask, not reject**.
 This applies to all bFaaaP community spaces (Discussions, issues, pull requests). To report a
 concern privately, contact the owners at <shishid@saaipf.com>.
 
+This is **version 1** of our Code of Conduct — it draws on established open‑source codes (the
+[Berlin Code of Conduct](https://berlincodeofconduct.org/) and the Contributor Covenant), adapted
+for our music‑and‑technology community, and will keep evolving together with our moderators.
+
 **Let's build the best community — together.** 🌉🎹

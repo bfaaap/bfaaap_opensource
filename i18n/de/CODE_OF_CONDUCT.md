@@ -46,4 +46,6 @@ Wo Verhalten diese Richtlinien schwerwiegend verletzt, können Moderatoren Beitr
 
 Dies gilt für alle bFaaaP-Community-Bereiche (Discussions, Issues, Pull Requests). Um ein Anliegen vertraulich zu melden, wenden Sie sich an die Eigentümer unter <shishid@saaipf.com>.
 
+Dies ist **Version 1** unseres Verhaltenskodex — er stützt sich auf etablierte Open-Source-Kodizes (den [Berlin Code of Conduct](https://berlincodeofconduct.org/) und den Contributor Covenant), angepasst an unsere Musik-und-Technik-Community, und wird gemeinsam mit unseren Moderatoren weiterentwickelt.
+
 **Lassen Sie uns gemeinsam die beste Community aufbauen.** 🌉🎹
