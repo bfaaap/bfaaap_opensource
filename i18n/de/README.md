@@ -18,7 +18,7 @@ Repository enthält alles, um das Gerät zu bauen und den Controller selbst zu b
 🌱 **Neu?** → [**Die bFaaaP‑Geschichte**](docs/story.md) · [Funktionsweise](docs/how-it-works.md) · [Glossar](docs/GLOSSARY.md)
 🔧 **Selber bauen** → [**Selbst bauen**](docs/build/) (iOS · Pro · Switch)
 🗂 **Quelldateien finden** → [Quellenübersicht](../../docs/SOURCE-MAP.md) — welche Datei/Abbildung/Code zu welcher Erklärung gehört
-🤖 **Hilfe bekommen** → [KI‑gestützter Support](docs/ai-support.md) · 💛 [Projekt unterstützen](SUPPORT.md)
+🙋 **Hilfe bekommen** → [Community‑Support](docs/ai-support.md) · 💛 [Projekt unterstützen](SUPPORT.md)
 
 > Status: dieser Ordner (`github_opensource/`) ist der Staging‑Bereich zur Vorbereitung der
 > Veröffentlichung (siehe [`PUBLISHING-CHECKLIST.md`](../../PUBLISHING-CHECKLIST.md)). Die
@@ -72,8 +72,8 @@ Siehe [`ios-app/DESIGN-HIGHLIGHTS.md`](../../ios-app/DESIGN-HIGHLIGHTS.md).
 4. Die **iOS‑App bauen & installieren** — [`ios-app/`](../../ios-app/) (eigenes Signing‑Team & Bundle‑ID).
 5. **Koppeln, kalibrieren und spielen** — [`docs/operation/`](../../docs/operation/).
 
-Bei einem Schritt hängengeblieben? **[Frag im KI‑gestützten Support](docs/ai-support.md)** — ein von
-Maintainern geprüftes Q&A (keine Sofortantwort; echte Menschen prüfen jede Antwort).
+Bei einem Schritt hängengeblieben? **[Frag in unserem Community‑Q&A](docs/ai-support.md)** — die
+bFaaaP‑Community und das Team prüfen jede Antwort, also keine Sofortantwort.
 
 ### Stückliste (Überblick, Pro‑Linie)
 - iPhone / iPad mit **TrueDepth**‑Frontkamera (Kopf‑Tracking)
@@ -102,9 +102,22 @@ einem Team aus Ingenieuren und Musikern. Den ganzen Weg — mit Vorstellung der 
 ## 💛 Unterstützen
 
 Die Geräte werden nicht verkauft — deine Unterstützung hält bFaaaP frei und am Wachsen
-(Entwicklung, der KI‑gestützte Support, Teile/Leihgeräte sowie inklusive Konzerte & Unterricht).
+(Entwicklung, Community‑Support, Teile/Leihgeräte sowie inklusive Konzerte & Unterricht).
 Siehe [**SUPPORT.md**](SUPPORT.md) (PayPal jetzt; Stripe — Karte / Apple Pay / Google Pay — folgt) oder
 nutze den **Sponsor**‑Button dieses Repos.
+
+## 📣 Poster & Veranstaltungen
+
+Bitte weitersagen — hier ist das bFaaaP‑Open‑Source‑Poster (Vorder‑ und Rückseite). Drucken und Teilen ausdrücklich erwünscht.
+
+<p align="center">
+  <a href="../../docs/media/poster/opensource-poster-front.jpg"><img src="../../docs/media/poster/opensource-poster-front.jpg" width="45%" alt="bFaaaP‑Open‑Source‑Poster, Vorderseite — das Projekt, die Geräte Switch und Pro sowie die QR‑Codes"></a>
+  <a href="../../docs/media/poster/opensource-poster-back.jpg"><img src="../../docs/media/poster/opensource-poster-back.jpg" width="45%" alt="bFaaaP‑Open‑Source‑Poster, Rückseite — die Geschichte seit 2018, das Suzukake‑Konzert 2025 und wie man mitmacht"></a>
+</p>
+
+<p align="center"><sub>Poster‑Design: <b>Masahiro Ootaki</b> (Ootaki Architekturbüro)</sub></p>
+
+> 📅 Dank der freundlichen Unterstützung der **Tokyo Women's Choral Society** wird dieses Poster bei ihrem Konzert **„Composer Exhibition Series Vol.6: Hideki Chihara"** am **Freitag, 31. Juli 2026** verteilt. Wir sind dankbar, unsere Geschichte teilen zu dürfen. → [Konzert‑Ankündigung](https://tokyowomens-cs.website/2026/05/12/composerexhibitionseries-vol6-hidekichihara/)
 
 ## Repository‑Aufbau
 
@@ -113,7 +126,7 @@ nutze den **Sponsor**‑Button dieses Repos.
 | [`ios-app/`](../../ios-app/) | iOS‑Controller‑App — Code, Design‑Notizen, Build‑Anleitung, bereinigter `src/`. Steuert beide Linien. |
 | [`device-pro-acoustic/`](../../device-pro-acoustic/) | **Pro** (akustisch): Firmware, Hardware (`cad/`, `3d-print/`, `airback/`, `schematic/`), Motor‑Infos, Montage. |
 | [`device-switch-electronic/`](../../device-switch-electronic/) | **Switch** (elektrisch/Keyboard): elektronisches Sustain‑Design (in Arbeit). |
-| [`docs/`](../../docs/) | Geschichte, Funktionsweise, Glossar, Build‑Hub, KI‑Support, Architektur, Betrieb, Toolchain, Videos, Mitglieder, Historie. |
+| [`docs/`](../../docs/) | Geschichte, Funktionsweise, Glossar, Build‑Hub, Community‑Support, Architektur, Betrieb, Toolchain, Videos, Mitglieder, Historie. |
 | [`bfaaap_arxiv_latex/`](../../bfaaap_arxiv_latex/) | Forschungs‑**arXiv‑Preprint** (LaTeX). |
 | [`bfaaap_patent_info/`](../../bfaaap_patent_info/) | Allgemeinverständlicher Patent‑Leitfaden + Erteilungsakten. |
 

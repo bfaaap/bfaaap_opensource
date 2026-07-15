@@ -71,7 +71,7 @@
 | 研究プレプリント | [`arxiv/README`](../../../bfaaap_arxiv_latex/README.md) | `bfaaap_arxiv_latex/main.tex`, `figures/` |
 | 特許・商標 | [`patent_info`](../../../bfaaap_patent_info/README.md) | 審査経過PDF |
 | ライセンス | [`LICENSE`](../../../LICENSE), `LICENSES/` | — |
-| AI支援サポート | [`ai-support`](ai-support.md) | 📊 `../../../docs/media/diagrams/ai-support-timeline.png` |
+| コミュニティ・サポート | [`ai-support`](ai-support.md) | 📊 `../../../docs/media/diagrams/ai-support-timeline.png` |
 | 支援 | [`SUPPORT`](../SUPPORT.md) | 📊 `../../../docs/media/illustrations/intl-support.png` |
 
 ## 8. 生成図の一覧（`docs/media/diagrams/`）
@@ -82,7 +82,7 @@
 | `rate-decoupling.png` | AR取得 vs BLE送信のタイミング | （流用） |
 | `pro-mechanism.png` | 駆動系＋エアバック機構 | （流用） |
 | `pro-build-flow.png` | Pro 8工程→各工程が使うファイル | matplotlib |
-| `ai-support-timeline.png` | AI支援サポートの流れ | matplotlib |
+| `ai-support-timeline.png` | コミュニティ・サポートの流れ | matplotlib |
 
 イラスト（`docs/media/illustrations/`）と全クレジット：[`docs/media/CREDITS.md`](../../../docs/media/CREDITS.md)。
 

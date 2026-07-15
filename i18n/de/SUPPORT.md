@@ -9,16 +9,16 @@ veröffentlicht, damit jede und jeder sie bauen und verbessern kann und Pianisti
 die ihre Füße nicht einsetzen können, spielen können. Deine Unterstützung hält das Projekt frei und
 am Wachsen. 🙏
 
-## 🙋 Hilfe beim Bauen? (KI‑gestützter Support)
+## 🙋 Hilfe beim Bauen? (Community‑Support)
 Frag in **[GitHub Discussions (Q&A)](https://github.com/bfaaap/bfaaap_opensource/discussions)**.
-Wir **entwerfen eine Antwort mit KI aus den Materialien dieses Repos, dann prüft das bFaaaP‑Team sie**
-auf Sicherheit/Genauigkeit, bevor sie gepostet wird — öffentlich und **nicht sofort** (eine Antwort
+Die **bFaaaP‑Community und das Team antworten mit den offenen Materialien dieses Repos** — Antworten
+werden von echten Menschen auf Sicherheit/Genauigkeit geprüft, bevor sie gepostet werden — öffentlich und **nicht sofort** (eine Antwort
 kann ein paar Tage dauern). Frag in **jeder Sprache**; wir antworten in derselben Sprache, und nützliche
 Antworten **verbessern diese Doku**. Ablauf: [`docs/ai-support.md`](docs/ai-support.md).
 
 ## Wofür deine Unterstützung verwendet wird
 - Entwicklung & Pflege der iOS‑App, Firmware und Hardware‑Designs
-- **KI‑gestützter Support** (das KI‑Entwerfen + Maintainer‑Prüfung, die Bau‑Fragen beantwortet — siehe [`docs/ai-support.md`](docs/ai-support.md))
+- **Community‑Support** (das GitHub‑Discussions‑Q&A, in dem die Community und das Team Bau‑Fragen beantworten — siehe [`docs/ai-support.md`](docs/ai-support.md))
 - Teile & Leihgeräte für Bauende und Nutzende, die sie brauchen
 - Konzerte, Unterricht und Vorführungen für Menschen mit Behinderungen
 
@@ -45,4 +45,4 @@ hier ergänzt, abgerechnet über **Shishido & Associates**. *(Platzhalter — Li
 ---
 > bFaaaP wird von **Shishido & Associates** betrieben. Beiträge sind *Unterstützung für ein offenes
 > Projekt*, **keine** steuerlich absetzbaren Spenden. Danke, dass du hilfst, Musik zugänglich zu
-> machen. Bau‑Fragen → **[GitHub Discussions](https://github.com/bfaaap/bfaaap_opensource/discussions)** (KI‑gestützter Support). Sonstiger Kontakt: <shishid@saaipf.com>
+> machen. Bau‑Fragen → **[GitHub Discussions](https://github.com/bfaaap/bfaaap_opensource/discussions)** (Community‑Support). Sonstiger Kontakt: <shishid@saaipf.com>

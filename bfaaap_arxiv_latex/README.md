@@ -9,7 +9,7 @@ electronic actuator for digital instruments.
 
 - Manuscripts compile with **pdfLaTeX + BibTeX**.
 - Authors: **Tomoyuki Shishido** (corresponding & first author),
-  **Hiroyuki Narusawa**.
+  **Masahiro Ootaki**, **Hiroyuki Narusawa**.
 
 ## The manuscript
 

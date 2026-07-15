@@ -72,7 +72,7 @@ jump from any topic to its authoritative files. All paths are relative to the re
 | Research preprint | [`bfaaap_arxiv_latex/README.md`](../bfaaap_arxiv_latex/README.md) | `bfaaap_arxiv_latex/main.tex`, `figures/` |
 | Patents / trademark | [`bfaaap_patent_info/`](../bfaaap_patent_info/README.md) | prosecution PDFs |
 | Licensing | [`../LICENSE`](../LICENSE), `LICENSES/` | — |
-| AI-assisted Support | [`docs/ai-support.md`](ai-support.md) | 📊 `docs/media/diagrams/ai-support-timeline.png` |
+| Community Support | [`docs/ai-support.md`](ai-support.md) | 📊 `docs/media/diagrams/ai-support-timeline.png` |
 | Support / donate | [`../SUPPORT.md`](../SUPPORT.md) | 📊 `media/illustrations/intl-support.png` |
 
 ## 8. Generated figures (what each is) — `docs/media/diagrams/`
@@ -83,7 +83,7 @@ jump from any topic to its authoritative files. All paths are relative to the re
 | `rate-decoupling.png` | AR sampling vs BLE send timing | (reused project figure) |
 | `pro-mechanism.png` | drivetrain + airback mechanism | (reused project figure) |
 | `pro-build-flow.png` | the 8 Pro build steps → files each uses | matplotlib |
-| `ai-support-timeline.png` | the AI-assisted Support process timeline | matplotlib |
+| `ai-support-timeline.png` | the community support process timeline | matplotlib |
 
 Illustrations (`docs/media/illustrations/`) and full credits/licensing: [`docs/media/CREDITS.md`](media/CREDITS.md).
 

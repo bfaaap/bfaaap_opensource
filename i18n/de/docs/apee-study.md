@@ -62,6 +62,29 @@ Die ursprünglichen anonymisierten Studienabbildungen sind unter
 [`docs/history/pct-original-figures/`](../../../docs/history/pct-original-figures/README.md) archiviert.
 Für die vollständige Methode, Statistik und Diskussion siehe das [Paper](../../../bfaaap_arxiv_latex/README.md).
 
+## Ethik
+
+An der APEE nahmen Menschen teil — Erwachsene, Kinder (7–11) und Menschen mit Behinderungen. Die
+Teilnahme war **freiwillig**, und für **jede teilnehmende Person wurde eine schriftliche Einwilligung
+nach Aufklärung eingeholt**:
+
+- **Erwachsene** gaben ihre eigene schriftliche Einwilligung.
+- **Kinder (7–11)** — ein Elternteil oder eine Aufsichtsperson bestätigte die schriftliche
+  Einwilligung (vermittelt über eine an der Studie mitwirkende Klavierlehrkraft), und das Kind
+  unterschrieb die Einwilligung selbst.
+- **Teilnehmende mit Behinderungen** nahmen mit der schriftlichen Einwilligung eines Elternteils oder
+  einer Aufsichtsperson teil, die sie zudem begleitete und den Transport zu und von den Sitzungen
+  organisierte.
+
+Alle konnten jederzeit pausieren oder abbrechen; die Aufgaben (kurze Klavierpassagen spielen) waren
+mit nicht mehr als minimalem Risiko verbunden. Die Autoren sind unabhängige Fachleute und keiner
+Einrichtung mit einer Ethikkommission (IRB) angegliedert, sodass keine formale IRB‑Zulassungsnummer
+vorliegt. Die Studie wurde dennoch nach den ethischen Grundsätzen der
+[ACM‑Richtlinie zu Forschung mit menschlichen Teilnehmenden](https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects)
+durchgeführt — Minimierung von Schäden sowie Schutz der Privatsphäre und des Selbstbestimmungsrechts.
+Alle hier gezeigten Daten sind **anonymisiert** (Teilnehmende Nr. 1–15); es erscheinen keine
+personenbezogenen Daten.
+
 ---
 
 ← Zurück zu [Funktionsweise](how-it-works.md) · [Glossar](GLOSSARY.md) · [Story](story.md)

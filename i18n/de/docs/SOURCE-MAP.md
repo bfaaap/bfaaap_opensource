@@ -71,7 +71,7 @@ zu seinen maßgeblichen Dateien. Pfade sind relativ zur Repo‑Wurzel (`github_o
 | Forschungs‑Preprint | [`arxiv/README`](../../../bfaaap_arxiv_latex/README.md) | `bfaaap_arxiv_latex/main.tex`, `figures/` |
 | Patente / Marke | [`patent_info`](../../../bfaaap_patent_info/README.md) | Erteilungsakten (PDF) |
 | Lizenzierung | [`LICENSE`](../../../LICENSE), `LICENSES/` | — |
-| KI‑gestützter Support | [`ai-support`](ai-support.md) | 📊 `../../../docs/media/diagrams/ai-support-timeline.png` |
+| Community‑Support | [`ai-support`](ai-support.md) | 📊 `../../../docs/media/diagrams/ai-support-timeline.png` |
 | Unterstützung | [`SUPPORT`](../SUPPORT.md) | 📊 `../../../docs/media/illustrations/intl-support.png` |
 
 ## 8. Generierte Abbildungen (`docs/media/diagrams/`)
@@ -82,7 +82,7 @@ zu seinen maßgeblichen Dateien. Pfade sind relativ zur Repo‑Wurzel (`github_o
 | `rate-decoupling.png` | AR‑Abtastung vs. BLE‑Senden | (wiederverwendet) |
 | `pro-mechanism.png` | Antrieb + Airback‑Mechanik | (wiederverwendet) |
 | `pro-build-flow.png` | Pro: 8 Schritte → genutzte Dateien | matplotlib |
-| `ai-support-timeline.png` | Ablauf des KI‑gestützten Supports | matplotlib |
+| `ai-support-timeline.png` | Ablauf des Community‑Supports | matplotlib |
 
 Illustrationen (`docs/media/illustrations/`) und vollständige Credits: [`docs/media/CREDITS.md`](../../../docs/media/CREDITS.md).
 

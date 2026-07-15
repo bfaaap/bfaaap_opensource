@@ -1,36 +1,37 @@
-# 🤖 KI‑gestützter Support
+# 🙋 Hilfe bekommen — GitHub Discussions
 
 > 🌐 [English](../../../docs/ai-support.md) · [日本語](../../ja/docs/ai-support.md) · **Deutsch**
 
-Du baust bFaaaP selbst? **Frag uns in den [GitHub Discussions](https://github.com/bfaaap/bfaaap_opensource/discussions) (Q&A).**
-Das ist unser zentraler Hilfe‑Dienst: Du stellst eine Frage und bekommst eine Antwort, die **mit KI
-aus den Materialien dieses Repositories entworfen und dann vom bFaaaP‑Team geprüft** wird, bevor sie
-veröffentlicht wird.
+Du baust bFaaaP selbst? **Frag in den [GitHub Discussions](https://github.com/bfaaap/bfaaap_opensource/discussions) (Q&A).**
+Das ist ein **Community‑Raum**: Poste deine Frage zum Bauen oder Benutzen, und die bFaaaP‑Community und
+das Team helfen bei der Antwort — mit den offenen Materialien dieses Repositories (Bauanleitungen,
+Schaltpläne, Firmware, Teileliste). Alles, was du zum Bauen von bFaaaP brauchst, ist hier offen
+verfügbar und bleibt kostenlos.
 
-![So funktioniert der KI‑gestützte Support — eine Zeitleiste](../../../docs/media/diagrams/ai-support-timeline.png)
+![So läuft die Hilfe — eine Zeitleiste](../../../docs/media/diagrams/ai-support-timeline.png)
 
 ## ⏳ Es ist **kein** sofortiger Chatbot
-Bitte lies die Zeitleiste oben. Jede Antwort wird von **echten Menschen** (dem bFaaaP‑Team, z. B.
-Shishido und Narusawa) auf Sicherheit und Richtigkeit **geprüft**, bevor sie erscheint — eine Antwort
-kann daher **mehrere Tage dauern.** Genau diese Prüfung ist der Punkt: Sie hält Antworten dort
-verlässlich, wo es darauf ankommt — Verdrahtung, 24‑V‑Stromversorgung, Funk‑/Bluetooth‑Regeln und
-Sicherheit assistiver Geräte.
+Antworten werden von **echten Menschen** geschrieben (der bFaaaP‑Community und dem Team, z. B. Shishido
+und Narusawa), daher kann eine Antwort **einige Zeit dauern.** Genau diese Prüfung durch echte Menschen
+ist der Punkt: Sie hält Antworten dort verlässlich, wo es darauf ankommt — Verdrahtung, 24‑V‑Strom­
+versorgung, Funk‑/Bluetooth‑Regeln und Sicherheit assistiver Geräte. Bitte hab Geduld und sei
+freundlich — das ist ein ehrenamtliches, community‑betriebenes Projekt.
 
 | Phase | Was passiert | Grober Zeitrahmen |
 |------|--------------|-------------------|
 | **1. Du fragst** | Frage in den GitHub Discussions (Q&A) posten | Tag 0 |
-| **2. KI entwirft** | KI entwirft eine Antwort aus den Open‑Source‑Materialien | ~1 Tag |
-| **3. Team prüft** | bFaaaP‑Mitglieder prüfen & korrigieren auf Sicherheit + Richtigkeit | einige Tage |
-| **4. Antwort erscheint** | Die geprüfte Antwort wird gepostet (und als Antwort markiert) | sobald bereit |
+| **2. Community & Team helfen** | Mitglieder antworten mit den offenen Materialien des Repos | einige Tage |
+| **3. Antwort erscheint** | Die Antwort wird gepostet (und als Antwort markiert) | sobald bereit |
+| **4. Doku verbessert sich** | Nützliche Antworten fließen in diese Doku zurück | sobald bereit |
 
 Nützliche Fragen **verbessern** oft auch diese Doku — deine Frage hilft also allen, die als Nächstes bauen.
 
 ## Zwei Spuren: sofort beantwortbar vs. braucht die Bauenden
 
-Wenn deine Frage eintrifft, sortieren wir sie in eine von zwei Spuren:
+Wenn deine Frage eintrifft, fällt sie meist in eine von zwei Spuren:
 
 - **① Sofort beantwortbar** — die Antwort steht bereits in diesem Repository (Bauanleitungen,
-  Schaltpläne, Firmware, Teileliste). Die KI entwirft sie aus der Doku, das Team prüft sie.
+  Schaltpläne, Firmware, Teileliste). Die Community kann dich direkt darauf hinweisen.
   *Die meisten Fragen sind hier — und am schnellsten.*
 - **② Braucht die Bauenden** — die Antwort braucht Informationen, die nur die Gerätemacher haben
   und noch nicht veröffentlicht sind (z. B. eine exakte mechanische Teilenummer oder die nächste
@@ -39,16 +40,21 @@ Wenn deine Frage eintrifft, sortieren wir sie in eine von zwei Spuren:
 
 So oder so hilft deine Frage — Antworten der Spur ② werden zu neuer Dokumentation.
 
-> 🎭 **Live ansehen:** [**bFaaaP — AI & Team, Live**](ai-team-live.md) — ein Blick hinter die Kulissen, wie die KI und die Macher bFaaaP **gemeinsam** bauen (Abbildungen, Illustrationen und die Firmware, die die KI schrieb und das Team live prüfte). Der Spaß — und das *Warum* — der teambasierten KI-gestützten Unterstützung. Ein kürzeres Beispiel mit nur einer Frage: [**„Welcher Motor kann den EOL-Motor ersetzen?“**](ai-support-example-pro-motor.md).
+> 🎭 **Wie bFaaaP offen gebaut wurde:** [**bFaaaP — AI & Team, Live**](ai-team-live.md) — ein Blick
+> hinter die Kulissen eines früheren Kapitels und eine **Aufzeichnung**, als KI‑Teammitglieder (Ponte
+> und Harmonia) Antworten und Ideen entwarfen, die das Team prüfte, während wir bFaaaP **gemeinsam**
+> bauten (Abbildungen, Illustrationen und Firmware, live vom Team geprüft). Wir bewahren es als
+> Aufzeichnung der Projektgeschichte. Ein kürzeres Beispiel mit nur einer Frage: [**„Welcher Motor
+> kann den EOL‑Motor ersetzen?“**](ai-support-example-pro-motor.md).
 
 ## 🧹 Was wir beantworten — ein kuratiertes Q&A
 
-Damit dies eine hochwertige Ressource für Bauende bleibt, macht **Ponte (unsere KI) eine erste Kuratierung
-(Sichtung) jeder neuen Frage, und das bFaaaP‑Team hat das letzte Wort.** Wir tun das **offen** — so läuft es:
+Damit dies eine hochwertige Ressource für Bauende bleibt, **kuratiert das bFaaaP‑Team neue Fragen**,
+und wir tun das **offen** — so läuft es:
 
 - **Wir priorisieren Fragen, die beim Bauen, Reproduzieren, Debuggen oder Verbessern von bFaaaP helfen** —
   einschließlich echter **Design‑Ideen**, klarer **Fehlerberichte** und **Show‑and‑Tell** deines Baus.
-  Diese werden entworfen und beantwortet, und die nützlichen werden zu neuer Doku.
+  Die nützlichen werden zu neuer Doku.
 - **Details helfen.** Sag, was du baust, was du versucht hast, deine Teile/Boards, und füge eine
   **Fehlermeldung oder ein Foto** hinzu — detaillierte Fragen bekommen bessere, schnellere Antworten.
 - **Sei freundlich und konstruktiv.** Das ist **assistive Technologie**; Empathie ist unser Fundament.
@@ -59,8 +65,7 @@ Damit dies eine hochwertige Ressource für Bauende bleibt, macht **Ponte (unsere
 - **Ist eine Frage unklar, fragen wir nach — wir weisen sie nicht ab.** Als echte:r Bauende:r bekommst du
   also immer eine Antwort, und sei es die freundliche Bitte um mehr Details.
 
-*Die Kuratierung macht Ponte, die Bauenden entscheiden am Ende — transparent, und immer im Zweifel
-zugunsten echter Bauender.*
+*Die Kuratierung macht das bFaaaP‑Team — transparent, und immer im Zweifel zugunsten echter Bauender.*
 
 ## So stellst du eine gute Frage
 - Sag, ob es um die **iOS‑App, das Pro‑Gerät oder das Switch‑Gerät** geht.

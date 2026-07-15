@@ -18,7 +18,7 @@ to build the device and run the controller **yourself**.
 🌱 **New?** → [**The bFaaaP story**](docs/story.md) · [How it works](docs/how-it-works.md) · [Glossary](docs/GLOSSARY.md)
 🔧 **Make one** → [**Build it yourself**](docs/build/) (iOS · Pro · Switch)
 🗂 **Find any source** → [Source map](docs/SOURCE-MAP.md) — which file / figure / code backs each topic
-🤖 **Get help** → [AI‑assisted Support](docs/ai-support.md) · 💛 [Support the project](SUPPORT.md)
+🙋 **Get help** → [Community Support](docs/ai-support.md) · 💛 [Support the project](SUPPORT.md)
 
 > Status: this folder (`github_opensource/`) is the staging area being prepared for public
 > release (see [`PUBLISHING-CHECKLIST.md`](PUBLISHING-CHECKLIST.md)). Docs are **English‑first**;
@@ -72,8 +72,8 @@ Open the **[Build hub](docs/build/)** and pick a track. The short version (Pro):
 4. **Build & install the iOS app** — [`ios-app/`](ios-app/) (your own signing team & bundle ID).
 5. **Pair, calibrate, and play** — [`docs/operation/`](docs/operation/).
 
-Stuck on any step? **[Ask in AI‑assisted Support](docs/ai-support.md)** — a maintainer‑reviewed
-Q&A (it's not instant; real people check each answer).
+Stuck on any step? **[Ask in our community Q&A](docs/ai-support.md)** — the bFaaaP community and
+team check each answer, so it's not instant.
 
 ### Bill of materials (overview, Pro line)
 - iPhone / iPad with **TrueDepth** front camera (head tracking)
@@ -103,10 +103,23 @@ performance video** — in **[The bFaaaP story](docs/story.md)**.
 
 ## 💛 Support
 
-The devices aren't sold — your support keeps bFaaaP free and growing (development, the
-AI‑assisted Support service, parts/loaners, and inclusive concerts & lessons). See
+The devices aren't sold — your support keeps bFaaaP free and growing (development, community
+support, parts/loaners, and inclusive concerts & lessons). See
 [**SUPPORT.md**](SUPPORT.md) (PayPal now; Stripe — card / Apple Pay / Google Pay — coming) or use
 the **Sponsor** button on this repo.
+
+## 📣 Poster & events
+
+Spread the word — here is the bFaaaP open‑source poster (front & back). Please feel free to print and share it.
+
+<p align="center">
+  <a href="docs/media/poster/opensource-poster-front.jpg"><img src="docs/media/poster/opensource-poster-front.jpg" width="45%" alt="bFaaaP open‑source poster, front — the project, the Switch and Pro devices, and the QR codes"></a>
+  <a href="docs/media/poster/opensource-poster-back.jpg"><img src="docs/media/poster/opensource-poster-back.jpg" width="45%" alt="bFaaaP open‑source poster, back — the story since 2018, the 2025 Suzukake concert, and how to join"></a>
+</p>
+
+<p align="center"><sub>Poster design: <b>Masahiro Ootaki</b> (Ootaki Architects Office)</sub></p>
+
+> 📅 Thanks to the kind support of the **Tokyo Women's Choral Society**, this poster will be handed out at their **"Composer Exhibition Series Vol.6: Hideki Chihara"** concert on **Friday, July 31, 2026**. We're grateful for the chance to share our story — [concert details](https://tokyowomens-cs.website/2026/05/12/composerexhibitionseries-vol6-hidekichihara/).
 
 ## Repository layout
 
@@ -115,7 +128,7 @@ the **Sponsor** button on this repo.
 | [`ios-app/`](ios-app/) | iOS controller app — code, design notes, build guide, sanitized `src/`. Drives both lines. |
 | [`device-pro-acoustic/`](device-pro-acoustic/) | **Pro** (acoustic): firmware, hardware (`cad/`, `3d-print/`, `airback/`, `schematic/`), motor info, assembly. |
 | [`device-switch-electronic/`](device-switch-electronic/) | **Switch** (electric/keyboard): electronic‑sustain design (in progress). |
-| [`docs/`](docs/) | Story, how‑it‑works, glossary, build hub, AI‑support, architecture, operation, toolchain, videos, members, history. |
+| [`docs/`](docs/) | Story, how‑it‑works, glossary, build hub, community support, architecture, operation, toolchain, videos, members, history. |
 | [`bfaaap_arxiv_latex/`](bfaaap_arxiv_latex/) | The research **arXiv preprint** (LaTeX). |
 | [`bfaaap_patent_info/`](bfaaap_patent_info/) | Plain‑language patent guide + prosecution files. |
 
@@ -133,7 +146,7 @@ library). Imported contributor materials (schematic / CAD / photos) are included
 A LaTeX **arXiv** preprint (`main.tex`) is in [`bfaaap_arxiv_latex/`](bfaaap_arxiv_latex/). It
 frames bFaaaP as inclusive design / human–machine interaction whose inventive core is a
 **quantitative, user‑tunable head‑angle control law**, validated by a **human‑subject clinical
-evaluation (APEE)**. Authors: T. Shishido (corresponding), H. Narusawa. *(A peer‑reviewed ACM
+evaluation (APEE)**. Authors: T. Shishido (corresponding), M. Ootaki, H. Narusawa. *(A peer‑reviewed ACM
 TACCESS version is maintained privately.)*
 
 ## Patents, trademark & design

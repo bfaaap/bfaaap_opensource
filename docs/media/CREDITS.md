@@ -36,7 +36,7 @@ below and `../members/`.)*
 Round avatar icons of the team — cropped from the **original hand‑drawn member illustrations by
 Saki Shiokawa (塩川紗季)** — plus **two AI avatars** (`ai.png`, the project's AI assistant, and
 `ai-2.png`, the *other* AI a maker consulted), both illustrated by Harmonia in her style.
-Used in [AI‑assisted Support](../ai-support.md) Discussions‑style threads. Full list, usage and
+Used in the [AI & Team, Live](../ai-team-live.md) record and example Q&A threads. Full list, usage and
 the **display‑name‑only** rule for *kana* / *Midori*: [`avatars/README.md`](avatars/README.md).
 **© Saki Shiokawa / bFaaaP** (member art) · **© Shishido & Associates** (AI avatar).
 
@@ -46,7 +46,7 @@ Generated with matplotlib (data/process figures). **CC‑BY‑4.0.**
 
 | File | Use |
 |------|-----|
-| `ai-support-timeline.png` | How AI‑assisted Support works (timeline) |
+| `ai-support-timeline.png` | How community support works (timeline) |
 | `ai-team-flow.png` | The AI × team collaboration loop + the story timeline ([AI & Team Live](../ai-team-live.md)) |
 | `future-horizon.png` | "To be continued" — Narusawa's three elements branching into next‑gen ideas + the ske‑ske mini‑Pro ([AI & Team Live](../ai-team-live.md) Act 6) |
 | `shitei-mentor.png` | The 師弟 (shitei) master‑apprentice way — four mentor traits mapped to the team ([AI & Team Live](../ai-team-live.md); culture bridge for non‑Japanese readers) |
@@ -73,6 +73,9 @@ Generated with matplotlib (data/process figures). **CC‑BY‑4.0.**
 ## Photos & posters (`./`, member portraits, device photos)
 
 - `poster_concert_*.jpg`, `bfaaap_promotion.png` — bFaaaP event posters/promotion. **© bFaaaP team / Platanus.**
+- `poster/opensource-poster-front.jpg`, `poster/opensource-poster-back.jpg` — the bFaaaP open‑source
+  poster (front & back). **Poster design © Masahiro Ootaki (大瀧雅寛 / Ootaki Architects Office).**
+  Cover illustrations are in Saki Shiokawa's style; device photos © bFaaaP team.
 - `../members/*.jpg|png` — member caricatures by **Saki Shiokawa (塩川紗季)**. *Exception:*
   `../members/nagasawa-keiko.png` is **illustrated by Harmonia in her style** © Shishido & Associates (a
   newer member with no original Shiokawa portrait), noted on the members page.
