@@ -2,6 +2,8 @@
 
 > 🌐 [English](../../README.md) · **日本語** · [Deutsch](../de/README.md)
 
+[![App Store で bFaaaP Pro & Switch を無料ダウンロード](https://img.shields.io/badge/App%20Store-%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E7%84%A1%E6%96%99%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89-0D96F6?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/app/id1545866059)
+
 ![bFaaaP — 頭の傾きでペダルを操作](../../docs/media/illustrations/hero-opensource.png)
 
 > **bFaaaP** —（*barrier‑Free assist as a Pedal*）は、**AI補助ピアノ・ペダルシステム**です。

@@ -16,7 +16,7 @@ BLE protocol is identical; only the device hardware differs.
 | [`BLE-CONNECTION-FLOW.md`](BLE-CONNECTION-FLOW.md) | Flowcharts: recognize device by name (4 channels), connect, and the sync→async handoff |
 | [`BUILD.md`](BUILD.md) | How to build it yourself (set your own team & bundle ID) |
 | [`src/`](src/) | The Xcode project (sanitized: blank team, placeholder bundle ID) |
-| [`app-store/`](app-store/) | App Store listing info, icon & screenshots ([on the App Store](https://apps.apple.com/jp/app/bfaaapswitch/id1545866059)) |
+| [`app-store/`](app-store/) | App Store listing info, icon & screenshots ([on the App Store](https://apps.apple.com/app/id1545866059)) |
 
 ## App facts
 

@@ -2,6 +2,8 @@
 
 > 🌐 [English](../../../../docs/build/ios.md) · [日本語](../../../ja/docs/build/ios.md) · **Deutsch**
 
+[![bFaaaP Pro & Switch kostenlos im App Store laden](https://img.shields.io/badge/App%20Store-App%20kostenlos%20laden-0D96F6?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/app/id1545866059)
+
 Die App wird für **beide Geräte (Pro und Switch)** benötigt. Sie liest den Kopfwinkel per
 Face‑ID‑Gesichts‑Tracking und sendet Pedalbefehle per Bluetooth. Du kannst sie auch einfach **kostenlos**
 aus dem App Store **herunterladen** — das Bauen aus dem Quellcode ist für Entwickler, die anpassen oder
@@ -41,7 +43,7 @@ weit neigen) und deinen **Faktor** (Empfindlichkeit) ein; beide zusammen ergeben
 [`ios-app/BLE-CONNECTION-FLOW.md`](../../../../ios-app/BLE-CONNECTION-FLOW.md), den Betrieb in
 [`docs/operation/`](../../../../docs/operation/).
 
-> Lieber nicht selbst bauen? Hol sie **kostenlos** aus dem **App Store**: <https://apps.apple.com/jp/app/bfaaapswitch/id1545866059>
+> Lieber nicht selbst bauen? Hol sie **kostenlos** aus dem **App Store**: <https://apps.apple.com/app/id1545866059>
 
 ---
 → [Build‑Hub](README.md) · [Pro bauen](pro.md) · [Switch bauen](switch.md)

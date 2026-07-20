@@ -2,7 +2,7 @@
 
 The iOS controller app is published **free** on the App Store:
 
-**<https://apps.apple.com/jp/app/bfaaapswitch/id1545866059>**
+**<https://apps.apple.com/app/id1545866059>**
 
 ![app icon](app-icon.png)
 

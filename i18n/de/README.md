@@ -2,6 +2,8 @@
 
 > 🌐 [English](../../README.md) · [日本語](../ja/README.md) · **Deutsch**
 
+[![bFaaaP Pro & Switch kostenlos im App Store laden](https://img.shields.io/badge/App%20Store-App%20kostenlos%20laden-0D96F6?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/app/id1545866059)
+
 ![bFaaaP — das Pedal mit einer Kopfneigung bedienen](../../docs/media/illustrations/hero-opensource.png)
 
 > **bFaaaP** — *(barrier‑Free assist as a Pedal)* — ist ein **KI‑gestütztes System zur

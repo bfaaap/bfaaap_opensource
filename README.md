@@ -2,6 +2,8 @@
 
 > 🌐 **English** · [日本語](i18n/ja/README.md) · [Deutsch](i18n/de/README.md)
 
+[![Download bFaaaP Pro & Switch free on the App Store](https://img.shields.io/badge/App%20Store-Download%20the%20app%20free-0D96F6?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/app/id1545866059)
+
 ![bFaaaP — play the pedal with a tilt of your head](docs/media/illustrations/hero-opensource.png)
 
 > **bFaaaP** — *(**b**arrier‑**F**ree **a**ssist **a**s **a** **P**edal)* — is an **AI
