@@ -27,11 +27,11 @@
 
 ## Deutsch (Übersetzung — zu bestätigen)
 
-> Herzlichen Glückwunsch dazu, dass bFaaaP Open Source wird! Dieses System, mit dem man das Klavierpedal
+> Herzlichen Glückwunsch zur bFaaaP Open Source! Dieses System, mit dem man das Klavierpedal
 > allein durch die Bewegung des Kopfes steuern kann, während man spielt, ist außerordentlich flexibel
 > einzustellen — alle, von Kindern bis zu älteren Menschen, können es mühelos beherrschen. Ich glaube,
-> es ist ein System, das erweitert, was Spielende zu tun vermögen. Als wichtiges Projekt zur
-> Verwirklichung des freien Wunsches, dass „Musik für alle da ist“, hoffe ich aufrichtig, dass es so
+> es ist ein System, das erweitert, was Spieler zu tun vermögen. Als wichtiges Projekt zur
+> Verwirklichung des Wunsches, dass Musik für alle da sein soll, hoffe ich aufrichtig, dass es so
 > vielen Menschen wie möglich bekannt wird.
 
 — Fehmiju Fati

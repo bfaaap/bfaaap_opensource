@@ -35,8 +35,8 @@
 
 ## Deutsch (Übersetzung — zu bestätigen)
 
-> Als Amateur-Chorsängerin, die sich an der Musik erfreut, erfuhr ich durch eine glückliche Fügung von
-> „bFaaaP“. Ich schämte mich, bis dahin die Menschen nicht wahrgenommen zu haben, die beim Bedienen des
+> Als Amateur-Chorsängerin, die sich an der Musik erfreut, erfuhr ich durch einen glücklichen Zufall von
+> „bFaaaP“. Es war mir peinlich, bis dahin die Menschen nicht wahrgenommen zu haben, die beim Bedienen des
 > Pedals Unterstützung brauchen — und war zugleich zutiefst beeindruckt von dieser wunderbaren Technik.
 >
 > Den Nervenkitzel, als Kind im Klavierunterricht zum ersten Mal das Pedal zu treten, habe ich noch

@@ -36,6 +36,6 @@ recitals: I'll support each person's wish to play on stage."* — Kyoko Yamaguch
 Open-Source-Veröffentlichung. Als Klavierlehrerin freue ich mich, Teil dieses wunderbaren Projekts zu
 sein — ich glaube, Musik sollte für alle da sein, und ich hoffe, dass bFaaaP mehr Menschen ermutigt,
 die spielen möchten. Mein Klavierstudio bietet Unterricht mit bFaaaP an, auch als Hausbesuch — wenn
-der Weg zum Unterricht im Rollstuhl schwierig war und Sie den Unterricht aufgegeben hatten, sprechen
-Sie mich gern an. Und bei unseren Vorspielen können Sie mit bFaaaP auftreten: Ich unterstütze den
-Wunsch jeder und jedes Einzelnen, auf der Bühne zu spielen.“* — Kyoko Yamaguchi
+der Weg zum Unterricht im Rollstuhl schwierig ist und Sie den Unterricht aufgegeben hatten, sprechen
+Sie mich gern an. Und bei unseren Vorspielen können Sie bFaaaP bei Ihren Auftritten nutzen: Ich unterstütze den
+Wunsch jedes Einzelnen, auf der Bühne zu spielen.“* — Kyoko Yamaguchi

@@ -29,14 +29,14 @@
 
 ## Deutsch (Übersetzung — zu bestätigen)
 
-> Das Pedalspiel ist sehr feinfühlig: Tritt man das Pedal zu weit, kann das eine Phrase trüben und die
+> Das Pedalspiel ist sehr feinfühlig: Tritt man das Pedal zu weit, kann das eine Passage trüben und die
 > Schönheit der Harmonie verlorengehen lassen. bFaaaP ist ein wunderbares Gerät, das diese feine
 > Pedalsteuerung nicht mit den Zehen, sondern über die Neigung und Geschwindigkeit der Kopfbewegung
-> umsetzt — und die Spielenden ihre Musik reicher und präziser ausdrücken lässt. Das Klavier ist ein
+> umsetzt — und die Spieler ihre Musik reicher und präziser ausdrücken lässt. Das Klavier ist ein
 > Instrument, das alle Menschen auf der Welt genießen können. Als Klavierstimmerin bin ich tief
 > beeindruckt, dass bFaaaP ein so breites Spektrum des Spielens ermöglicht, ohne die Mechanik des
 > Klaviers im Geringsten zu belasten. Und mit dieser Open-Source-Veröffentlichung wünsche ich mir von
 > Herzen, dass noch viel mehr Menschen bFaaaP kennenlernen und dass es zumindest einige von denen
-> erreicht, die gewisse Einschränkungen empfinden.
+> erreicht, die bisher eingeschränkt waren.
 
 — kana

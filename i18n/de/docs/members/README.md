@@ -56,7 +56,7 @@ Ausdruckskraft des Pedals genießen können.
 <sub>Porträt: KI‑generiert *im Stil von* Saki Shiokawa © Shishido &amp; Associates.</sub>
 
 Eine **Klavierlehrerin**, die das Tokioter Studio **PASTEL** leitet. Sie begrüßt bFaaaP, weil es die
-körperliche Barriere des Pedals beseitigt, sodass jede:r Spielende *„ein wahrhaft eigenes Spiel"*
+körperliche Barriere des Pedals beseitigt, sodass jede:r Spieler *„ein wahrhaft eigenes Spiel"*
 gestalten kann.
 *(In Tokio werden bFaaaP‑Unterricht und ‑Vorspiele in zwei Studios angeboten — Kyoko Yamaguchis*
 *[Fleur](https://www.fleur-pianok.com/講師紹介profile/) und ihrem eigenen [PASTEL](https://www.pastelpiano.org).)*

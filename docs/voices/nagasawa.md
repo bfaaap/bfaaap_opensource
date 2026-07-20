@@ -38,8 +38,8 @@
 
 > Herzlichen Glückwunsch zur Open-Source-Veröffentlichung. Das Pedal ist eine wesentliche Funktion, die
 > den Ausdruck des Klavierspiels stark prägt — und doch gibt es Menschen, denen seine Bedienung aus
-> körperlichen Gründen schwerfällt. bFaaaP nimmt diese Hürde weg, und ich empfinde es als ein
-> wunderbares Vorhaben, das dem Wunsch der Spielenden, zu „spielen“ und „mehr auszudrücken“, Gestalt
+> körperlichen Gründen schwerfällt. bFaaaP nimmt diese Hürde, und ich empfinde es als ein
+> wunderbares Vorhaben, das dem Wunsch der Spieler, zu „spielen“ und „mehr auszudrücken“, Gestalt
 > gibt. Weil bFaaaP selbst auf feine Pedalwechsel reagiert, glaube ich, dass es vielen Menschen eine
 > große Hilfe sein wird, ein Spiel zu verwirklichen, das wirklich ihr eigenes ist. Auf eine
 > Gesellschaft hin, in der alle Musik genießen und sich auf ihre eigene Weise ausdrücken können, hoffe

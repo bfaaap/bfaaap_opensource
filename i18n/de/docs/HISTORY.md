@@ -4,8 +4,8 @@
 
 ![Platanus‑with‑bFaaaP‑Plakat](../../../docs/media/poster_concert_pro_2025.jpg)
 
-*bFaaaP = **b**arrier‑**F**ree **a**ssist **a**s **a** **P**edal — ein KI‑gestütztes assistives
-Klavierpedal‑System. Projektseite: <https://bfaaap.com>*
+*bFaaaP = **b**arrier‑**F**ree **a**ssist **a**s **a** **P**edal — ein KI‑gestütztes System zur
+Bedienung des Klavierpedals. Projektseite: <https://bfaaap.com>*
 
 ## Ursprung (2018)
 

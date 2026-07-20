@@ -107,7 +107,7 @@
 > erstaunlicher Mensch —, und stellte mir Herrn Narusawa vor, und wir bauten einen Prototyp. So entstand
 > bFaaaP1, das wir als englische PCT-Anmeldung einreichten. Damals nutzte es einen brillengebundenen
 > Sensor und einen Schrittmotor aus der Industrierobotik, doch die Steuerungsmethode (**dead angle +
-> multiplier**) — die die Absicht der Spielenden widerspiegelt und natürliches Spiel ohne Einsatz der
+> multiplier**) — die die Absicht der Spieler widerspiegelt und natürliches Spiel ohne Einsatz der
 > Füße ermöglicht, weit über ein einfaches Ein/Aus hinaus — erzielte eine bemerkenswerte, völlig
 > unbekannte Wirkung. Daher beriet ich mich mit Herrn Tokushige, einem Bekannten in der Patentkanzlei,
 > in der ich damals Berater war, reichte eine englische PCT-Anmeldung ein, und daraus wurden schließlich

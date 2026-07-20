@@ -6,8 +6,8 @@
 
 ![Eine spielende Person, der ein kleines freundliches Gerät das Pedal drückt](../../../docs/media/illustrations/intl-what-bfaaap.png)
 
-> **bFaaaP** = **b**arrier‑**F**ree **a**ssist **a**s **a** **P**edal — ein KI‑gestütztes assistives
-> Klavierpedal‑System. Neige den Kopf ein wenig, und das Haltepedal senkt sich. Keine Füße nötig.
+> **bFaaaP** = **b**arrier‑**F**ree **a**ssist **a**s **a** **P**edal — ein KI‑gestütztes System zur
+> Bedienung des Klavierpedals. Neige den Kopf ein wenig, und das Haltepedal senkt sich. Keine Füße nötig.
 > Diese Seite erzählt, wie es entstand, wer es gebaut hat und wo du es *sehen* und *hören* kannst.
 > Neu? Beginne mit [Funktionsweise](how-it-works.md) und [Glossar](GLOSSARY.md); bereit zum Bauen?
 > Springe zu [Selbst bauen](build/).

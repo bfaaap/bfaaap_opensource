@@ -152,8 +152,8 @@ wunderbaren Projekts zu sein — ich glaube, **Musik sollte für alle da sein**,
 mehr Menschen ermutigt, die spielen möchten.
 
 Mein Klavierstudio bietet **Unterricht mit bFaaaP** an, auch als Hausbesuch — wenn der Weg zum Unterricht
-im Rollstuhl schwierig war und Sie aufgegeben hatten, sprechen Sie mich gern an. Und bei unseren
-**Vorspielen** können Sie mit bFaaaP auftreten: Ich unterstütze den Wunsch jeder und jedes Einzelnen, auf
+im Rollstuhl schwierig ist und Sie aufgegeben hatten, sprechen Sie mich gern an. Und bei unseren
+**Vorspielen** können Sie bFaaaP bei Ihren Auftritten nutzen: Ich unterstütze den Wunsch jedes Einzelnen, auf
 der Bühne zu spielen.
 
 <br clear="left">
@@ -172,7 +172,7 @@ Herzlichen Glückwunsch zur Open-Source-Veröffentlichung. Das **Pedal** ist ein
 den Ausdruck des Klavierspiels stark prägt — und doch gibt es Menschen, denen seine Bedienung aus
 körperlichen Gründen schwerfällt.
 
-bFaaaP **nimmt diese Hürde weg** und gibt dem Wunsch der Spielenden, zu *„spielen“* und *„mehr
+bFaaaP **nimmt diese Hürde** und gibt dem Wunsch der Spieler, zu *„spielen“* und *„mehr
 auszudrücken“*, Gestalt. Weil es selbst auf **feine Pedalwechsel** reagiert, glaube ich, dass es vielen
 Menschen hilft, ein Spiel zu verwirklichen, das *wirklich ihr eigenes* ist. Auf eine Gesellschaft hin, in
 der alle Musik genießen und sich auf ihre eigene Weise ausdrücken können, hoffe ich, dass dieses Projekt
@@ -190,15 +190,15 @@ noch mehr Menschen erreicht.
 
 <img src="../../../docs/members/kana.png" alt="kana" width="150" align="left">
 
-Das Pedalspiel ist sehr feinfühlig: Tritt man zu weit, kann das eine Phrase trüben und die Schönheit der
+Das Pedalspiel ist sehr feinfühlig: Tritt man zu weit, kann das eine Passage trüben und die Schönheit der
 Harmonie verlorengehen lassen. bFaaaP setzt diese feine Steuerung **nicht mit den Zehen, sondern über die
-Neigung und Geschwindigkeit der Kopfbewegung** um — und lässt die Spielenden ihre Musik reicher und
+Neigung und Geschwindigkeit der Kopfbewegung** um — und lässt die Spieler ihre Musik reicher und
 präziser ausdrücken.
 
 Das Klavier kann jeder Mensch auf der Welt genießen. Als Stimmerin bin ich tief beeindruckt, dass bFaaaP
 ein so breites Spektrum des Spielens ermöglicht, **ohne die Mechanik des Klaviers im Geringsten zu
 belasten.** Mit dieser Veröffentlichung wünsche ich mir von Herzen, dass noch viel mehr Menschen bFaaaP
-kennenlernen — und dass es jene erreicht, die gewisse Einschränkungen empfinden.
+kennenlernen — und dass es jene erreicht, die bisher eingeschränkt waren.
 
 <br clear="left">
 
@@ -212,12 +212,12 @@ kennenlernen — und dass es jene erreicht, die gewisse Einschränkungen empfind
 
 <img src="../../../docs/members/member2020.png" alt="Fehmiju Fati" width="150" align="left">
 
-Herzlichen Glückwunsch dazu, dass bFaaaP Open Source wird! Dieses System — mit dem man das Klavierpedal
+Herzlichen Glückwunsch zur bFaaaP Open Source! Dieses System — mit dem man das Klavierpedal
 **allein durch die Bewegung des Kopfes** steuern kann, während man spielt — ist außerordentlich flexibel
 einzustellen: **alle, von Kindern bis zu älteren Menschen, können es mühelos beherrschen.** Es erweitert,
-was Spielende zu tun vermögen.
+was Spieler zu tun vermögen.
 
-Als wichtiges Projekt zur Verwirklichung des freien Wunsches, dass *„Musik für alle da ist“*, hoffe ich
+Als wichtiges Projekt zur Verwirklichung des Wunsches, dass Musik für alle da sein soll, hoffe ich
 aufrichtig, dass es so vielen Menschen wie möglich bekannt wird.
 
 <br clear="left">
@@ -232,7 +232,7 @@ aufrichtig, dass es so vielen Menschen wie möglich bekannt wird.
 
 <img src="../../../docs/members/kyoko.png" alt="kyoko" width="150" align="left">
 
-Als Amateur-Chorsängerin, die sich an der Musik erfreut, erfuhr ich durch eine glückliche Fügung von bFaaaP — und war ebenso beeindruckt von dieser wunderbaren Technik wie beschämt, die Menschen, die beim Bedienen des Pedals Hilfe brauchen, bis dahin kaum wahrgenommen zu haben. Den Nervenkitzel meines ersten Pedaltritts als Kind erinnere ich noch: **Der Wunsch, sich auszudrücken, darf niemals aus körperlichen Gründen versperrt werden.**
+Als Amateur-Chorsängerin, die sich an der Musik erfreut, erfuhr ich durch einen glücklichen Zufall von bFaaaP — und war zutiefst beeindruckt von dieser wunderbaren Technik; zugleich war es mir peinlich, die Menschen, die beim Bedienen des Pedals Hilfe brauchen, bis dahin kaum wahrgenommen zu haben. Den Nervenkitzel meines ersten Pedaltritts als Kind erinnere ich noch: **Der Wunsch, sich auszudrücken, darf niemals aus körperlichen Gründen versperrt werden.**
 
 Diese Open-Source-Initiative hat mich tief bewegt. Ich hoffe, dass bFaaaP zu etwas wird, *„das Menschen, die es brauchen, selbstverständlich nutzen können — so wie jemand mit schwacher Sehkraft eine Brille trägt“*, damit die Welt der Musik **reicher und sanfter** wird.
 

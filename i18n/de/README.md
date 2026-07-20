@@ -4,8 +4,8 @@
 
 ![bFaaaP — das Pedal mit einer Kopfneigung bedienen](../../docs/media/illustrations/hero-opensource.png)
 
-> **bFaaaP** — *(barrier‑Free assist as a Pedal)* — ist ein **KI‑gestütztes assistives
-> Klavierpedal‑System**. Neige den Kopf ein wenig, und das Haltepedal (Sustain) senkt sich —
+> **bFaaaP** — *(barrier‑Free assist as a Pedal)* — ist ein **KI‑gestütztes System zur
+> Bedienung des Klavierpedals**. Neige den Kopf ein wenig, und das Haltepedal (Sustain) senkt sich —
 > **ganz ohne Füße.** Ein iPhone/iPad erfasst den Kopfwinkel mit On‑Device‑KI und sendet ihn per
 > Bluetooth an ein kleines Gerät, das das Klavierpedal drückt (oder elektronisch schaltet).
 
